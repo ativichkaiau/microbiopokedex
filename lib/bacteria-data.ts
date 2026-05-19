@@ -448,4 +448,404 @@ export const BACTERIA: Bacterium[] = [
     description:
       "Thin spirochete with hooked ends, shed in animal urine. Causes leptospirosis, ranging from a flu-like illness to severe Weil's disease.",
   },
+  {
+    slug: "staphylococcus-saprophyticus",
+    name: "Staph saprophyticus",
+    scientificName: "Staphylococcus saprophyticus",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "clusters",
+    description:
+      "Coagulase-negative, novobiocin-resistant gram-positive cocci in clusters. A common cause of uncomplicated UTIs in sexually active young women.",
+  },
+  {
+    slug: "streptococcus-sanguinis",
+    name: "Viridans Strep",
+    scientificName: "Streptococcus sanguinis",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Alpha-hemolytic viridans-group gram-positive cocci in chains, resident in dental plaque. Enters blood after dental work and seeds damaged valves (subacute endocarditis).",
+  },
+  {
+    slug: "enterococcus-faecium",
+    name: "Enterococcus faecium",
+    scientificName: "Enterococcus faecium",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "pairs",
+    description:
+      "Hardy gut gram-positive cocci in pairs and short chains. The species most associated with vancomycin-resistant enterococcus (VRE) in hospitals.",
+  },
+  {
+    slug: "cutibacterium-acnes",
+    name: "C. acnes",
+    scientificName: "Cutibacterium acnes",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Anaerobic gram-positive rod of the sebaceous skin flora. Drives inflammatory acne and causes indolent prosthetic-joint and shoulder-surgery infections.",
+  },
+  {
+    slug: "lactobacillus-acidophilus",
+    name: "Lactobacillus",
+    scientificName: "Lactobacillus acidophilus",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "chains",
+    description:
+      "Acid-tolerant gram-positive rod in chains. Dominates the healthy vaginal flora, producing lactic acid and peroxide; widely used as a probiotic.",
+  },
+  {
+    slug: "gardnerella-vaginalis",
+    name: "Gardnerella",
+    scientificName: "Gardnerella vaginalis",
+    gramStain: "variable",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Gram-variable coccobacillus that coats epithelial 'clue cells' in bacterial vaginosis, producing a fishy-amine discharge with raised vaginal pH.",
+  },
+  {
+    slug: "mycobacterium-leprae",
+    name: "Leprosy bacillus",
+    scientificName: "Mycobacterium leprae",
+    gramStain: "variable",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Acid-fast rod that cannot be cultured in vitro and grows in cool tissues (skin, nerves). Causes leprosy (Hansen's disease) with its tuberculoid and lepromatous forms.",
+  },
+  {
+    slug: "mycobacterium-avium",
+    name: "MAC",
+    scientificName: "Mycobacterium avium",
+    gramStain: "variable",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Environmental acid-fast rod (Mycobacterium avium complex). Causes disseminated infection in advanced HIV and chronic lung disease in older adults.",
+  },
+  {
+    slug: "rickettsia-rickettsii",
+    name: "Spotted fever rickettsia",
+    scientificName: "Rickettsia rickettsii",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Obligate intracellular gram-negative coccobacillus transmitted by ticks. Invades vascular endothelium, causing the vasculitic rash of Rocky Mountain spotted fever.",
+  },
+  {
+    slug: "chlamydia-trachomatis",
+    name: "Chlamydia",
+    scientificName: "Chlamydia trachomatis",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Obligate intracellular bacterium with a biphasic elementary/reticulate-body cycle and no classic peptidoglycan, so it stains poorly by Gram. Leading cause of bacterial STI and trachoma blindness.",
+  },
+  {
+    slug: "coxiella-burnetii",
+    name: "Q fever agent",
+    scientificName: "Coxiella burnetii",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Highly infectious intracellular gram-negative coccobacillus with a spore-like form. Inhaled from livestock aerosols, causing Q fever (atypical pneumonia, hepatitis).",
+  },
+  {
+    slug: "bartonella-henselae",
+    name: "Cat-scratch bacillus",
+    scientificName: "Bartonella henselae",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Fastidious gram-negative rod transmitted by cat scratches/fleas. Causes cat-scratch disease and, in immunocompromised hosts, bacillary angiomatosis.",
+  },
+  {
+    slug: "francisella-tularensis",
+    name: "Tularemia bacillus",
+    scientificName: "Francisella tularensis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Tiny, highly infectious intracellular gram-negative coccobacillus. Tick bites or handling rabbits cause tularemia; a very low inoculum can infect.",
+  },
+  {
+    slug: "brucella-melitensis",
+    name: "Brucella",
+    scientificName: "Brucella melitensis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Intracellular gram-negative coccobacillus from unpasteurized dairy and livestock. Causes undulant fever (brucellosis) with relapsing temperatures and sweats.",
+  },
+  {
+    slug: "vibrio-vulnificus",
+    name: "V. vulnificus",
+    scientificName: "Vibrio vulnificus",
+    gramStain: "negative",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Curved gram-negative marine rod. Raw oysters or seawater wound exposure cause fulminant sepsis and necrotizing fasciitis, especially in liver disease.",
+  },
+  {
+    slug: "yersinia-enterocolitica",
+    name: "Y. enterocolitica",
+    scientificName: "Yersinia enterocolitica",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Cold-tolerant gram-negative coccobacillus from pork and contaminated milk. Causes enterocolitis and mesenteric adenitis mimicking appendicitis.",
+  },
+  {
+    slug: "stenotrophomonas-maltophilia",
+    name: "Stenotrophomonas",
+    scientificName: "Stenotrophomonas maltophilia",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Aerobic gram-negative rod with broad intrinsic drug resistance. An opportunistic nosocomial pathogen of catheters and ventilated, immunocompromised patients.",
+  },
+  {
+    slug: "pasteurella-multocida",
+    name: "Pasteurella",
+    scientificName: "Pasteurella multocida",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Bipolar-staining gram-negative coccobacillus in animal mouths. Rapidly inflamed cellulitis after cat and dog bites; classic within hours of the bite.",
+  },
+  {
+    slug: "fusobacterium-nucleatum",
+    name: "Fusobacterium",
+    scientificName: "Fusobacterium nucleatum",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Spindle-shaped anaerobic gram-negative rod of the oral flora. Implicated in periodontal disease, Lemierre's syndrome, and colorectal tumors.",
+  },
+  {
+    slug: "burkholderia-cepacia",
+    name: "Burkholderia",
+    scientificName: "Burkholderia cepacia",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Environmental gram-negative rod highly resistant to antibiotics and disinfectants. Causes rapidly declining lung infection in cystic fibrosis and contaminates hospital fluids.",
+  },
+  {
+    slug: "micrococcus-luteus",
+    name: "Micrococcus",
+    scientificName: "Micrococcus luteus",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "tetrads",
+    description:
+      "Aerobic gram-positive cocci in tetrads forming bright yellow colonies. A common skin and air commensal; rarely causes infection except in immunocompromised hosts.",
+  },
+  {
+    slug: "streptococcus-gallolyticus",
+    name: "S. gallolyticus",
+    scientificName: "Streptococcus gallolyticus",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Gram-positive cocci in chains (the former S. bovis). Bacteremia and endocarditis with this organism are strongly linked to colorectal carcinoma.",
+  },
+  {
+    slug: "bacillus-subtilis",
+    name: "B. subtilis",
+    scientificName: "Bacillus subtilis",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "chains",
+    description:
+      "Aerobic spore-forming gram-positive rod in chains. A ubiquitous soil saprophyte and a workhorse model organism; only an occasional opportunistic contaminant.",
+  },
+  {
+    slug: "erysipelothrix-rhusiopathiae",
+    name: "Erysipelothrix",
+    scientificName: "Erysipelothrix rhusiopathiae",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Thin gram-positive rod from animals and fish. Causes erysipeloid, a painful violaceous hand cellulitis in butchers, fishermen, and veterinarians.",
+  },
+  {
+    slug: "rhodococcus-equi",
+    name: "Rhodococcus",
+    scientificName: "Rhodococcus equi",
+    gramStain: "positive",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Partially acid-fast, intracellular gram-positive coccobacillus from soil and horses. Causes cavitary pneumonia in immunocompromised, especially HIV, patients.",
+  },
+  {
+    slug: "tropheryma-whipplei",
+    name: "Whipple bacillus",
+    scientificName: "Tropheryma whipplei",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Fastidious gram-positive rod that infects intestinal macrophages (PAS-positive). Causes Whipple's disease: malabsorption, weight loss, arthralgia, and CNS signs.",
+  },
+  {
+    slug: "mycobacterium-abscessus",
+    name: "M. abscessus",
+    scientificName: "Mycobacterium abscessus",
+    gramStain: "variable",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Rapidly growing, highly drug-resistant acid-fast rod. Causes skin/soft-tissue infections after procedures and chronic lung disease in cystic fibrosis.",
+  },
+  {
+    slug: "vibrio-parahaemolyticus",
+    name: "V. parahaemolyticus",
+    scientificName: "Vibrio parahaemolyticus",
+    gramStain: "negative",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Halophilic curved gram-negative marine rod. The leading cause of seafood-associated gastroenteritis from raw or undercooked shellfish.",
+  },
+  {
+    slug: "aeromonas-hydrophila",
+    name: "Aeromonas",
+    scientificName: "Aeromonas hydrophila",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Freshwater gram-negative rod. Causes diarrhea and aggressive wound infections after freshwater exposure, including medicinal-leech-associated cellulitis.",
+  },
+  {
+    slug: "citrobacter-freundii",
+    name: "Citrobacter",
+    scientificName: "Citrobacter freundii",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Enteric gram-negative rod with inducible AmpC beta-lactamase. An opportunistic cause of UTIs, neonatal meningitis, and nosocomial bacteremia.",
+  },
+  {
+    slug: "enterobacter-cloacae",
+    name: "Enterobacter",
+    scientificName: "Enterobacter cloacae",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Motile enteric gram-negative rod. AmpC derepression drives resistance to broad-spectrum cephalosporins in ICU pneumonia, line, and wound infections.",
+  },
+  {
+    slug: "morganella-morganii",
+    name: "Morganella",
+    scientificName: "Morganella morganii",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Urease-positive enteric gram-negative rod. Causes catheter-associated UTIs and post-operative wound infections, often multidrug resistant.",
+  },
+  {
+    slug: "eikenella-corrodens",
+    name: "Eikenella",
+    scientificName: "Eikenella corrodens",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Slow-growing gram-negative rod (a HACEK organism) of the human mouth that pits agar. Classic in clenched-fist 'fight-bite' wound infections and endocarditis.",
+  },
+  {
+    slug: "kingella-kingae",
+    name: "Kingella",
+    scientificName: "Kingella kingae",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "pairs",
+    description:
+      "Fastidious gram-negative coccobacillus in pairs (a HACEK organism). A leading cause of septic arthritis and osteomyelitis in young children.",
+  },
+  {
+    slug: "capnocytophaga-canimorsus",
+    name: "Capnocytophaga",
+    scientificName: "Capnocytophaga canimorsus",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Slender gram-negative rod from dog and cat mouths. Dog-bite exposure causes fulminant sepsis, especially in asplenic or alcoholic patients.",
+  },
+  {
+    slug: "porphyromonas-gingivalis",
+    name: "Porphyromonas",
+    scientificName: "Porphyromonas gingivalis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Black-pigmented anaerobic gram-negative rod. A keystone pathogen of chronic periodontitis and a suspected contributor to systemic inflammatory disease.",
+  },
+  {
+    slug: "anaplasma-phagocytophilum",
+    name: "Anaplasma",
+    scientificName: "Anaplasma phagocytophilum",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Obligate intracellular gram-negative coccobacillus that forms morulae inside neutrophils. Ixodes-tick-borne agent of human granulocytic anaplasmosis.",
+  },
+  {
+    slug: "streptobacillus-moniliformis",
+    name: "Rat-bite bacillus",
+    scientificName: "Streptobacillus moniliformis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "filaments",
+    description:
+      "Pleomorphic gram-negative rod forming beaded filaments. Transmitted by rat bites, causing rat-bite fever with migratory arthralgia and rash.",
+  },
+  {
+    slug: "ureaplasma-urealyticum",
+    name: "Ureaplasma",
+    scientificName: "Ureaplasma urealyticum",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Tiny pleomorphic bacterium that lacks a cell wall (unstainable by Gram, beta-lactam resistant) and splits urea. Causes nongonococcal urethritis.",
+  },
+  {
+    slug: "veillonella-parvula",
+    name: "Veillonella",
+    scientificName: "Veillonella parvula",
+    gramStain: "negative",
+    shape: "coccus",
+    arrangement: "clusters",
+    description:
+      "Anaerobic gram-negative cocci in clusters, resident in the mouth and gut. A low-virulence commensal occasionally implicated in bites, sinusitis, and endocarditis.",
+  },
 ];
