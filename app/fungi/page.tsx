@@ -3,23 +3,18 @@ import { getSectionFacets, listMicrobes } from "@/lib/db";
 
 type SearchParams = { [key: string]: string | string[] | undefined };
 
-export default async function Home({
+export default async function FungiPage({
   searchParams,
 }: {
   searchParams: Promise<SearchParams>;
 }) {
   const sp = await searchParams;
-  const active = buildActive("bacteria", sp);
+  const active = buildActive("fungi", sp);
   const [items, facets] = await Promise.all([
-    listMicrobes("bacteria", active),
-    getSectionFacets("bacteria"),
+    listMicrobes("fungi", active),
+    getSectionFacets("fungi"),
   ]);
   return (
-    <Explorer
-      sectionKey="bacteria"
-      active={active}
-      items={items}
-      facets={facets}
-    />
+    <Explorer sectionKey="fungi" active={active} items={items} facets={facets} />
   );
 }

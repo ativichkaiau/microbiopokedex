@@ -1,12 +1,13 @@
 import { PGlite } from "@electric-sql/pglite";
 import {
-  BACTERIA,
-  type Arrangement,
-  type GramStain,
-  type Shape,
-} from "./bacteria-data";
+  SECTION_ORDER,
+  SECTIONS,
+  type GenericRecord,
+  type SectionDef,
+  type SectionKey,
+} from "./sections";
 
-// In-memory embedded Postgres, reseeded from the dataset on startup. This
+// In-memory embedded Postgres, reseeded from the datasets on startup. This
 // runs identically on a serverless host (read-only filesystem) and locally.
 // Swap getDb() for a node-postgres pool to use a persistent server — the
 // query helpers below speak standard SQL.
@@ -15,94 +16,66 @@ type GlobalWithPg = typeof globalThis & {
 };
 const globalForPg = globalThis as GlobalWithPg;
 
-async function init(): Promise<PGlite> {
-  const db = new PGlite();
-  await db.waitReady;
-
+async function seedSection(db: PGlite, section: SectionDef): Promise<void> {
+  const { table, columns, rows } = section;
+  const colDefs = columns
+    .map((c) => `${c} TEXT NOT NULL`)
+    .join(",\n      ");
   await db.exec(`
-    CREATE TABLE IF NOT EXISTS bacteria (
-      id              SERIAL PRIMARY KEY,
-      slug            TEXT NOT NULL UNIQUE,
-      name            TEXT NOT NULL,
-      scientific_name TEXT NOT NULL,
-      gram_stain      TEXT NOT NULL,
-      shape           TEXT NOT NULL,
-      arrangement     TEXT NOT NULL,
-      description     TEXT NOT NULL
+    CREATE TABLE IF NOT EXISTS ${table} (
+      id SERIAL PRIMARY KEY,
+      ${colDefs},
+      UNIQUE (slug)
     );
   `);
 
-  // Idempotent sync: upsert every dataset entry by slug so editing
-  // bacteria-data.ts and reloading re-syncs the database.
-  for (const b of BACTERIA) {
+  const placeholders = columns.map((_, i) => `$${i + 1}`).join(", ");
+  const updates = columns
+    .filter((c) => c !== "slug")
+    .map((c) => `${c} = EXCLUDED.${c}`)
+    .join(", ");
+
+  for (const row of rows) {
     await db.query(
-      `INSERT INTO bacteria
-         (slug, name, scientific_name, gram_stain, shape, arrangement, description)
-       VALUES ($1, $2, $3, $4, $5, $6, $7)
-       ON CONFLICT (slug) DO UPDATE SET
-         name            = EXCLUDED.name,
-         scientific_name = EXCLUDED.scientific_name,
-         gram_stain      = EXCLUDED.gram_stain,
-         shape           = EXCLUDED.shape,
-         arrangement     = EXCLUDED.arrangement,
-         description     = EXCLUDED.description;`,
-      [
-        b.slug,
-        b.name,
-        b.scientificName,
-        b.gramStain,
-        b.shape,
-        b.arrangement,
-        b.description,
-      ],
+      `INSERT INTO ${table} (${columns.join(", ")})
+       VALUES (${placeholders})
+       ON CONFLICT (slug) DO UPDATE SET ${updates};`,
+      columns.map((c) => row[c]),
     );
   }
+}
 
+async function init(): Promise<PGlite> {
+  const db = new PGlite();
+  await db.waitReady;
+  for (const key of SECTION_ORDER) {
+    await seedSection(db, SECTIONS[key]);
+  }
   return db;
 }
 
 function getDb(): Promise<PGlite> {
-  // Reuse a single connection across dev hot-reloads.
   globalForPg.__pglitePokedex ??= init();
   return globalForPg.__pglitePokedex;
 }
 
-export type BacteriumRecord = {
-  id: number;
-  slug: string;
-  name: string;
-  scientific_name: string;
-  gram_stain: GramStain;
-  shape: Shape;
-  arrangement: Arrangement;
-  description: string;
-};
+export type Filter = Record<string, string | undefined> & { q?: string };
 
-export type BacteriaFilter = {
-  gramStain?: string;
-  shape?: string;
-  arrangement?: string;
-  q?: string;
-};
-
-export async function listBacteria(
-  filter: BacteriaFilter = {},
-): Promise<BacteriumRecord[]> {
+export async function listMicrobes(
+  sectionKey: SectionKey,
+  filter: Filter = {},
+): Promise<GenericRecord[]> {
+  const section = SECTIONS[sectionKey];
   const db = await getDb();
   const where: string[] = [];
   const params: unknown[] = [];
 
-  if (filter.gramStain) {
-    params.push(filter.gramStain);
-    where.push(`gram_stain = $${params.length}`);
-  }
-  if (filter.shape) {
-    params.push(filter.shape);
-    where.push(`shape = $${params.length}`);
-  }
-  if (filter.arrangement) {
-    params.push(filter.arrangement);
-    where.push(`arrangement = $${params.length}`);
+  for (const facet of section.facets) {
+    const value = filter[facet.param];
+    if (value) {
+      params.push(value);
+      where.push(`${facet.column} = $${params.length}`);
+    }
   }
   if (filter.q) {
     params.push(`%${filter.q.toLowerCase()}%`);
@@ -111,55 +84,56 @@ export async function listBacteria(
     );
   }
 
-  const sql = `
-    SELECT * FROM bacteria
-    ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
-    ORDER BY id
-  `;
-  const res = await db.query<BacteriumRecord>(sql, params);
+  const res = await db.query<GenericRecord>(
+    `SELECT * FROM ${section.table}
+     ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
+     ORDER BY id`,
+    params,
+  );
   return res.rows;
 }
 
-export async function getBacterium(
+export async function getMicrobe(
+  sectionKey: SectionKey,
   slug: string,
-): Promise<BacteriumRecord | null> {
+): Promise<GenericRecord | null> {
+  const section = SECTIONS[sectionKey];
   const db = await getDb();
-  const res = await db.query<BacteriumRecord>(
-    `SELECT * FROM bacteria WHERE slug = $1`,
+  const res = await db.query<GenericRecord>(
+    `SELECT * FROM ${section.table} WHERE slug = $1`,
     [slug],
   );
   return res.rows[0] ?? null;
 }
 
 export type FacetCount = { value: string; count: number };
+export type FacetGroup = {
+  param: string;
+  label: string;
+  counts: FacetCount[];
+};
 
-// Counts per category value, used to label the filter controls.
-export async function getFacetCounts(): Promise<{
-  gramStain: FacetCount[];
-  shape: FacetCount[];
-  arrangement: FacetCount[];
+export async function getSectionFacets(sectionKey: SectionKey): Promise<{
   total: number;
+  groups: FacetGroup[];
 }> {
+  const section = SECTIONS[sectionKey];
   const db = await getDb();
-  const facet = async (column: string) =>
-    (
-      await db.query<FacetCount>(
-        `SELECT ${column} AS value, COUNT(*)::int AS count
-         FROM bacteria GROUP BY ${column} ORDER BY count DESC, value`,
-      )
-    ).rows;
 
-  const [gramStain, shape, arrangement, totalRes] = await Promise.all([
-    facet("gram_stain"),
-    facet("shape"),
-    facet("arrangement"),
-    db.query<{ count: number }>(`SELECT COUNT(*)::int AS count FROM bacteria`),
-  ]);
+  const groups: FacetGroup[] = [];
+  for (const facet of section.facets) {
+    const res = await db.query<FacetCount>(
+      `SELECT ${facet.column} AS value, COUNT(*)::int AS count
+       FROM ${section.table}
+       GROUP BY ${facet.column}
+       ORDER BY count DESC, value`,
+    );
+    groups.push({ param: facet.param, label: facet.label, counts: res.rows });
+  }
 
-  return {
-    gramStain,
-    shape,
-    arrangement,
-    total: totalRes.rows[0]?.count ?? 0,
-  };
+  const totalRes = await db.query<{ count: number }>(
+    `SELECT COUNT(*)::int AS count FROM ${section.table}`,
+  );
+
+  return { total: totalRes.rows[0]?.count ?? 0, groups };
 }

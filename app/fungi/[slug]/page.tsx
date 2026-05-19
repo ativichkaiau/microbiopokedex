@@ -5,10 +5,10 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  return microbeMetadata("bacteria", slug);
+  return microbeMetadata("fungi", slug);
 }
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  return <MicrobeDetail sectionKey="bacteria" slug={slug} />;
+  return <MicrobeDetail sectionKey="fungi" slug={slug} />;
 }
