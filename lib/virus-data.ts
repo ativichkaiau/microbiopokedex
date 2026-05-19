@@ -688,4 +688,384 @@ export const VIRUSES: Virus[] = [
     description:
       "Double-stranded segmented RNA virus, nearly ubiquitous and usually asymptomatic. Studied as an oncolytic agent and a model of viral pathogenesis.",
   },
+  {
+    slug: "human-herpesvirus-7",
+    name: "HHV-7",
+    scientificName: "Human betaherpesvirus 7",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Double-stranded DNA herpesvirus that is near-universal and T-cell tropic. Causes some cases of roseola and febrile illness in young children.",
+  },
+  {
+    slug: "herpes-b-virus",
+    name: "Herpes B",
+    scientificName: "Macacine alphaherpesvirus 1",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Macaque herpesvirus. Rare zoonotic monkey-bite exposure causes near-uniformly fatal ascending encephalomyelitis without prophylaxis.",
+  },
+  {
+    slug: "human-bocavirus",
+    name: "Bocavirus",
+    scientificName: "Human bocavirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Parvoviridae",
+    description:
+      "Small single-stranded DNA parvovirus. Detected in young children with wheezing, bronchiolitis, and gastroenteritis, often as a co-infection.",
+  },
+  {
+    slug: "adeno-associated-virus",
+    name: "AAV",
+    scientificName: "Adeno-associated virus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Parvoviridae",
+    description:
+      "Replication-defective single-stranded DNA dependoparvovirus needing a helper virus. Non-pathogenic and the leading in-vivo gene-therapy vector.",
+  },
+  {
+    slug: "ki-polyomavirus",
+    name: "KI polyomavirus",
+    scientificName: "KI polyomavirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Polyomaviridae",
+    description:
+      "Double-stranded DNA polyomavirus found in respiratory secretions. Of uncertain pathogenicity; usually an incidental co-detection.",
+  },
+  {
+    slug: "torque-teno-virus",
+    name: "Torque teno virus",
+    scientificName: "Torque teno virus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Anelloviridae",
+    description:
+      "Tiny circular single-stranded DNA anellovirus carried by nearly everyone. Non-pathogenic; its load is studied as a marker of immune competence.",
+  },
+  {
+    slug: "tanapox-virus",
+    name: "Tanapox",
+    scientificName: "Tanapox virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "African yatapoxvirus from monkeys. Causes a febrile illness with one or a few large nodular skin lesions that resolve over weeks.",
+  },
+  {
+    slug: "pseudocowpox-virus",
+    name: "Pseudocowpox",
+    scientificName: "Pseudocowpox virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "Parapoxvirus of cattle udders. Contact causes 'milker's nodule' — a solitary firm reddish nodule on the hands of dairy workers.",
+  },
+  {
+    slug: "enterovirus-71",
+    name: "Enterovirus 71",
+    scientificName: "Enterovirus A71",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA enterovirus. Causes hand-foot-and-mouth disease with a tendency for severe brainstem encephalitis and large outbreaks in Asia.",
+  },
+  {
+    slug: "human-parechovirus",
+    name: "Parechovirus",
+    scientificName: "Human parechovirus",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA picornavirus. A frequent cause of neonatal sepsis-like illness, meningoencephalitis, and rash in infants.",
+  },
+  {
+    slug: "aichi-virus",
+    name: "Aichi virus",
+    scientificName: "Aichivirus A",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA kobuvirus linked to shellfish. An uncommon cause of gastroenteritis and traveler's diarrhea worldwide.",
+  },
+  {
+    slug: "saffold-virus",
+    name: "Saffold virus",
+    scientificName: "Saffold virus",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA cardiovirus, the first human Theiler-like virus. Common in childhood; a possible contributor to enteric and respiratory illness.",
+  },
+  {
+    slug: "saint-louis-encephalitis-virus",
+    name: "St. Louis encephalitis",
+    scientificName: "Saint Louis encephalitis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Mosquito-borne flavivirus cycling in birds across the Americas. Mostly subclinical, but causes encephalitis with higher severity in the elderly.",
+  },
+  {
+    slug: "powassan-virus",
+    name: "Powassan",
+    scientificName: "Powassan virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "North American tick-borne flavivirus transmitted within minutes of attachment. Causes severe encephalitis with frequent neurologic sequelae.",
+  },
+  {
+    slug: "murray-valley-encephalitis-virus",
+    name: "Murray Valley encephalitis",
+    scientificName: "Murray Valley encephalitis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Australian mosquito-borne flavivirus maintained in water birds. Rare but causes severe encephalitis, especially in northern Australia.",
+  },
+  {
+    slug: "kyasanur-forest-disease-virus",
+    name: "Kyasanur Forest disease",
+    scientificName: "Kyasanur Forest disease virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Tick-borne flavivirus of southern India. Causes a biphasic hemorrhagic fever with later neurologic involvement; linked to monkey die-offs.",
+  },
+  {
+    slug: "gb-virus-c",
+    name: "GB virus C",
+    scientificName: "Human pegivirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Blood-borne pegivirus related to hepatitis C but apparently non-pathogenic. Persistent infection is associated with slower HIV progression.",
+  },
+  {
+    slug: "western-equine-encephalitis-virus",
+    name: "WEE virus",
+    scientificName: "Western equine encephalitis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Mosquito-borne alphavirus of the western Americas. Causes encephalitis, generally milder than eastern equine but severe in infants.",
+  },
+  {
+    slug: "venezuelan-equine-encephalitis-virus",
+    name: "VEE virus",
+    scientificName: "Venezuelan equine encephalitis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Mosquito-borne alphavirus with explosive equine and human epizootics. Causes a flu-like illness and occasional encephalitis; highly infectious as an aerosol.",
+  },
+  {
+    slug: "ross-river-virus",
+    name: "Ross River",
+    scientificName: "Ross River virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Australian mosquito-borne alphavirus. Causes epidemic polyarthritis with rash and prolonged, sometimes months-long, joint pain.",
+  },
+  {
+    slug: "mayaro-virus",
+    name: "Mayaro",
+    scientificName: "Mayaro virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Neotropical mosquito-borne alphavirus of South America. Causes a chikungunya-like febrile illness with persistent arthralgia.",
+  },
+  {
+    slug: "sindbis-virus",
+    name: "Sindbis",
+    scientificName: "Sindbis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Widely distributed mosquito-borne alphavirus and a key molecular-biology model. Human disease is a self-limited fever, rash, and arthralgia.",
+  },
+  {
+    slug: "oropouche-virus",
+    name: "Oropouche",
+    scientificName: "Oropouche virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Midge-borne segmented RNA orthobunyavirus of the Americas. Causes large urban outbreaks of a dengue-like febrile illness, sometimes with meningitis.",
+  },
+  {
+    slug: "la-crosse-virus",
+    name: "La Crosse",
+    scientificName: "La Crosse virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Mosquito-borne segmented RNA orthobunyavirus of the US Midwest. A leading cause of pediatric arboviral encephalitis and seizures.",
+  },
+  {
+    slug: "toscana-virus",
+    name: "Toscana",
+    scientificName: "Toscana virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Sandfly-borne segmented RNA phlebovirus of the Mediterranean. A major summer cause of aseptic meningitis and meningoencephalitis.",
+  },
+  {
+    slug: "sfts-virus",
+    name: "SFTS virus",
+    scientificName: "Dabie bandavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Tick-borne segmented RNA phlebovirus in East Asia. Causes severe fever with thrombocytopenia syndrome — high fever, low platelets, and multiorgan failure.",
+  },
+  {
+    slug: "hantaan-virus",
+    name: "Hantaan",
+    scientificName: "Hantaan orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "Rodent-borne segmented RNA hantavirus of East Asia. The prototype cause of hemorrhagic fever with renal syndrome (Korean hemorrhagic fever).",
+  },
+  {
+    slug: "andes-virus",
+    name: "Andes",
+    scientificName: "Andes orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "South American rodent-borne hantavirus causing hantavirus pulmonary syndrome, and the only hantavirus with documented person-to-person spread.",
+  },
+  {
+    slug: "junin-virus",
+    name: "Junín",
+    scientificName: "Junín mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Rodent-borne segmented RNA arenavirus of the Argentine pampas. Causes Argentine hemorrhagic fever; preventable with the Candid#1 vaccine.",
+  },
+  {
+    slug: "machupo-virus",
+    name: "Machupo",
+    scientificName: "Machupo mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Rodent-borne arenavirus of Bolivia. Causes Bolivian hemorrhagic fever with bleeding and neurologic signs and high mortality.",
+  },
+  {
+    slug: "sudan-ebolavirus",
+    name: "Sudan ebolavirus",
+    scientificName: "Sudan ebolavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Filamentous negative-sense RNA filovirus distinct from Zaire ebolavirus. Causes recurrent Ebola virus disease outbreaks with no licensed vaccine.",
+  },
+  {
+    slug: "vesicular-stomatitis-virus",
+    name: "VSV",
+    scientificName: "Vesicular stomatitis virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "Bullet-shaped negative-sense RNA rhabdovirus of livestock. Causes mild flu-like illness in handlers and is a key vaccine and oncolytic vector.",
+  },
+  {
+    slug: "chandipura-virus",
+    name: "Chandipura",
+    scientificName: "Chandipura vesiculovirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "Sandfly-borne negative-sense RNA rhabdovirus of India. Causes rapidly progressive, often fatal pediatric encephalitis in outbreaks.",
+  },
+  {
+    slug: "colorado-tick-fever-virus",
+    name: "Colorado tick fever",
+    scientificName: "Colorado tick fever virus",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Reoviridae",
+    description:
+      "Double-stranded segmented RNA coltivirus from Rocky Mountain wood ticks. Causes a biphasic 'saddleback' fever; the virus persists in red cells.",
+  },
+  {
+    slug: "influenza-c-virus",
+    name: "Influenza C",
+    scientificName: "Influenza C virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Orthomyxoviridae",
+    description:
+      "Segmented negative-sense RNA virus with only mild upper-respiratory illness, mostly in children. Does not cause epidemics or pandemics.",
+  },
+  {
+    slug: "htlv-2",
+    name: "HTLV-2",
+    scientificName: "Human T-lymphotropic virus 2",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Retroviridae",
+    description:
+      "Retrovirus endemic in some indigenous and injection-drug-use populations. Largely non-pathogenic, with a weak link to neurologic disease.",
+  },
+  {
+    slug: "newcastle-disease-virus",
+    name: "Newcastle disease virus",
+    scientificName: "Avian orthoavulavirus 1",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Paramyxoviridae",
+    description:
+      "Negative-sense RNA avian paramyxovirus. Causes mild self-limited conjunctivitis in poultry workers and is studied as an oncolytic agent.",
+  },
+  {
+    slug: "borna-disease-virus",
+    name: "Borna disease virus",
+    scientificName: "Borna disease virus 1",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Bornaviridae",
+    description:
+      "Negative-sense RNA virus that replicates in the nucleus and persists in neurons. Linked to rare, often fatal human encephalitis from infected mammals.",
+  },
 ];
