@@ -1,4 +1,3 @@
-import path from "node:path";
 import { PGlite } from "@electric-sql/pglite";
 import {
   BACTERIA,
@@ -7,18 +6,17 @@ import {
   type Shape,
 } from "./bacteria-data";
 
-// Embedded Postgres persisted to a local directory. Swap this for a real
-// Postgres server later by replacing getDb() with a node-postgres pool — the
+// In-memory embedded Postgres, reseeded from the dataset on startup. This
+// runs identically on a serverless host (read-only filesystem) and locally.
+// Swap getDb() for a node-postgres pool to use a persistent server — the
 // query helpers below speak standard SQL.
-const DATA_DIR = path.join(process.cwd(), ".pgdata");
-
 type GlobalWithPg = typeof globalThis & {
   __pglitePokedex?: Promise<PGlite>;
 };
 const globalForPg = globalThis as GlobalWithPg;
 
 async function init(): Promise<PGlite> {
-  const db = new PGlite(DATA_DIR);
+  const db = new PGlite();
   await db.waitReady;
 
   await db.exec(`
