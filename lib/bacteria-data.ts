@@ -848,4 +848,284 @@ export const BACTERIA: Bacterium[] = [
     description:
       "Anaerobic gram-negative cocci in clusters, resident in the mouth and gut. A low-virulence commensal occasionally implicated in bites, sinusitis, and endocarditis.",
   },
+  {
+    slug: "staphylococcus-lugdunensis",
+    name: "Staph lugdunensis",
+    scientificName: "Staphylococcus lugdunensis",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "clusters",
+    description:
+      "Coagulase-negative gram-positive cocci in clusters, but unusually aggressive — causes destructive native-valve endocarditis like S. aureus.",
+  },
+  {
+    slug: "streptococcus-anginosus",
+    name: "S. anginosus group",
+    scientificName: "Streptococcus anginosus",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Viridans-group gram-positive cocci in chains with a caramel odor. Notorious for forming deep-seated abscesses (brain, liver, thoracic).",
+  },
+  {
+    slug: "streptococcus-suis",
+    name: "S. suis",
+    scientificName: "Streptococcus suis",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "pairs",
+    description:
+      "Encapsulated gram-positive cocci of pigs. A zoonotic cause of meningitis and deafness in pork handlers and slaughterhouse workers.",
+  },
+  {
+    slug: "abiotrophia-defectiva",
+    name: "Nutritionally variant strep",
+    scientificName: "Abiotrophia defectiva",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Pyridoxal-dependent 'nutritionally variant streptococcus' that needs supplemented media to grow. Causes culture-negative endocarditis.",
+  },
+  {
+    slug: "rothia-mucilaginosa",
+    name: "Rothia",
+    scientificName: "Rothia mucilaginosa",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "clusters",
+    description:
+      "Mucoid gram-positive oral commensal coccus. An uncommon cause of endocarditis and bacteremia in neutropenic and intravenous-drug-use patients.",
+  },
+  {
+    slug: "aerococcus-urinae",
+    name: "Aerococcus",
+    scientificName: "Aerococcus urinae",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "tetrads",
+    description:
+      "Gram-positive cocci in tetrads, easily mistaken for staphylococci or enterococci. Causes UTIs and occasional endocarditis in elderly men.",
+  },
+  {
+    slug: "leuconostoc-mesenteroides",
+    name: "Leuconostoc",
+    scientificName: "Leuconostoc mesenteroides",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "pairs",
+    description:
+      "Gram-positive cocci in pairs and chains with intrinsic vancomycin resistance. A rare opportunist in catheter and gut-compromised patients.",
+  },
+  {
+    slug: "arcanobacterium-haemolyticum",
+    name: "Arcanobacterium",
+    scientificName: "Arcanobacterium haemolyticum",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Slender gram-positive rod causing pharyngitis with a scarlatiniform rash in adolescents and young adults, mimicking group A strep.",
+  },
+  {
+    slug: "corynebacterium-jeikeium",
+    name: "C. jeikeium",
+    scientificName: "Corynebacterium jeikeium",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "palisades",
+    description:
+      "Lipophilic, multidrug-resistant gram-positive rod in palisades. Causes line sepsis and prosthetic infections in neutropenic patients.",
+  },
+  {
+    slug: "bifidobacterium-bifidum",
+    name: "Bifidobacterium",
+    scientificName: "Bifidobacterium bifidum",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Branched anaerobic gram-positive rod dominating the breast-fed infant gut. A keystone commensal and common probiotic; rarely pathogenic.",
+  },
+  {
+    slug: "clostridium-sordellii",
+    name: "C. sordellii",
+    scientificName: "Paeniclostridium sordellii",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Spore-forming anaerobic gram-positive rod. Causes a fulminant toxic shock (afebrile, leukemoid, refractory shock) after childbirth or abortion.",
+  },
+  {
+    slug: "brevibacterium-casei",
+    name: "Brevibacterium",
+    scientificName: "Brevibacterium casei",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Gram-positive rod of human skin responsible for foot and cheese odor. A rare cause of catheter-related bacteremia in immunocompromised hosts.",
+  },
+  {
+    slug: "mobiluncus-curtisii",
+    name: "Mobiluncus",
+    scientificName: "Mobiluncus curtisii",
+    gramStain: "variable",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Curved, motile gram-variable anaerobe of the vaginal flora. Found in bacterial vaginosis and seen as motile crescents on wet mount.",
+  },
+  {
+    slug: "burkholderia-pseudomallei",
+    name: "Melioidosis bacillus",
+    scientificName: "Burkholderia pseudomallei",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Soil and water gram-negative rod with bipolar 'safety-pin' staining. Causes melioidosis: abscesses and sepsis in SE Asia and northern Australia.",
+  },
+  {
+    slug: "haemophilus-ducreyi",
+    name: "Chancroid bacillus",
+    scientificName: "Haemophilus ducreyi",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "chains",
+    description:
+      "Fastidious gram-negative coccobacillus in 'school-of-fish' chains. Causes chancroid: painful genital ulcers with tender suppurative buboes.",
+  },
+  {
+    slug: "aggregatibacter-actinomycetemcomitans",
+    name: "Aggregatibacter",
+    scientificName: "Aggregatibacter actinomycetemcomitans",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Fastidious gram-negative coccobacillus (a HACEK organism). Causes aggressive localized periodontitis and indolent endocarditis.",
+  },
+  {
+    slug: "cardiobacterium-hominis",
+    name: "Cardiobacterium",
+    scientificName: "Cardiobacterium hominis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Pleomorphic gram-negative rod of the throat flora (a HACEK organism). A classic cause of slow, culture-elusive native-valve endocarditis.",
+  },
+  {
+    slug: "cronobacter-sakazakii",
+    name: "Cronobacter",
+    scientificName: "Cronobacter sakazakii",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Environmentally hardy gram-negative enteric rod. Contaminated powdered infant formula causes neonatal meningitis and necrotizing enterocolitis.",
+  },
+  {
+    slug: "plesiomonas-shigelloides",
+    name: "Plesiomonas",
+    scientificName: "Plesiomonas shigelloides",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Motile gram-negative rod from freshwater and shellfish. Causes traveler's and seafood-associated gastroenteritis, occasionally invasive.",
+  },
+  {
+    slug: "chromobacterium-violaceum",
+    name: "Chromobacterium",
+    scientificName: "Chromobacterium violaceum",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Soil and water gram-negative rod producing purple violacein pigment. Rare but causes fulminant sepsis with abscesses, often in chronic granulomatous disease.",
+  },
+  {
+    slug: "rickettsia-prowazekii",
+    name: "Epidemic typhus rickettsia",
+    scientificName: "Rickettsia prowazekii",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Obligate intracellular gram-negative coccobacillus spread by the body louse. Causes epidemic typhus and recrudescent Brill-Zinsser disease.",
+  },
+  {
+    slug: "orientia-tsutsugamushi",
+    name: "Scrub typhus agent",
+    scientificName: "Orientia tsutsugamushi",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Obligate intracellular bacterium transmitted by chigger mites in Asia-Pacific. Causes scrub typhus with an eschar at the bite site.",
+  },
+  {
+    slug: "borrelia-recurrentis",
+    name: "Relapsing-fever spirochete",
+    scientificName: "Borrelia recurrentis",
+    gramStain: "negative",
+    shape: "spirochete",
+    arrangement: "single",
+    description:
+      "Loosely coiled spirochete transmitted by the body louse. Antigenic variation produces louse-borne relapsing fever's recurring fever spikes.",
+  },
+  {
+    slug: "yersinia-pseudotuberculosis",
+    name: "Y. pseudotuberculosis",
+    scientificName: "Yersinia pseudotuberculosis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Zoonotic gram-negative coccobacillus. Causes mesenteric adenitis mimicking appendicitis and a scarlatiniform far-east fever.",
+  },
+  {
+    slug: "shigella-sonnei",
+    name: "Shigella sonnei",
+    scientificName: "Shigella sonnei",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Non-motile gram-negative enteric rod. The predominant cause of bacillary dysentery (shigellosis) in industrialized countries.",
+  },
+  {
+    slug: "klebsiella-oxytoca",
+    name: "Klebsiella oxytoca",
+    scientificName: "Klebsiella oxytoca",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Encapsulated gram-negative rod. A nosocomial pathogen and the cause of antibiotic-associated hemorrhagic colitis via cytotoxin production.",
+  },
+  {
+    slug: "fusobacterium-necrophorum",
+    name: "F. necrophorum",
+    scientificName: "Fusobacterium necrophorum",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Anaerobic gram-negative rod. Causes Lemierre's syndrome — pharyngitis progressing to septic internal jugular thrombophlebitis with emboli.",
+  },
+  {
+    slug: "bilophila-wadsworthia",
+    name: "Bilophila",
+    scientificName: "Bilophila wadsworthia",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Bile-resistant anaerobic gram-negative rod of the gut. Recovered from gangrenous and perforated appendicitis and other intra-abdominal sepsis.",
+  },
 ];
