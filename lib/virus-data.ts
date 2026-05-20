@@ -1068,4 +1068,314 @@ export const VIRUSES: Virus[] = [
     description:
       "Negative-sense RNA virus that replicates in the nucleus and persists in neurons. Linked to rare, often fatal human encephalitis from infected mammals.",
   },
+  {
+    slug: "wu-polyomavirus",
+    name: "WU polyomavirus",
+    scientificName: "WU polyomavirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Polyomaviridae",
+    description:
+      "Double-stranded DNA polyomavirus first found in pediatric respiratory secretions. Pathogenicity is uncertain; most often a co-detection.",
+  },
+  {
+    slug: "trichodysplasia-spinulosa-polyomavirus",
+    name: "TS polyomavirus",
+    scientificName: "Trichodysplasia spinulosa-associated polyomavirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Polyomaviridae",
+    description:
+      "Skin polyomavirus reactivating in heavy immunosuppression. Causes trichodysplasia spinulosa: facial keratin spicules and alopecia of the eyebrows.",
+  },
+  {
+    slug: "camelpox-virus",
+    name: "Camelpox",
+    scientificName: "Camelpox virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "Orthopoxvirus of dromedary camels, closely related to variola. Causes rare zoonotic pustular skin lesions in camel handlers.",
+  },
+  {
+    slug: "human-coronavirus-229e",
+    name: "HCoV-229E",
+    scientificName: "Human coronavirus 229E",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Coronaviridae",
+    description:
+      "Endemic alphacoronavirus circulating worldwide. One of several common-cold coronaviruses causing mild upper-respiratory illness.",
+  },
+  {
+    slug: "human-coronavirus-nl63",
+    name: "HCoV-NL63",
+    scientificName: "Human coronavirus NL63",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Coronaviridae",
+    description:
+      "Endemic alphacoronavirus that uses ACE2 like SARS-CoV-2. Causes upper-respiratory illness and is a notable cause of croup in children.",
+  },
+  {
+    slug: "human-coronavirus-hku1",
+    name: "HCoV-HKU1",
+    scientificName: "Human coronavirus HKU1",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Coronaviridae",
+    description:
+      "Endemic betacoronavirus first identified in Hong Kong. Causes common-cold-like illness with occasional lower respiratory disease in the elderly.",
+  },
+  {
+    slug: "hiv-2",
+    name: "HIV-2",
+    scientificName: "Human immunodeficiency virus 2",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Retroviridae",
+    description:
+      "Retrovirus of West African origin, less transmissible and slower-progressing than HIV-1. Intrinsically resistant to non-nucleoside reverse-transcriptase inhibitors.",
+  },
+  {
+    slug: "puumala-virus",
+    name: "Puumala",
+    scientificName: "Puumala orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "European bank-vole-borne segmented RNA hantavirus. Causes nephropathia epidemica, a milder hemorrhagic fever with renal syndrome.",
+  },
+  {
+    slug: "seoul-virus",
+    name: "Seoul",
+    scientificName: "Seoul orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "Rat-borne hantavirus distributed worldwide via shipping. Causes hemorrhagic fever with renal syndrome and outbreaks among pet-rat owners.",
+  },
+  {
+    slug: "dobrava-belgrade-virus",
+    name: "Dobrava-Belgrade",
+    scientificName: "Dobrava-Belgrade orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "Yellow-necked-mouse-borne hantavirus of the Balkans. Causes the most severe European hemorrhagic fever with renal syndrome.",
+  },
+  {
+    slug: "lujo-virus",
+    name: "Lujo",
+    scientificName: "Lujo mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Old World arenavirus first identified in a 2008 southern-African nosocomial outbreak. Causes Lujo hemorrhagic fever with very high mortality.",
+  },
+  {
+    slug: "chapare-virus",
+    name: "Chapare",
+    scientificName: "Chapare mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Rodent-borne Bolivian arenavirus. Causes Chapare hemorrhagic fever with nosocomial transmission and high case fatality.",
+  },
+  {
+    slug: "sabia-virus",
+    name: "Sabiá",
+    scientificName: "Sabiá mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Brazilian arenavirus. Causes severe Brazilian hemorrhagic fever; multiple laboratory infections highlighted its hazard.",
+  },
+  {
+    slug: "heartland-virus",
+    name: "Heartland",
+    scientificName: "Heartland bandavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Lone-Star-tick-borne segmented RNA phlebovirus of the central US. Causes a febrile illness with leukopenia and thrombocytopenia resembling ehrlichiosis.",
+  },
+  {
+    slug: "bourbon-virus",
+    name: "Bourbon",
+    scientificName: "Bourbon virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Orthomyxoviridae",
+    description:
+      "Tick-borne thogotovirus of the central US. Causes a rare febrile illness with leukopenia and thrombocytopenia, occasionally fatal.",
+  },
+  {
+    slug: "jamestown-canyon-virus",
+    name: "Jamestown Canyon",
+    scientificName: "Jamestown Canyon virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "North American mosquito-borne orthobunyavirus. Causes febrile illness and meningoencephalitis, mostly in adults in the upper Midwest.",
+  },
+  {
+    slug: "snowshoe-hare-virus",
+    name: "Snowshoe hare virus",
+    scientificName: "Snowshoe hare orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Canadian mosquito-borne orthobunyavirus in the California encephalitis serogroup. Causes pediatric meningoencephalitis at northern latitudes.",
+  },
+  {
+    slug: "bunyamwera-virus",
+    name: "Bunyamwera",
+    scientificName: "Bunyamwera orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Type species of the Orthobunyavirus genus, mosquito-borne across Africa. Causes a mild self-limited febrile arthralgia with occasional rash.",
+  },
+  {
+    slug: "bundibugyo-ebolavirus",
+    name: "Bundibugyo ebolavirus",
+    scientificName: "Bundibugyo ebolavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Filovirus first identified in Uganda in 2007. Causes Ebola virus disease with somewhat lower mortality than Zaire ebolavirus.",
+  },
+  {
+    slug: "tai-forest-ebolavirus",
+    name: "Taï Forest ebolavirus",
+    scientificName: "Taï Forest ebolavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Côte d'Ivoire chimpanzee-associated filovirus. A single recognized human case, contracted while performing a chimpanzee autopsy.",
+  },
+  {
+    slug: "reston-ebolavirus",
+    name: "Reston ebolavirus",
+    scientificName: "Reston ebolavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Filipino filovirus of macaques and pigs. Causes severe disease in non-human primates but only asymptomatic seroconversion in humans.",
+  },
+  {
+    slug: "lloviu-virus",
+    name: "Lloviu",
+    scientificName: "Lloviu cuevavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Bat-borne filovirus (genus Cuevavirus) from Spanish and Hungarian caves. Linked to mass die-offs in Schreiber's bats; uncertain human pathogenicity.",
+  },
+  {
+    slug: "mokola-virus",
+    name: "Mokola",
+    scientificName: "Mokola lyssavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "African lyssavirus most often isolated from shrews and pets. Causes rabies-like encephalitis not reliably prevented by standard rabies vaccine.",
+  },
+  {
+    slug: "australian-bat-lyssavirus",
+    name: "Australian bat lyssavirus",
+    scientificName: "Australian bat lyssavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "Bat-borne lyssavirus closely related to rabies. Bites or scratches from Australian flying foxes cause fatal encephalitis; rabies vaccine cross-protects.",
+  },
+  {
+    slug: "european-bat-lyssavirus",
+    name: "European bat lyssavirus",
+    scientificName: "European bat lyssavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "Insectivorous-bat-borne lyssavirus in Europe. Rare human cases cause rabies-like fatal encephalitis after bat bites or scratches.",
+  },
+  {
+    slug: "cosavirus",
+    name: "Cosavirus",
+    scientificName: "Cosavirus A",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA picornavirus shed in stool. Detected in children with acute flaccid paralysis and gastroenteritis; pathogenic role unclear.",
+  },
+  {
+    slug: "salivirus",
+    name: "Salivirus",
+    scientificName: "Salivirus A",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA picornavirus first found in sewage and stool. Linked to outbreaks of acute gastroenteritis worldwide.",
+  },
+  {
+    slug: "banna-virus",
+    name: "Banna virus",
+    scientificName: "Banna virus",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Reoviridae",
+    description:
+      "Double-stranded segmented RNA seadornavirus in Asia. Tick- and mosquito-associated; isolated from patients with febrile illness and encephalitis.",
+  },
+  {
+    slug: "influenza-d-virus",
+    name: "Influenza D",
+    scientificName: "Influenza D virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Orthomyxoviridae",
+    description:
+      "Segmented negative-sense RNA orthomyxovirus of cattle. Sporadic seroconversion in livestock workers; no established human disease.",
+  },
+  {
+    slug: "cedar-henipavirus",
+    name: "Cedar henipavirus",
+    scientificName: "Cedar henipavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Paramyxoviridae",
+    description:
+      "Australian fruit-bat henipavirus, a relative of Nipah and Hendra. Apparently non-pathogenic, used as a comparator for henipavirus research.",
+  },
+  {
+    slug: "simian-foamy-virus",
+    name: "Simian foamy virus",
+    scientificName: "Simian foamy virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Retroviridae",
+    description:
+      "Spumaretrovirus of nonhuman primates. Zoonotic exposure causes persistent but apparently non-pathogenic infection in primate handlers.",
+  },
 ];
