@@ -43,7 +43,7 @@ export default function ThemeToggle() {
     <div
       role="radiogroup"
       aria-label="Theme"
-      className="shadow-soft flex items-center gap-0.5 rounded-full border border-border bg-surface p-1"
+      className="glass-soft flex items-center gap-0.5 rounded-full p-1"
     >
       {MODES.map((m) => {
         const active = mode === m.id;

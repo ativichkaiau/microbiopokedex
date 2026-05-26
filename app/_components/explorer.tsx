@@ -37,23 +37,29 @@ export default function Explorer({
   return (
     <main className="mx-auto w-full max-w-6xl px-6 pb-20 pt-12">
       <section className="flex flex-col items-center text-center">
-        <span className="shadow-soft inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-semibold text-foreground">
+        <span className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground">
           <span aria-hidden>📍</span> {section.navLabel} Grid
         </span>
 
-        <h1 className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
-          <span className="rounded-2xl bg-foreground px-4 py-2 italic text-surface">
-            {"///MICROBE"}
-          </span>
-          <span>Pokedex</span>
-        </h1>
+        <div className="relative mt-7">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-28 w-80 max-w-[90vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/25 blur-3xl"
+          />
+          <h1 className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
+            <span className="shadow-card rounded-2xl bg-foreground px-4 py-2 italic text-surface">
+              {"///MICROBE"}
+            </span>
+            <span>Pokedex</span>
+          </h1>
+        </div>
 
         <p className="text-tech mt-6 text-xs sm:text-sm">
           <span className="text-muted">{section.navLabel} {"//"}</span>{" "}
           <span className="text-accent">{section.eyebrow}</span>
         </p>
 
-        <nav className="shadow-soft mt-7 flex items-center gap-0.5 rounded-full border border-border bg-surface p-1">
+        <nav className="glass-soft mt-7 flex items-center gap-0.5 rounded-full p-1">
           {SECTION_ORDER.map((key) => {
             const s = SECTIONS[key];
             const isActive = key === sectionKey;
@@ -74,7 +80,7 @@ export default function Explorer({
           })}
         </nav>
 
-        <span className="shadow-soft mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-semibold text-accent">
+        <span className="glass-soft mt-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-accent">
           <span aria-hidden>⚡</span> Database Synced ·{" "}
           <span className="font-mono">
             {String(facets.total).padStart(2, "0")}
@@ -83,16 +89,16 @@ export default function Explorer({
         </span>
       </section>
 
-      <section className="shadow-card mt-12 rounded-3xl border border-border bg-surface p-6 sm:p-8">
+      <section className="glass mt-12 rounded-3xl p-6 sm:p-8">
         <div className="mb-6 flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-blue" />
+          <span className="h-2.5 w-2.5 rounded-full bg-blue shadow-[0_0_12px_2px_var(--blue)]" />
           <h2 className="text-lg font-bold text-foreground">Filter Stream</h2>
           <span className="text-tech rounded-full bg-blue-soft px-2.5 py-1 text-[10px] text-blue">
             Live DB
           </span>
         </div>
 
-        <div className="space-y-7 rounded-2xl border border-border bg-surface-2 p-5 sm:p-6">
+        <div className="glass-inset space-y-7 rounded-2xl p-5 sm:p-6">
           <form method="get" className="flex gap-2.5">
             {section.facets.map((f) =>
               active[f.param] ? (
@@ -109,7 +115,7 @@ export default function Explorer({
               name="q"
               defaultValue={active.q ?? ""}
               placeholder={section.searchPlaceholder}
-              className="w-full rounded-xl border border-border bg-field px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted focus:border-accent"
+              className="w-full rounded-xl border border-glass-border bg-white/55 px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted focus:border-accent dark:bg-white/5"
             />
             <button
               type="submit"
@@ -137,8 +143,8 @@ export default function Explorer({
                       aria-pressed={isActive}
                       className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
                         isActive
-                          ? "shadow-soft border-accent bg-accent text-accent-ink"
-                          : "border-border bg-surface text-foreground hover:border-accent/60"
+                          ? "border-accent bg-accent text-accent-ink shadow-[0_4px_16px_-4px_var(--accent)]"
+                          : "border-glass-border bg-glass text-foreground hover:border-accent/60"
                       }`}
                     >
                       {value}
@@ -161,7 +167,7 @@ export default function Explorer({
           <div className="mt-5 flex justify-end">
             <Link
               href={section.listPath}
-              className="rounded-xl border border-border bg-surface px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface-2"
+              className="glass-soft rounded-xl px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
             >
               Clear filters
             </Link>
@@ -182,7 +188,7 @@ export default function Explorer({
                 <li key={item.slug}>
                   <Link
                     href={`${section.detailPath}/${item.slug}`}
-                    className="shadow-soft hover:shadow-card group flex h-full flex-col rounded-2xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-0.5"
+                    className="glass-soft hover:shadow-card group flex h-full flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
                   >
                     <div className="mb-3 flex items-start justify-between gap-2">
                       <div>
@@ -206,7 +212,7 @@ export default function Explorer({
                       {section.tags(item).map((tag) => (
                         <span
                           key={tag}
-                          className="text-tech rounded-full border border-border px-2.5 py-0.5 text-[10px] text-muted"
+                          className="text-tech rounded-full border border-glass-border px-2.5 py-0.5 text-[10px] text-muted"
                         >
                           {tag}
                         </span>

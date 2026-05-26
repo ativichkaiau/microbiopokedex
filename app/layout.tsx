@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import ThemeToggle from "./_components/theme-toggle";
+import Atmosphere from "./_components/atmosphere";
+import Intro from "./_components/intro";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +38,8 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
-        <header className="sticky top-0 z-20 border-b border-border bg-surface/60 backdrop-blur-md">
+        <Atmosphere />
+        <header className="sticky top-0 z-20 border-b border-glass-border bg-glass backdrop-blur-xl">
           <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3.5">
             <Link href="/" className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground text-lg font-black text-surface">
@@ -59,6 +62,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <Intro />
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ export async function microbeMetadata(
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="shadow-soft rounded-2xl border border-border bg-surface p-5">
+    <div className="glass-soft rounded-2xl p-5">
       <dt className="text-tech text-[10px] text-muted">{label}</dt>
       <dd className="mt-2 text-lg font-bold text-foreground">{value}</dd>
     </div>
@@ -43,12 +43,12 @@ export default async function MicrobeDetail({
     <main className="mx-auto w-full max-w-3xl px-6 pb-20 pt-12">
       <Link
         href={section.listPath}
-        className="shadow-soft inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/60"
+        className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/60"
       >
         ← Back to {section.navLabel.toLowerCase()}
       </Link>
 
-      <section className="shadow-card mt-7 rounded-3xl border border-border bg-surface p-7 sm:p-9">
+      <section className="glass mt-7 rounded-3xl p-7 sm:p-9">
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-tech text-[11px]">
@@ -85,7 +85,7 @@ export default async function MicrobeDetail({
           ))}
         </dl>
 
-        <div className="mt-8 rounded-2xl border border-border bg-surface-2 p-6">
+        <div className="glass-inset mt-8 rounded-2xl p-6">
           <h2 className="text-tech mb-3 text-[10px] text-muted">
             Pokédex entry
           </h2>
