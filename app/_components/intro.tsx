@@ -7,27 +7,27 @@ type Phase = "visible" | "closing" | "done";
 const STEPS = [
   {
     number: "01",
-    label: "SCAN",
-    title: "Prime the archive",
+    label: "CULTURE",
+    title: "Plate the library",
     description:
-      "Load the bacteria, virus, and fungi banks before you begin screening morphology, genome, and clinical signatures.",
-    tag: "TRI-DOMAIN INDEX",
+      "Wake the organism banks: bacteria, viruses, and fungi are staged like colonies on a diagnostic bench.",
+    tag: "CULTURE READY",
   },
   {
     number: "02",
-    label: "TRACE",
-    title: "Follow the signal",
+    label: "STAIN",
+    title: "Read the traits",
     description:
-      "Track a specimen from source traits to classification. The stream highlights the clues that separate look-alikes.",
-    tag: "CLASSIFICATION FLOW",
+      "Screen Gram pattern, morphology, genome, envelope, and fungal form without losing the specimen context.",
+    tag: "TRAITS TAGGED",
   },
   {
     number: "03",
-    label: "MATCH",
-    title: "Lock the identity",
+    label: "IDENTIFY",
+    title: "Open the entry",
     description:
-      "Match the pattern to the right Pokédex entry, then jump into richer cards for the organism behind the signal.",
-    tag: "POKÉDEX READY",
+      "Resolve the isolate into a Pokédex card with its taxonomy, phenotype, and clinical fingerprint.",
+    tag: "SPECIMEN LOCKED",
   },
 ] as const;
 
@@ -92,16 +92,16 @@ export default function Intro() {
       </button>
 
       <section className="relative z-10 flex min-h-dvh items-center justify-center px-5 py-8">
-        <div className="intro-card w-full max-w-[620px] rounded-[2rem] border border-white/10 bg-[#11131a]/78 px-6 py-6 shadow-[0_30px_90px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl sm:px-9 sm:py-8">
+        <div className="intro-card w-full max-w-[620px] rounded-[2rem] border border-white/10 bg-[#0d1518]/78 px-6 py-6 shadow-[0_30px_90px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl sm:px-9 sm:py-8">
           <div className="text-center">
             <p className="text-tech text-[11px] font-black text-[#c5a86a]">
-              VESTRIPPN3.0 MICROBE LAB
+              VESTRIPPN3.0 MICROBIOLOGY BENCH
             </p>
             <h1 className="mt-3 text-4xl font-black tracking-tight text-[#f3f5ee] sm:text-5xl">
               Microbe <span className="text-[#f2c566]">Pokédex</span>
             </h1>
             <p className="mt-3 text-sm font-semibold text-[#aeb7b4] sm:text-base">
-              Scan traits. Compare domains. Identify the signal.
+              Culture, stain, and classify the organism.
             </p>
           </div>
 
@@ -121,54 +121,65 @@ export default function Intro() {
                       <feMergeNode in="SourceGraphic" />
                     </feMerge>
                   </filter>
-                  <marker
-                    id="intro-arrow"
-                    markerHeight="14"
-                    markerWidth="14"
-                    orient="auto"
-                    refX="9"
-                    refY="5"
-                    viewBox="0 0 10 10"
-                  >
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f2c566" />
-                  </marker>
+                  <linearGradient id="plate-glow" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stopColor="#6fffe4" stopOpacity="0.46" />
+                    <stop offset="52%" stopColor="#6f9bff" stopOpacity="0.2" />
+                    <stop offset="100%" stopColor="#d784ff" stopOpacity="0.28" />
+                  </linearGradient>
                 </defs>
 
-                <path
-                  d="M145 145 C255 55 385 60 470 140 S610 220 690 125"
-                  className="intro-path intro-path-shadow"
-                />
-                <path
-                  d="M145 145 C255 55 385 60 470 140 S610 220 690 125"
-                  className="intro-path intro-path-hot"
-                  markerEnd="url(#intro-arrow)"
-                />
-                <path
-                  d="M430 138 C500 188 600 215 682 130"
-                  className="intro-path intro-path-dash"
-                />
+                <circle cx="380" cy="145" r="96" className="intro-plate" />
+                <circle cx="380" cy="145" r="72" className="intro-plate-ring" />
+                <ellipse cx="380" cy="145" rx="126" ry="102" fill="url(#plate-glow)" opacity="0.26" />
 
-                <g className="intro-node" transform="translate(98 108)">
-                  <circle cx="38" cy="38" r="36" fill="#2b2619" stroke="#b8954e" strokeWidth="3" />
-                  <circle cx="38" cy="38" r="15" fill="#f2c566" />
+                <g className="intro-colonies">
+                  <circle cx="333" cy="117" r="12" />
+                  <circle cx="408" cy="105" r="8" />
+                  <circle cx="431" cy="159" r="14" />
+                  <circle cx="357" cy="183" r="9" />
+                  <circle cx="391" cy="151" r="6" />
+                  <circle cx="316" cy="158" r="7" />
                 </g>
 
-                <g className="intro-node intro-node-delay" transform="translate(628 108)">
-                  <circle cx="38" cy="38" r="36" fill="#2b2619" stroke="#b8954e" strokeWidth="3" />
-                  <circle cx="38" cy="38" r="15" fill="#f2c566" />
+                <g className="intro-bacilli">
+                  <rect x="142" y="104" width="62" height="14" rx="7" transform="rotate(-18 173 111)" />
+                  <rect x="164" y="139" width="58" height="14" rx="7" transform="rotate(16 193 146)" />
+                  <rect x="124" y="170" width="48" height="13" rx="6.5" transform="rotate(-8 148 176.5)" />
+                  <circle cx="190" cy="190" r="9" />
+                  <circle cx="218" cy="193" r="9" />
+                  <circle cx="246" cy="190" r="9" />
                 </g>
+
+                <g className="intro-virions">
+                  <circle cx="590" cy="120" r="22" />
+                  <circle cx="590" cy="120" r="8" fill="#071013" opacity="0.88" />
+                  <path d="M590 90 V76 M590 164 V150 M560 120 H546 M634 120 H620 M569 99 L558 88 M611 141 L622 152 M611 99 L622 88 M569 141 L558 152" />
+                  <circle cx="650" cy="176" r="16" />
+                  <path d="M650 151 V139 M650 213 V201 M625 176 H613 M687 176 H675 M632 158 L623 149 M668 194 L677 203" />
+                </g>
+
+                <g className="intro-hyphae">
+                  <path d="M86 220 C135 190 160 230 210 206 S288 201 311 238" />
+                  <path d="M186 211 C185 185 203 166 232 154" />
+                  <path d="M238 203 C254 180 279 176 306 184" />
+                </g>
+
+                <path d="M280 77 H480" className="intro-scan-line" />
+                <path d="M380 58 V238" className="intro-scan-line intro-scan-line-vertical" />
 
                 <g filter="url(#intro-glow)">
-                  <circle cx="425" cy="148" r="18" fill="#ee6a49" />
-                  <circle cx="425" cy="148" r="46" fill="#ee6a49" opacity="0.18" />
+                  <circle cx="380" cy="145" r="16" fill="#5ff3d0" />
+                  <circle cx="380" cy="145" r="50" fill="#5ff3d0" opacity="0.11" />
                 </g>
-                <path d="M425 170 L425 252" stroke="#9fb2b4" strokeDasharray="4 7" opacity="0.34" />
 
-                <text x="97" y="222" className="intro-svg-label">
-                  SOURCE
+                <text x="110" y="82" className="intro-svg-label">
+                  BACTERIA
                 </text>
-                <text x="622" y="222" className="intro-svg-label">
-                  MATCH
+                <text x="548" y="82" className="intro-svg-label">
+                  VIRUSES
+                </text>
+                <text x="86" y="260" className="intro-svg-label">
+                  FUNGI
                 </text>
                 <rect x="346" y="246" width="158" height="30" rx="15" className="intro-chip" />
                 <text x="425" y="266" textAnchor="middle" className="intro-chip-text">
