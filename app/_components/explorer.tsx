@@ -46,6 +46,7 @@ const SINGULAR: Record<SectionKey, string> = {
   bacteria: "bacterium",
   viruses: "virus",
   fungi: "fungus",
+  parasites: "parasite",
 };
 
 function Stat({
@@ -92,18 +93,9 @@ export default function Explorer({
             <span aria-hidden>📍</span> Specimen Bench · {section.navLabel}
           </span>
 
-          <div className="relative mt-6">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute left-0 top-1/2 -z-10 h-24 w-72 max-w-full -translate-y-1/2 rounded-full bg-accent/25 blur-3xl"
-            />
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              <span className="shadow-card rounded-2xl bg-foreground px-3.5 py-1.5 italic text-surface">
-                {"///MICROBE"}
-              </span>
-              <span>Pokedex</span>
-            </div>
-          </div>
+          <p className="mt-6 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+            Microbe Pokédex
+          </p>
 
           <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
             Every {SINGULAR[sectionKey]} on the wards, with its own{" "}

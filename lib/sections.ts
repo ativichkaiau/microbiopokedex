@@ -1,15 +1,17 @@
 import { BACTERIA } from "./bacteria-data";
 import { VIRUSES } from "./virus-data";
 import { FUNGI } from "./fungi-data";
+import { PARASITES } from "./parasite-data";
 import {
   fungiMorphologyClasses,
   gramStainClasses,
   gramStainLabel,
+  parasiteGroupClasses,
   titleCase,
   virusGenomeClasses,
 } from "./labels";
 
-export type SectionKey = "bacteria" | "viruses" | "fungi";
+export type SectionKey = "bacteria" | "viruses" | "fungi" | "parasites";
 
 export type FacetDef = { param: string; column: string; label: string };
 
@@ -147,12 +149,55 @@ const SECTION_LIST: SectionDef[] = [
     }),
     tags: (r) => [String(r.grp)],
   },
+  {
+    key: "parasites",
+    table: "parasites",
+    navLabel: "Parasites",
+    listPath: "/parasites",
+    detailPath: "/parasites",
+    eyebrow: "Group & Transmission",
+    searchPlaceholder: "Search parasites…",
+    columns: [
+      "slug",
+      "name",
+      "scientific_name",
+      "description",
+      "grp",
+      "form",
+      "transmission",
+    ],
+    facets: [
+      { param: "group", column: "grp", label: "Group" },
+      { param: "form", column: "form", label: "Form" },
+      { param: "transmission", column: "transmission", label: "Transmission" },
+    ],
+    rows: PARASITES.map((p) => ({
+      slug: p.slug,
+      name: p.name,
+      scientific_name: p.scientificName,
+      description: p.description,
+      grp: p.group,
+      form: p.form,
+      transmission: p.transmission,
+    })),
+    primaryBadge: (r) => ({
+      label: String(r.grp),
+      className: parasiteGroupClasses(String(r.grp)),
+    }),
+    tags: (r) => [String(r.form), String(r.transmission)],
+  },
 ];
 
 export const SECTIONS: Record<SectionKey, SectionDef> = {
   bacteria: SECTION_LIST[0],
   viruses: SECTION_LIST[1],
   fungi: SECTION_LIST[2],
+  parasites: SECTION_LIST[3],
 };
 
-export const SECTION_ORDER: SectionKey[] = ["bacteria", "viruses", "fungi"];
+export const SECTION_ORDER: SectionKey[] = [
+  "bacteria",
+  "viruses",
+  "fungi",
+  "parasites",
+];

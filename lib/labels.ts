@@ -49,3 +49,15 @@ export function fungiMorphologyClasses(morphology: string): string {
       return AMBER;
   }
 }
+
+// Broad parasite group.
+export function parasiteGroupClasses(group: string): string {
+  switch (group) {
+    case "Helminth":
+      return AMBER;
+    case "Ectoparasite":
+      return PINK;
+    default:
+      return VIOLET;
+  }
+}
