@@ -40,7 +40,13 @@ function todayLabel(): string {
   return `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`;
 }
 
-const BULLETS = ["Auto-synced", "In-browser DB", "Typed filters", "Deep links"];
+const BULLETS = ["Plated", "Stained", "Catalogued", "Linkable"];
+
+const SINGULAR: Record<SectionKey, string> = {
+  bacteria: "bacterium",
+  viruses: "virus",
+  fungi: "fungus",
+};
 
 function Stat({
   label,
@@ -83,7 +89,7 @@ export default function Explorer({
         {/* ----- Hero ----- */}
         <div className="lg:col-span-7">
           <span className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground">
-            <span aria-hidden>📍</span> {section.navLabel} Grid
+            <span aria-hidden>📍</span> Specimen Bench · {section.navLabel}
           </span>
 
           <div className="relative mt-6">
@@ -100,18 +106,18 @@ export default function Explorer({
           </div>
 
           <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
-            Screen {section.navLabel.toLowerCase()} at the pace of your{" "}
+            Every {SINGULAR[sectionKey]} on the wards, with its own{" "}
             <span className="bg-gradient-to-r from-accent to-blue bg-clip-text text-transparent">
-              protocol
+              Pokédex card
             </span>
             .
           </h1>
 
           <p className="mt-5 max-w-xl text-sm leading-6 text-muted sm:text-base">
-            A curated pokédex of medically notable {section.navLabel.toLowerCase()},
-            indexed by {section.eyebrow.toLowerCase()}. Filter the matrix,
-            search by name, and deep-link any query — all served from an
-            in-browser Postgres.
+            A clinical-microbiology field guide of medically notable{" "}
+            {section.navLabel.toLowerCase()}, sorted by{" "}
+            {section.eyebrow.toLowerCase()}. Pull a chip, narrow the lineup,
+            open the entry.
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -119,13 +125,13 @@ export default function Explorer({
               href="#filter"
               className="text-tech inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-[11px] text-surface shadow-card transition-opacity hover:opacity-90"
             >
-              Start Scanning
+              Crack the Bench
             </Link>
             <Link
               href="#grid"
               className="text-tech glass-soft inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] text-foreground transition-colors hover:border-accent/50"
             >
-              View Index <span aria-hidden>↗</span>
+              Flip Cards <span aria-hidden>↗</span>
             </Link>
           </div>
 
@@ -143,23 +149,23 @@ export default function Explorer({
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-tech text-[10px] text-muted">
-                Live Operations
+                Plate Telemetry
               </p>
               <h2 className="mt-1 text-lg font-bold text-foreground">
-                Operator Dashboard
+                Bench Console
               </h2>
             </div>
             <span className="text-tech rounded-full bg-blue-soft px-2.5 py-1 text-[10px] text-blue">
-              Day_Cycle
+              Day_Shift
             </span>
           </div>
 
           <div className="glass-inset mt-5 rounded-2xl p-5">
             <div className="flex items-start justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span aria-hidden>🎯</span>
+                <span aria-hidden>🧫</span>
                 <span className="font-bold text-foreground">
-                  Active Protocol
+                  Active Plate
                 </span>
               </div>
               <span className="text-tech text-[10px] text-muted">
@@ -167,7 +173,7 @@ export default function Explorer({
               </span>
             </div>
             <p className="mt-2 text-sm italic text-muted">
-              Tracking {section.facets.length} facet groups · Auto-synced.
+              Filtering by {section.facets.length} traits · Plate live.
             </p>
 
             <form
@@ -189,7 +195,7 @@ export default function Explorer({
                 type="search"
                 name="q"
                 defaultValue={active.q ?? ""}
-                placeholder="Deploy new query…"
+                placeholder="Streak a name…"
                 className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted"
               />
               <button
@@ -203,9 +209,9 @@ export default function Explorer({
           </div>
 
           <div className="mt-4 grid grid-cols-3 gap-3">
-            <Stat label="Total" value={String(facets.total)} />
-            <Stat label="Categories" value={String(section.facets.length)} />
-            <Stat label="Status" value="• Nominal" valueClass="text-accent" />
+            <Stat label="Specimens" value={String(facets.total)} />
+            <Stat label="Traits" value={String(section.facets.length)} />
+            <Stat label="Bench" value="• Open" valueClass="text-accent" />
           </div>
         </aside>
       </section>
@@ -241,9 +247,9 @@ export default function Explorer({
       >
         <div className="mb-6 flex items-center gap-3">
           <span className="h-2.5 w-2.5 rounded-full bg-blue shadow-[0_0_12px_2px_var(--blue)]" />
-          <h2 className="text-lg font-bold text-foreground">Filter Stream</h2>
+          <h2 className="text-lg font-bold text-foreground">Bench Filters</h2>
           <span className="text-tech rounded-full bg-blue-soft px-2.5 py-1 text-[10px] text-blue">
-            Live DB
+            Live Bench
           </span>
           {active.q ? (
             <span className="text-tech ml-auto text-[10px] text-muted">
@@ -297,7 +303,7 @@ export default function Explorer({
               href={section.listPath}
               className="glass-soft rounded-xl px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
             >
-              Clear filters
+              Wash the plate
             </Link>
           </div>
         )}
@@ -307,7 +313,7 @@ export default function Explorer({
       <div id="grid" className="mt-10 scroll-mt-24">
         {items.length === 0 ? (
           <p className="text-tech py-20 text-center text-xs text-muted">
-            No {section.navLabel.toLowerCase()} match these filters.
+            No {section.navLabel.toLowerCase()} grew on this plate.
           </p>
         ) : (
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
