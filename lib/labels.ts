@@ -61,3 +61,17 @@ export function parasiteGroupClasses(group: string): string {
       return VIOLET;
   }
 }
+
+// Drug category.
+export function drugCategoryClasses(category: string): string {
+  switch (category) {
+    case "Antiviral":
+      return VIOLET;
+    case "Antifungal":
+      return TEAL;
+    case "Antiparasitic":
+      return AMBER;
+    default:
+      return BLUE;
+  }
+}

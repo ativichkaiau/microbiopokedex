@@ -2,7 +2,9 @@ import { BACTERIA } from "./bacteria-data";
 import { VIRUSES } from "./virus-data";
 import { FUNGI } from "./fungi-data";
 import { PARASITES } from "./parasite-data";
+import { DRUGS } from "./drug-data";
 import {
+  drugCategoryClasses,
   fungiMorphologyClasses,
   gramStainClasses,
   gramStainLabel,
@@ -11,7 +13,12 @@ import {
   virusGenomeClasses,
 } from "./labels";
 
-export type SectionKey = "bacteria" | "viruses" | "fungi" | "parasites";
+export type SectionKey =
+  | "bacteria"
+  | "viruses"
+  | "fungi"
+  | "parasites"
+  | "pharmacology";
 
 export type FacetDef = { param: string; column: string; label: string };
 
@@ -186,6 +193,43 @@ const SECTION_LIST: SectionDef[] = [
     }),
     tags: (r) => [String(r.form), String(r.transmission)],
   },
+  {
+    key: "pharmacology",
+    table: "drugs",
+    navLabel: "Pharmacology",
+    listPath: "/pharmacology",
+    detailPath: "/pharmacology",
+    eyebrow: "Class & Target",
+    searchPlaceholder: "Search drugs…",
+    columns: [
+      "slug",
+      "name",
+      "scientific_name",
+      "description",
+      "category",
+      "drug_class",
+      "target",
+    ],
+    facets: [
+      { param: "category", column: "category", label: "Category" },
+      { param: "class", column: "drug_class", label: "Class" },
+      { param: "target", column: "target", label: "Target" },
+    ],
+    rows: DRUGS.map((d) => ({
+      slug: d.slug,
+      name: d.name,
+      scientific_name: d.genericName,
+      description: d.description,
+      category: d.category,
+      drug_class: d.drugClass,
+      target: d.target,
+    })),
+    primaryBadge: (r) => ({
+      label: String(r.category),
+      className: drugCategoryClasses(String(r.category)),
+    }),
+    tags: (r) => [String(r.drug_class), String(r.target)],
+  },
 ];
 
 export const SECTIONS: Record<SectionKey, SectionDef> = {
@@ -193,6 +237,7 @@ export const SECTIONS: Record<SectionKey, SectionDef> = {
   viruses: SECTION_LIST[1],
   fungi: SECTION_LIST[2],
   parasites: SECTION_LIST[3],
+  pharmacology: SECTION_LIST[4],
 };
 
 export const SECTION_ORDER: SectionKey[] = [
@@ -200,4 +245,5 @@ export const SECTION_ORDER: SectionKey[] = [
   "viruses",
   "fungi",
   "parasites",
+  "pharmacology",
 ];

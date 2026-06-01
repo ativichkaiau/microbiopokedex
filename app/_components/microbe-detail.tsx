@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getMicrobe } from "@/lib/db";
-import { SECTIONS, type SectionKey } from "@/lib/sections";
+import {
+  SECTION_ORDER,
+  SECTIONS,
+  type SectionKey,
+} from "@/lib/sections";
+import { DRUGS } from "@/lib/drug-data";
+import {
+  getMicrobesEffectiveFor,
+  getPharmacologyFor,
+} from "@/lib/pharmacology-data";
 import { titleCase } from "@/lib/labels";
 
 export async function microbeMetadata(
@@ -26,6 +35,109 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
+function drugBySlug(slug: string) {
+  return DRUGS.find((d) => d.slug === slug);
+}
+
+function microbeBySectionSlug(section: SectionKey, slug: string) {
+  return SECTIONS[section].rows.find((r) => r.slug === slug);
+}
+
+function DrugChip({
+  slug,
+  tone,
+}: {
+  slug: string;
+  tone: "accent" | "warn";
+}) {
+  const drug = drugBySlug(slug);
+  const label = drug?.name ?? titleCase(slug.replace(/-/g, " "));
+  const toneClasses =
+    tone === "accent"
+      ? "border-accent/40 bg-accent/10 text-accent-strong hover:border-accent"
+      : "border-pink-500/30 bg-pink-500/10 text-pink-700 hover:border-pink-500/60 dark:border-pink-400/30 dark:bg-pink-400/10 dark:text-pink-300";
+  const className = `rounded-full border px-3 py-1 text-sm font-medium transition-colors ${toneClasses}`;
+  if (drug) {
+    return (
+      <Link href={`/pharmacology/${drug.slug}`} className={className}>
+        {label}
+      </Link>
+    );
+  }
+  return <span className={className}>{label}</span>;
+}
+
+function PharmaCard({
+  label,
+  items,
+  tone,
+}: {
+  label: string;
+  items?: string[];
+  tone: "accent" | "warn";
+}) {
+  return (
+    <div className="glass-soft rounded-2xl p-5">
+      <h3 className="text-tech text-[10px] text-muted">{label}</h3>
+      {!items || items.length === 0 ? (
+        <p className="mt-3 text-sm italic text-muted">
+          Not characterized in this pokédex.
+        </p>
+      ) : (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {items.map((s) => (
+            <DrugChip key={s} slug={s} tone={tone} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MicrobeCoverage({ drugSlug }: { drugSlug: string }) {
+  const matches = getMicrobesEffectiveFor(drugSlug);
+  return (
+    <div className="glass-soft mt-6 rounded-2xl p-6">
+      <h3 className="text-tech text-[10px] text-muted">Microbes covered</h3>
+      {matches.length === 0 ? (
+        <p className="mt-3 text-sm italic text-muted">
+          No catalogued matches in this pokédex.
+        </p>
+      ) : (
+        <div className="mt-4 space-y-5">
+          {SECTION_ORDER.filter((k) => k !== "pharmacology").map((k) => {
+            const inSection = matches.filter((m) => m.section === k);
+            if (inSection.length === 0) return null;
+            const sec = SECTIONS[k];
+            return (
+              <div key={k}>
+                <p className="text-tech mb-2 text-[10px] text-accent">
+                  {sec.navLabel}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {inSection.map((m) => {
+                    const r = microbeBySectionSlug(k, m.slug);
+                    const label = (r?.name as string) ?? m.slug;
+                    return (
+                      <Link
+                        key={m.slug}
+                        href={`${sec.detailPath}/${m.slug}`}
+                        className="rounded-full border border-glass-border bg-glass px-3 py-1 text-sm text-foreground transition-colors hover:border-accent/60"
+                      >
+                        {label}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default async function MicrobeDetail({
   sectionKey,
   slug,
@@ -38,6 +150,10 @@ export default async function MicrobeDetail({
   if (!item) notFound();
 
   const badge = section.primaryBadge(item);
+  const pharma =
+    sectionKey === "pharmacology"
+      ? undefined
+      : getPharmacologyFor(sectionKey, slug);
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pb-20 pt-12">
@@ -94,6 +210,23 @@ export default async function MicrobeDetail({
           </p>
         </div>
       </section>
+
+      {sectionKey === "pharmacology" ? (
+        <MicrobeCoverage drugSlug={slug} />
+      ) : (
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <PharmaCard
+            label="Resistance Against"
+            items={pharma?.resistance}
+            tone="warn"
+          />
+          <PharmaCard
+            label="Drug Effective"
+            items={pharma?.effective}
+            tone="accent"
+          />
+        </div>
+      )}
     </main>
   );
 }

@@ -47,6 +47,7 @@ const SINGULAR: Record<SectionKey, string> = {
   viruses: "virus",
   fungi: "fungus",
   parasites: "parasite",
+  pharmacology: "drug",
 };
 
 function Stat({
