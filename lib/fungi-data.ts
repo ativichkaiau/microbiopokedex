@@ -662,4 +662,292 @@ export const FUNGI: Fungus[] = [
     description:
       "Anthropophilic dermatophyte that drove mid-century epidemics of childhood tinea capitis. Fluoresces under Wood's lamp; rare now in temperate countries.",
   },
+  {
+    slug: "candida-kefyr",
+    name: "Candida kefyr",
+    scientificName: "Kluyveromyces marxianus",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Dairy-associated lactose-fermenting yeast (anamorph of Kluyveromyces marxianus). A rare cause of fungemia and oral infection in immunocompromised hosts.",
+  },
+  {
+    slug: "candida-guilliermondii",
+    name: "Candida guilliermondii",
+    scientificName: "Meyerozyma guilliermondii",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Environmental yeast with reduced echinocandin susceptibility. Causes catheter-related fungemia and onychomycosis in cancer patients.",
+  },
+  {
+    slug: "candida-famata",
+    name: "Candida famata",
+    scientificName: "Debaryomyces hansenii",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Salt-tolerant cheese-rind yeast that is rarely pathogenic. Occasional cause of catheter bloodstream infection and fungal keratitis.",
+  },
+  {
+    slug: "candida-pelliculosa",
+    name: "Candida pelliculosa",
+    scientificName: "Wickerhamomyces anomalus",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Wickerhamomyces yeast linked to neonatal-ICU outbreaks via contaminated parenteral nutrition. Causes candidemia and meningitis in premature infants.",
+  },
+  {
+    slug: "trichosporon-mucoides",
+    name: "Trichosporon mucoides",
+    scientificName: "Trichosporon mucoides",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Mucoid yeast-like fungus producing arthroconidia. Causes catheter-related fungemia and brain abscess in hematologic-malignancy patients.",
+  },
+  {
+    slug: "trichosporon-inkin",
+    name: "Trichosporon inkin",
+    scientificName: "Trichosporon inkin",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Arthroconidial yeast that colonizes pubic and scalp hair. Causes white piedra and occasional invasive disease in neutropenic patients.",
+  },
+  {
+    slug: "cryptococcus-laurentii",
+    name: "Cryptococcus laurentii",
+    scientificName: "Papiliotrema laurentii",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Environmental non-neoformans Cryptococcus. Causes rare catheter-related fungemia, keratitis, and skin infection in immunocompromised hosts.",
+  },
+  {
+    slug: "yarrowia-lipolytica",
+    name: "Yarrowia",
+    scientificName: "Yarrowia lipolytica",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Lipid-degrading yeast used in food biotechnology. Rare cause of catheter-related fungemia, mostly in patients on parenteral lipid emulsions.",
+  },
+  {
+    slug: "magnusiomyces-capitatus",
+    name: "Magnusiomyces (Geotrichum capitatum)",
+    scientificName: "Magnusiomyces capitatus",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Yeast-like fungus (formerly Geotrichum/Blastoschizomyces capitatus) with arthroconidia. Causes high-mortality disseminated infection in acute leukemia.",
+  },
+  {
+    slug: "aureobasidium-pullulans",
+    name: "Aureobasidium",
+    scientificName: "Aureobasidium pullulans",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Ubiquitous dematiaceous 'black yeast' on plants and damp walls. An uncommon cause of phaeohyphomycosis, peritonitis, and keratitis.",
+  },
+  {
+    slug: "aspergillus-versicolor",
+    name: "Aspergillus versicolor",
+    scientificName: "Aspergillus versicolor",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Septate mold of damp indoor environments producing sterigmatocystin. A common 'sick-building' aeroallergen and occasional onychomycosis agent.",
+  },
+  {
+    slug: "aspergillus-glaucus",
+    name: "Aspergillus glaucus group",
+    scientificName: "Aspergillus glaucus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Xerophilic 'storage' molds that spoil dried foods. Rare cause of cutaneous and pulmonary aspergillosis in the severely immunocompromised.",
+  },
+  {
+    slug: "penicillium-expansum",
+    name: "Penicillium expansum",
+    scientificName: "Penicillium expansum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Blue-mold rot of apples and pears that produces the mycotoxin patulin. Rarely infectious but a foodborne contamination concern.",
+  },
+  {
+    slug: "penicillium-roqueforti",
+    name: "Penicillium roqueforti",
+    scientificName: "Penicillium roqueforti",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Industrial mold used to ripen blue-veined cheeses (Roquefort, Stilton, Gorgonzola). Allergic but rarely invasive in humans.",
+  },
+  {
+    slug: "cladosporium-herbarum",
+    name: "Cladosporium herbarum",
+    scientificName: "Cladosporium herbarum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Olive-green dematiaceous mold and the most abundant airborne fungal allergen. Triggers seasonal hay fever and asthma; rarely invasive.",
+  },
+  {
+    slug: "cladosporium-sphaerospermum",
+    name: "Cladosporium sphaerospermum",
+    scientificName: "Cladosporium sphaerospermum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous indoor mold growing on damp walls and bathrooms. A respiratory allergen and rare cause of cutaneous phaeohyphomycosis.",
+  },
+  {
+    slug: "trichoderma-longibrachiatum",
+    name: "Trichoderma",
+    scientificName: "Trichoderma longibrachiatum",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Fast-growing soil mold and biocontrol agent. An emerging cause of peritonitis on CAPD and invasive infection in transplant patients.",
+  },
+  {
+    slug: "scopulariopsis-brevicaulis",
+    name: "Scopulariopsis",
+    scientificName: "Scopulariopsis brevicaulis",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Septate mold with rough lemon-shaped conidia. The classic non-dermatophyte cause of toenail onychomycosis, especially in older adults.",
+  },
+  {
+    slug: "chaetomium-globosum",
+    name: "Chaetomium",
+    scientificName: "Chaetomium globosum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Cellulose-degrading dematiaceous mold of water-damaged buildings. Causes onychomycosis and rare disseminated infection in neutropenic patients.",
+  },
+  {
+    slug: "exophiala-jeanselmei",
+    name: "Exophiala jeanselmei",
+    scientificName: "Exophiala jeanselmei",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Dematiaceous 'black yeast'-like fungus of soil and wood. Causes eumycetoma and subcutaneous phaeohyphomycotic cysts after splinter trauma.",
+  },
+  {
+    slug: "pyrenochaeta-romeroi",
+    name: "Pyrenochaeta",
+    scientificName: "Trematosphaeria grisea",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous mold of tropical soils. A common agent of eumycetoma with black grains, presenting as a chronic foot swelling.",
+  },
+  {
+    slug: "lichtheimia-ramosa",
+    name: "Lichtheimia ramosa",
+    scientificName: "Lichtheimia ramosa",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Mucoralean mold of soil and decaying matter. Causes angioinvasive mucormycosis, especially of skin and soft tissue after burns or trauma.",
+  },
+  {
+    slug: "lacazia-loboi",
+    name: "Lacazia",
+    scientificName: "Lacazia loboi",
+    morphology: "yeast",
+    group: "Dimorphic",
+    description:
+      "Uncultivable yeast-form fungus of Amazonian environments and dolphins. Causes lobomycosis — keloidal skin nodules that slowly disfigure.",
+  },
+  {
+    slug: "sporothrix-brasiliensis",
+    name: "Sporothrix brasiliensis",
+    scientificName: "Sporothrix brasiliensis",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Cat-transmitted dimorphic fungus driving Brazil's zoonotic sporotrichosis epidemic. Cat scratches cause lymphocutaneous nodules in handlers.",
+  },
+  {
+    slug: "emmonsia-parva",
+    name: "Emmonsia",
+    scientificName: "Emmonsia parva",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Soil-dwelling dimorphic fungus that forms massive non-replicating adiaspores in lungs. Causes pulmonary adiaspiromycosis in small mammals and humans.",
+  },
+  {
+    slug: "fonsecaea-compacta",
+    name: "Fonsecaea compacta",
+    scientificName: "Fonsecaea compacta",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous mold related to F. pedrosoi. A less common agent of chromoblastomycosis with characteristic sclerotic 'copper-penny' bodies in tissue.",
+  },
+  {
+    slug: "trichophyton-schoenleinii",
+    name: "Trichophyton schoenleinii",
+    scientificName: "Trichophyton schoenleinii",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Anthropophilic dermatophyte causing favus — scutula crusts and scarring alopecia. Now rare; historically endemic in Europe and the Middle East.",
+  },
+  {
+    slug: "trichophyton-concentricum",
+    name: "Trichophyton concentricum",
+    scientificName: "Trichophyton concentricum",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Anthropophilic dermatophyte of the Pacific and South America. Causes tinea imbricata: concentric overlapping rings of scaly skin.",
+  },
+  {
+    slug: "trichophyton-violaceum",
+    name: "Trichophyton violaceum",
+    scientificName: "Trichophyton violaceum",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Anthropophilic dermatophyte producing violet-purple colonies. A common cause of endothrix 'black-dot' tinea capitis in Africa and the Middle East.",
+  },
+  {
+    slug: "trichophyton-interdigitale",
+    name: "Trichophyton interdigitale",
+    scientificName: "Trichophyton interdigitale",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Zoo-anthropophilic dermatophyte split from T. mentagrophytes. The leading cause of athlete's foot and interdigital tinea pedis.",
+  },
+  {
+    slug: "microsporum-ferrugineum",
+    name: "Microsporum ferrugineum",
+    scientificName: "Microsporum ferrugineum",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Rust-colored anthropophilic dermatophyte of Asia and Africa. Causes endemic tinea capitis with little inflammation.",
+  },
+  {
+    slug: "microsporum-nanum",
+    name: "Microsporum nanum",
+    scientificName: "Microsporum nanum",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Zoophilic dermatophyte of pigs with tiny pear-shaped macroconidia. Causes occasional cutaneous infection in swine handlers.",
+  },
 ];
