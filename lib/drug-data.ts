@@ -838,4 +838,512 @@ export const DRUGS: Drug[] = [
     description:
       "Second-line for Pneumocystis pneumonia (inhaled prophylaxis or IV treatment), African trypanosomiasis, and visceral leishmaniasis.",
   },
+
+  // ----- More Antibacterials -----
+  {
+    slug: "penicillin-v",
+    name: "Penicillin V",
+    genericName: "phenoxymethylpenicillin",
+    category: "Antibacterial",
+    drugClass: "Penicillin",
+    target: "Cell wall",
+    description:
+      "Oral acid-stable penicillin. Mainstay for strep pharyngitis and rheumatic-fever prophylaxis.",
+  },
+  {
+    slug: "dicloxacillin",
+    name: "Dicloxacillin",
+    genericName: "dicloxacillin",
+    category: "Antibacterial",
+    drugClass: "Antistaphylococcal penicillin",
+    target: "Cell wall",
+    description:
+      "Oral beta-lactamase-stable penicillin for MSSA skin infections and step-down therapy from IV nafcillin.",
+  },
+  {
+    slug: "cefoxitin",
+    name: "Cefoxitin",
+    genericName: "cefoxitin",
+    category: "Antibacterial",
+    drugClass: "Cephamycin",
+    target: "Cell wall",
+    description:
+      "Second-generation cephamycin with anaerobic coverage (Bacteroides). Used for surgical prophylaxis and intra-abdominal infections.",
+  },
+  {
+    slug: "aztreonam",
+    name: "Aztreonam",
+    genericName: "aztreonam",
+    category: "Antibacterial",
+    drugClass: "Monobactam",
+    target: "Cell wall",
+    description:
+      "Only marketed monobactam. Gram-negative-only (including Pseudomonas); safe alternative for severe penicillin allergy.",
+  },
+  {
+    slug: "imipenem-cilastatin",
+    name: "Imipenem–cilastatin",
+    genericName: "imipenem + cilastatin",
+    category: "Antibacterial",
+    drugClass: "Carbapenem",
+    target: "Cell wall",
+    description:
+      "Broad carbapenem paired with cilastatin to block renal dehydropeptidase inactivation. Lower seizure threshold than meropenem.",
+  },
+  {
+    slug: "ceftazidime-avibactam",
+    name: "Ceftazidime–avibactam",
+    genericName: "ceftazidime + avibactam",
+    category: "Antibacterial",
+    drugClass: "Cephalosporin + BL inhibitor",
+    target: "Cell wall",
+    description:
+      "Salvage agent for KPC-producing carbapenem-resistant Enterobacterales and MDR Pseudomonas. Avibactam restores activity against many serine carbapenemases.",
+  },
+  {
+    slug: "dalbavancin",
+    name: "Dalbavancin",
+    genericName: "dalbavancin",
+    category: "Antibacterial",
+    drugClass: "Lipoglycopeptide",
+    target: "Cell wall (D-Ala-D-Ala)",
+    description:
+      "Long-half-life IV glycopeptide given once or twice over 1–2 weeks. Used for skin/soft-tissue infections and outpatient endocarditis bridges.",
+  },
+  {
+    slug: "tedizolid",
+    name: "Tedizolid",
+    genericName: "tedizolid phosphate",
+    category: "Antibacterial",
+    drugClass: "Oxazolidinone",
+    target: "Ribosome 50S",
+    description:
+      "Once-daily oxazolidinone with anti-MRSA activity, shorter therapy than linezolid, and less myelosuppression.",
+  },
+  {
+    slug: "minocycline",
+    name: "Minocycline",
+    genericName: "minocycline",
+    category: "Antibacterial",
+    drugClass: "Tetracycline",
+    target: "Ribosome 30S",
+    description:
+      "Lipophilic tetracycline with good CNS penetration. Used for MRSA skin infections, Stenotrophomonas, and Acinetobacter.",
+  },
+  {
+    slug: "erythromycin",
+    name: "Erythromycin",
+    genericName: "erythromycin",
+    category: "Antibacterial",
+    drugClass: "Macrolide",
+    target: "Ribosome 50S",
+    description:
+      "Original macrolide. Now mostly used as a prokinetic agent or for pertussis in patients who cannot take azithromycin.",
+  },
+  {
+    slug: "tobramycin",
+    name: "Tobramycin",
+    genericName: "tobramycin",
+    category: "Antibacterial",
+    drugClass: "Aminoglycoside",
+    target: "Ribosome 30S",
+    description:
+      "Aminoglycoside with slightly better Pseudomonas activity than gentamicin. Inhaled form is cornerstone of CF pulmonary care.",
+  },
+  {
+    slug: "amikacin",
+    name: "Amikacin",
+    genericName: "amikacin",
+    category: "Antibacterial",
+    drugClass: "Aminoglycoside",
+    target: "Ribosome 30S",
+    description:
+      "Amino-modified aminoglycoside that evades most aminoglycoside-modifying enzymes. Used for MDR Gram-negatives and non-TB mycobacteria.",
+  },
+  {
+    slug: "moxifloxacin",
+    name: "Moxifloxacin",
+    genericName: "moxifloxacin",
+    category: "Antibacterial",
+    drugClass: "Respiratory fluoroquinolone",
+    target: "DNA gyrase / topo IV",
+    description:
+      "Once-daily respiratory fluoroquinolone with anaerobic activity and a role in second-line tuberculosis. Avoid in UTI (no urinary excretion).",
+  },
+  {
+    slug: "nitrofurantoin",
+    name: "Nitrofurantoin",
+    genericName: "nitrofurantoin",
+    category: "Antibacterial",
+    drugClass: "Nitrofuran",
+    target: "Multiple bacterial enzymes",
+    description:
+      "Oral agent concentrated in urine. First-line for uncomplicated cystitis; not for pyelonephritis or CrCl below 30.",
+  },
+  {
+    slug: "fosfomycin",
+    name: "Fosfomycin",
+    genericName: "fosfomycin trometamol",
+    category: "Antibacterial",
+    drugClass: "Epoxide",
+    target: "MurA / cell wall",
+    description:
+      "Single oral dose for uncomplicated cystitis, including some MDR Enterobacterales. IV formulation in some countries.",
+  },
+  {
+    slug: "mupirocin",
+    name: "Mupirocin",
+    genericName: "mupirocin",
+    category: "Antibacterial",
+    drugClass: "Topical antibiotic",
+    target: "Isoleucyl-tRNA synthetase",
+    description:
+      "Topical agent for impetigo and intranasal MRSA decolonization before high-risk surgery.",
+  },
+  {
+    slug: "chloramphenicol",
+    name: "Chloramphenicol",
+    genericName: "chloramphenicol",
+    category: "Antibacterial",
+    drugClass: "Phenicol",
+    target: "Ribosome 50S",
+    description:
+      "Broad ribosomal inhibitor with CNS penetration. Rarely used due to aplastic anemia; reserved for resistant typhoid and meningitis in low-resource settings.",
+  },
+  {
+    slug: "dapsone",
+    name: "Dapsone",
+    genericName: "dapsone",
+    category: "Antibacterial",
+    drugClass: "Sulfone",
+    target: "Folate synthesis",
+    description:
+      "Component of multidrug therapy for leprosy and an alternative for Pneumocystis prophylaxis. Risk of hemolysis in G6PD deficiency.",
+  },
+  {
+    slug: "clofazimine",
+    name: "Clofazimine",
+    genericName: "clofazimine",
+    category: "Antibacterial",
+    drugClass: "Riminophenazine",
+    target: "Outer membrane / respiratory chain",
+    description:
+      "Red-pigmented agent for leprosy and MDR-TB. Long half-life; pinkish skin discoloration is common.",
+  },
+  {
+    slug: "bedaquiline",
+    name: "Bedaquiline",
+    genericName: "bedaquiline",
+    category: "Antibacterial",
+    drugClass: "Diarylquinoline",
+    target: "Mycobacterial ATP synthase",
+    description:
+      "Anchor agent for multidrug-resistant tuberculosis. Prolongs QT and has hepatic side effects.",
+  },
+
+  // ----- More Antivirals -----
+  {
+    slug: "famciclovir",
+    name: "Famciclovir",
+    genericName: "famciclovir",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog (prodrug)",
+    target: "Viral DNA polymerase",
+    description:
+      "Oral prodrug of penciclovir for HSV and VZV. Comparable efficacy to acyclovir/valacyclovir.",
+  },
+  {
+    slug: "foscarnet",
+    name: "Foscarnet",
+    genericName: "foscarnet sodium",
+    category: "Antiviral",
+    drugClass: "Pyrophosphate analog",
+    target: "Viral DNA polymerase",
+    description:
+      "IV non-nucleoside polymerase inhibitor for acyclovir-resistant HSV and ganciclovir-resistant CMV. Nephrotoxic and dyselectrolytemic.",
+  },
+  {
+    slug: "cidofovir",
+    name: "Cidofovir",
+    genericName: "cidofovir",
+    category: "Antiviral",
+    drugClass: "Nucleotide analog",
+    target: "Viral DNA polymerase",
+    description:
+      "Broad anti-DNA-virus agent (CMV, BK, JC, adenovirus, poxviruses). Significant nephrotoxicity; given with probenecid.",
+  },
+  {
+    slug: "tecovirimat",
+    name: "Tecovirimat",
+    genericName: "tecovirimat",
+    category: "Antiviral",
+    drugClass: "Egress inhibitor",
+    target: "Poxvirus VP37",
+    description:
+      "TPOXX. Oral agent that blocks orthopoxvirus envelope assembly. Used for smallpox/mpox under emergency-use protocols.",
+  },
+  {
+    slug: "ribavirin",
+    name: "Ribavirin",
+    genericName: "ribavirin",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Multiple (IMPDH, polymerase)",
+    description:
+      "Broad antiviral used for hepatitis C combos, RSV in select infants, and viral hemorrhagic fevers (Lassa, hantavirus).",
+  },
+  {
+    slug: "peramivir",
+    name: "Peramivir",
+    genericName: "peramivir",
+    category: "Antiviral",
+    drugClass: "Neuraminidase inhibitor",
+    target: "Viral neuraminidase",
+    description:
+      "Single-dose IV neuraminidase inhibitor for influenza in patients who cannot tolerate oral oseltamivir.",
+  },
+  {
+    slug: "raltegravir",
+    name: "Raltegravir",
+    genericName: "raltegravir",
+    category: "Antiviral",
+    drugClass: "Integrase inhibitor",
+    target: "HIV integrase",
+    description:
+      "First-in-class INSTI. Used in HIV salvage regimens and as part of post-exposure prophylaxis cocktails.",
+  },
+  {
+    slug: "efavirenz",
+    name: "Efavirenz",
+    genericName: "efavirenz",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "Once-daily NNRTI historically used in HIV first-line therapy. CNS side effects and resistance limit modern use.",
+  },
+  {
+    slug: "nevirapine",
+    name: "Nevirapine",
+    genericName: "nevirapine",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "NNRTI most notable for single-dose prevention of mother-to-child HIV transmission in resource-limited settings.",
+  },
+  {
+    slug: "darunavir",
+    name: "Darunavir",
+    genericName: "darunavir",
+    category: "Antiviral",
+    drugClass: "Protease inhibitor",
+    target: "HIV protease",
+    description:
+      "Boosted protease inhibitor (with cobicistat or ritonavir) with a high barrier to resistance. Useful in salvage regimens.",
+  },
+  {
+    slug: "zidovudine",
+    name: "Zidovudine",
+    genericName: "zidovudine (AZT)",
+    category: "Antiviral",
+    drugClass: "NRTI",
+    target: "Reverse transcriptase",
+    description:
+      "First approved antiretroviral. Now mainly used to prevent perinatal HIV transmission; macrocytic anemia is a hallmark adverse effect.",
+  },
+  {
+    slug: "molnupiravir",
+    name: "Molnupiravir",
+    genericName: "molnupiravir",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Viral RNA polymerase",
+    description:
+      "Oral 5-day regimen for COVID-19. Induces lethal mutagenesis in SARS-CoV-2; reserved for patients who cannot take Paxlovid.",
+  },
+  {
+    slug: "sofosbuvir-velpatasvir",
+    name: "Sofosbuvir–velpatasvir",
+    genericName: "sofosbuvir + velpatasvir",
+    category: "Antiviral",
+    drugClass: "NS5B + NS5A inhibitors",
+    target: "HCV NS5B + NS5A",
+    description:
+      "Epclusa. Once-daily pan-genotypic single-tablet cure for chronic hepatitis C, including compensated cirrhosis.",
+  },
+
+  // ----- More Antifungals -----
+  {
+    slug: "nystatin",
+    name: "Nystatin",
+    genericName: "nystatin",
+    category: "Antifungal",
+    drugClass: "Polyene",
+    target: "Ergosterol",
+    description:
+      "Topical/oral non-absorbed polyene for oral thrush and cutaneous Candida. Not for systemic disease.",
+  },
+  {
+    slug: "anidulafungin",
+    name: "Anidulafungin",
+    genericName: "anidulafungin",
+    category: "Antifungal",
+    drugClass: "Echinocandin",
+    target: "β-1,3-glucan synthase",
+    description:
+      "IV echinocandin metabolized non-enzymatically — minimal hepatic or renal dose adjustment. Treats invasive candidiasis.",
+  },
+  {
+    slug: "ketoconazole",
+    name: "Ketoconazole",
+    genericName: "ketoconazole",
+    category: "Antifungal",
+    drugClass: "Imidazole",
+    target: "Ergosterol synthesis",
+    description:
+      "Older azole now used topically (shampoo, cream) for seborrheic dermatitis and tinea versicolor. Oral form discouraged due to hepatotoxicity.",
+  },
+  {
+    slug: "ibrexafungerp",
+    name: "Ibrexafungerp",
+    genericName: "ibrexafungerp",
+    category: "Antifungal",
+    drugClass: "Triterpenoid",
+    target: "β-1,3-glucan synthase",
+    description:
+      "First oral glucan-synthase inhibitor. Approved for vulvovaginal candidiasis, with activity against fluconazole-resistant Candida.",
+  },
+  {
+    slug: "ciclopirox",
+    name: "Ciclopirox",
+    genericName: "ciclopirox olamine",
+    category: "Antifungal",
+    drugClass: "Hydroxypyridone",
+    target: "Iron-dependent enzymes",
+    description:
+      "Broad topical antifungal used as nail lacquer for onychomycosis and cream for tinea and seborrheic dermatitis.",
+  },
+  {
+    slug: "rezafungin",
+    name: "Rezafungin",
+    genericName: "rezafungin",
+    category: "Antifungal",
+    drugClass: "Echinocandin",
+    target: "β-1,3-glucan synthase",
+    description:
+      "Long-half-life echinocandin dosed once weekly for invasive candidiasis. Convenient outpatient parenteral therapy.",
+  },
+
+  // ----- More Antiparasitics -----
+  {
+    slug: "quinine",
+    name: "Quinine",
+    genericName: "quinine sulfate",
+    category: "Antiparasitic",
+    drugClass: "Quinoline",
+    target: "Heme detoxification",
+    description:
+      "Oral antimalarial used with doxycycline or clindamycin for chloroquine-resistant P. falciparum. Cinchonism is common.",
+  },
+  {
+    slug: "hydroxychloroquine",
+    name: "Hydroxychloroquine",
+    genericName: "hydroxychloroquine",
+    category: "Antiparasitic",
+    drugClass: "4-aminoquinoline",
+    target: "Heme detoxification",
+    description:
+      "Better-tolerated chloroquine analog for sensitive malaria and amebic liver abscess; widely used off-label for rheumatologic disease.",
+  },
+  {
+    slug: "pyrantel-pamoate",
+    name: "Pyrantel pamoate",
+    genericName: "pyrantel pamoate",
+    category: "Antiparasitic",
+    drugClass: "Tetrahydropyrimidine",
+    target: "Neuromuscular blockade",
+    description:
+      "Over-the-counter single-dose oral agent for pinworm (Enterobius), ascariasis, and hookworm.",
+  },
+  {
+    slug: "diethylcarbamazine",
+    name: "Diethylcarbamazine",
+    genericName: "diethylcarbamazine (DEC)",
+    category: "Antiparasitic",
+    drugClass: "Piperazine derivative",
+    target: "Microfilarial cuticle",
+    description:
+      "First-line for Wuchereria, Brugia, and Loa loa filariasis. Avoid in heavy Loa or Onchocerca infection due to severe Mazzotti-like reactions.",
+  },
+  {
+    slug: "eflornithine",
+    name: "Eflornithine",
+    genericName: "eflornithine",
+    category: "Antiparasitic",
+    drugClass: "Ornithine decarboxylase inhibitor",
+    target: "Polyamine synthesis",
+    description:
+      "Treats CNS-stage West African trypanosomiasis (T. b. gambiense). Often combined with nifurtimox in NECT regimens.",
+  },
+  {
+    slug: "sodium-stibogluconate",
+    name: "Sodium stibogluconate",
+    genericName: "sodium stibogluconate",
+    category: "Antiparasitic",
+    drugClass: "Pentavalent antimonial",
+    target: "Trypanothione metabolism",
+    description:
+      "Pentavalent antimonial for cutaneous and visceral leishmaniasis. Cardiotoxic; resistance is widespread in the Indian subcontinent.",
+  },
+  {
+    slug: "triclabendazole",
+    name: "Triclabendazole",
+    genericName: "triclabendazole",
+    category: "Antiparasitic",
+    drugClass: "Benzimidazole",
+    target: "β-tubulin",
+    description:
+      "Drug of choice for liver fluke (Fasciola hepatica) and lung fluke (Paragonimus) infections.",
+  },
+  {
+    slug: "spiramycin",
+    name: "Spiramycin",
+    genericName: "spiramycin",
+    category: "Antiparasitic",
+    drugClass: "Macrolide",
+    target: "Ribosome 50S",
+    description:
+      "Used in first-trimester maternal Toxoplasma infection to reduce vertical transmission, before switching to pyrimethamine–sulfadiazine.",
+  },
+  {
+    slug: "tafenoquine",
+    name: "Tafenoquine",
+    genericName: "tafenoquine",
+    category: "Antiparasitic",
+    drugClass: "8-aminoquinoline",
+    target: "Hepatic hypnozoites",
+    description:
+      "Single-dose alternative to primaquine for radical cure of P. vivax and P. ovale relapse. Requires G6PD screening.",
+  },
+  {
+    slug: "atovaquone",
+    name: "Atovaquone",
+    genericName: "atovaquone",
+    category: "Antiparasitic",
+    drugClass: "Naphthoquinone",
+    target: "Cytochrome bc1",
+    description:
+      "Solo formulation used for Pneumocystis prophylaxis and mild PCP, and toxoplasmic encephalitis salvage.",
+  },
+  {
+    slug: "malathion",
+    name: "Malathion",
+    genericName: "malathion",
+    category: "Antiparasitic",
+    drugClass: "Organophosphate",
+    target: "Acetylcholinesterase",
+    description:
+      "Topical lotion for head lice, including permethrin-resistant strains. Flammable and malodorous.",
+  },
 ];
