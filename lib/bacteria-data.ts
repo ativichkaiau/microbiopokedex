@@ -1498,4 +1498,204 @@ export const BACTERIA: Bacterium[] = [
     description:
       "Environmental gram-negative rod resistant to most antibiotics including carbapenems. Causes neonatal meningitis and bacteremia in immunocompromised adults.",
   },
+  {
+    slug: "streptococcus-bovis",
+    name: "S. bovis (gallolyticus)",
+    scientificName: "Streptococcus bovis biotype I",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Gut gram-positive cocci in chains. Bacteremia and endocarditis carry a strong association with colon adenocarcinoma — find the colonoscopy.",
+  },
+  {
+    slug: "peptostreptococcus-anaerobius",
+    name: "Peptostreptococcus",
+    scientificName: "Peptostreptococcus anaerobius",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Anaerobic gram-positive cocci of the mouth, gut, and vagina. A frequent component of polymicrobial abscesses, aspiration pneumonia, and pelvic infections.",
+  },
+  {
+    slug: "kocuria-rosea",
+    name: "Kocuria",
+    scientificName: "Kocuria rosea",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "tetrads",
+    description:
+      "Pink-pigmented skin commensal gram-positive cocci in tetrads, related to Micrococcus. A rare cause of catheter-related bacteremia in cancer patients.",
+  },
+  {
+    slug: "listeria-ivanovii",
+    name: "Listeria ivanovii",
+    scientificName: "Listeria ivanovii",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Motile gram-positive rod chiefly pathogenic to ruminants. Rare human gastroenteritis and bacteremia; aids the textbook distinction from L. monocytogenes.",
+  },
+  {
+    slug: "clostridium-novyi",
+    name: "Clostridium novyi",
+    scientificName: "Clostridium novyi",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Spore-forming anaerobic gram-positive rod. Causes gas gangrene and outbreaks of severe soft-tissue infection among injection-drug users.",
+  },
+  {
+    slug: "paenibacillus-larvae",
+    name: "Paenibacillus",
+    scientificName: "Paenibacillus larvae",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "chains",
+    description:
+      "Spore-forming gram-positive rod best known for honeybee American foulbrood. Rare opportunistic human bacteremia and wound infection.",
+  },
+  {
+    slug: "corynebacterium-urealyticum",
+    name: "C. urealyticum",
+    scientificName: "Corynebacterium urealyticum",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "palisades",
+    description:
+      "Slow-growing, urease-positive, multidrug-resistant gram-positive rod. Causes encrusted cystitis and pyelonephritis with alkaline struvite deposits.",
+  },
+  {
+    slug: "cutibacterium-avidum",
+    name: "Cutibacterium avidum",
+    scientificName: "Cutibacterium avidum",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Anaerobic gram-positive skin rod that favors moist folds. An emerging cause of prosthetic hip-joint and breast-implant infections.",
+  },
+  {
+    slug: "atopobium-vaginae",
+    name: "Atopobium",
+    scientificName: "Fannyhessea vaginae",
+    gramStain: "positive",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Fastidious anaerobic gram-positive coccobacillus. A key partner with Gardnerella in bacterial-vaginosis biofilms and a marker of metronidazole failure.",
+  },
+  {
+    slug: "cardiobacterium-valvarum",
+    name: "Cardiobacterium valvarum",
+    scientificName: "Cardiobacterium valvarum",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Fastidious gram-negative rod of the throat flora (a HACEK organism). A rare cause of aortic-valve endocarditis with slow-growing cultures.",
+  },
+  {
+    slug: "chryseobacterium-indologenes",
+    name: "Chryseobacterium",
+    scientificName: "Chryseobacterium indologenes",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Yellow-pigmented environmental gram-negative rod with broad intrinsic resistance. Causes device-related infections in hospitalized patients.",
+  },
+  {
+    slug: "ralstonia-pickettii",
+    name: "Ralstonia",
+    scientificName: "Ralstonia pickettii",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Water-borne gram-negative rod that passes through 0.2-µm filters. Notorious for contaminating sterile solutions and causing pseudo-outbreaks.",
+  },
+  {
+    slug: "cupriavidus-pauculus",
+    name: "Cupriavidus",
+    scientificName: "Cupriavidus pauculus",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Environmental gram-negative rod from water sources. A rare opportunist causing bacteremia linked to contaminated fluids and dialysis.",
+  },
+  {
+    slug: "pandoraea-apista",
+    name: "Pandoraea",
+    scientificName: "Pandoraea apista",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Gram-negative rod resembling Burkholderia. Colonizes cystic-fibrosis airways and can cause progressive lung infection and bacteremia.",
+  },
+  {
+    slug: "kingella-denitrificans",
+    name: "Kingella denitrificans",
+    scientificName: "Kingella denitrificans",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "pairs",
+    description:
+      "Fastidious gram-negative coccobacillus of the oropharynx. A rare HACEK-adjacent cause of endocarditis that mimics Neisseria on culture.",
+  },
+  {
+    slug: "vibrio-fluvialis",
+    name: "Vibrio fluvialis",
+    scientificName: "Vibrio fluvialis",
+    gramStain: "negative",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Halophilic curved gram-negative marine rod. Causes cholera-like secretory diarrhea after seafood or brackish-water exposure.",
+  },
+  {
+    slug: "grimontia-hollisae",
+    name: "Grimontia (Vibrio hollisae)",
+    scientificName: "Grimontia hollisae",
+    gramStain: "negative",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Curved gram-negative rod formerly classed in Vibrio. Causes gastroenteritis and occasional septicemia after raw-seafood ingestion.",
+  },
+  {
+    slug: "shewanella-putrefaciens",
+    name: "Shewanella",
+    scientificName: "Shewanella putrefaciens",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Hydrogen-sulfide-producing marine gram-negative rod. Causes skin and soft-tissue infections and bacteremia after seawater wound exposure.",
+  },
+  {
+    slug: "wolbachia-pipientis",
+    name: "Wolbachia",
+    scientificName: "Wolbachia pipientis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Obligate intracellular alphaproteobacterium living inside filarial nematodes and arthropods. Targeting it with doxycycline sterilizes adult filariae.",
+  },
+  {
+    slug: "spirillum-minus",
+    name: "Spirillum minus",
+    scientificName: "Spirillum minus",
+    gramStain: "negative",
+    shape: "spirillum",
+    arrangement: "single",
+    description:
+      "Tightly coiled motile gram-negative spiral rod. Causes the spirillary form of rat-bite fever (sodoku) with relapsing fever and a regional eschar.",
+  },
 ];

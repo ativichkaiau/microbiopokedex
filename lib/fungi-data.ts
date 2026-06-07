@@ -950,4 +950,166 @@ export const FUNGI: Fungus[] = [
     description:
       "Zoophilic dermatophyte of pigs with tiny pear-shaped macroconidia. Causes occasional cutaneous infection in swine handlers.",
   },
+  {
+    slug: "candida-rugosa",
+    name: "Candida rugosa",
+    scientificName: "Diutina rugosa",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Emerging non-albicans yeast with reduced azole susceptibility. Linked to catheter-related fungemia outbreaks in burn and ICU units.",
+  },
+  {
+    slug: "candida-lipolytica",
+    name: "Candida lipolytica",
+    scientificName: "Yarrowia lipolytica (Candida lipolytica)",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Lipid-assimilating yeast. A rare cause of catheter-associated fungemia in patients on parenteral lipid nutrition.",
+  },
+  {
+    slug: "kodamaea-ohmeri",
+    name: "Kodamaea",
+    scientificName: "Kodamaea ohmeri",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Color-shifting yeast on CHROMagar. Causes fungemia, endocarditis, and cellulitis in immunocompromised and prosthetic-device patients.",
+  },
+  {
+    slug: "pichia-kudriavzevii",
+    name: "Pichia",
+    scientificName: "Pichia kudriavzevii",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "The teleomorph of Candida krusei, used in fermentation. Intrinsically fluconazole-resistant; causes breakthrough fungemia on azole prophylaxis.",
+  },
+  {
+    slug: "saprochaete-clavata",
+    name: "Saprochaete",
+    scientificName: "Saprochaete clavata",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Arthroconidial yeast-like fungus linked to hospital outbreaks. Causes high-mortality disseminated infection in acute leukemia.",
+  },
+  {
+    slug: "cryptococcus-albidus",
+    name: "Cryptococcus albidus",
+    scientificName: "Naganishia albida",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Encapsulated environmental non-neoformans Cryptococcus. Rare cause of meningitis, fungemia, and keratitis in immunocompromised hosts.",
+  },
+  {
+    slug: "aspergillus-lentulus",
+    name: "Aspergillus lentulus",
+    scientificName: "Aspergillus lentulus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Cryptic species within the A. fumigatus complex with reduced antifungal susceptibility. Causes hard-to-treat invasive aspergillosis.",
+  },
+  {
+    slug: "aspergillus-ustus",
+    name: "Aspergillus ustus",
+    scientificName: "Aspergillus ustus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Uncommon septate mold with poor triazole response. Causes invasive disease and onychomycosis in transplant recipients.",
+  },
+  {
+    slug: "penicillium-marneffei-complex",
+    name: "Talaromyces atroroseus",
+    scientificName: "Talaromyces atroroseus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Red-pigment-producing Talaromyces species. Mainly an industrial mold; rare environmental contaminant of clinical specimens.",
+  },
+  {
+    slug: "rasamsonia-argillacea",
+    name: "Rasamsonia",
+    scientificName: "Rasamsonia argillacea",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Thermotolerant Penicillium-like mold. An emerging cause of invasive infection in chronic granulomatous disease and cystic fibrosis.",
+  },
+  {
+    slug: "paecilomyces-variotii",
+    name: "Paecilomyces",
+    scientificName: "Paecilomyces variotii",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Heat-tolerant environmental mold. Causes peritonitis on dialysis, keratitis, and rare disseminated infection in the immunocompromised.",
+  },
+  {
+    slug: "rhinocladiella-mackenziei",
+    name: "Rhinocladiella",
+    scientificName: "Rhinocladiella mackenziei",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Neurotropic dematiaceous mold of the arid Middle East. Causes lethal cerebral phaeohyphomycosis even in immunocompetent hosts.",
+  },
+  {
+    slug: "verruconis-gallopava",
+    name: "Verruconis",
+    scientificName: "Verruconis gallopava",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Thermophilic dematiaceous mold of hot springs and poultry. Causes brain abscess and pneumonia in lung-transplant recipients.",
+  },
+  {
+    slug: "scytalidium-dimidiatum",
+    name: "Neoscytalidium",
+    scientificName: "Neoscytalidium dimidiatum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous mold of the tropics that mimics dermatophytes. Causes non-dermatophyte onychomycosis and skin infection resistant to usual antifungals.",
+  },
+  {
+    slug: "phaeoacremonium-parasiticum",
+    name: "Phaeoacremonium",
+    scientificName: "Phaeoacremonium parasiticum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous mold of plants and soil. Causes subcutaneous phaeohyphomycosis and arthritis after thorn or splinter inoculation.",
+  },
+  {
+    slug: "lacazia-loboi-marine",
+    name: "Paracoccidioides ceti",
+    scientificName: "Paracoccidioides ceti",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Dimorphic fungus causing lobomycosis-like disease (lacaziosis) in dolphins, with rare zoonotic skin nodules in handlers.",
+  },
+  {
+    slug: "blastomyces-gilchristii",
+    name: "Blastomyces gilchristii",
+    scientificName: "Blastomyces gilchristii",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Cryptic dimorphic species split from B. dermatitidis in the North American Midwest. Causes pulmonary and disseminated blastomycosis.",
+  },
+  {
+    slug: "trichophyton-soudanense",
+    name: "Trichophyton soudanense",
+    scientificName: "Trichophyton soudanense",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Anthropophilic dermatophyte of African origin. Causes endothrix tinea capitis spreading in migrant and adopted-child populations.",
+  },
 ];

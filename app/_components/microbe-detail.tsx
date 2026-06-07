@@ -171,7 +171,8 @@ export default async function MicrobeDetail({
               <span className="text-muted">{section.navLabel} {"//"}</span>{" "}
               <span className="text-accent">Decoded</span>
             </p>
-            <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="mt-3 flex items-center gap-3 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+              <span aria-hidden>{section.entryEmoji(item)}</span>
               {item.name}
             </h1>
             <p className="mt-2 font-mono text-base italic text-muted">

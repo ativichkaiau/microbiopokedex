@@ -1378,4 +1378,204 @@ export const VIRUSES: Virus[] = [
     description:
       "Spumaretrovirus of nonhuman primates. Zoonotic exposure causes persistent but apparently non-pathogenic infection in primate handlers.",
   },
+  {
+    slug: "human-herpesvirus-8",
+    name: "HHV-8 (KSHV)",
+    scientificName: "Human gammaherpesvirus 8",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Double-stranded DNA herpesvirus and the cause of Kaposi sarcoma, primary effusion lymphoma, and multicentric Castleman disease, especially in AIDS.",
+  },
+  {
+    slug: "saimiriine-herpesvirus-2",
+    name: "Herpesvirus saimiri",
+    scientificName: "Saimiriine gammaherpesvirus 2",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Squirrel-monkey gammaherpesvirus that transforms T cells. Non-pathogenic in its host but a workhorse model of viral oncogenesis.",
+  },
+  {
+    slug: "buffalopox-virus",
+    name: "Buffalopox",
+    scientificName: "Buffalopox virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "A vaccinia-derived orthopoxvirus of South Asian water buffalo. Causes zoonotic pustular hand and udder lesions in milkers during outbreaks.",
+  },
+  {
+    slug: "yaba-monkey-tumor-virus",
+    name: "Yaba monkey tumor virus",
+    scientificName: "Yatapoxvirus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "African yatapoxvirus of primates. Direct contact causes benign histiocytic skin tumors that regress spontaneously over weeks.",
+  },
+  {
+    slug: "lymphocryptovirus-papio",
+    name: "Baboon LCV",
+    scientificName: "Papiine gammaherpesvirus 1",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Baboon Epstein-Barr-like lymphocryptovirus. Used as an animal model of EBV-driven B-cell transformation and lymphoma.",
+  },
+  {
+    slug: "saint-louis-aichivirus-b",
+    name: "Aichivirus B",
+    scientificName: "Aichivirus B",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA kobuvirus detected in stool and sewage worldwide. Of uncertain clinical significance in human gastroenteritis.",
+  },
+  {
+    slug: "ljungan-virus",
+    name: "Ljungan virus",
+    scientificName: "Parechovirus B",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Rodent-borne parechovirus first found in Swedish bank voles. Investigated for possible links to human metabolic and fetal disease.",
+  },
+  {
+    slug: "usutu-virus",
+    name: "Usutu",
+    scientificName: "Usutu virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Mosquito-borne flavivirus cycling in birds across Europe and Africa. Causes occasional human febrile illness and neuroinvasive disease.",
+  },
+  {
+    slug: "wesselsbron-virus",
+    name: "Wesselsbron",
+    scientificName: "Wesselsbron virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Mosquito-borne flavivirus of African livestock. Human infection causes a self-limited febrile illness with myalgia and rash.",
+  },
+  {
+    slug: "ilheus-virus",
+    name: "Ilhéus",
+    scientificName: "Ilhéus virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Neotropical mosquito-borne flavivirus. Causes sporadic febrile illness and rare encephalitis across Central and South America.",
+  },
+  {
+    slug: "barmah-forest-virus",
+    name: "Barmah Forest",
+    scientificName: "Barmah Forest virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "Australian mosquito-borne alphavirus. Causes polyarthritis, rash, and fever resembling Ross River virus disease.",
+  },
+  {
+    slug: "onyong-nyong-virus",
+    name: "O'nyong-nyong",
+    scientificName: "O'nyong-nyong virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "African Anopheles-borne alphavirus closely related to chikungunya. Causes epidemic fever, rash, and severe joint pain.",
+  },
+  {
+    slug: "semliki-forest-virus",
+    name: "Semliki Forest virus",
+    scientificName: "Semliki Forest virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Togaviridae",
+    description:
+      "African mosquito-borne alphavirus and a major molecular-biology model. Rare human febrile illness; one fatal laboratory encephalitis case.",
+  },
+  {
+    slug: "guanarito-virus",
+    name: "Guanarito",
+    scientificName: "Guanarito mammarenavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Arenaviridae",
+    description:
+      "Rodent-borne arenavirus of Venezuela. Causes Venezuelan hemorrhagic fever with bleeding, neurologic signs, and high mortality.",
+  },
+  {
+    slug: "tula-virus",
+    name: "Tula",
+    scientificName: "Tula orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "European vole-borne hantavirus. Usually subclinical but causes occasional mild hemorrhagic fever with renal syndrome.",
+  },
+  {
+    slug: "thogoto-virus",
+    name: "Thogoto",
+    scientificName: "Thogoto virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Orthomyxoviridae",
+    description:
+      "Tick-borne orthomyxovirus of Africa and southern Europe. Rare human infection causes meningitis and febrile illness.",
+  },
+  {
+    slug: "menangle-virus",
+    name: "Menangle",
+    scientificName: "Menangle pararubulavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Paramyxoviridae",
+    description:
+      "Bat-borne paramyxovirus that spread through Australian piggeries. Causes febrile illness with rash in exposed workers.",
+  },
+  {
+    slug: "menglavirus",
+    name: "Menglà virus",
+    scientificName: "Mènglà dianlovirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Bat-derived filovirus discovered in China, related to Ebola and Marburg. Uses the same NPC1 entry receptor; human risk is unknown.",
+  },
+  {
+    slug: "lake-victoria-marburgvirus-ravn",
+    name: "Ravn virus",
+    scientificName: "Ravn virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "A distinct member of the Marburg marburgvirus species. Causes Marburg hemorrhagic fever in African outbreaks with high mortality.",
+  },
+  {
+    slug: "rosavirus",
+    name: "Rosavirus",
+    scientificName: "Rosavirus A",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA picornavirus found in stool. Detected in children with diarrhea; its causal role remains under study.",
+  },
 ];

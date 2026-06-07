@@ -1346,4 +1346,322 @@ export const DRUGS: Drug[] = [
     description:
       "Topical lotion for head lice, including permethrin-resistant strains. Flammable and malodorous.",
   },
+
+  // ----- More Antibacterials -----
+  {
+    slug: "cephalexin",
+    name: "Cephalexin",
+    genericName: "cephalexin",
+    category: "Antibacterial",
+    drugClass: "1st-gen cephalosporin",
+    target: "Cell wall",
+    description:
+      "Oral first-generation cephalosporin for MSSA and streptococcal skin infections and uncomplicated UTIs.",
+  },
+  {
+    slug: "cefdinir",
+    name: "Cefdinir",
+    genericName: "cefdinir",
+    category: "Antibacterial",
+    drugClass: "3rd-gen cephalosporin",
+    target: "Cell wall",
+    description:
+      "Oral third-generation cephalosporin for otitis media, sinusitis, and community respiratory infections.",
+  },
+  {
+    slug: "ceftolozane-tazobactam",
+    name: "Ceftolozane–tazobactam",
+    genericName: "ceftolozane + tazobactam",
+    category: "Antibacterial",
+    drugClass: "Cephalosporin + BL inhibitor",
+    target: "Cell wall",
+    description:
+      "Anti-pseudomonal combination for MDR Pseudomonas and complicated intra-abdominal and urinary infections.",
+  },
+  {
+    slug: "meropenem-vaborbactam",
+    name: "Meropenem–vaborbactam",
+    genericName: "meropenem + vaborbactam",
+    category: "Antibacterial",
+    drugClass: "Carbapenem + BL inhibitor",
+    target: "Cell wall",
+    description:
+      "Carbapenem paired with a boronate inhibitor to restore activity against KPC-producing carbapenem-resistant Enterobacterales.",
+  },
+  {
+    slug: "telavancin",
+    name: "Telavancin",
+    genericName: "telavancin",
+    category: "Antibacterial",
+    drugClass: "Lipoglycopeptide",
+    target: "Cell wall + membrane",
+    description:
+      "Dual-mechanism lipoglycopeptide for MRSA skin infections and hospital-acquired pneumonia. Nephrotoxicity and QT prolongation limit use.",
+  },
+  {
+    slug: "oritavancin",
+    name: "Oritavancin",
+    genericName: "oritavancin",
+    category: "Antibacterial",
+    drugClass: "Lipoglycopeptide",
+    target: "Cell wall",
+    description:
+      "Single-dose long-acting lipoglycopeptide for acute bacterial skin infections caused by MRSA and streptococci.",
+  },
+  {
+    slug: "quinupristin-dalfopristin",
+    name: "Quinupristin–dalfopristin",
+    genericName: "quinupristin + dalfopristin",
+    category: "Antibacterial",
+    drugClass: "Streptogramin",
+    target: "Ribosome 50S",
+    description:
+      "IV streptogramin combination for vancomycin-resistant Enterococcus faecium and complicated MRSA infections.",
+  },
+  {
+    slug: "fusidic-acid",
+    name: "Fusidic acid",
+    genericName: "fusidic acid",
+    category: "Antibacterial",
+    drugClass: "Fusidane",
+    target: "Elongation factor G",
+    description:
+      "Anti-staphylococcal agent used topically for skin infections and orally (outside the US) for bone and joint MSSA infection.",
+  },
+  {
+    slug: "rifaximin",
+    name: "Rifaximin",
+    genericName: "rifaximin",
+    category: "Antibacterial",
+    drugClass: "Rifamycin",
+    target: "RNA polymerase",
+    description:
+      "Non-absorbed gut-selective rifamycin for traveler's diarrhea, hepatic encephalopathy, and IBS with diarrhea.",
+  },
+  {
+    slug: "delafloxacin",
+    name: "Delafloxacin",
+    genericName: "delafloxacin",
+    category: "Antibacterial",
+    drugClass: "Fluoroquinolone",
+    target: "DNA gyrase / topo IV",
+    description:
+      "Broad fluoroquinolone uniquely active against MRSA, used for acute skin infections and community pneumonia.",
+  },
+  {
+    slug: "cefiderocol",
+    name: "Cefiderocol",
+    genericName: "cefiderocol",
+    category: "Antibacterial",
+    drugClass: "Siderophore cephalosporin",
+    target: "Cell wall",
+    description:
+      "Trojan-horse cephalosporin smuggled in via iron transporters. Last-line for carbapenem-resistant Gram-negatives including metallo-β-lactamase producers.",
+  },
+  {
+    slug: "trimethoprim",
+    name: "Trimethoprim",
+    genericName: "trimethoprim",
+    category: "Antibacterial",
+    drugClass: "Folate antagonist",
+    target: "Dihydrofolate reductase",
+    description:
+      "Folate inhibitor used alone for uncomplicated cystitis where sulfa is contraindicated.",
+  },
+
+  // ----- More Antivirals -----
+  {
+    slug: "penciclovir",
+    name: "Penciclovir",
+    genericName: "penciclovir",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Viral DNA polymerase",
+    description:
+      "Topical agent for recurrent herpes labialis (cold sores); the active form of oral famciclovir.",
+  },
+  {
+    slug: "maraviroc",
+    name: "Maraviroc",
+    genericName: "maraviroc",
+    category: "Antiviral",
+    drugClass: "CCR5 antagonist",
+    target: "Host CCR5 co-receptor",
+    description:
+      "Entry inhibitor that blocks CCR5-tropic HIV from binding its co-receptor. Requires a tropism assay before use.",
+  },
+  {
+    slug: "enfuvirtide",
+    name: "Enfuvirtide",
+    genericName: "enfuvirtide",
+    category: "Antiviral",
+    drugClass: "Fusion inhibitor",
+    target: "HIV gp41",
+    description:
+      "Injectable peptide that blocks HIV membrane fusion. Reserved for multidrug-resistant HIV salvage regimens.",
+  },
+  {
+    slug: "cabotegravir",
+    name: "Cabotegravir",
+    genericName: "cabotegravir",
+    category: "Antiviral",
+    drugClass: "Integrase inhibitor",
+    target: "HIV integrase",
+    description:
+      "Long-acting injectable INSTI for HIV treatment (with rilpivirine) and every-two-month pre-exposure prophylaxis.",
+  },
+  {
+    slug: "rilpivirine",
+    name: "Rilpivirine",
+    genericName: "rilpivirine",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "Second-generation NNRTI in oral and long-acting injectable HIV regimens. Needs an acidic stomach for absorption.",
+  },
+  {
+    slug: "ledipasvir-sofosbuvir",
+    name: "Ledipasvir–sofosbuvir",
+    genericName: "ledipasvir + sofosbuvir",
+    category: "Antiviral",
+    drugClass: "NS5A + NS5B inhibitors",
+    target: "HCV NS5A + NS5B",
+    description:
+      "Harvoni. Once-daily single-tablet cure for hepatitis C genotype 1, including in cirrhosis.",
+  },
+  {
+    slug: "adefovir",
+    name: "Adefovir",
+    genericName: "adefovir dipivoxil",
+    category: "Antiviral",
+    drugClass: "Nucleotide analog",
+    target: "HBV reverse transcriptase",
+    description:
+      "Older nucleotide analog for chronic hepatitis B. Largely supplanted by tenofovir and entecavir due to nephrotoxicity and resistance.",
+  },
+  {
+    slug: "brincidofovir",
+    name: "Brincidofovir",
+    genericName: "brincidofovir",
+    category: "Antiviral",
+    drugClass: "Nucleotide analog (lipid conjugate)",
+    target: "Viral DNA polymerase",
+    description:
+      "Oral lipid-conjugated cidofovir with less nephrotoxicity. Stockpiled for smallpox and used for resistant DNA-virus infections.",
+  },
+
+  // ----- More Antifungals -----
+  {
+    slug: "miconazole",
+    name: "Miconazole",
+    genericName: "miconazole",
+    category: "Antifungal",
+    drugClass: "Imidazole",
+    target: "Ergosterol synthesis",
+    description:
+      "Topical and oral-gel imidazole for cutaneous candidiasis, tinea, and oral thrush.",
+  },
+  {
+    slug: "clotrimazole",
+    name: "Clotrimazole",
+    genericName: "clotrimazole",
+    category: "Antifungal",
+    drugClass: "Imidazole",
+    target: "Ergosterol synthesis",
+    description:
+      "Over-the-counter topical and troche imidazole for vaginal candidiasis, tinea, and oral thrush.",
+  },
+  {
+    slug: "tavaborole",
+    name: "Tavaborole",
+    genericName: "tavaborole",
+    category: "Antifungal",
+    drugClass: "Oxaborole",
+    target: "Leucyl-tRNA synthetase",
+    description:
+      "Topical boron-based solution for toenail onychomycosis; penetrates the nail plate better than older lacquers.",
+  },
+  {
+    slug: "fosmanogepix",
+    name: "Fosmanogepix",
+    genericName: "fosmanogepix",
+    category: "Antifungal",
+    drugClass: "Gwt1 inhibitor",
+    target: "GPI-anchor biosynthesis",
+    description:
+      "Investigational broad-spectrum antifungal with a novel target, active against Candida, Aspergillus, and many resistant molds.",
+  },
+
+  // ----- More Antiparasitics -----
+  {
+    slug: "fexinidazole",
+    name: "Fexinidazole",
+    genericName: "fexinidazole",
+    category: "Antiparasitic",
+    drugClass: "Nitroimidazole",
+    target: "DNA / reactive metabolites",
+    description:
+      "First all-oral treatment for both stages of West African sleeping sickness (T. b. gambiense).",
+  },
+  {
+    slug: "suramin",
+    name: "Suramin",
+    genericName: "suramin",
+    category: "Antiparasitic",
+    drugClass: "Polysulfonated naphthylurea",
+    target: "Multiple parasite enzymes",
+    description:
+      "Century-old IV drug for early-stage East African trypanosomiasis and as an adjunct in onchocerciasis.",
+  },
+  {
+    slug: "melarsoprol",
+    name: "Melarsoprol",
+    genericName: "melarsoprol",
+    category: "Antiparasitic",
+    drugClass: "Arsenical",
+    target: "Trypanothione / pyruvate kinase",
+    description:
+      "Arsenic-based drug for CNS-stage African trypanosomiasis. Causes a fatal reactive encephalopathy in up to 10% — a last resort.",
+  },
+  {
+    slug: "oxamniquine",
+    name: "Oxamniquine",
+    genericName: "oxamniquine",
+    category: "Antiparasitic",
+    drugClass: "Tetrahydroquinoline",
+    target: "Parasite DNA",
+    description:
+      "Oral alternative to praziquantel specifically for Schistosoma mansoni infection, mainly used in South America.",
+  },
+  {
+    slug: "diloxanide-furoate",
+    name: "Diloxanide furoate",
+    genericName: "diloxanide furoate",
+    category: "Antiparasitic",
+    drugClass: "Dichloroacetamide",
+    target: "Luminal amoeba",
+    description:
+      "Luminal amebicide that clears intestinal Entamoeba histolytica cysts after tissue treatment with metronidazole.",
+  },
+  {
+    slug: "fumagillin",
+    name: "Fumagillin",
+    genericName: "fumagillin",
+    category: "Antiparasitic",
+    drugClass: "Methionine aminopeptidase inhibitor",
+    target: "MetAP2",
+    description:
+      "Used for microsporidial (Encephalitozoon, Enterocytozoon) infections, including intestinal and ocular disease in AIDS.",
+  },
+  {
+    slug: "lindane",
+    name: "Lindane",
+    genericName: "lindane",
+    category: "Antiparasitic",
+    drugClass: "Organochlorine",
+    target: "GABA-gated chloride channels",
+    description:
+      "Second-line topical scabicide and pediculicide. Neurotoxicity risk restricts it to treatment failures in adults.",
+  },
 ];

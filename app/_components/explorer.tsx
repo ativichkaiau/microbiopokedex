@@ -91,7 +91,8 @@ export default function Explorer({
         {/* ----- Hero ----- */}
         <div className="lg:col-span-7">
           <span className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground">
-            <span aria-hidden>📍</span> Specimen Bench · {section.navLabel}
+            <span aria-hidden>{section.emoji}</span> Specimen Bench ·{" "}
+            {section.navLabel}
           </span>
 
           <p className="mt-6 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
@@ -220,12 +221,13 @@ export default function Explorer({
                 key={key}
                 href={s.listPath}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                   isActive
                     ? "bg-foreground text-surface"
                     : "text-muted hover:text-foreground"
                 }`}
               >
+                <span aria-hidden>{s.emoji}</span>
                 {s.navLabel}
               </Link>
             );
@@ -319,13 +321,18 @@ export default function Explorer({
                     className="glass-soft hover:shadow-card group flex h-full flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
                   >
                     <div className="mb-3 flex items-start justify-between gap-2">
-                      <div>
-                        <h3 className="font-bold text-foreground">
-                          {item.name}
-                        </h3>
-                        <p className="font-mono text-xs italic text-muted">
-                          {item.scientific_name}
-                        </p>
+                      <div className="flex items-start gap-2.5">
+                        <span aria-hidden className="text-xl leading-none">
+                          {section.entryEmoji(item)}
+                        </span>
+                        <div>
+                          <h3 className="font-bold text-foreground">
+                            {item.name}
+                          </h3>
+                          <p className="font-mono text-xs italic text-muted">
+                            {item.scientific_name}
+                          </p>
+                        </div>
                       </div>
                       <span className="font-mono text-xs font-semibold text-accent">
                         #{String(item.id).padStart(3, "0")}
