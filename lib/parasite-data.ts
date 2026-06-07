@@ -741,4 +741,254 @@ export const PARASITES: Parasite[] = [
     description:
       "Trombiculid larva that feeds once on lymph at human skin. The Asian-Pacific vector of scrub typhus (Orientia tsutsugamushi).",
   },
+  {
+    slug: "plasmodium-falciparum-artemisinin-r",
+    name: "Artemisinin-resistant P. falciparum",
+    scientificName: "Plasmodium falciparum (PfKelch13)",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Vector-borne",
+    description:
+      "PfKelch13-mutant parasite first reported on the Thai–Cambodian border. Delayed parasite clearance on artemisinins is now spreading into Africa.",
+  },
+  {
+    slug: "cryptosporidium-hominis",
+    name: "Cryptosporidium hominis",
+    scientificName: "Cryptosporidium hominis",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Waterborne",
+    description:
+      "Anthroponotic cryptosporidian shed only by humans. The leading cause of pediatric cryptosporidial diarrhea in low- and middle-income countries.",
+  },
+  {
+    slug: "babesia-divergens",
+    name: "Babesia divergens",
+    scientificName: "Babesia divergens",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Vector-borne",
+    description:
+      "European bovine babesia transmitted by Ixodes ricinus. Causes severe babesiosis in splenectomized patients, often progressing to multiorgan failure.",
+  },
+  {
+    slug: "blastocystis-hominis",
+    name: "Blastocystis",
+    scientificName: "Blastocystis hominis",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Pleomorphic anaerobic stramenopile found in stool of healthy adults and patients with chronic diarrhea and IBS. Pathogenicity remains debated.",
+  },
+  {
+    slug: "leishmania-tropica",
+    name: "Leishmania tropica",
+    scientificName: "Leishmania tropica",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Sandfly-borne Old-World flagellate. Causes anthroponotic urban cutaneous leishmaniasis with dry chronic ulcers ('Oriental sore').",
+  },
+  {
+    slug: "leishmania-infantum",
+    name: "Leishmania infantum",
+    scientificName: "Leishmania infantum",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Mediterranean and Latin-American zoonotic flagellate cycling in dogs. Causes infantile visceral leishmaniasis and HIV-associated kala-azar.",
+  },
+  {
+    slug: "trypanosoma-rangeli",
+    name: "Trypanosoma rangeli",
+    scientificName: "Trypanosoma rangeli",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Kissing-bug-borne flagellate cycling alongside T. cruzi. Apparently non-pathogenic but complicates Chagas serology.",
+  },
+  {
+    slug: "iodamoeba-buetschlii",
+    name: "Iodamoeba",
+    scientificName: "Iodamoeba bütschlii",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Non-pathogenic intestinal amoeba with a large iodine-staining glycogen vacuole. A frequent benign finding that aids interpretation of stool ova-and-parasite exams.",
+  },
+  {
+    slug: "entamoeba-dispar",
+    name: "Entamoeba dispar",
+    scientificName: "Entamoeba dispar",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Morphologically identical to E. histolytica but non-invasive. Distinguishing the two by antigen or PCR avoids unnecessary metronidazole therapy.",
+  },
+  {
+    slug: "encephalitozoon-cuniculi",
+    name: "Encephalitozoon cuniculi",
+    scientificName: "Encephalitozoon cuniculi",
+    group: "Protozoa",
+    form: "Microsporidian",
+    transmission: "Fecal-oral",
+    description:
+      "Tiny obligate intracellular microsporidian of rabbits. Causes disseminated and CNS microsporidiosis in transplant and HIV patients.",
+  },
+  {
+    slug: "encephalitozoon-intestinalis",
+    name: "Encephalitozoon intestinalis",
+    scientificName: "Encephalitozoon intestinalis",
+    group: "Protozoa",
+    form: "Microsporidian",
+    transmission: "Fecal-oral",
+    description:
+      "Microsporidian that infects intestinal epithelium and disseminates. Causes chronic diarrhea and biliary disease in AIDS.",
+  },
+  {
+    slug: "trichuris-vulpis",
+    name: "Trichuris vulpis (zoonotic whipworm)",
+    scientificName: "Trichuris vulpis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Canine whipworm. Rare zoonotic human infection causes chronic colonic inflammation, mainly in children exposed to dog feces.",
+  },
+  {
+    slug: "trichostrongylus",
+    name: "Trichostrongylus",
+    scientificName: "Trichostrongylus colubriformis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Goat/sheep parasite acquired from contaminated produce. Causes asymptomatic to mild eosinophilic enteritis in agricultural workers.",
+  },
+  {
+    slug: "halicephalobus-gingivalis",
+    name: "Halicephalobus",
+    scientificName: "Halicephalobus gingivalis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Free-living soil nematode that can invade mammals. Causes rare but uniformly fatal eosinophilic meningoencephalitis after horse exposure.",
+  },
+  {
+    slug: "anisakis-pegreffii",
+    name: "Anisakis pegreffii",
+    scientificName: "Anisakis pegreffii",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "Mediterranean sibling of A. simplex. Causes anisakiasis after raw or undercooked fish; allergic IgE reactions can occur even after thorough cooking.",
+  },
+  {
+    slug: "thelazia-callipaeda",
+    name: "Thelazia (eye worm)",
+    scientificName: "Thelazia callipaeda",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Vector-borne",
+    description:
+      "Fly-borne nematode that lives on the eye surface. Causes conjunctivitis with adult worms visible crawling under the eyelid in endemic Asia and Europe.",
+  },
+  {
+    slug: "dracunculus-medinensis-aquatic",
+    name: "Dracunculus medinensis (animal hosts)",
+    scientificName: "Dracunculus medinensis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Waterborne",
+    description:
+      "Zoonotic reservoirs in dogs and fish complicate Guinea-worm eradication. The animal cycle keeps the parasite circulating despite near-zero human cases.",
+  },
+  {
+    slug: "echinococcus-vogeli",
+    name: "Echinococcus vogeli",
+    scientificName: "Echinococcus vogeli",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Fecal-oral",
+    description:
+      "South-American cestode cycling between bush dogs and pacas. Causes polycystic hydatid disease of the liver and abdomen.",
+  },
+  {
+    slug: "spirometra-mansonoides",
+    name: "Spirometra",
+    scientificName: "Spirometra mansonoides",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Foodborne",
+    description:
+      "Pseudophyllidean cestode whose plerocercoid larva (sparganum) migrates through subcutaneous tissues, eye, or brain (sparganosis).",
+  },
+  {
+    slug: "ornithodoros-moubata",
+    name: "Soft tick",
+    scientificName: "Ornithodoros moubata",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "African soft tick that feeds quickly and painlessly at night. The principal vector of louse-borne relapsing-fever Borrelia in cave and shelter settings.",
+  },
+  {
+    slug: "amblyomma-americanum",
+    name: "Lone-star tick",
+    scientificName: "Amblyomma americanum",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Aggressive American tick whose female has a white dorsal spot. Vector for ehrlichiosis, tularemia, Heartland virus, and the alpha-gal red-meat allergy.",
+  },
+  {
+    slug: "dermacentor-variabilis",
+    name: "American dog tick",
+    scientificName: "Dermacentor variabilis",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Hard tick of the eastern US. Vector for Rocky Mountain spotted fever, tularemia, and tick paralysis from neurotoxic saliva.",
+  },
+  {
+    slug: "leptotrombidium-deliense",
+    name: "Trombiculid chigger",
+    scientificName: "Leptotrombidium deliense",
+    group: "Ectoparasite",
+    form: "Mite",
+    transmission: "Contact",
+    description:
+      "Asian-Pacific trombiculid larva. Bites cause an eschar and transmit Orientia tsutsugamushi (scrub typhus).",
+  },
+  {
+    slug: "ornithonyssus-sylviarum",
+    name: "Northern fowl mite",
+    scientificName: "Ornithonyssus sylviarum",
+    group: "Ectoparasite",
+    form: "Mite",
+    transmission: "Contact",
+    description:
+      "Avian mite that bites humans handling poultry or pigeons. Causes pruritic papular dermatitis without persisting on human skin.",
+  },
+  {
+    slug: "cheyletiella-blakei",
+    name: "Cheyletiella (walking dandruff)",
+    scientificName: "Cheyletiella blakei",
+    group: "Ectoparasite",
+    form: "Mite",
+    transmission: "Contact",
+    description:
+      "Surface-dwelling cat fur mite that appears as mobile dandruff. Causes intensely itchy papular rash on owners and groomers.",
+  },
 ];

@@ -1112,4 +1112,166 @@ export const FUNGI: Fungus[] = [
     description:
       "Anthropophilic dermatophyte of African origin. Causes endothrix tinea capitis spreading in migrant and adopted-child populations.",
   },
+  {
+    slug: "candida-nivariensis",
+    name: "Candida nivariensis",
+    scientificName: "Nakaseomyces nivariensis",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Cryptic species sibling to C. glabrata with shared azole resistance. Causes invasive candidiasis often misidentified by phenotypic methods.",
+  },
+  {
+    slug: "candida-orthopsilosis",
+    name: "Candida orthopsilosis",
+    scientificName: "Candida orthopsilosis",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Cryptic species within the C. parapsilosis complex. Causes neonatal and catheter-related fungemia with similar virulence.",
+  },
+  {
+    slug: "saccharomyces-boulardii",
+    name: "S. boulardii (probiotic)",
+    scientificName: "Saccharomyces cerevisiae var. boulardii",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Thermotolerant probiotic strain marketed for C. difficile and antibiotic-associated diarrhea. Causes rare fungemia via translocation from central lines.",
+  },
+  {
+    slug: "filobasidiella-neoformans",
+    name: "Filobasidiella (Cryptococcus teleomorph)",
+    scientificName: "Filobasidiella neoformans",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Sexual stage of Cryptococcus neoformans. Recognized in soil and recombinant strains studied for fungal virulence.",
+  },
+  {
+    slug: "aspergillus-clavatus",
+    name: "Aspergillus clavatus",
+    scientificName: "Aspergillus clavatus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Septate mold of moldy malting grain producing patulin. Inhalational exposure causes malt-worker's hypersensitivity pneumonitis.",
+  },
+  {
+    slug: "aspergillus-calidoustus",
+    name: "Aspergillus calidoustus",
+    scientificName: "Aspergillus calidoustus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Thermotolerant species within the A. ustus complex with broad azole resistance. Emerging cause of invasive disease in transplant patients.",
+  },
+  {
+    slug: "neoscytalidium-hyalinum",
+    name: "Neoscytalidium hyalinum",
+    scientificName: "Neoscytalidium hyalinum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Hyaline relative of N. dimidiatum. Causes tropical onychomycosis and superficial mycoses unresponsive to dermatophyte therapy.",
+  },
+  {
+    slug: "scopulariopsis-brumptii",
+    name: "Scopulariopsis brumptii",
+    scientificName: "Scopulariopsis brumptii",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dark-pigmented Scopulariopsis species. Causes onychomycosis and rare invasive infection in hematologic-malignancy patients.",
+  },
+  {
+    slug: "ochroconis-gallopava",
+    name: "Ochroconis gallopava",
+    scientificName: "Ochroconis gallopava",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Thermophilic dematiaceous mold. A rare cause of brain abscess and pneumonia in transplant and immunocompromised hosts.",
+  },
+  {
+    slug: "scedosporium-boydii",
+    name: "Scedosporium boydii",
+    scientificName: "Scedosporium boydii",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Sibling species to S. apiospermum with similar amphotericin B resistance. Causes eumycetoma and respiratory colonization in cystic fibrosis.",
+  },
+  {
+    slug: "alternaria-infectoria",
+    name: "Alternaria infectoria",
+    scientificName: "Alternaria infectoria",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Dematiaceous mold causing chronic cutaneous phaeohyphomycosis. Common in solid-organ-transplant recipients on long-term immunosuppression.",
+  },
+  {
+    slug: "rhinosporidium-seeberi",
+    name: "Rhinosporidium",
+    scientificName: "Rhinosporidium seeberi",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Aquatic eukaryote (Mesomycetozoea) once thought to be a fungus. Causes nasal and ocular polyps acquired from contaminated freshwater.",
+  },
+  {
+    slug: "geosmithia-argillacea",
+    name: "Geosmithia",
+    scientificName: "Geosmithia argillacea",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Thermophilic mold related to Talaromyces. An emerging pulmonary pathogen in cystic fibrosis and chronic granulomatous disease.",
+  },
+  {
+    slug: "rhizomucor-pusillus",
+    name: "Rhizomucor pusillus",
+    scientificName: "Rhizomucor pusillus",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Thermotolerant Mucoralean mold of composting plant matter. Causes pulmonary mucormycosis in immunocompromised patients.",
+  },
+  {
+    slug: "cokeromyces-recurvatus",
+    name: "Cokeromyces",
+    scientificName: "Cokeromyces recurvatus",
+    morphology: "dimorphic",
+    group: "Opportunistic",
+    description:
+      "Rare Mucoralean fungus with both filamentous and yeast-like phases. Causes urinary tract and gastric infection, often confused with Coccidioides.",
+  },
+  {
+    slug: "lacazia-loboi-cetacean",
+    name: "Lacazia (cetacean strain)",
+    scientificName: "Lacazia loboi",
+    morphology: "yeast",
+    group: "Dimorphic",
+    description:
+      "Aquatic-mammal-associated strain causing dolphin lacaziosis. Documented in handlers exposed to infected animals.",
+  },
+  {
+    slug: "trichophyton-equinum",
+    name: "Trichophyton equinum",
+    scientificName: "Trichophyton equinum",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Zoophilic dermatophyte of horses. Causes inflammatory tinea corporis and capitis in handlers, jockeys, and veterinarians.",
+  },
+  {
+    slug: "epidermophyton-stockdaleae",
+    name: "Epidermophyton stockdaleae",
+    scientificName: "Epidermophyton stockdaleae",
+    morphology: "mold",
+    group: "Dermatophyte",
+    description:
+      "Soil-associated Epidermophyton species. Causes rare cases of tinea corporis and onychomycosis after contact with contaminated soil.",
+  },
 ];

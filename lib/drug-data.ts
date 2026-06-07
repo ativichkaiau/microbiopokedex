@@ -1664,4 +1664,322 @@ export const DRUGS: Drug[] = [
     description:
       "Second-line topical scabicide and pediculicide. Neurotoxicity risk restricts it to treatment failures in adults.",
   },
+
+  // ----- More Antibacterials -----
+  {
+    slug: "cefiderocol-novel",
+    name: "Sulbactam–durlobactam",
+    genericName: "sulbactam + durlobactam",
+    category: "Antibacterial",
+    drugClass: "BL inhibitor combo",
+    target: "Cell wall (PBP1/3)",
+    description:
+      "Combination of two beta-lactamase-related agents for carbapenem-resistant Acinetobacter baumannii — a previously near-untreatable pathogen.",
+  },
+  {
+    slug: "lefamulin",
+    name: "Lefamulin",
+    genericName: "lefamulin",
+    category: "Antibacterial",
+    drugClass: "Pleuromutilin",
+    target: "Ribosome 50S",
+    description:
+      "Oral/IV pleuromutilin for community-acquired pneumonia. Covers atypicals, MRSA, and macrolide-resistant S. pneumoniae.",
+  },
+  {
+    slug: "omadacycline",
+    name: "Omadacycline",
+    genericName: "omadacycline",
+    category: "Antibacterial",
+    drugClass: "Aminomethylcycline",
+    target: "Ribosome 30S",
+    description:
+      "Tetracycline derivative bypassing common efflux pumps. Approved for community pneumonia and acute skin infections.",
+  },
+  {
+    slug: "eravacycline",
+    name: "Eravacycline",
+    genericName: "eravacycline",
+    category: "Antibacterial",
+    drugClass: "Fluorocycline",
+    target: "Ribosome 30S",
+    description:
+      "Broad fluorocycline for complicated intra-abdominal infections, including ESBL Enterobacterales and Acinetobacter.",
+  },
+  {
+    slug: "plazomicin",
+    name: "Plazomicin",
+    genericName: "plazomicin",
+    category: "Antibacterial",
+    drugClass: "Aminoglycoside",
+    target: "Ribosome 30S",
+    description:
+      "Neo-aminoglycoside stable to common aminoglycoside-modifying enzymes. Targets CRE in complicated UTI and bloodstream infections.",
+  },
+  {
+    slug: "pretomanid",
+    name: "Pretomanid",
+    genericName: "pretomanid",
+    category: "Antibacterial",
+    drugClass: "Nitroimidazooxazine",
+    target: "Mycolic acid + ETC",
+    description:
+      "Bicyclic nitroimidazole used in the BPaL regimen (bedaquiline + pretomanid + linezolid) for extensively drug-resistant tuberculosis.",
+  },
+  {
+    slug: "delamanid",
+    name: "Delamanid",
+    genericName: "delamanid",
+    category: "Antibacterial",
+    drugClass: "Nitro-dihydroimidazooxazole",
+    target: "Mycolic acid synthesis",
+    description:
+      "Anti-TB drug used in MDR-TB regimens. Inhibits mycolic-acid synthesis like pretomanid; QT prolongation requires monitoring.",
+  },
+  {
+    slug: "ethionamide",
+    name: "Ethionamide",
+    genericName: "ethionamide",
+    category: "Antibacterial",
+    drugClass: "Antimycobacterial",
+    target: "Mycolic acid synthesis",
+    description:
+      "Second-line anti-TB drug structurally related to INH. Limited by GI upset, hepatotoxicity, and reversible hypothyroidism.",
+  },
+  {
+    slug: "cycloserine",
+    name: "Cycloserine",
+    genericName: "cycloserine",
+    category: "Antibacterial",
+    drugClass: "Cyclic amino-acid analog",
+    target: "Cell wall (alanine racemase)",
+    description:
+      "Second-line anti-TB drug. Causes neuropsychiatric adverse effects ('cycloserine madness') and seizures at high concentrations.",
+  },
+  {
+    slug: "spectinomycin",
+    name: "Spectinomycin",
+    genericName: "spectinomycin",
+    category: "Antibacterial",
+    drugClass: "Aminocyclitol",
+    target: "Ribosome 30S",
+    description:
+      "Single IM dose alternative for uncomplicated gonococcal urethritis when ceftriaxone cannot be used. Limited global availability.",
+  },
+  {
+    slug: "polymyxin-b",
+    name: "Polymyxin B",
+    genericName: "polymyxin B",
+    category: "Antibacterial",
+    drugClass: "Polymyxin",
+    target: "Outer membrane (LPS)",
+    description:
+      "Cationic peptide closely related to colistin. Used for carbapenem-resistant Gram-negatives; also a topical ophthalmic and otic agent.",
+  },
+  {
+    slug: "methenamine",
+    name: "Methenamine",
+    genericName: "methenamine hippurate",
+    category: "Antibacterial",
+    drugClass: "Urinary antiseptic",
+    target: "Formaldehyde release",
+    description:
+      "Oral urinary antiseptic releasing formaldehyde in acidic urine. Used for recurrent uncomplicated cystitis prophylaxis.",
+  },
+
+  // ----- More Antivirals -----
+  {
+    slug: "maribavir",
+    name: "Maribavir",
+    genericName: "maribavir",
+    category: "Antiviral",
+    drugClass: "UL97 kinase inhibitor",
+    target: "CMV UL97 protein kinase",
+    description:
+      "Oral anti-CMV agent for refractory or resistant CMV infection in transplant recipients, with less marrow toxicity than ganciclovir.",
+  },
+  {
+    slug: "obeldesivir",
+    name: "Obeldesivir",
+    genericName: "obeldesivir",
+    category: "Antiviral",
+    drugClass: "Nucleotide analog",
+    target: "RNA-dependent RNA polymerase",
+    description:
+      "Oral prodrug of remdesivir's parent nucleoside, investigated for Marburg, Ebola, and other RNA viruses.",
+  },
+  {
+    slug: "lenacapavir",
+    name: "Lenacapavir",
+    genericName: "lenacapavir",
+    category: "Antiviral",
+    drugClass: "Capsid inhibitor",
+    target: "HIV capsid",
+    description:
+      "First-in-class subcutaneous capsid inhibitor dosed every six months. For heavily treatment-experienced HIV and as long-acting PrEP.",
+  },
+  {
+    slug: "fostemsavir",
+    name: "Fostemsavir",
+    genericName: "fostemsavir",
+    category: "Antiviral",
+    drugClass: "Attachment inhibitor",
+    target: "HIV gp120",
+    description:
+      "Oral prodrug blocking HIV gp120 binding to CD4. Reserved for multidrug-resistant HIV salvage regimens.",
+  },
+  {
+    slug: "ibalizumab",
+    name: "Ibalizumab",
+    genericName: "ibalizumab-uiyk",
+    category: "Antiviral",
+    drugClass: "Monoclonal antibody",
+    target: "CD4 (post-attachment)",
+    description:
+      "IV monoclonal antibody preventing HIV entry after CD4 binding. Approved for multi-class-resistant HIV.",
+  },
+  {
+    slug: "abacavir",
+    name: "Abacavir",
+    genericName: "abacavir",
+    category: "Antiviral",
+    drugClass: "NRTI",
+    target: "Reverse transcriptase",
+    description:
+      "Guanosine analog NRTI for HIV. Requires HLA-B*5701 screening to avoid the hypersensitivity reaction.",
+  },
+  {
+    slug: "doravirine",
+    name: "Doravirine",
+    genericName: "doravirine",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "Next-generation NNRTI retaining activity against common K103N resistance. Fewer CNS effects than efavirenz.",
+  },
+
+  // ----- More Antifungals -----
+  {
+    slug: "olorofim",
+    name: "Olorofim",
+    genericName: "olorofim",
+    category: "Antifungal",
+    drugClass: "Orotomide",
+    target: "Dihydroorotate dehydrogenase",
+    description:
+      "First-in-class anti-mold drug active against azole-resistant Aspergillus, Scedosporium, and Lomentospora. Phase 3 investigational.",
+  },
+  {
+    slug: "manogepix",
+    name: "Manogepix",
+    genericName: "manogepix",
+    category: "Antifungal",
+    drugClass: "Gwt1 inhibitor",
+    target: "GPI-anchor biosynthesis",
+    description:
+      "The active form of fosmanogepix. Targets a fungal-specific cell-wall pathway and remains active against many resistant molds and yeasts.",
+  },
+  {
+    slug: "tolnaftate",
+    name: "Tolnaftate",
+    genericName: "tolnaftate",
+    category: "Antifungal",
+    drugClass: "Thiocarbamate",
+    target: "Squalene epoxidase",
+    description:
+      "Over-the-counter topical antifungal for tinea pedis, corporis, and cruris. Fungistatic; less effective for thick scaling.",
+  },
+  {
+    slug: "naftifine",
+    name: "Naftifine",
+    genericName: "naftifine",
+    category: "Antifungal",
+    drugClass: "Allylamine",
+    target: "Squalene epoxidase",
+    description:
+      "Topical allylamine for tinea pedis, corporis, and cruris. Fungicidal against dermatophytes with anti-inflammatory effect.",
+  },
+  {
+    slug: "efinaconazole",
+    name: "Efinaconazole",
+    genericName: "efinaconazole",
+    category: "Antifungal",
+    drugClass: "Triazole",
+    target: "Ergosterol synthesis",
+    description:
+      "Topical triazole solution for toenail onychomycosis. Penetrates the nail plate without requiring oral therapy.",
+  },
+
+  // ----- More Antiparasitics -----
+  {
+    slug: "amodiaquine",
+    name: "Amodiaquine",
+    genericName: "amodiaquine",
+    category: "Antiparasitic",
+    drugClass: "4-aminoquinoline",
+    target: "Heme detoxification",
+    description:
+      "Aminoquinoline antimalarial paired with artesunate in WHO-recommended ACT regimens for uncomplicated falciparum malaria.",
+  },
+  {
+    slug: "artesunate",
+    name: "Artesunate",
+    genericName: "artesunate",
+    category: "Antiparasitic",
+    drugClass: "Artemisinin",
+    target: "Heme / parasite proteins",
+    description:
+      "IV/IM artemisinin derivative and the global standard for severe P. falciparum malaria, replacing quinine.",
+  },
+  {
+    slug: "dihydroartemisinin-piperaquine",
+    name: "DHA–piperaquine",
+    genericName: "dihydroartemisinin + piperaquine",
+    category: "Antiparasitic",
+    drugClass: "Artemisinin combination therapy",
+    target: "Heme / parasite proteins",
+    description:
+      "Long-acting ACT for uncomplicated falciparum malaria and intermittent preventive treatment in pregnancy.",
+  },
+  {
+    slug: "pyronaridine-artesunate",
+    name: "Pyronaridine–artesunate",
+    genericName: "pyronaridine + artesunate",
+    category: "Antiparasitic",
+    drugClass: "Artemisinin combination therapy",
+    target: "Heme / parasite proteins",
+    description:
+      "Newer ACT effective against both P. falciparum and chloroquine-resistant P. vivax. Used in African and South-East Asian programs.",
+  },
+  {
+    slug: "moxidectin",
+    name: "Moxidectin",
+    genericName: "moxidectin",
+    category: "Antiparasitic",
+    drugClass: "Macrocyclic lactone",
+    target: "Glutamate-gated chloride channels",
+    description:
+      "Long-acting ivermectin relative for onchocerciasis with stronger microfilaricidal effect. Single oral dose.",
+  },
+  {
+    slug: "ozonide-oz439",
+    name: "Artefenomel (OZ439)",
+    genericName: "artefenomel",
+    category: "Antiparasitic",
+    drugClass: "Synthetic ozonide",
+    target: "Heme / iron metabolism",
+    description:
+      "Investigational synthetic ozonide antimalarial designed for single-dose cure when combined with a partner drug.",
+  },
+  {
+    slug: "tafenoquine-combo",
+    name: "Tafenoquine + chloroquine",
+    genericName: "tafenoquine + chloroquine",
+    category: "Antiparasitic",
+    drugClass: "Combination regimen",
+    target: "Heme + hypnozoites",
+    description:
+      "Single-dose regimen for radical cure of P. vivax. Requires G6PD screening before use.",
+  },
 ];

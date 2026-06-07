@@ -1578,4 +1578,204 @@ export const VIRUSES: Virus[] = [
     description:
       "Positive-sense RNA picornavirus found in stool. Detected in children with diarrhea; its causal role remains under study.",
   },
+  {
+    slug: "kobuvirus",
+    name: "Aichivirus / Kobuvirus",
+    scientificName: "Aichivirus C",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Positive-sense RNA picornavirus shed in stool. Detected worldwide in pediatric diarrhea, often co-infecting with rotavirus or norovirus.",
+  },
+  {
+    slug: "enterovirus-a71-bf",
+    name: "Enterovirus A71 (severe HFMD)",
+    scientificName: "Enterovirus A71",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Picornaviridae",
+    description:
+      "Drives large outbreaks of severe hand-foot-and-mouth disease in Asia, with brainstem encephalitis and cardiopulmonary collapse in young children.",
+  },
+  {
+    slug: "human-cyclovirus",
+    name: "Cyclovirus",
+    scientificName: "Cyclovirus CyCV",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Circoviridae",
+    description:
+      "Tiny single-stranded DNA circovirus detected in CSF of patients with paralysis and encephalitis. Pathogenic role still being characterized.",
+  },
+  {
+    slug: "human-anellovirus",
+    name: "Anelloviruses (TTV family)",
+    scientificName: "Anellovirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Anelloviridae",
+    description:
+      "Diverse single-stranded DNA viruses present in nearly everyone. Non-pathogenic; viral load is studied as a biomarker of immune competence.",
+  },
+  {
+    slug: "duvenhage-virus",
+    name: "Duvenhage virus",
+    scientificName: "Duvenhage lyssavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "African bat-borne lyssavirus. Rare human exposure causes rabies-like fatal encephalitis after bat bites.",
+  },
+  {
+    slug: "lagos-bat-virus",
+    name: "Lagos bat lyssavirus",
+    scientificName: "Lagos bat lyssavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Rhabdoviridae",
+    description:
+      "African frugivorous bat lyssavirus. Has caused rabies-like encephalitis in cats and dogs; sporadic human exposure carries the same lethal risk.",
+  },
+  {
+    slug: "kemerovo-virus",
+    name: "Kemerovo virus",
+    scientificName: "Kemerovo orbivirus",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Reoviridae",
+    description:
+      "Tick-borne double-stranded RNA orbivirus of Siberia and Central Europe. Causes febrile illness with occasional meningoencephalitis.",
+  },
+  {
+    slug: "human-pegivirus-2",
+    name: "Human pegivirus 2",
+    scientificName: "Human pegivirus 2",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Blood-borne pegivirus related to GBV-C. Persistently infects up to 5% of donors; clinical significance is uncertain.",
+  },
+  {
+    slug: "alkhurma-virus",
+    name: "Alkhurma virus",
+    scientificName: "Alkhurma hemorrhagic fever virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Tick-borne flavivirus related to Kyasanur Forest virus, endemic to Saudi Arabia. Causes hemorrhagic fever with hepatitis and encephalitis.",
+  },
+  {
+    slug: "rio-mamore-virus",
+    name: "Rio Mamoré virus",
+    scientificName: "Rio Mamoré orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "South-American rodent-borne hantavirus. Sporadic cause of hantavirus pulmonary syndrome in the Amazon basin.",
+  },
+  {
+    slug: "monongahela-virus",
+    name: "Monongahela virus",
+    scientificName: "Monongahela orthohantavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Hantaviridae",
+    description:
+      "North-American hantavirus closely related to Sin Nombre. Causes hantavirus pulmonary syndrome along the Appalachian range.",
+  },
+  {
+    slug: "ngari-virus",
+    name: "Ngari virus",
+    scientificName: "Ngari orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Reassortant bunyavirus of sub-Saharan Africa. Linked to outbreaks of hemorrhagic fever during Rift Valley fever epizootics.",
+  },
+  {
+    slug: "tahyna-virus",
+    name: "Tahyna virus",
+    scientificName: "Tahyna orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "European mosquito-borne orthobunyavirus in the California encephalitis serogroup. Causes a flu-like illness with rare meningitis.",
+  },
+  {
+    slug: "punta-toro-virus",
+    name: "Punta Toro virus",
+    scientificName: "Punta Toro phlebovirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Neotropical sandfly-borne phlebovirus of Panama. Causes a brief febrile illness with hepatitis-like enzyme rise.",
+  },
+  {
+    slug: "sandfly-fever-naples",
+    name: "Sandfly fever Naples virus",
+    scientificName: "Sandfly fever Naples phlebovirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Sandfly-borne phlebovirus of the Mediterranean. Causes 'three-day fever' with severe headache, myalgia, and photophobia.",
+  },
+  {
+    slug: "akabane-virus",
+    name: "Akabane virus",
+    scientificName: "Akabane orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "Midge-borne orthobunyavirus of cattle and sheep. Veterinary teratogen; no confirmed human disease but a frequent surveillance target.",
+  },
+  {
+    slug: "schmallenberg-virus",
+    name: "Schmallenberg virus",
+    scientificName: "Schmallenberg orthobunyavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Peribunyaviridae",
+    description:
+      "European midge-borne orthobunyavirus discovered in 2011. Causes ruminant congenital arthrogryposis; no proven human pathogenicity.",
+  },
+  {
+    slug: "hepatitis-g-virus",
+    name: "Hepatitis G virus (HGV)",
+    scientificName: "Pegivirus C",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Blood-borne pegivirus related to GBV-C. Persistently infects without confirmed disease; may slow HIV progression.",
+  },
+  {
+    slug: "asfarvirus-african-swine-fever",
+    name: "African swine fever virus",
+    scientificName: "African swine fever virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Asfarviridae",
+    description:
+      "Tick-and-pig-borne double-stranded DNA virus causing devastating hemorrhagic fever in pigs. Not known to infect humans but tracked as a major agricultural threat.",
+  },
+  {
+    slug: "circovirus-pcv2",
+    name: "Porcine circovirus 2",
+    scientificName: "Porcine circovirus 2",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Circoviridae",
+    description:
+      "Tiny single-stranded DNA circovirus causing post-weaning multisystemic wasting in pigs. A common contaminant of biologicals and rotavirus vaccines.",
+  },
 ];

@@ -1698,4 +1698,204 @@ export const BACTERIA: Bacterium[] = [
     description:
       "Tightly coiled motile gram-negative spiral rod. Causes the spirillary form of rat-bite fever (sodoku) with relapsing fever and a regional eschar.",
   },
+  {
+    slug: "streptococcus-dysgalactiae",
+    name: "S. dysgalactiae",
+    scientificName: "Streptococcus dysgalactiae",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Beta-hemolytic gram-positive cocci in chains. An increasingly common cause of necrotizing fasciitis, cellulitis, and toxic-shock-like syndrome in older adults.",
+  },
+  {
+    slug: "streptococcus-intermedius",
+    name: "S. intermedius",
+    scientificName: "Streptococcus intermedius",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Anginosus-group gram-positive cocci with a tropism for the central nervous system. Causes brain abscesses, often in sinusitis or dental infection.",
+  },
+  {
+    slug: "stomatococcus-mucilaginosus",
+    name: "Stomatococcus",
+    scientificName: "Rothia mucilaginosa (Stomatococcus)",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "clusters",
+    description:
+      "Mucoid gram-positive cocci of the mouth. Causes bacteremia and endocarditis in neutropenic patients via oral mucositis.",
+  },
+  {
+    slug: "weissella-confusa",
+    name: "Weissella",
+    scientificName: "Weissella confusa",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "pairs",
+    description:
+      "Lactic-acid bacterium often mistaken for Lactobacillus or Leuconostoc. Intrinsically vancomycin-resistant; causes rare opportunistic bacteremia.",
+  },
+  {
+    slug: "lactobacillus-crispatus",
+    name: "L. crispatus",
+    scientificName: "Lactobacillus crispatus",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "chains",
+    description:
+      "Hydrogen-peroxide-producing gram-positive rod that dominates a healthy vaginal microbiome. Its dominance is protective against bacterial vaginosis.",
+  },
+  {
+    slug: "leptotrichia-buccalis",
+    name: "Leptotrichia",
+    scientificName: "Leptotrichia buccalis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "filaments",
+    description:
+      "Anaerobic gram-negative rod of the mouth. Causes bacteremia and oropharyngeal infections in neutropenic patients with mucositis.",
+  },
+  {
+    slug: "selenomonas-ruminantium",
+    name: "Selenomonas",
+    scientificName: "Selenomonas ruminantium",
+    gramStain: "negative",
+    shape: "vibrio",
+    arrangement: "single",
+    description:
+      "Crescent-shaped anaerobic gram-negative rod with flagella along the concave side. Rare cause of polymicrobial periodontal and intra-abdominal infections.",
+  },
+  {
+    slug: "kingella-oralis",
+    name: "Kingella oralis",
+    scientificName: "Kingella oralis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "pairs",
+    description:
+      "Fastidious gram-negative coccobacillus of the human mouth. A rare HACEK-related cause of endocarditis and oral abscesses.",
+  },
+  {
+    slug: "ornithobacterium-rhinotracheale",
+    name: "Ornithobacterium",
+    scientificName: "Ornithobacterium rhinotracheale",
+    gramStain: "negative",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Pleomorphic gram-negative rod of poultry. Rare occupational human respiratory infection from intensive poultry exposure.",
+  },
+  {
+    slug: "kytococcus-sedentarius",
+    name: "Kytococcus",
+    scientificName: "Kytococcus sedentarius",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "tetrads",
+    description:
+      "Coagulase-negative skin gram-positive cocci in tetrads. The classic cause of pitted keratolysis — symmetric pits on the soles of sweaty feet.",
+  },
+  {
+    slug: "dermabacter-hominis",
+    name: "Dermabacter",
+    scientificName: "Dermabacter hominis",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "palisades",
+    description:
+      "Slow-growing diphtheroid skin commensal. Rare cause of bacteremia and abscesses in immunocompromised hosts.",
+  },
+  {
+    slug: "microbacterium-paraoxydans",
+    name: "Microbacterium",
+    scientificName: "Microbacterium paraoxydans",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Yellow-pigmented coryneform gram-positive rod. Causes catheter-related bacteremia and endophthalmitis in immunocompromised patients.",
+  },
+  {
+    slug: "rothia-dentocariosa",
+    name: "Rothia dentocariosa",
+    scientificName: "Rothia dentocariosa",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Pleomorphic gram-positive rod of dental plaque. Causes endocarditis after dental procedures and rare cervicofacial abscesses.",
+  },
+  {
+    slug: "mycoplasma-fermentans",
+    name: "Mycoplasma fermentans",
+    scientificName: "Mycoplasma fermentans",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Cell-wall-deficient bacterium that infects monocytes and lymphocytes. Implicated in rare arthritis and bronchitis, especially in immunocompromised hosts.",
+  },
+  {
+    slug: "chlamydia-pneumoniae",
+    name: "Chlamydophila pneumoniae",
+    scientificName: "Chlamydia pneumoniae",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Obligate intracellular pear-shaped bacterium without classic peptidoglycan. Causes atypical pneumonia, bronchitis, and pharyngitis, often in adolescents.",
+  },
+  {
+    slug: "chlamydia-psittaci",
+    name: "Chlamydia psittaci",
+    scientificName: "Chlamydia psittaci",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Obligate intracellular bacterium from parrots and other birds. Inhalation causes psittacosis with high fever, dry cough, and severe headache.",
+  },
+  {
+    slug: "bordetella-bronchiseptica",
+    name: "B. bronchiseptica",
+    scientificName: "Bordetella bronchiseptica",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Motile gram-negative coccobacillus of dogs, cats, and pigs (kennel cough). Rare zoonotic respiratory infection in immunocompromised humans.",
+  },
+  {
+    slug: "haemophilus-aphrophilus",
+    name: "Aggregatibacter aphrophilus",
+    scientificName: "Aggregatibacter aphrophilus",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Fastidious gram-negative coccobacillus of the mouth (a HACEK organism). Causes endocarditis and brain abscesses, often after dental work.",
+  },
+  {
+    slug: "rickettsia-akari",
+    name: "Rickettsia akari",
+    scientificName: "Rickettsia akari",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Intracellular gram-negative coccobacillus transmitted by house mouse mites. Causes rickettsialpox: an eschar with febrile vesicular rash.",
+  },
+  {
+    slug: "rickettsia-felis",
+    name: "Rickettsia felis",
+    scientificName: "Rickettsia felis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Flea-borne intracellular gram-negative coccobacillus. Causes a worldwide flea-borne spotted fever with rash, eschar, and fever.",
+  },
 ];
