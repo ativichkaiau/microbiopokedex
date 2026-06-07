@@ -96,14 +96,13 @@ function PharmaCard({
 
 function MicrobeCoverage({ drugSlug }: { drugSlug: string }) {
   const matches = getMicrobesEffectiveFor(drugSlug);
+  // Systemic (non-antimicrobial) drugs have no microbe map; skip the card
+  // entirely rather than showing an empty panel.
+  if (matches.length === 0) return null;
   return (
     <div className="glass-soft mt-6 rounded-2xl p-6">
       <h3 className="text-tech text-[10px] text-muted">Microbes covered</h3>
-      {matches.length === 0 ? (
-        <p className="mt-3 text-sm italic text-muted">
-          No catalogued matches in this pokédex.
-        </p>
-      ) : (
+      {
         <div className="mt-4 space-y-5">
           {SECTION_ORDER.filter((k) => k !== "pharmacology").map((k) => {
             const inSection = matches.filter((m) => m.section === k);
@@ -133,7 +132,7 @@ function MicrobeCoverage({ drugSlug }: { drugSlug: string }) {
             );
           })}
         </div>
-      )}
+      }
     </div>
   );
 }
