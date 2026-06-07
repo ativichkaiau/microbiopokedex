@@ -1982,4 +1982,290 @@ export const DRUGS: Drug[] = [
     description:
       "Single-dose regimen for radical cure of P. vivax. Requires G6PD screening before use.",
   },
+  {
+    slug: "cefpodoxime",
+    name: "Cefpodoxime",
+    genericName: "cefpodoxime proxetil",
+    category: "Antibacterial",
+    drugClass: "3rd-gen cephalosporin",
+    target: "Cell wall",
+    description:
+      "Oral third-generation cephalosporin for community pneumonia, otitis media, and uncomplicated gonorrhea.",
+  },
+  {
+    slug: "cefixime",
+    name: "Cefixime",
+    genericName: "cefixime",
+    category: "Antibacterial",
+    drugClass: "3rd-gen cephalosporin",
+    target: "Cell wall",
+    description:
+      "Oral third-generation cephalosporin previously used for gonorrhea; now reserved for UTIs and typhoid.",
+  },
+  {
+    slug: "imipenem-relebactam",
+    name: "Imipenem–relebactam",
+    genericName: "imipenem + cilastatin + relebactam",
+    category: "Antibacterial",
+    drugClass: "Carbapenem + BL inhibitor",
+    target: "Cell wall",
+    description:
+      "Imipenem combined with a novel diazabicyclooctane to restore activity against KPC-producing carbapenem-resistant Enterobacterales and Pseudomonas.",
+  },
+  {
+    slug: "ceftobiprole",
+    name: "Ceftobiprole",
+    genericName: "ceftobiprole medocaril",
+    category: "Antibacterial",
+    drugClass: "Anti-MRSA cephalosporin",
+    target: "Cell wall (PBP2a)",
+    description:
+      "Broad cephalosporin with anti-MRSA and anti-Pseudomonas activity. Used for community and hospital pneumonia in some countries.",
+  },
+  {
+    slug: "iclaprim",
+    name: "Iclaprim",
+    genericName: "iclaprim",
+    category: "Antibacterial",
+    drugClass: "Folate antagonist",
+    target: "Dihydrofolate reductase",
+    description:
+      "Newer DHFR inhibitor with activity against MRSA. Investigated for acute bacterial skin infections.",
+  },
+  {
+    slug: "novobiocin",
+    name: "Novobiocin",
+    genericName: "novobiocin",
+    category: "Antibacterial",
+    drugClass: "Aminocoumarin",
+    target: "DNA gyrase (B subunit)",
+    description:
+      "Historical antibiotic targeting GyrB. Used in the laboratory to distinguish S. saprophyticus (resistant) from other coagulase-negative staph.",
+  },
+  {
+    slug: "bacitracin",
+    name: "Bacitracin",
+    genericName: "bacitracin",
+    category: "Antibacterial",
+    drugClass: "Polypeptide",
+    target: "Cell wall (lipid carrier)",
+    description:
+      "Topical antibiotic for skin infections. Laboratory disk used to identify Streptococcus pyogenes (susceptible) versus other beta-hemolytic strep.",
+  },
+  {
+    slug: "optochin",
+    name: "Optochin",
+    genericName: "ethylhydrocupreine",
+    category: "Antibacterial",
+    drugClass: "Quinoline (lab marker)",
+    target: "ATPase",
+    description:
+      "Historical antimalarial now only used in the lab to identify S. pneumoniae (optochin-sensitive) versus viridans streptococci.",
+  },
+  {
+    slug: "sparfloxacin",
+    name: "Sparfloxacin",
+    genericName: "sparfloxacin",
+    category: "Antibacterial",
+    drugClass: "Fluoroquinolone",
+    target: "DNA gyrase / topo IV",
+    description:
+      "Older fluoroquinolone with anti-pneumococcal activity. Limited by phototoxicity and QT prolongation; rarely used today.",
+  },
+  {
+    slug: "trovafloxacin",
+    name: "Trovafloxacin",
+    genericName: "trovafloxacin",
+    category: "Antibacterial",
+    drugClass: "Fluoroquinolone",
+    target: "DNA gyrase / topo IV",
+    description:
+      "Broad-spectrum quinolone withdrawn due to severe hepatotoxicity. A cautionary tale in antimicrobial pharmacovigilance.",
+  },
+
+  // ----- More Antivirals -----
+  {
+    slug: "rimantadine",
+    name: "Rimantadine",
+    genericName: "rimantadine",
+    category: "Antiviral",
+    drugClass: "M2 inhibitor",
+    target: "Influenza A M2 channel",
+    description:
+      "Older adamantane antiviral active against influenza A only. Universal resistance has retired it from clinical use.",
+  },
+  {
+    slug: "amantadine",
+    name: "Amantadine",
+    genericName: "amantadine",
+    category: "Antiviral",
+    drugClass: "M2 inhibitor",
+    target: "Influenza A M2 channel",
+    description:
+      "First-generation M2 channel blocker. Now used mainly for Parkinson's disease and drug-induced extrapyramidal symptoms.",
+  },
+  {
+    slug: "trifluridine",
+    name: "Trifluridine",
+    genericName: "trifluridine",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Viral DNA polymerase",
+    description:
+      "Topical ophthalmic agent for herpetic keratoconjunctivitis. The thymidine analog disrupts viral DNA synthesis in the cornea.",
+  },
+  {
+    slug: "idoxuridine",
+    name: "Idoxuridine",
+    genericName: "idoxuridine",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Viral DNA polymerase",
+    description:
+      "First systemic antiviral developed (1959). Now used only topically for herpetic keratitis.",
+  },
+  {
+    slug: "vidarabine",
+    name: "Vidarabine",
+    genericName: "vidarabine",
+    category: "Antiviral",
+    drugClass: "Nucleoside analog",
+    target: "Viral DNA polymerase",
+    description:
+      "Adenosine analog historically used for HSV encephalitis and zoster. Largely replaced by acyclovir; some ophthalmic use remains.",
+  },
+  {
+    slug: "saquinavir",
+    name: "Saquinavir",
+    genericName: "saquinavir",
+    category: "Antiviral",
+    drugClass: "Protease inhibitor",
+    target: "HIV protease",
+    description:
+      "First approved HIV protease inhibitor (1995). Required boosting with ritonavir; pivotal historical agent.",
+  },
+  {
+    slug: "indinavir",
+    name: "Indinavir",
+    genericName: "indinavir",
+    category: "Antiviral",
+    drugClass: "Protease inhibitor",
+    target: "HIV protease",
+    description:
+      "Classic HIV protease inhibitor. Caused crystal nephropathy; required strict hydration.",
+  },
+  {
+    slug: "delavirdine",
+    name: "Delavirdine",
+    genericName: "delavirdine",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "Early NNRTI now rarely used due to thrice-daily dosing and a low resistance barrier.",
+  },
+  {
+    slug: "etravirine",
+    name: "Etravirine",
+    genericName: "etravirine",
+    category: "Antiviral",
+    drugClass: "NNRTI",
+    target: "HIV reverse transcriptase",
+    description:
+      "Second-generation NNRTI with activity against many NNRTI-resistant viruses. Salvage option after first-line failure.",
+  },
+  {
+    slug: "elvitegravir",
+    name: "Elvitegravir",
+    genericName: "elvitegravir",
+    category: "Antiviral",
+    drugClass: "Integrase inhibitor",
+    target: "HIV integrase",
+    description:
+      "Once-daily INSTI requiring cobicistat boosting. Co-formulated with tenofovir + emtricitabine in earlier single-tablet HIV regimens.",
+  },
+
+  // ----- More Antifungals -----
+  {
+    slug: "butenafine",
+    name: "Butenafine",
+    genericName: "butenafine",
+    category: "Antifungal",
+    drugClass: "Benzylamine",
+    target: "Squalene epoxidase",
+    description:
+      "Topical squalene-epoxidase inhibitor for tinea pedis, cruris, and corporis. Fungicidal against dermatophytes; once-daily.",
+  },
+  {
+    slug: "amorolfine",
+    name: "Amorolfine",
+    genericName: "amorolfine",
+    category: "Antifungal",
+    drugClass: "Morpholine",
+    target: "Ergosterol synthesis",
+    description:
+      "Topical nail-lacquer antifungal for mild onychomycosis. Inhibits two distinct ergosterol-synthesis steps.",
+  },
+
+  // ----- More Antiparasitics -----
+  {
+    slug: "tinidazole-malaria",
+    name: "Tinidazole (luminal amoebicide)",
+    genericName: "tinidazole",
+    category: "Antiparasitic",
+    drugClass: "Nitroimidazole",
+    target: "DNA damage",
+    description:
+      "Used after metronidazole or tinidazole tissue therapy to clear remaining intestinal Entamoeba cysts (alongside paromomycin).",
+  },
+  {
+    slug: "niclosamide",
+    name: "Niclosamide",
+    genericName: "niclosamide",
+    category: "Antiparasitic",
+    drugClass: "Salicylanilide",
+    target: "Mitochondrial oxidative phosphorylation",
+    description:
+      "Oral non-absorbed agent for intestinal tapeworms (Taenia, Diphyllobothrium). Single dose; not effective for cysticercosis.",
+  },
+  {
+    slug: "bithionol",
+    name: "Bithionol",
+    genericName: "bithionol",
+    category: "Antiparasitic",
+    drugClass: "Bisphenol",
+    target: "Parasite oxidative phosphorylation",
+    description:
+      "Historical alternative for paragonimiasis (lung fluke) and fasciolisis. Mostly replaced by triclabendazole.",
+  },
+  {
+    slug: "metrifonate",
+    name: "Metrifonate",
+    genericName: "metrifonate",
+    category: "Antiparasitic",
+    drugClass: "Organophosphate",
+    target: "Acetylcholinesterase",
+    description:
+      "Older oral agent for Schistosoma haematobium. Mostly superseded by praziquantel but still used in some endemic regions.",
+  },
+  {
+    slug: "carbarsone",
+    name: "Carbarsone",
+    genericName: "carbarsone",
+    category: "Antiparasitic",
+    drugClass: "Arsenical",
+    target: "Sulfhydryl groups",
+    description:
+      "Older arsenic-based luminal amoebicide for E. histolytica. Largely replaced by safer paromomycin and diloxanide.",
+  },
+  {
+    slug: "tafenoquine-prophylaxis",
+    name: "Tafenoquine (prophylaxis)",
+    genericName: "tafenoquine",
+    category: "Antiparasitic",
+    drugClass: "8-aminoquinoline",
+    target: "Mitochondrial functions",
+    description:
+      "Weekly dosing for malaria prophylaxis after loading. Approved as Arakoda in addition to its single-dose Krintafel role.",
+  },
 ];

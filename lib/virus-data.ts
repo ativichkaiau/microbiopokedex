@@ -1778,4 +1778,184 @@ export const VIRUSES: Virus[] = [
     description:
       "Tiny single-stranded DNA circovirus causing post-weaning multisystemic wasting in pigs. A common contaminant of biologicals and rotavirus vaccines.",
   },
+  {
+    slug: "human-parvovirus-4",
+    name: "Parvovirus 4",
+    scientificName: "Human parvovirus 4",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Parvoviridae",
+    description:
+      "Single-stranded DNA parvovirus first found in blood donors. Persistence in tissues is documented; clinical disease is uncertain.",
+  },
+  {
+    slug: "bocaparvovirus-2",
+    name: "Human bocaparvovirus 2",
+    scientificName: "Human bocaparvovirus 2",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Parvoviridae",
+    description:
+      "Stool-associated bocaparvovirus. Frequently detected in pediatric gastroenteritis; an independent disease role is debated.",
+  },
+  {
+    slug: "rabbit-fibroma-virus",
+    name: "Shope fibroma virus",
+    scientificName: "Rabbit fibroma virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "Leporipoxvirus of cottontail rabbits. Foundational model of viral oncogenesis; not infectious in humans.",
+  },
+  {
+    slug: "deerpox-virus",
+    name: "Deerpox",
+    scientificName: "Deerpox virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "Recently characterized poxvirus of cervids. Causes proliferative skin lesions in mule deer; rare zoonotic significance.",
+  },
+  {
+    slug: "elephantid-herpesvirus-1",
+    name: "EEHV-1",
+    scientificName: "Elephantid betaherpesvirus 1",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Herpesviridae",
+    description:
+      "Lethal endotheliotropic herpesvirus of Asian elephant calves. Studied by veterinary virologists; not known to infect humans.",
+  },
+  {
+    slug: "carp-edema-virus",
+    name: "Carp edema virus",
+    scientificName: "Carp edema virus",
+    genome: "DNA",
+    envelope: "enveloped",
+    family: "Poxviridae",
+    description:
+      "Aquatic poxvirus causing 'sleepy disease' in koi and common carp. Important fishery pathogen with no human disease.",
+  },
+  {
+    slug: "rotavirus-c",
+    name: "Rotavirus C",
+    scientificName: "Rotavirus C",
+    genome: "RNA",
+    envelope: "non-enveloped",
+    family: "Reoviridae",
+    description:
+      "Segmented double-stranded RNA rotavirus species causing outbreaks of pediatric and adult gastroenteritis, especially in Asia.",
+  },
+  {
+    slug: "human-mastadenovirus-f",
+    name: "Adenovirus F (41)",
+    scientificName: "Human mastadenovirus F",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Adenoviridae",
+    description:
+      "Enteric adenovirus species F (types 40/41). Causes pediatric gastroenteritis and has been investigated in severe hepatitis clusters.",
+  },
+  {
+    slug: "circovirus-anelloviridae",
+    name: "Beak and feather disease virus",
+    scientificName: "Beak and feather disease virus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Circoviridae",
+    description:
+      "Parrot circovirus causing feather loss and beak deformity in psittacines. No human disease; relevant to aviary veterinarians.",
+  },
+  {
+    slug: "smacoviruses",
+    name: "Smacovirus",
+    scientificName: "Smacovirus",
+    genome: "DNA",
+    envelope: "non-enveloped",
+    family: "Smacoviridae",
+    description:
+      "Single-stranded DNA viruses detected in mammalian and avian feces. Pathogenicity unknown; under surveillance as a possible diarrhea agent.",
+  },
+  {
+    slug: "hepatitis-c-genotype-3",
+    name: "HCV genotype 3",
+    scientificName: "Hepatitis C virus (genotype 3)",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Aggressive HCV genotype with marked hepatic steatosis and faster fibrosis. Now curable with pan-genotypic DAAs.",
+  },
+  {
+    slug: "hepatitis-c-genotype-4",
+    name: "HCV genotype 4",
+    scientificName: "Hepatitis C virus (genotype 4)",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "HCV genotype endemic in Egypt and Sub-Saharan Africa. Historically harder to cure with interferon-based therapy.",
+  },
+  {
+    slug: "hepatitis-c-genotype-6",
+    name: "HCV genotype 6",
+    scientificName: "Hepatitis C virus (genotype 6)",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "South-East Asian HCV genotype with diverse subtypes. Responds to modern pan-genotypic regimens.",
+  },
+  {
+    slug: "rio-grande-virus",
+    name: "Rio Grande virus",
+    scientificName: "Rio Grande phlebovirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Phenuiviridae",
+    description:
+      "Sandfly-borne phlebovirus of the southern US. Rare cause of febrile illness in border-state agricultural workers.",
+  },
+  {
+    slug: "louping-ill-virus",
+    name: "Louping-ill virus",
+    scientificName: "Louping ill virus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Flaviviridae",
+    description:
+      "Tick-borne flavivirus of British and Irish sheep. Sporadic human infection causes biphasic febrile illness with meningoencephalitis.",
+  },
+  {
+    slug: "alphacoronavirus-1",
+    name: "Alphacoronavirus 1 (TGEV)",
+    scientificName: "Alphacoronavirus 1",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Coronaviridae",
+    description:
+      "Coronavirus causing transmissible gastroenteritis in pigs. Not known to infect humans but a key animal-model coronavirus.",
+  },
+  {
+    slug: "feline-coronavirus",
+    name: "Feline coronavirus (FIP)",
+    scientificName: "Feline coronavirus",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Coronaviridae",
+    description:
+      "Mutates to cause feline infectious peritonitis in cats. Veterinary use of GS-441524 (remdesivir precursor) cures most cases.",
+  },
+  {
+    slug: "lake-victoria-marburg-popp",
+    name: "Marburg (Popp strain)",
+    scientificName: "Marburg marburgvirus (Popp strain)",
+    genome: "RNA",
+    envelope: "enveloped",
+    family: "Filoviridae",
+    description:
+      "Historic Marburg lineage from the original 1967 Marburg/Frankfurt outbreak. Studied as a reference strain for filovirus virology and vaccine work.",
+  },
 ];

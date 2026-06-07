@@ -1274,4 +1274,139 @@ export const FUNGI: Fungus[] = [
     description:
       "Soil-associated Epidermophyton species. Causes rare cases of tinea corporis and onychomycosis after contact with contaminated soil.",
   },
+  {
+    slug: "candida-metapsilosis",
+    name: "Candida metapsilosis",
+    scientificName: "Candida metapsilosis",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Cryptic species in the C. parapsilosis complex. Causes endocarditis and catheter-related fungemia indistinguishable phenotypically from C. parapsilosis.",
+  },
+  {
+    slug: "wickerhamiella-pararugosa",
+    name: "Wickerhamiella",
+    scientificName: "Wickerhamiella pararugosa",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Emerging non-albicans yeast (formerly Candida pararugosa). Catheter-related fungemia in cancer and transplant patients.",
+  },
+  {
+    slug: "kazachstania-telluris",
+    name: "Kazachstania",
+    scientificName: "Kazachstania telluris",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Soil-associated yeast with industrial relevance. Rare opportunistic fungemia in immunocompromised patients.",
+  },
+  {
+    slug: "meyerozyma-caribbica",
+    name: "Meyerozyma caribbica",
+    scientificName: "Meyerozyma caribbica",
+    morphology: "yeast",
+    group: "Yeast",
+    description:
+      "Cryptic sibling of C. guilliermondii / M. guilliermondii. Causes catheter-related fungemia with reduced antifungal susceptibility.",
+  },
+  {
+    slug: "papiliotrema-flavescens",
+    name: "Papiliotrema",
+    scientificName: "Papiliotrema flavescens",
+    morphology: "yeast",
+    group: "Opportunistic",
+    description:
+      "Tremellomycete yeast historically classed in Cryptococcus. Rare cause of fungemia and keratitis in compromised hosts.",
+  },
+  {
+    slug: "aspergillus-tubingensis",
+    name: "Aspergillus tubingensis",
+    scientificName: "Aspergillus tubingensis",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Sibling species within the A. niger complex with notable triazole resistance. Causes invasive disease in immunocompromised hosts.",
+  },
+  {
+    slug: "fusarium-oxysporum",
+    name: "Fusarium oxysporum",
+    scientificName: "Fusarium oxysporum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Septate plant-pathogenic mold. Causes keratitis and disseminated fusariosis in neutropenic patients with pan-antifungal resistance.",
+  },
+  {
+    slug: "fusarium-verticillioides",
+    name: "Fusarium verticillioides",
+    scientificName: "Fusarium verticillioides",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Plant pathogen of maize producing fumonisin mycotoxin. Linked to esophageal cancer in high-corn-consumption populations.",
+  },
+  {
+    slug: "scedosporium-aurantiacum",
+    name: "Scedosporium aurantiacum",
+    scientificName: "Scedosporium aurantiacum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Orange-pigmented Scedosporium species. Lung colonization in cystic fibrosis and rare disseminated infection in transplants.",
+  },
+  {
+    slug: "purpureocillium-lavendulum",
+    name: "Purpureocillium lavendulum",
+    scientificName: "Purpureocillium lavendulum",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Recently split from P. lilacinum. Causes hyalohyphomycosis with keratitis and rare invasive disease.",
+  },
+  {
+    slug: "exophiala-spinifera",
+    name: "Exophiala spinifera",
+    scientificName: "Exophiala spinifera",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Dematiaceous black yeast/mold. Causes chronic cutaneous phaeohyphomycosis and disseminated disease in immunocompetent hosts in the tropics.",
+  },
+  {
+    slug: "ramichloridium-mackenziei",
+    name: "Ramichloridium",
+    scientificName: "Ramichloridium mackenziei",
+    morphology: "mold",
+    group: "Opportunistic",
+    description:
+      "Dematiaceous fungus of arid regions. Causes lethal cerebral phaeohyphomycosis, most cases reported from the Middle East.",
+  },
+  {
+    slug: "histoplasma-mississippiense",
+    name: "Histoplasma mississippiense",
+    scientificName: "Histoplasma mississippiense",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Cryptic species in the H. capsulatum complex from the central US. Causes pulmonary and disseminated histoplasmosis.",
+  },
+  {
+    slug: "blastomyces-helicus",
+    name: "Blastomyces helicus",
+    scientificName: "Blastomyces helicus",
+    morphology: "dimorphic",
+    group: "Dimorphic",
+    description:
+      "Atypical Blastomyces species with helical yeast forms. Causes disseminated blastomycosis primarily in immunocompromised western North American patients.",
+  },
+  {
+    slug: "saksenaea-erythrospora",
+    name: "Saksenaea erythrospora",
+    scientificName: "Saksenaea erythrospora",
+    morphology: "mold",
+    group: "Mold",
+    description:
+      "Sibling Saksenaea species. Causes cutaneous mucormycosis after trauma in warm climates, including post-tornado infections.",
+  },
 ];

@@ -991,4 +991,204 @@ export const PARASITES: Parasite[] = [
     description:
       "Surface-dwelling cat fur mite that appears as mobile dandruff. Causes intensely itchy papular rash on owners and groomers.",
   },
+  {
+    slug: "plasmodium-cynomolgi",
+    name: "Plasmodium cynomolgi",
+    scientificName: "Plasmodium cynomolgi",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Vector-borne",
+    description:
+      "Zoonotic macaque malaria parasite forming hypnozoites. Sporadic naturally acquired human cases in Southeast Asia confirmed by PCR.",
+  },
+  {
+    slug: "cyclospora-acidiformis",
+    name: "Cyclospora acidiformis",
+    scientificName: "Cyclospora acidiformis",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Foodborne",
+    description:
+      "Animal-associated cousin of C. cayetanensis. Rare reported human infections cause prolonged diarrhea similar to classic cyclosporiasis.",
+  },
+  {
+    slug: "neospora-caninum",
+    name: "Neospora caninum",
+    scientificName: "Neospora caninum",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Fecal-oral",
+    description:
+      "Apicomplexan of dogs and cattle closely related to Toxoplasma. Rare opportunistic human encephalitis reported in HIV.",
+  },
+  {
+    slug: "sarcocystis-suihominis",
+    name: "Sarcocystis",
+    scientificName: "Sarcocystis suihominis",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Foodborne",
+    description:
+      "Coccidian acquired by eating raw pork. Forms muscle cysts and causes intestinal sarcocystosis with diarrhea and abdominal pain.",
+  },
+  {
+    slug: "trichomonas-tenax",
+    name: "Trichomonas tenax",
+    scientificName: "Trichomonas tenax",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Contact",
+    description:
+      "Oral cavity flagellate of poor dental hygiene. Aspiration causes rare empyema and pulmonary infection in immunocompromised patients.",
+  },
+  {
+    slug: "trichomonas-hominis",
+    name: "Pentatrichomonas hominis",
+    scientificName: "Pentatrichomonas hominis",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Fecal-oral",
+    description:
+      "Five-flagellated intestinal flagellate. Considered non-pathogenic but distinguishing it from T. vaginalis is useful in stool exams.",
+  },
+  {
+    slug: "endolimax-nana",
+    name: "Endolimax nana",
+    scientificName: "Endolimax nana",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Tiny non-pathogenic intestinal amoeba with a small karyosomal nucleus. A common marker of fecal-oral exposure on stool exam.",
+  },
+  {
+    slug: "entamoeba-coli",
+    name: "Entamoeba coli (commensal)",
+    scientificName: "Entamoeba coli",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Non-pathogenic intestinal amoeba with 8-nucleated cysts. Must be distinguished from E. histolytica to avoid unnecessary treatment.",
+  },
+  {
+    slug: "vittaforma-corneae",
+    name: "Vittaforma corneae",
+    scientificName: "Vittaforma corneae",
+    group: "Protozoa",
+    form: "Microsporidian",
+    transmission: "Contact",
+    description:
+      "Microsporidian causing keratoconjunctivitis, especially in contact-lens wearers and AIDS patients.",
+  },
+  {
+    slug: "ascaris-suum",
+    name: "Ascaris suum (pig)",
+    scientificName: "Ascaris suum",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Pig roundworm. Zoonotic human infection causes visceral larva migrans and Löffler-like pulmonary syndrome.",
+  },
+  {
+    slug: "toxocara-cati",
+    name: "Toxocara cati",
+    scientificName: "Toxocara cati",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Fecal-oral",
+    description:
+      "Cat roundworm whose ingested eggs cause visceral and ocular larva migrans in children playing in sandboxes contaminated with cat feces.",
+  },
+  {
+    slug: "ancylostoma-braziliense",
+    name: "Cutaneous larva migrans (Ancylostoma braziliense)",
+    scientificName: "Ancylostoma braziliense",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Tropical hookworm of dogs and cats. Larvae penetrate skin and cause itchy serpiginous tracks ('creeping eruption') on the feet of beach-goers.",
+  },
+  {
+    slug: "syngamus-laryngeus",
+    name: "Mammomonogamus",
+    scientificName: "Mammomonogamus laryngeus",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "Y-shaped nematode parasite of ruminant airways. Causes chronic cough with adult worms found attached in the human larynx.",
+  },
+  {
+    slug: "ternidens-deminutus",
+    name: "Ternidens deminutus",
+    scientificName: "Ternidens deminutus",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "False hookworm of African primates. Causes anemia and intestinal nodules in chronically infected human populations.",
+  },
+  {
+    slug: "diphyllobothrium-pacificum",
+    name: "Diphyllobothrium pacificum",
+    scientificName: "Adenocephalus pacificus",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Foodborne",
+    description:
+      "Marine fish tapeworm common along the Pacific coast of the Americas. Acquired from raw ceviche; usually mild GI symptoms.",
+  },
+  {
+    slug: "echinococcus-oligarthrus",
+    name: "Echinococcus oligarthrus",
+    scientificName: "Echinococcus oligarthrus",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Fecal-oral",
+    description:
+      "Neotropical felid cestode whose larva causes polycystic neotropical echinococcosis. Mainly hepatic and muscular cysts.",
+  },
+  {
+    slug: "raillietina-celebensis",
+    name: "Raillietina",
+    scientificName: "Raillietina celebensis",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Fecal-oral",
+    description:
+      "Rodent cestode acquired by ingesting infected grain beetles. Causes mild abdominal symptoms in tropical children.",
+  },
+  {
+    slug: "amblyomma-cajennense",
+    name: "Cayenne tick",
+    scientificName: "Amblyomma cajennense",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Neotropical hard tick. Major vector of Brazilian spotted fever (Rickettsia rickettsii) across Central and South America.",
+  },
+  {
+    slug: "rhipicephalus-sanguineus",
+    name: "Brown dog tick",
+    scientificName: "Rhipicephalus sanguineus",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Cosmopolitan kennel-loving tick. Vector for Rocky Mountain spotted fever in the southwestern US and Mediterranean spotted fever in Europe.",
+  },
+  {
+    slug: "androlaelaps-casalis",
+    name: "Tropical fowl mite",
+    scientificName: "Androlaelaps casalis",
+    group: "Ectoparasite",
+    form: "Mite",
+    transmission: "Contact",
+    description:
+      "Mite of poultry and rodents that bites humans, causing pruritic papular dermatitis in workers handling infested birds.",
+  },
 ];

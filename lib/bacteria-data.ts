@@ -1898,4 +1898,184 @@ export const BACTERIA: Bacterium[] = [
     description:
       "Flea-borne intracellular gram-negative coccobacillus. Causes a worldwide flea-borne spotted fever with rash, eschar, and fever.",
   },
+  {
+    slug: "arcobacter-butzleri",
+    name: "Arcobacter",
+    scientificName: "Arcobacter butzleri",
+    gramStain: "negative",
+    shape: "spirillum",
+    arrangement: "single",
+    description:
+      "Aerotolerant cousin of Campylobacter. Causes acute watery diarrhea and rare bacteremia, often acquired from poultry and shellfish.",
+  },
+  {
+    slug: "comamonas-testosteroni",
+    name: "Comamonas",
+    scientificName: "Comamonas testosteroni",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Environmental water-borne gram-negative rod. A rare cause of catheter-related bacteremia and peritoneal-dialysis peritonitis.",
+  },
+  {
+    slug: "delftia-acidovorans",
+    name: "Delftia",
+    scientificName: "Delftia acidovorans",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Water-borne gram-negative rod that contaminates IV fluids. Rare cause of catheter-line and prosthetic-joint infections.",
+  },
+  {
+    slug: "sphingomonas-paucimobilis",
+    name: "Sphingomonas",
+    scientificName: "Sphingomonas paucimobilis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Yellow-pigmented environmental gram-negative rod found in water and soil. An emerging opportunist in hospitalized and immunocompromised patients.",
+  },
+  {
+    slug: "moraxella-osloensis",
+    name: "Moraxella osloensis",
+    scientificName: "Moraxella osloensis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "pairs",
+    description:
+      "Skin and respiratory commensal resembling Neisseria. Causes rare endocarditis, bacteremia, and prosthetic-joint infections.",
+  },
+  {
+    slug: "neisseria-lactamica",
+    name: "Neisseria lactamica",
+    scientificName: "Neisseria lactamica",
+    gramStain: "negative",
+    shape: "coccus",
+    arrangement: "pairs",
+    description:
+      "Commensal nasopharyngeal Neisseria of children. Protects against N. meningitidis colonization and is a common laboratory mimic.",
+  },
+  {
+    slug: "moraxella-nonliquefaciens",
+    name: "Moraxella nonliquefaciens",
+    scientificName: "Moraxella nonliquefaciens",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "single",
+    description:
+      "Upper-respiratory gram-negative coccobacillus. Causes rare conjunctivitis, sinusitis, and endocarditis in immunocompromised hosts.",
+  },
+  {
+    slug: "alcaligenes-faecalis",
+    name: "Alcaligenes",
+    scientificName: "Alcaligenes faecalis",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Motile gram-negative rod of soil and water. Opportunistic cause of catheter and respiratory infections, often multidrug resistant.",
+  },
+  {
+    slug: "myroides-odoratus",
+    name: "Myroides",
+    scientificName: "Myroides odoratus",
+    gramStain: "negative",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Yellow-pigmented water-borne gram-negative rod with strong intrinsic resistance. Causes UTI and bacteremia in chronically catheterized patients.",
+  },
+  {
+    slug: "kingella-negevensis",
+    name: "Kingella negevensis",
+    scientificName: "Kingella negevensis",
+    gramStain: "negative",
+    shape: "coccobacillus",
+    arrangement: "pairs",
+    description:
+      "Cryptic sibling of K. kingae described in 2017. Likely shares its tropism for pediatric joints and bones.",
+  },
+  {
+    slug: "abiotrophia-defectiva-2",
+    name: "Granulicatella elegans",
+    scientificName: "Granulicatella elegans",
+    gramStain: "positive",
+    shape: "coccus",
+    arrangement: "chains",
+    description:
+      "Pyridoxal-dependent gram-positive coccus and another nutritionally variant streptococcus. Causes culture-negative endocarditis.",
+  },
+  {
+    slug: "ureaplasma-parvum",
+    name: "Ureaplasma parvum",
+    scientificName: "Ureaplasma parvum",
+    gramStain: "variable",
+    shape: "pleomorphic",
+    arrangement: "single",
+    description:
+      "Tiny cell-wall-free organism colonizing the genital tract. Causes non-gonococcal urethritis and neonatal lung disease in preterm infants.",
+  },
+  {
+    slug: "mycobacterium-genavense",
+    name: "Mycobacterium genavense",
+    scientificName: "Mycobacterium genavense",
+    gramStain: "variable",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Slow-growing acid-fast rod first found in AIDS patients. Causes disseminated GI and lymph-node disease resembling MAC.",
+  },
+  {
+    slug: "mycobacterium-haemophilum",
+    name: "Mycobacterium haemophilum",
+    scientificName: "Mycobacterium haemophilum",
+    gramStain: "variable",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Acid-fast rod requiring heme and cool temperatures. Causes skin and joint infections in transplant recipients and HIV.",
+  },
+  {
+    slug: "rhodococcus-erythropolis",
+    name: "Rhodococcus erythropolis",
+    scientificName: "Rhodococcus erythropolis",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Salmon-pigmented environmental gram-positive rod. Rare cause of bacteremia and skin infection in immunocompromised hosts.",
+  },
+  {
+    slug: "gordonia-bronchialis",
+    name: "Gordonia",
+    scientificName: "Gordonia bronchialis",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Partially acid-fast environmental actinomycete. Causes surgical-wound outbreaks and indolent device-related infections.",
+  },
+  {
+    slug: "tsukamurella-tyrosinosolvens",
+    name: "Tsukamurella",
+    scientificName: "Tsukamurella tyrosinosolvens",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Weakly acid-fast actinomycete easily confused with Mycobacterium and Nocardia. Causes catheter-related bacteremia.",
+  },
+  {
+    slug: "dietzia-maris",
+    name: "Dietzia",
+    scientificName: "Dietzia maris",
+    gramStain: "positive",
+    shape: "bacillus",
+    arrangement: "single",
+    description:
+      "Coryneform marine gram-positive rod. Rare cause of bacteremia and prosthetic-joint infection in immunocompromised patients.",
+  },
 ];
