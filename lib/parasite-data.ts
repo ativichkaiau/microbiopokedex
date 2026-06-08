@@ -1191,4 +1191,300 @@ export const PARASITES: Parasite[] = [
     description:
       "Mite of poultry and rodents that bites humans, causing pruritic papular dermatitis in workers handling infested birds.",
   },
+
+  // ===== Protozoa (batch) =====
+  {
+    slug: "leishmania-major",
+    name: "Leishmania major",
+    scientificName: "Leishmania major",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Sandfly-borne Old-World flagellate causing zoonotic 'wet' cutaneous leishmaniasis with rapidly ulcerating sores across the Middle East and Africa.",
+  },
+  {
+    slug: "leishmania-mexicana",
+    name: "Leishmania mexicana",
+    scientificName: "Leishmania mexicana",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "New-World flagellate causing localized cutaneous leishmaniasis, including the ear-destroying 'chiclero ulcer' of forest workers.",
+  },
+  {
+    slug: "trypanosoma-brucei-gambiense",
+    name: "T. b. gambiense",
+    scientificName: "Trypanosoma brucei gambiense",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Tsetse-borne West African flagellate causing the chronic, slowly progressive form of sleeping sickness; humans are the main reservoir.",
+  },
+  {
+    slug: "trypanosoma-brucei-rhodesiense",
+    name: "T. b. rhodesiense",
+    scientificName: "Trypanosoma brucei rhodesiense",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "Tsetse-borne East African flagellate causing acute, rapidly fatal sleeping sickness; maintained in animal reservoirs.",
+  },
+  {
+    slug: "babesia-duncani",
+    name: "Babesia duncani",
+    scientificName: "Babesia duncani",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Vector-borne",
+    description:
+      "US Pacific-coast apicomplexan (the WA1 agent) that parasitizes red cells, causing a malaria-like babesiosis severe in asplenic patients.",
+  },
+  {
+    slug: "sarcocystis-hominis",
+    name: "Sarcocystis hominis",
+    scientificName: "Sarcocystis hominis",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Foodborne",
+    description:
+      "Apicomplexan acquired from undercooked beef. Humans are the definitive host, developing self-limited intestinal sarcocystosis.",
+  },
+  {
+    slug: "entamoeba-gingivalis",
+    name: "Entamoeba gingivalis",
+    scientificName: "Entamoeba gingivalis",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Contact",
+    description:
+      "Oral amoeba found in periodontal pockets and tonsillar crypts. Generally commensal but enriched in periodontitis.",
+  },
+  {
+    slug: "chilomastix-mesnili",
+    name: "Chilomastix mesnili",
+    scientificName: "Chilomastix mesnili",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Fecal-oral",
+    description:
+      "Non-pathogenic intestinal flagellate. Important mainly as a marker of fecal contamination and a mimic of pathogenic protozoa on stool exams.",
+  },
+  {
+    slug: "encephalitozoon-hellem",
+    name: "Encephalitozoon hellem",
+    scientificName: "Encephalitozoon hellem",
+    group: "Protozoa",
+    form: "Microsporidian",
+    transmission: "Fecal-oral",
+    description:
+      "Microsporidian causing keratoconjunctivitis and disseminated infection of the eyes, sinuses, and urinary tract in advanced HIV.",
+  },
+
+  // ===== Helminths (batch) =====
+  {
+    slug: "ancylostoma-caninum",
+    name: "Ancylostoma caninum",
+    scientificName: "Ancylostoma caninum",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Dog hookworm whose larvae penetrate human skin. Causes cutaneous larva migrans and, when it reaches the gut, eosinophilic enteritis.",
+  },
+  {
+    slug: "dirofilaria-immitis",
+    name: "Dog heartworm",
+    scientificName: "Dirofilaria immitis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Vector-borne",
+    description:
+      "Mosquito-borne canine filaria. Dead-end human infection lodges in the lung as a benign coin lesion mimicking malignancy.",
+  },
+  {
+    slug: "mansonella-ozzardi",
+    name: "Mansonella ozzardi",
+    scientificName: "Mansonella ozzardi",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Vector-borne",
+    description:
+      "Midge- and blackfly-borne filaria of the Americas. Usually mild, with arthralgia, pruritus, and circulating microfilariae.",
+  },
+  {
+    slug: "angiostrongylus-costaricensis",
+    name: "Angiostrongylus costaricensis",
+    scientificName: "Angiostrongylus costaricensis",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "Nematode of Latin America acquired from slug-contaminated produce. Larvae invade mesenteric arteries, causing abdominal angiostrongyliasis mimicking appendicitis.",
+  },
+  {
+    slug: "oesophagostomum-bifurcum",
+    name: "Oesophagostomum",
+    scientificName: "Oesophagostomum bifurcum",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Soil-transmitted",
+    description:
+      "Nodular nematode of West Africa. Larvae encyst in the bowel wall, producing the inflammatory abdominal 'Dapaong tumor'.",
+  },
+  {
+    slug: "heterophyes-heterophyes",
+    name: "Heterophyes",
+    scientificName: "Heterophyes heterophyes",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "Minute intestinal fluke acquired from raw brackish-water fish. Causes mild diarrhea; eggs can embolize to the heart or brain.",
+  },
+  {
+    slug: "metagonimus-yokogawai",
+    name: "Metagonimus",
+    scientificName: "Metagonimus yokogawai",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "The smallest human fluke, acquired from raw freshwater fish in East Asia. Causes intestinal inflammation and diarrhea.",
+  },
+  {
+    slug: "dicrocoelium-dendriticum",
+    name: "Lancet liver fluke",
+    scientificName: "Dicrocoelium dendriticum",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "Lancet-shaped bile-duct fluke acquired by accidentally swallowing infected ants. Often a spurious finding from eating infected liver.",
+  },
+  {
+    slug: "trichobilharzia-regenti",
+    name: "Swimmer's-itch schistosome",
+    scientificName: "Trichobilharzia regenti",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Waterborne",
+    description:
+      "Avian schistosome whose cercariae penetrate human skin in freshwater, causing the itchy papular rash of cercarial dermatitis (swimmer's itch).",
+  },
+  {
+    slug: "hymenolepis-diminuta",
+    name: "Rat tapeworm",
+    scientificName: "Hymenolepis diminuta",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Foodborne",
+    description:
+      "Rodent tapeworm transmitted by ingesting infected grain beetles. Causes rare, usually mild, human infection in children.",
+  },
+
+  // ===== Ectoparasites (batch) =====
+  {
+    slug: "xenopsylla-cheopis",
+    name: "Oriental rat flea",
+    scientificName: "Xenopsylla cheopis",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "The classic plague flea. Transmits Yersinia pestis from rats to humans and is also a vector of murine typhus.",
+  },
+  {
+    slug: "pulex-irritans",
+    name: "Human flea",
+    scientificName: "Pulex irritans",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Cosmopolitan flea biting humans and pigs. Causes papular urticaria and can transmit plague and tapeworm cysts.",
+  },
+  {
+    slug: "triatoma-infestans",
+    name: "Kissing bug",
+    scientificName: "Triatoma infestans",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Blood-feeding reduviid bug that bites at night near the eyes and mouth. The principal vector of Chagas disease (Trypanosoma cruzi).",
+  },
+  {
+    slug: "glossina-morsitans",
+    name: "Tsetse fly",
+    scientificName: "Glossina morsitans",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Large biting fly of sub-Saharan Africa and the vector of African trypanosomiasis (sleeping sickness).",
+  },
+  {
+    slug: "phlebotomus-papatasi",
+    name: "Sandfly",
+    scientificName: "Phlebotomus papatasi",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Tiny blood-feeding fly that transmits Leishmania, sandfly fever, and bartonellosis in the Old World.",
+  },
+  {
+    slug: "simulium-damnosum",
+    name: "Blackfly",
+    scientificName: "Simulium damnosum",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Painful biting fly breeding in fast rivers. The vector of Onchocerca volvulus (river blindness) in Africa.",
+  },
+  {
+    slug: "cordylobia-anthropophaga",
+    name: "Tumbu fly",
+    scientificName: "Cordylobia anthropophaga",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "African fly whose larvae hatch from eggs laid on drying laundry and burrow into skin, causing furuncular myiasis.",
+  },
+  {
+    slug: "oestrus-ovis",
+    name: "Sheep botfly",
+    scientificName: "Oestrus ovis",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Sheep nasal botfly that deposits larvae onto the human eye, causing external ophthalmomyiasis in shepherds.",
+  },
+  {
+    slug: "dermacentor-andersoni",
+    name: "Rocky Mountain wood tick",
+    scientificName: "Dermacentor andersoni",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Western US hard tick. Vector of Rocky Mountain spotted fever, Colorado tick fever, and tularemia, and a cause of tick paralysis.",
+  },
+  {
+    slug: "ixodes-pacificus",
+    name: "Western black-legged tick",
+    scientificName: "Ixodes pacificus",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Pacific-coast Ixodes tick and the western US vector of Lyme disease, anaplasmosis, and babesiosis.",
+  },
 ];
