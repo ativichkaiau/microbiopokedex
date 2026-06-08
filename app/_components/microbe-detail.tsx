@@ -13,6 +13,7 @@ import {
   getPharmacologyFor,
 } from "@/lib/pharmacology-data";
 import { titleCase } from "@/lib/labels";
+import { TIER_META, type Tier } from "@/lib/tiers";
 
 export async function microbeMetadata(
   sectionKey: SectionKey,
@@ -149,6 +150,8 @@ export default async function MicrobeDetail({
   if (!item) notFound();
 
   const badge = section.primaryBadge(item);
+  const tier = String(item.tier) as Tier;
+  const tierMeta = TIER_META[tier];
   const pharma =
     sectionKey === "pharmacology"
       ? undefined
@@ -183,7 +186,15 @@ export default async function MicrobeDetail({
           </span>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 flex flex-wrap items-center gap-2">
+          {tierMeta ? (
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1 text-sm font-semibold ${tierMeta.className}`}
+            >
+              <span aria-hidden>{tierMeta.emoji}</span>
+              {tier}
+            </span>
+          ) : null}
           <span
             className={`rounded-full border px-3.5 py-1 text-sm font-semibold ${badge.className}`}
           >
@@ -192,13 +203,15 @@ export default async function MicrobeDetail({
         </div>
 
         <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {section.facets.map((f) => (
-            <Stat
-              key={f.param}
-              label={f.label}
-              value={titleCase(String(item[f.column]))}
-            />
-          ))}
+          {section.facets
+            .filter((f) => f.param !== "tier")
+            .map((f) => (
+              <Stat
+                key={f.param}
+                label={f.label}
+                value={titleCase(String(item[f.column]))}
+              />
+            ))}
         </dl>
 
         <div className="glass-inset mt-8 rounded-2xl p-6">

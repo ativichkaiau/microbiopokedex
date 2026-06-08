@@ -12,6 +12,9 @@ import {
   titleCase,
   virusGenomeClasses,
 } from "./labels";
+import { tierFor } from "./tiers";
+
+const TIER_FACET: FacetDef = { param: "tier", column: "tier", label: "Yield tier" };
 
 export type SectionKey =
   | "bacteria"
@@ -70,11 +73,13 @@ const SECTION_LIST: SectionDef[] = [
       "name",
       "scientific_name",
       "description",
+      "tier",
       "gram_stain",
       "shape",
       "arrangement",
     ],
     facets: [
+      TIER_FACET,
       { param: "gramStain", column: "gram_stain", label: "Gram stain" },
       { param: "shape", column: "shape", label: "Shape" },
       { param: "arrangement", column: "arrangement", label: "Arrangement" },
@@ -84,6 +89,7 @@ const SECTION_LIST: SectionDef[] = [
       name: b.name,
       scientific_name: b.scientificName,
       description: b.description,
+      tier: tierFor("bacteria", b.slug),
       gram_stain: b.gramStain,
       shape: b.shape,
       arrangement: b.arrangement,
@@ -122,11 +128,13 @@ const SECTION_LIST: SectionDef[] = [
       "name",
       "scientific_name",
       "description",
+      "tier",
       "genome",
       "envelope",
       "family",
     ],
     facets: [
+      TIER_FACET,
       { param: "genome", column: "genome", label: "Genome" },
       { param: "envelope", column: "envelope", label: "Envelope" },
       { param: "family", column: "family", label: "Family" },
@@ -136,6 +144,7 @@ const SECTION_LIST: SectionDef[] = [
       name: v.name,
       scientific_name: v.scientificName,
       description: v.description,
+      tier: tierFor("viruses", v.slug),
       genome: v.genome,
       envelope: v.envelope,
       family: v.family,
@@ -161,10 +170,12 @@ const SECTION_LIST: SectionDef[] = [
       "name",
       "scientific_name",
       "description",
+      "tier",
       "morphology",
       "grp",
     ],
     facets: [
+      TIER_FACET,
       { param: "morphology", column: "morphology", label: "Morphology" },
       { param: "group", column: "grp", label: "Group" },
     ],
@@ -173,6 +184,7 @@ const SECTION_LIST: SectionDef[] = [
       name: f.name,
       scientific_name: f.scientificName,
       description: f.description,
+      tier: tierFor("fungi", f.slug),
       morphology: f.morphology,
       grp: f.group,
     })),
@@ -202,11 +214,13 @@ const SECTION_LIST: SectionDef[] = [
       "name",
       "scientific_name",
       "description",
+      "tier",
       "grp",
       "form",
       "transmission",
     ],
     facets: [
+      TIER_FACET,
       { param: "group", column: "grp", label: "Group" },
       { param: "form", column: "form", label: "Form" },
       { param: "transmission", column: "transmission", label: "Transmission" },
@@ -216,6 +230,7 @@ const SECTION_LIST: SectionDef[] = [
       name: p.name,
       scientific_name: p.scientificName,
       description: p.description,
+      tier: tierFor("parasites", p.slug),
       grp: p.group,
       form: p.form,
       transmission: p.transmission,
@@ -246,11 +261,13 @@ const SECTION_LIST: SectionDef[] = [
       "name",
       "scientific_name",
       "description",
+      "tier",
       "category",
       "drug_class",
       "target",
     ],
     facets: [
+      TIER_FACET,
       { param: "category", column: "category", label: "Category" },
       { param: "class", column: "drug_class", label: "Class" },
       { param: "target", column: "target", label: "Target" },
@@ -260,6 +277,7 @@ const SECTION_LIST: SectionDef[] = [
       name: d.name,
       scientific_name: d.genericName,
       description: d.description,
+      tier: tierFor("pharmacology", d.slug),
       category: d.category,
       drug_class: d.drugClass,
       target: d.target,

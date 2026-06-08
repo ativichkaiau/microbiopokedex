@@ -7,6 +7,7 @@ import {
   type SectionKey,
 } from "@/lib/sections";
 import FacetSelect from "./facet-select";
+import { TIER_META, type Tier } from "@/lib/tiers";
 
 // Facets with more distinct values than this render as a compact dropdown
 // instead of a chip wall.
@@ -378,6 +379,8 @@ export default function Explorer({
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => {
               const badge = section.primaryBadge(item);
+              const tier = String(item.tier) as Tier;
+              const tierMeta = TIER_META[tier];
               return (
                 <li key={item.slug}>
                   <Link
@@ -398,9 +401,19 @@ export default function Explorer({
                           </p>
                         </div>
                       </div>
-                      <span className="font-mono text-xs font-semibold text-accent">
-                        #{String(item.id).padStart(3, "0")}
-                      </span>
+                      <div className="flex flex-col items-end gap-1.5">
+                        {tierMeta ? (
+                          <span
+                            className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold ${tierMeta.className}`}
+                          >
+                            <span aria-hidden>{tierMeta.emoji}</span>
+                            {tierMeta.short}
+                          </span>
+                        ) : null}
+                        <span className="font-mono text-xs font-semibold text-accent">
+                          #{String(item.id).padStart(3, "0")}
+                        </span>
+                      </div>
                     </div>
                     <div className="mb-3 flex flex-wrap gap-1.5">
                       <span

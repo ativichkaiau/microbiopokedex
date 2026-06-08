@@ -128,7 +128,15 @@ export async function getSectionFacets(sectionKey: SectionKey): Promise<{
        GROUP BY ${facet.column}
        ORDER BY count DESC, value`,
     );
-    groups.push({ param: facet.param, label: facet.label, counts: res.rows });
+    let counts = res.rows;
+    // Tier reads best in pedagogical order, not by count.
+    if (facet.param === "tier") {
+      const order = ["High yield", "Medium yield", "Good to know", "Demigod"];
+      counts = [...counts].sort(
+        (a, b) => order.indexOf(a.value) - order.indexOf(b.value),
+      );
+    }
+    groups.push({ param: facet.param, label: facet.label, counts });
   }
 
   const totalRes = await db.query<{ count: number }>(
