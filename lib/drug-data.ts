@@ -1676,7 +1676,7 @@ export const DRUGS: Drug[] = [
 
   // ----- More Antibacterials -----
   {
-    slug: "cefiderocol-novel",
+    slug: "sulbactam-durlobactam",
     name: "Sulbactam–durlobactam",
     genericName: "sulbactam + durlobactam",
     category: "Antibacterial",
