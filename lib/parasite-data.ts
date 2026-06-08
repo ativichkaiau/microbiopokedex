@@ -1487,4 +1487,300 @@ export const PARASITES: Parasite[] = [
     description:
       "Pacific-coast Ixodes tick and the western US vector of Lyme disease, anaplasmosis, and babesiosis.",
   },
+
+  // ===== Protozoa (batch 2) =====
+  {
+    slug: "leishmania-aethiopica",
+    name: "Leishmania aethiopica",
+    scientificName: "Leishmania aethiopica",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "East African hyrax-reservoir flagellate. Causes localized and rare diffuse cutaneous leishmaniasis that resists treatment.",
+  },
+  {
+    slug: "leishmania-guyanensis",
+    name: "Leishmania guyanensis",
+    scientificName: "Leishmania guyanensis",
+    group: "Protozoa",
+    form: "Flagellate",
+    transmission: "Vector-borne",
+    description:
+      "South American flagellate ('pian bois') causing cutaneous leishmaniasis that can spread along lymphatics.",
+  },
+  {
+    slug: "acanthamoeba-polyphaga",
+    name: "Acanthamoeba polyphaga",
+    scientificName: "Acanthamoeba polyphaga",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Waterborne",
+    description:
+      "Free-living amoeba and a leading cause of contact-lens keratitis; also causes granulomatous encephalitis in the immunocompromised.",
+  },
+  {
+    slug: "sappinia-pedata",
+    name: "Sappinia",
+    scientificName: "Sappinia pedata",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Contact",
+    description:
+      "Free-living amoeba implicated in a rare case of amoebic encephalitis in an immunocompetent person.",
+  },
+  {
+    slug: "entamoeba-polecki",
+    name: "Entamoeba polecki",
+    scientificName: "Entamoeba polecki",
+    group: "Protozoa",
+    form: "Amoeba",
+    transmission: "Fecal-oral",
+    description:
+      "Intestinal amoeba of pigs and primates. Usually a mild or asymptomatic infection found on stool examination.",
+  },
+  {
+    slug: "trachipleistophora-hominis",
+    name: "Trachipleistophora",
+    scientificName: "Trachipleistophora hominis",
+    group: "Protozoa",
+    form: "Microsporidian",
+    transmission: "Contact",
+    description:
+      "Microsporidian causing disseminated myositis and keratoconjunctivitis in advanced HIV.",
+  },
+  {
+    slug: "babesia-venatorum",
+    name: "Babesia venatorum",
+    scientificName: "Babesia venatorum",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Vector-borne",
+    description:
+      "Ixodes-tick-borne apicomplexan (the EU1 agent) of Europe and China causing babesiosis, mainly in splenectomized patients.",
+  },
+  {
+    slug: "cryptosporidium-meleagridis",
+    name: "Cryptosporidium meleagridis",
+    scientificName: "Cryptosporidium meleagridis",
+    group: "Protozoa",
+    form: "Apicomplexan",
+    transmission: "Fecal-oral",
+    description:
+      "Avian-origin cryptosporidian and the third most common Cryptosporidium in human diarrhea, especially in HIV.",
+  },
+
+  // ===== Helminths (batch 2) =====
+  {
+    slug: "pseudoterranova-decipiens",
+    name: "Cod worm",
+    scientificName: "Pseudoterranova decipiens",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "Marine anisakid nematode acquired from raw cod and other fish. Larvae cause gastric anisakiasis, sometimes coughed up after a tingling throat.",
+  },
+  {
+    slug: "gongylonema-pulchrum",
+    name: "Gullet worm",
+    scientificName: "Gongylonema pulchrum",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "Nematode acquired by swallowing infected beetles or roaches. The worm migrates in the lining of the mouth, causing a creeping sensation.",
+  },
+  {
+    slug: "dioctophyme-renale",
+    name: "Giant kidney worm",
+    scientificName: "Dioctophyme renale",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Foodborne",
+    description:
+      "The largest parasitic nematode, acquired from raw fish or frogs. Destroys the kidney, causing hematuria and flank pain.",
+  },
+  {
+    slug: "brugia-timori",
+    name: "Brugia timori",
+    scientificName: "Brugia timori",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Vector-borne",
+    description:
+      "Mosquito-borne lymphatic filaria confined to the Lesser Sunda Islands of Indonesia, causing limb lymphedema.",
+  },
+  {
+    slug: "onchocerca-lupi",
+    name: "Onchocerca lupi",
+    scientificName: "Onchocerca lupi",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Vector-borne",
+    description:
+      "Zoonotic filaria of dogs and cats. Emerging human cases present with ocular and cervical-spine nodules.",
+  },
+  {
+    slug: "capillaria-hepatica",
+    name: "Capillaria hepatica",
+    scientificName: "Calodium hepaticum",
+    group: "Helminth",
+    form: "Nematode",
+    transmission: "Fecal-oral",
+    description:
+      "Rodent nematode whose eggs, ingested from contaminated soil, lodge in the liver causing hepatic capillariasis and granulomas.",
+  },
+  {
+    slug: "schistosoma-mekongi",
+    name: "Schistosoma mekongi",
+    scientificName: "Schistosoma mekongi",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Waterborne",
+    description:
+      "Mekong-basin blood fluke transmitted by Neotricula snails. Causes hepatosplenic schistosomiasis like S. japonicum.",
+  },
+  {
+    slug: "opisthorchis-felineus",
+    name: "Cat liver fluke",
+    scientificName: "Opisthorchis felineus",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "Eastern European and Russian liver fluke acquired from raw freshwater fish. Chronic biliary infection is linked to cholangiocarcinoma.",
+  },
+  {
+    slug: "paragonimus-kellicotti",
+    name: "Paragonimus kellicotti",
+    scientificName: "Paragonimus kellicotti",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "North American lung fluke acquired from raw crayfish. Causes cough, eosinophilia, and pleural effusions.",
+  },
+  {
+    slug: "echinostoma-ilocanum",
+    name: "Echinostoma",
+    scientificName: "Echinostoma ilocanum",
+    group: "Helminth",
+    form: "Trematode",
+    transmission: "Foodborne",
+    description:
+      "Intestinal fluke acquired from raw snails and bivalves in Asia. Causes abdominal pain and diarrhea with eosinophilia.",
+  },
+  {
+    slug: "taenia-asiatica",
+    name: "Asian tapeworm",
+    scientificName: "Taenia asiatica",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Foodborne",
+    description:
+      "Tapeworm acquired from pig viscera (liver) rather than muscle. Causes intestinal taeniasis across Asia, resembling T. saginata.",
+  },
+  {
+    slug: "bertiella-studeri",
+    name: "Bertiella",
+    scientificName: "Bertiella studeri",
+    group: "Helminth",
+    form: "Cestode",
+    transmission: "Foodborne",
+    description:
+      "Primate tapeworm transmitted by ingesting infected oribatid mites. Causes rare human infection in those handling monkeys.",
+  },
+
+  // ===== Ectoparasites / vectors (batch 2) =====
+  {
+    slug: "amblyomma-maculatum",
+    name: "Gulf Coast tick",
+    scientificName: "Amblyomma maculatum",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Aggressive American tick and vector of Rickettsia parkeri spotted fever, producing an inoculation eschar.",
+  },
+  {
+    slug: "hyalomma-marginatum",
+    name: "Hyalomma tick",
+    scientificName: "Hyalomma marginatum",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Fast-moving hunting tick of Eurasia and Africa. The principal vector of Crimean-Congo hemorrhagic fever virus.",
+  },
+  {
+    slug: "haemaphysalis-longicornis",
+    name: "Asian longhorned tick",
+    scientificName: "Haemaphysalis longicornis",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Invasive parthenogenetic tick spreading in the US. Vector of SFTS/Heartland-like viruses and a heavy livestock pest.",
+  },
+  {
+    slug: "ornithodoros-hermsi",
+    name: "Relapsing-fever soft tick",
+    scientificName: "Ornithodoros hermsi",
+    group: "Ectoparasite",
+    form: "Arachnid",
+    transmission: "Contact",
+    description:
+      "Western North American soft tick that feeds quickly at night in rustic cabins, transmitting tick-borne relapsing-fever Borrelia.",
+  },
+  {
+    slug: "liponyssoides-sanguineus",
+    name: "House-mouse mite",
+    scientificName: "Liponyssoides sanguineus",
+    group: "Ectoparasite",
+    form: "Mite",
+    transmission: "Contact",
+    description:
+      "Mite of house mice and the vector of rickettsialpox (Rickettsia akari) in urban settings.",
+  },
+  {
+    slug: "rhodnius-prolixus",
+    name: "Rhodnius (kissing bug)",
+    scientificName: "Rhodnius prolixus",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Blood-feeding triatomine bug of northern South America and a major vector of Chagas disease.",
+  },
+  {
+    slug: "chrysomya-bezziana",
+    name: "Old World screwworm",
+    scientificName: "Chrysomya bezziana",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Obligate myiasis fly of Africa and Asia whose larvae feed on living tissue in wounds and body orifices.",
+  },
+  {
+    slug: "anopheles-gambiae",
+    name: "Anopheles mosquito",
+    scientificName: "Anopheles gambiae",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "The dominant African malaria mosquito and the primary vector of Plasmodium falciparum; also transmits lymphatic filariasis.",
+  },
+  {
+    slug: "aedes-aegypti",
+    name: "Aedes mosquito",
+    scientificName: "Aedes aegypti",
+    group: "Ectoparasite",
+    form: "Arthropod",
+    transmission: "Contact",
+    description:
+      "Daytime-biting urban mosquito and the chief vector of dengue, Zika, chikungunya, and yellow fever.",
+  },
 ];
