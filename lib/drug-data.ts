@@ -4555,4 +4555,1440 @@ export const DRUGS: Drug[] = [
     description:
       "Blocks conversion of testosterone to dihydrotestosterone for BPH and male-pattern hair loss.",
   },
+
+  // ===== Autonomic (batch 3) =====
+  {
+    slug: "terbutaline",
+    name: "Terbutaline",
+    genericName: "terbutaline",
+    category: "Autonomic",
+    drugClass: "Sympathomimetic (β2 agonist)",
+    target: "β2 adrenoceptor",
+    description:
+      "Beta-2 agonist used as a bronchodilator and as a short-term tocolytic to relax the uterus in preterm labor.",
+  },
+  {
+    slug: "mirabegron",
+    name: "Mirabegron",
+    genericName: "mirabegron",
+    category: "Autonomic",
+    drugClass: "Sympathomimetic (β3 agonist)",
+    target: "β3 adrenoceptor (bladder)",
+    description:
+      "Relaxes the detrusor via β3 receptors for overactive bladder, avoiding the dry mouth of antimuscarinics.",
+  },
+  {
+    slug: "guanfacine",
+    name: "Guanfacine",
+    genericName: "guanfacine",
+    category: "Autonomic",
+    drugClass: "Sympatholytic (α2 agonist)",
+    target: "Central α2A adrenoceptor",
+    description:
+      "Central α2 agonist for ADHD and hypertension, with less sedation than clonidine.",
+  },
+  {
+    slug: "reserpine",
+    name: "Reserpine",
+    genericName: "reserpine",
+    category: "Autonomic",
+    drugClass: "Sympatholytic (VMAT inhibitor)",
+    target: "Vesicular monoamine transporter",
+    description:
+      "Depletes stored catecholamines and serotonin. A historic antihypertensive; causes depression and sedation.",
+  },
+  {
+    slug: "terazosin",
+    name: "Terazosin",
+    genericName: "terazosin",
+    category: "Autonomic",
+    drugClass: "Sympatholytic (α1 blocker)",
+    target: "α1 adrenoceptor",
+    description:
+      "Long-acting α1 antagonist for BPH and hypertension. First-dose orthostatic hypotension is typical.",
+  },
+  {
+    slug: "silodosin",
+    name: "Silodosin",
+    genericName: "silodosin",
+    category: "Autonomic",
+    drugClass: "Sympatholytic (α1A blocker)",
+    target: "α1A adrenoceptor",
+    description:
+      "Highly uroselective α1A blocker for BPH with minimal blood-pressure effect but frequent retrograde ejaculation.",
+  },
+  {
+    slug: "yohimbine",
+    name: "Yohimbine",
+    genericName: "yohimbine",
+    category: "Autonomic",
+    drugClass: "Sympatholytic (α2 antagonist)",
+    target: "α2 adrenoceptor",
+    description:
+      "Alpha-2 antagonist that increases sympathetic outflow; historically used for erectile dysfunction.",
+  },
+  {
+    slug: "methacholine",
+    name: "Methacholine",
+    genericName: "methacholine",
+    category: "Autonomic",
+    drugClass: "Parasympathomimetic (muscarinic agonist)",
+    target: "Muscarinic receptors",
+    description:
+      "Inhaled muscarinic agonist used in bronchoprovocation testing to diagnose asthma by triggering airway hyperreactivity.",
+  },
+  {
+    slug: "cevimeline",
+    name: "Cevimeline",
+    genericName: "cevimeline",
+    category: "Autonomic",
+    drugClass: "Parasympathomimetic (muscarinic agonist)",
+    target: "M3 muscarinic receptor",
+    description:
+      "Muscarinic agonist that stimulates salivary and lacrimal glands in Sjögren's-associated dry mouth.",
+  },
+  {
+    slug: "solifenacin",
+    name: "Solifenacin",
+    genericName: "solifenacin",
+    category: "Autonomic",
+    drugClass: "Parasympatholytic (M3 antagonist)",
+    target: "M3 muscarinic receptor",
+    description:
+      "Bladder-selective antimuscarinic for overactive bladder with once-daily dosing.",
+  },
+  {
+    slug: "darifenacin",
+    name: "Darifenacin",
+    genericName: "darifenacin",
+    category: "Autonomic",
+    drugClass: "Parasympatholytic (M3 antagonist)",
+    target: "M3 muscarinic receptor",
+    description:
+      "M3-selective antimuscarinic for overactive bladder, designed to spare central M1 cognitive effects.",
+  },
+
+  // ===== Cardiovascular (batch 3) =====
+  {
+    slug: "captopril",
+    name: "Captopril",
+    genericName: "captopril",
+    category: "Cardiovascular",
+    drugClass: "ACE inhibitor",
+    target: "Angiotensin-converting enzyme",
+    description:
+      "Short-acting sulfhydryl ACE inhibitor, the prototype of the class. Dosed multiple times daily.",
+  },
+  {
+    slug: "ramipril",
+    name: "Ramipril",
+    genericName: "ramipril",
+    category: "Cardiovascular",
+    drugClass: "ACE inhibitor",
+    target: "Angiotensin-converting enzyme",
+    description:
+      "Long-acting ACE inhibitor with strong outcome data for reducing cardiovascular events.",
+  },
+  {
+    slug: "candesartan",
+    name: "Candesartan",
+    genericName: "candesartan",
+    category: "Cardiovascular",
+    drugClass: "Angiotensin receptor blocker",
+    target: "AT1 receptor",
+    description:
+      "Long-acting ARB for hypertension and heart failure; also studied for migraine prophylaxis.",
+  },
+  {
+    slug: "telmisartan",
+    name: "Telmisartan",
+    genericName: "telmisartan",
+    category: "Cardiovascular",
+    drugClass: "Angiotensin receptor blocker",
+    target: "AT1 receptor",
+    description:
+      "Longest-acting ARB with partial PPAR-γ activity, offering 24-hour blood-pressure control.",
+  },
+  {
+    slug: "nicardipine",
+    name: "Nicardipine",
+    genericName: "nicardipine",
+    category: "Cardiovascular",
+    drugClass: "Dihydropyridine calcium channel blocker",
+    target: "L-type calcium channel (vascular)",
+    description:
+      "IV dihydropyridine titratable for hypertensive emergencies and cerebral vasospasm.",
+  },
+  {
+    slug: "nimodipine",
+    name: "Nimodipine",
+    genericName: "nimodipine",
+    category: "Cardiovascular",
+    drugClass: "Dihydropyridine calcium channel blocker",
+    target: "L-type calcium channel (cerebral)",
+    description:
+      "CNS-selective dihydropyridine that reduces vasospasm and improves outcomes after subarachnoid hemorrhage.",
+  },
+  {
+    slug: "bisoprolol",
+    name: "Bisoprolol",
+    genericName: "bisoprolol",
+    category: "Cardiovascular",
+    drugClass: "β1-selective beta blocker",
+    target: "β1 adrenoceptor",
+    description:
+      "Highly cardioselective beta blocker proven to reduce mortality in chronic heart failure.",
+  },
+  {
+    slug: "esmolol",
+    name: "Esmolol",
+    genericName: "esmolol",
+    category: "Cardiovascular",
+    drugClass: "Ultra-short β1 blocker",
+    target: "β1 adrenoceptor",
+    description:
+      "IV beta blocker with a 9-minute half-life for rapid, titratable rate control in tachyarrhythmia and thyroid storm.",
+  },
+  {
+    slug: "sotalol",
+    name: "Sotalol",
+    genericName: "sotalol",
+    category: "Cardiovascular",
+    drugClass: "Class III antiarrhythmic / β blocker",
+    target: "K+ channel + β adrenoceptor",
+    description:
+      "Combines beta blockade with potassium-channel blockade for atrial and ventricular arrhythmias. Monitor QT.",
+  },
+  {
+    slug: "dofetilide",
+    name: "Dofetilide",
+    genericName: "dofetilide",
+    category: "Cardiovascular",
+    drugClass: "Class III antiarrhythmic",
+    target: "Rapid delayed-rectifier K+ channel",
+    description:
+      "Pure potassium-channel blocker for atrial fibrillation requiring in-hospital initiation due to torsades risk.",
+  },
+  {
+    slug: "procainamide",
+    name: "Procainamide",
+    genericName: "procainamide",
+    category: "Cardiovascular",
+    drugClass: "Class Ia antiarrhythmic",
+    target: "Cardiac sodium channel",
+    description:
+      "Sodium-channel blocker for stable wide-complex tachycardia and WPW. Long-term use causes drug-induced lupus.",
+  },
+  {
+    slug: "quinidine",
+    name: "Quinidine",
+    genericName: "quinidine",
+    category: "Cardiovascular",
+    drugClass: "Class Ia antiarrhythmic",
+    target: "Cardiac sodium / potassium channels",
+    description:
+      "Oldest antiarrhythmic, now niche (Brugada, short-QT). Causes cinchonism and QT prolongation.",
+  },
+  {
+    slug: "mexiletine",
+    name: "Mexiletine",
+    genericName: "mexiletine",
+    category: "Cardiovascular",
+    drugClass: "Class Ib antiarrhythmic",
+    target: "Cardiac sodium channel",
+    description:
+      "Oral lidocaine analog for ventricular arrhythmias and as a treatment for myotonia.",
+  },
+  {
+    slug: "ivabradine",
+    name: "Ivabradine",
+    genericName: "ivabradine",
+    category: "Cardiovascular",
+    drugClass: "Funny-current (If) inhibitor",
+    target: "SA-node HCN channel",
+    description:
+      "Slows the sinus node without affecting contractility or blood pressure in heart failure and stable angina.",
+  },
+  {
+    slug: "ranolazine",
+    name: "Ranolazine",
+    genericName: "ranolazine",
+    category: "Cardiovascular",
+    drugClass: "Late sodium-current inhibitor",
+    target: "Late cardiac sodium current",
+    description:
+      "Anti-anginal that reduces ischemia without lowering heart rate or blood pressure.",
+  },
+  {
+    slug: "nitroprusside",
+    name: "Sodium nitroprusside",
+    genericName: "sodium nitroprusside",
+    category: "Cardiovascular",
+    drugClass: "Arterial + venous vasodilator",
+    target: "Nitric oxide donor",
+    description:
+      "Rapidly titratable IV vasodilator for hypertensive emergencies. Prolonged use risks cyanide accumulation.",
+  },
+  {
+    slug: "simvastatin",
+    name: "Simvastatin",
+    genericName: "simvastatin",
+    category: "Cardiovascular",
+    drugClass: "HMG-CoA reductase inhibitor (statin)",
+    target: "HMG-CoA reductase",
+    description:
+      "Moderate-intensity statin with notable drug interactions (CYP3A4) raising myopathy risk.",
+  },
+  {
+    slug: "gemfibrozil",
+    name: "Gemfibrozil",
+    genericName: "gemfibrozil",
+    category: "Cardiovascular",
+    drugClass: "Fibrate",
+    target: "PPAR-α",
+    description:
+      "Lowers triglycerides via PPAR-α. Avoid combining with statins due to markedly increased myopathy risk.",
+  },
+  {
+    slug: "cholestyramine",
+    name: "Cholestyramine",
+    genericName: "cholestyramine",
+    category: "Cardiovascular",
+    drugClass: "Bile acid sequestrant",
+    target: "Intestinal bile acids",
+    description:
+      "Binds bile acids to lower LDL and relieve cholestatic pruritus and bile-acid diarrhea. Impairs absorption of other drugs.",
+  },
+  {
+    slug: "prasugrel",
+    name: "Prasugrel",
+    genericName: "prasugrel",
+    category: "Cardiovascular",
+    drugClass: "P2Y12 antiplatelet",
+    target: "Platelet P2Y12 receptor",
+    description:
+      "More potent, irreversible antiplatelet than clopidogrel after coronary stenting. Higher bleeding risk; avoid after stroke.",
+  },
+  {
+    slug: "cilostazol",
+    name: "Cilostazol",
+    genericName: "cilostazol",
+    category: "Cardiovascular",
+    drugClass: "Phosphodiesterase-3 inhibitor",
+    target: "Phosphodiesterase 3 (platelets/vessels)",
+    description:
+      "Vasodilator and antiplatelet that improves walking distance in intermittent claudication. Contraindicated in heart failure.",
+  },
+  {
+    slug: "alteplase",
+    name: "Alteplase",
+    genericName: "alteplase (tPA)",
+    category: "Cardiovascular",
+    drugClass: "Thrombolytic",
+    target: "Plasminogen → plasmin",
+    description:
+      "Recombinant tissue plasminogen activator that dissolves clots in acute ischemic stroke, massive PE, and STEMI.",
+  },
+  {
+    slug: "vasopressin",
+    name: "Vasopressin",
+    genericName: "vasopressin (ADH)",
+    category: "Cardiovascular",
+    drugClass: "Vasopressor (V1 agonist)",
+    target: "V1 vascular receptor",
+    description:
+      "Adjunct vasopressor in septic shock and a cardiac-arrest option; also used for variceal bleeding.",
+  },
+
+  // ===== Diuretics (batch 3) =====
+  {
+    slug: "chlorothiazide",
+    name: "Chlorothiazide",
+    genericName: "chlorothiazide",
+    category: "Diuretic",
+    drugClass: "Thiazide diuretic",
+    target: "Na-Cl cotransporter",
+    description:
+      "The original thiazide and the only one available IV, used to augment loop diuresis in resistant edema.",
+  },
+  {
+    slug: "bendroflumethiazide",
+    name: "Bendroflumethiazide",
+    genericName: "bendroflumethiazide",
+    category: "Diuretic",
+    drugClass: "Thiazide diuretic",
+    target: "Na-Cl cotransporter",
+    description:
+      "Thiazide used for hypertension, common in UK practice.",
+  },
+  {
+    slug: "methazolamide",
+    name: "Methazolamide",
+    genericName: "methazolamide",
+    category: "Diuretic",
+    drugClass: "Carbonic anhydrase inhibitor",
+    target: "Carbonic anhydrase",
+    description:
+      "Longer-acting carbonic anhydrase inhibitor for glaucoma with better CNS penetration than acetazolamide.",
+  },
+  {
+    slug: "conivaptan",
+    name: "Conivaptan",
+    genericName: "conivaptan",
+    category: "Diuretic",
+    drugClass: "Vasopressin V1a/V2 antagonist (vaptan)",
+    target: "V1a + V2 receptors",
+    description:
+      "IV vaptan promoting free-water excretion in euvolemic and hypervolemic hyponatremia.",
+  },
+  {
+    slug: "hydroflumethiazide",
+    name: "Hydroflumethiazide",
+    genericName: "hydroflumethiazide",
+    category: "Diuretic",
+    drugClass: "Thiazide diuretic",
+    target: "Na-Cl cotransporter",
+    description:
+      "Thiazide diuretic for edema and hypertension, sharing the class metabolic effects.",
+  },
+
+  // ===== Antineoplastics (batch 3) =====
+  {
+    slug: "dacarbazine",
+    name: "Dacarbazine",
+    genericName: "dacarbazine",
+    category: "Antineoplastic",
+    drugClass: "Alkylating agent",
+    target: "DNA methylation",
+    description:
+      "Alkylating agent in Hodgkin lymphoma (ABVD) and melanoma. Strongly emetogenic.",
+  },
+  {
+    slug: "busulfan",
+    name: "Busulfan",
+    genericName: "busulfan",
+    category: "Antineoplastic",
+    drugClass: "Alkylating agent",
+    target: "DNA cross-linking",
+    description:
+      "Alkylator used in stem-cell transplant conditioning. Risks pulmonary fibrosis and veno-occlusive disease.",
+  },
+  {
+    slug: "chlorambucil",
+    name: "Chlorambucil",
+    genericName: "chlorambucil",
+    category: "Antineoplastic",
+    drugClass: "Alkylating agent (nitrogen mustard)",
+    target: "DNA cross-linking",
+    description:
+      "Oral, well-tolerated alkylator for chronic lymphocytic leukemia in frail patients.",
+  },
+  {
+    slug: "carmustine",
+    name: "Carmustine (BCNU)",
+    genericName: "carmustine",
+    category: "Antineoplastic",
+    drugClass: "Nitrosourea alkylating agent",
+    target: "DNA cross-linking",
+    description:
+      "Lipophilic nitrosourea that crosses the blood-brain barrier for brain tumors; delivered as implantable wafers.",
+  },
+  {
+    slug: "daunorubicin",
+    name: "Daunorubicin",
+    genericName: "daunorubicin",
+    category: "Antineoplastic",
+    drugClass: "Anthracycline",
+    target: "Topoisomerase II / DNA intercalation",
+    description:
+      "Anthracycline central to acute leukemia induction. Cumulative cardiotoxicity like doxorubicin.",
+  },
+  {
+    slug: "mitoxantrone",
+    name: "Mitoxantrone",
+    genericName: "mitoxantrone",
+    category: "Antineoplastic",
+    drugClass: "Anthracenedione",
+    target: "Topoisomerase II",
+    description:
+      "Anthracycline-like agent for leukemia and prostate cancer; also used in aggressive multiple sclerosis.",
+  },
+  {
+    slug: "topotecan",
+    name: "Topotecan",
+    genericName: "topotecan",
+    category: "Antineoplastic",
+    drugClass: "Topoisomerase I inhibitor",
+    target: "Topoisomerase I",
+    description:
+      "Camptothecin analog for ovarian and small-cell lung cancer.",
+  },
+  {
+    slug: "vinorelbine",
+    name: "Vinorelbine",
+    genericName: "vinorelbine",
+    category: "Antineoplastic",
+    drugClass: "Vinca alkaloid",
+    target: "Microtubules (depolymerization)",
+    description:
+      "Semisynthetic vinca alkaloid for non-small-cell lung and breast cancer.",
+  },
+  {
+    slug: "pemetrexed",
+    name: "Pemetrexed",
+    genericName: "pemetrexed",
+    category: "Antineoplastic",
+    drugClass: "Antimetabolite (multitargeted antifolate)",
+    target: "Thymidylate synthase / DHFR",
+    description:
+      "Antifolate for non-squamous lung cancer and mesothelioma. Folate and B12 supplementation reduces toxicity.",
+  },
+  {
+    slug: "azacitidine",
+    name: "Azacitidine",
+    genericName: "azacitidine",
+    category: "Antineoplastic",
+    drugClass: "Hypomethylating agent",
+    target: "DNA methyltransferase",
+    description:
+      "Reactivates silenced genes in myelodysplastic syndrome and acute myeloid leukemia.",
+  },
+  {
+    slug: "fludarabine",
+    name: "Fludarabine",
+    genericName: "fludarabine",
+    category: "Antineoplastic",
+    drugClass: "Antimetabolite (purine analog)",
+    target: "DNA polymerase / ribonucleotide reductase",
+    description:
+      "Purine analog for chronic lymphocytic leukemia and as transplant conditioning. Profoundly immunosuppressive.",
+  },
+  {
+    slug: "dasatinib",
+    name: "Dasatinib",
+    genericName: "dasatinib",
+    category: "Antineoplastic",
+    drugClass: "Tyrosine kinase inhibitor",
+    target: "BCR-ABL, SRC kinases",
+    description:
+      "Second-generation BCR-ABL inhibitor for CML, including some imatinib-resistant mutations. Risk of pleural effusions.",
+  },
+  {
+    slug: "osimertinib",
+    name: "Osimertinib",
+    genericName: "osimertinib",
+    category: "Antineoplastic",
+    drugClass: "EGFR tyrosine kinase inhibitor",
+    target: "EGFR T790M",
+    description:
+      "Third-generation EGFR inhibitor for T790M-resistant and front-line EGFR-mutant lung cancer with good CNS penetration.",
+  },
+  {
+    slug: "sorafenib",
+    name: "Sorafenib",
+    genericName: "sorafenib",
+    category: "Antineoplastic",
+    drugClass: "Multikinase inhibitor",
+    target: "RAF, VEGFR, PDGFR",
+    description:
+      "Oral multikinase inhibitor for hepatocellular, renal, and thyroid cancers. Hand-foot skin reaction is common.",
+  },
+  {
+    slug: "ibrutinib",
+    name: "Ibrutinib",
+    genericName: "ibrutinib",
+    category: "Antineoplastic",
+    drugClass: "Bruton tyrosine kinase inhibitor",
+    target: "BTK",
+    description:
+      "Oral BTK inhibitor for CLL, mantle-cell lymphoma, and Waldenström. Raises atrial fibrillation and bleeding risk.",
+  },
+  {
+    slug: "olaparib",
+    name: "Olaparib",
+    genericName: "olaparib",
+    category: "Antineoplastic",
+    drugClass: "PARP inhibitor",
+    target: "PARP enzymes",
+    description:
+      "Exploits synthetic lethality in BRCA-mutant ovarian, breast, and prostate cancers.",
+  },
+  {
+    slug: "cetuximab",
+    name: "Cetuximab",
+    genericName: "cetuximab",
+    category: "Antineoplastic",
+    drugClass: "Anti-EGFR monoclonal antibody",
+    target: "EGFR",
+    description:
+      "Monoclonal antibody for RAS-wild-type colorectal and head-and-neck cancer. Acneiform rash predicts response.",
+  },
+  {
+    slug: "bortezomib",
+    name: "Bortezomib",
+    genericName: "bortezomib",
+    category: "Antineoplastic",
+    drugClass: "Proteasome inhibitor",
+    target: "26S proteasome",
+    description:
+      "Backbone of multiple-myeloma therapy. Dose-limiting peripheral neuropathy; reactivates herpes zoster.",
+  },
+  {
+    slug: "lenalidomide",
+    name: "Lenalidomide",
+    genericName: "lenalidomide",
+    category: "Antineoplastic",
+    drugClass: "Immunomodulatory agent",
+    target: "Cereblon E3 ligase",
+    description:
+      "Thalidomide analog for multiple myeloma and del(5q) myelodysplasia. Teratogenic and thrombogenic.",
+  },
+  {
+    slug: "all-trans-retinoic-acid",
+    name: "ATRA (tretinoin)",
+    genericName: "all-trans-retinoic acid",
+    category: "Antineoplastic",
+    drugClass: "Retinoid differentiating agent",
+    target: "Retinoic acid receptor-α",
+    description:
+      "Drives malignant promyelocyte differentiation to cure acute promyelocytic leukemia. Watch for differentiation syndrome.",
+  },
+  {
+    slug: "letrozole",
+    name: "Letrozole",
+    genericName: "letrozole",
+    category: "Antineoplastic",
+    drugClass: "Aromatase inhibitor",
+    target: "Aromatase",
+    description:
+      "Aromatase inhibitor for postmenopausal hormone-receptor-positive breast cancer; also induces ovulation.",
+  },
+  {
+    slug: "bicalutamide",
+    name: "Bicalutamide",
+    genericName: "bicalutamide",
+    category: "Antineoplastic",
+    drugClass: "Antiandrogen",
+    target: "Androgen receptor",
+    description:
+      "Nonsteroidal antiandrogen for prostate cancer, often paired with a GnRH agonist to block the testosterone flare.",
+  },
+  {
+    slug: "asparaginase",
+    name: "Asparaginase",
+    genericName: "asparaginase",
+    category: "Antineoplastic",
+    drugClass: "Enzyme",
+    target: "Plasma asparagine",
+    description:
+      "Depletes asparagine that leukemic cells cannot synthesize. Used in ALL; causes pancreatitis and clotting abnormalities.",
+  },
+
+  // ===== CNS (batch 3) =====
+  {
+    slug: "clonazepam",
+    name: "Clonazepam",
+    genericName: "clonazepam",
+    category: "CNS",
+    drugClass: "Benzodiazepine",
+    target: "GABA-A receptor",
+    description:
+      "Long-acting benzodiazepine for seizures, panic disorder, and myoclonus.",
+  },
+  {
+    slug: "chlordiazepoxide",
+    name: "Chlordiazepoxide",
+    genericName: "chlordiazepoxide",
+    category: "CNS",
+    drugClass: "Benzodiazepine",
+    target: "GABA-A receptor",
+    description:
+      "Long-acting benzodiazepine, a mainstay of alcohol-withdrawal regimens.",
+  },
+  {
+    slug: "flumazenil",
+    name: "Flumazenil",
+    genericName: "flumazenil",
+    category: "CNS",
+    drugClass: "Benzodiazepine antagonist",
+    target: "GABA-A receptor",
+    description:
+      "Reverses benzodiazepine sedation; used cautiously since it can precipitate seizures in dependent patients.",
+  },
+  {
+    slug: "eszopiclone",
+    name: "Eszopiclone",
+    genericName: "eszopiclone",
+    category: "CNS",
+    drugClass: "Non-benzodiazepine hypnotic (Z-drug)",
+    target: "GABA-A receptor",
+    description:
+      "Longer-acting Z-drug hypnotic for sleep maintenance insomnia.",
+  },
+  {
+    slug: "ramelteon",
+    name: "Ramelteon",
+    genericName: "ramelteon",
+    category: "CNS",
+    drugClass: "Melatonin receptor agonist",
+    target: "MT1 / MT2 receptors",
+    description:
+      "Non-controlled hypnotic for sleep-onset insomnia with no dependence potential.",
+  },
+  {
+    slug: "ethosuximide",
+    name: "Ethosuximide",
+    genericName: "ethosuximide",
+    category: "CNS",
+    drugClass: "Antiepileptic (T-type Ca channel blocker)",
+    target: "Thalamic T-type calcium channel",
+    description:
+      "First-line for childhood absence seizures.",
+  },
+  {
+    slug: "oxcarbazepine",
+    name: "Oxcarbazepine",
+    genericName: "oxcarbazepine",
+    category: "CNS",
+    drugClass: "Antiepileptic (Na+ channel blocker)",
+    target: "Voltage-gated sodium channel",
+    description:
+      "Carbamazepine analog for focal seizures with fewer interactions but more hyponatremia.",
+  },
+  {
+    slug: "pregabalin",
+    name: "Pregabalin",
+    genericName: "pregabalin",
+    category: "CNS",
+    drugClass: "Calcium channel α2δ ligand",
+    target: "Voltage-gated calcium channel α2δ",
+    description:
+      "Treats neuropathic pain, fibromyalgia, and partial seizures. A controlled substance due to misuse potential.",
+  },
+  {
+    slug: "citalopram",
+    name: "Citalopram",
+    genericName: "citalopram",
+    category: "CNS",
+    drugClass: "SSRI antidepressant",
+    target: "Serotonin transporter",
+    description:
+      "SSRI for depression with a dose-dependent QT-prolongation caution.",
+  },
+  {
+    slug: "paroxetine",
+    name: "Paroxetine",
+    genericName: "paroxetine",
+    category: "CNS",
+    drugClass: "SSRI antidepressant",
+    target: "Serotonin transporter",
+    description:
+      "Sedating, anticholinergic SSRI with the most pronounced discontinuation syndrome; avoid in pregnancy.",
+  },
+  {
+    slug: "nortriptyline",
+    name: "Nortriptyline",
+    genericName: "nortriptyline",
+    category: "CNS",
+    drugClass: "Tricyclic antidepressant",
+    target: "Norepinephrine/serotonin reuptake",
+    description:
+      "Better-tolerated secondary-amine TCA for depression and neuropathic pain.",
+  },
+  {
+    slug: "phenelzine",
+    name: "Phenelzine",
+    genericName: "phenelzine",
+    category: "CNS",
+    drugClass: "MAO inhibitor",
+    target: "Monoamine oxidase A/B",
+    description:
+      "Nonselective MAOI for refractory and atypical depression. Requires a tyramine-restricted diet to avoid hypertensive crisis.",
+  },
+  {
+    slug: "selegiline",
+    name: "Selegiline",
+    genericName: "selegiline",
+    category: "CNS",
+    drugClass: "MAO-B inhibitor",
+    target: "Monoamine oxidase B",
+    description:
+      "Selective MAO-B inhibitor for Parkinson disease; a transdermal form treats depression.",
+  },
+  {
+    slug: "mirtazapine",
+    name: "Mirtazapine",
+    genericName: "mirtazapine",
+    category: "CNS",
+    drugClass: "Atypical antidepressant (α2 antagonist)",
+    target: "α2 / 5-HT2 / H1 receptors",
+    description:
+      "Antidepressant that boosts appetite and sleep, useful in cachectic or insomniac patients.",
+  },
+  {
+    slug: "trazodone",
+    name: "Trazodone",
+    genericName: "trazodone",
+    category: "CNS",
+    drugClass: "Serotonin antagonist/reuptake inhibitor",
+    target: "5-HT2A / serotonin transporter",
+    description:
+      "Most often used at low dose as a sleep aid. Rare priapism is a notable adverse effect.",
+  },
+  {
+    slug: "aripiprazole",
+    name: "Aripiprazole",
+    genericName: "aripiprazole",
+    category: "CNS",
+    drugClass: "Atypical antipsychotic (D2 partial agonist)",
+    target: "D2 / 5-HT1A receptors",
+    description:
+      "Partial dopamine agonist with low metabolic and prolactin effects; used in schizophrenia, bipolar, and as antidepressant adjunct.",
+  },
+  {
+    slug: "chlorpromazine",
+    name: "Chlorpromazine",
+    genericName: "chlorpromazine",
+    category: "CNS",
+    drugClass: "Typical antipsychotic (low-potency)",
+    target: "D2 dopamine receptor",
+    description:
+      "Prototype phenothiazine antipsychotic, also used for intractable hiccups. Sedating with anticholinergic effects.",
+  },
+  {
+    slug: "methylphenidate",
+    name: "Methylphenidate",
+    genericName: "methylphenidate",
+    category: "CNS",
+    drugClass: "CNS stimulant",
+    target: "Dopamine/norepinephrine reuptake",
+    description:
+      "First-line stimulant for ADHD and narcolepsy. Controlled substance with appetite and sleep effects.",
+  },
+  {
+    slug: "atomoxetine",
+    name: "Atomoxetine",
+    genericName: "atomoxetine",
+    category: "CNS",
+    drugClass: "Selective norepinephrine reuptake inhibitor",
+    target: "Norepinephrine transporter",
+    description:
+      "Non-stimulant ADHD option without abuse potential; takes weeks for full effect.",
+  },
+  {
+    slug: "modafinil",
+    name: "Modafinil",
+    genericName: "modafinil",
+    category: "CNS",
+    drugClass: "Wakefulness-promoting agent",
+    target: "Dopamine transporter (weak)",
+    description:
+      "Promotes wakefulness in narcolepsy and shift-work sleep disorder with low abuse potential.",
+  },
+  {
+    slug: "entacapone",
+    name: "Entacapone",
+    genericName: "entacapone",
+    category: "CNS",
+    drugClass: "COMT inhibitor",
+    target: "Catechol-O-methyltransferase",
+    description:
+      "Extends levodopa's effect by blocking its peripheral breakdown, reducing Parkinson 'wearing-off'.",
+  },
+  {
+    slug: "rivastigmine",
+    name: "Rivastigmine",
+    genericName: "rivastigmine",
+    category: "CNS",
+    drugClass: "Cholinesterase inhibitor",
+    target: "Acetylcholinesterase + butyrylcholinesterase",
+    description:
+      "Cholinesterase inhibitor (oral or patch) for Alzheimer and Parkinson dementia.",
+  },
+  {
+    slug: "tizanidine",
+    name: "Tizanidine",
+    genericName: "tizanidine",
+    category: "CNS",
+    drugClass: "Central α2 agonist (muscle relaxant)",
+    target: "Central α2 adrenoceptor",
+    description:
+      "Reduces spasticity in MS and spinal injury; causes sedation, dry mouth, and hypotension.",
+  },
+  {
+    slug: "cyclobenzaprine",
+    name: "Cyclobenzaprine",
+    genericName: "cyclobenzaprine",
+    category: "CNS",
+    drugClass: "Skeletal muscle relaxant",
+    target: "Brainstem motor pathways",
+    description:
+      "TCA-related muscle relaxant for acute musculoskeletal spasm; anticholinergic and sedating.",
+  },
+  {
+    slug: "dantrolene",
+    name: "Dantrolene",
+    genericName: "dantrolene",
+    category: "CNS",
+    drugClass: "Direct muscle relaxant",
+    target: "Ryanodine receptor (RyR1)",
+    description:
+      "Blocks calcium release from the sarcoplasmic reticulum; the antidote for malignant hyperthermia and neuroleptic malignant syndrome.",
+  },
+  {
+    slug: "succinylcholine",
+    name: "Succinylcholine",
+    genericName: "succinylcholine",
+    category: "CNS",
+    drugClass: "Depolarizing neuromuscular blocker",
+    target: "Nicotinic ACh receptor (NMJ)",
+    description:
+      "Ultra-fast paralytic for rapid-sequence intubation. Risk of hyperkalemia and malignant hyperthermia.",
+  },
+  {
+    slug: "rocuronium",
+    name: "Rocuronium",
+    genericName: "rocuronium",
+    category: "CNS",
+    drugClass: "Nondepolarizing neuromuscular blocker",
+    target: "Nicotinic ACh receptor (NMJ)",
+    description:
+      "Rapid-onset nondepolarizing paralytic for intubation and surgery; reversed by sugammadex.",
+  },
+  {
+    slug: "methadone",
+    name: "Methadone",
+    genericName: "methadone",
+    category: "CNS",
+    drugClass: "Opioid agonist",
+    target: "μ-opioid + NMDA receptors",
+    description:
+      "Long-acting opioid for opioid-use-disorder maintenance and chronic pain. QT prolongation and complex kinetics.",
+  },
+  {
+    slug: "tramadol",
+    name: "Tramadol",
+    genericName: "tramadol",
+    category: "CNS",
+    drugClass: "Opioid agonist / SNRI",
+    target: "μ-opioid receptor + monoamine reuptake",
+    description:
+      "Weak opioid with serotonergic activity for moderate pain. Lowers seizure threshold and risks serotonin syndrome.",
+  },
+  {
+    slug: "naltrexone",
+    name: "Naltrexone",
+    genericName: "naltrexone",
+    category: "CNS",
+    drugClass: "Opioid antagonist",
+    target: "μ-opioid receptor",
+    description:
+      "Long-acting opioid antagonist for opioid- and alcohol-use disorder; an injectable monthly form aids adherence.",
+  },
+  {
+    slug: "acetaminophen",
+    name: "Acetaminophen",
+    genericName: "acetaminophen (paracetamol)",
+    category: "CNS",
+    drugClass: "Analgesic / antipyretic",
+    target: "Central COX / TRPV1 (uncertain)",
+    description:
+      "First-line analgesic and antipyretic without anti-inflammatory effect. Overdose causes hepatotoxicity treated with acetylcysteine.",
+  },
+  {
+    slug: "bupivacaine",
+    name: "Bupivacaine",
+    genericName: "bupivacaine",
+    category: "CNS",
+    drugClass: "Local anesthetic (amide)",
+    target: "Voltage-gated sodium channel",
+    description:
+      "Long-acting local anesthetic for epidural and regional blocks. Cardiotoxic if injected intravascularly.",
+  },
+  {
+    slug: "sevoflurane",
+    name: "Sevoflurane",
+    genericName: "sevoflurane",
+    category: "CNS",
+    drugClass: "Inhaled general anesthetic",
+    target: "GABA-A / multiple channels",
+    description:
+      "Sweet-smelling volatile anesthetic ideal for inhalational induction in children. Can trigger malignant hyperthermia.",
+  },
+  {
+    slug: "riluzole",
+    name: "Riluzole",
+    genericName: "riluzole",
+    category: "CNS",
+    drugClass: "Glutamate modulator",
+    target: "Glutamate release / Na+ channels",
+    description:
+      "Modestly prolongs survival in amyotrophic lateral sclerosis by reducing glutamate excitotoxicity.",
+  },
+
+  // ===== Respiratory (batch 3) =====
+  {
+    slug: "vilanterol",
+    name: "Vilanterol",
+    genericName: "vilanterol",
+    category: "Respiratory",
+    drugClass: "Long-acting β2 agonist (LABA)",
+    target: "β2 adrenoceptor",
+    description:
+      "Once-daily LABA in combination inhalers for asthma and COPD.",
+  },
+  {
+    slug: "umeclidinium",
+    name: "Umeclidinium",
+    genericName: "umeclidinium",
+    category: "Respiratory",
+    drugClass: "Long-acting muscarinic antagonist",
+    target: "Muscarinic receptor (airway)",
+    description:
+      "Once-daily inhaled anticholinergic for COPD maintenance, often in triple therapy.",
+  },
+  {
+    slug: "aclidinium",
+    name: "Aclidinium",
+    genericName: "aclidinium",
+    category: "Respiratory",
+    drugClass: "Long-acting muscarinic antagonist",
+    target: "Muscarinic receptor (airway)",
+    description:
+      "Twice-daily inhaled LAMA for COPD maintenance bronchodilation.",
+  },
+  {
+    slug: "mometasone-inhaled",
+    name: "Mometasone",
+    genericName: "mometasone",
+    category: "Respiratory",
+    drugClass: "Inhaled corticosteroid",
+    target: "Glucocorticoid receptor",
+    description:
+      "Inhaled and intranasal corticosteroid for asthma control and allergic rhinitis.",
+  },
+  {
+    slug: "beclomethasone",
+    name: "Beclomethasone",
+    genericName: "beclomethasone",
+    category: "Respiratory",
+    drugClass: "Inhaled corticosteroid",
+    target: "Glucocorticoid receptor",
+    description:
+      "Inhaled steroid for asthma maintenance and a nasal spray for allergic rhinitis.",
+  },
+  {
+    slug: "zafirlukast",
+    name: "Zafirlukast",
+    genericName: "zafirlukast",
+    category: "Respiratory",
+    drugClass: "Leukotriene receptor antagonist",
+    target: "CysLT1 receptor",
+    description:
+      "Oral leukotriene antagonist for asthma maintenance; hepatotoxicity warrants monitoring.",
+  },
+  {
+    slug: "zileuton",
+    name: "Zileuton",
+    genericName: "zileuton",
+    category: "Respiratory",
+    drugClass: "5-lipoxygenase inhibitor",
+    target: "5-lipoxygenase",
+    description:
+      "Blocks leukotriene synthesis for asthma. Requires liver-enzyme monitoring.",
+  },
+  {
+    slug: "mepolizumab",
+    name: "Mepolizumab",
+    genericName: "mepolizumab",
+    category: "Respiratory",
+    drugClass: "Anti-IL-5 monoclonal antibody",
+    target: "Interleukin-5",
+    description:
+      "Biologic that lowers eosinophils in severe eosinophilic asthma and eosinophilic granulomatosis.",
+  },
+  {
+    slug: "dupilumab",
+    name: "Dupilumab",
+    genericName: "dupilumab",
+    category: "Respiratory",
+    drugClass: "Anti-IL-4Rα monoclonal antibody",
+    target: "IL-4 receptor alpha",
+    description:
+      "Blocks type-2 inflammation in severe asthma, atopic dermatitis, and chronic rhinosinusitis with polyps.",
+  },
+  {
+    slug: "ivacaftor",
+    name: "Ivacaftor",
+    genericName: "ivacaftor",
+    category: "Respiratory",
+    drugClass: "CFTR potentiator",
+    target: "CFTR chloride channel",
+    description:
+      "Improves CFTR channel gating in cystic fibrosis patients with specific mutations; a component of Trikafta.",
+  },
+  {
+    slug: "nintedanib",
+    name: "Nintedanib",
+    genericName: "nintedanib",
+    category: "Respiratory",
+    drugClass: "Antifibrotic (multikinase inhibitor)",
+    target: "VEGFR / FGFR / PDGFR",
+    description:
+      "Slows lung-function decline in idiopathic pulmonary fibrosis; also an oncology agent.",
+  },
+  {
+    slug: "bosentan",
+    name: "Bosentan",
+    genericName: "bosentan",
+    category: "Respiratory",
+    drugClass: "Endothelin receptor antagonist",
+    target: "Endothelin-1 receptors",
+    description:
+      "Oral vasodilator for pulmonary arterial hypertension. Hepatotoxic and teratogenic; requires monitoring.",
+  },
+  {
+    slug: "sildenafil",
+    name: "Sildenafil",
+    genericName: "sildenafil",
+    category: "Respiratory",
+    drugClass: "Phosphodiesterase-5 inhibitor",
+    target: "Phosphodiesterase 5",
+    description:
+      "Vasodilator for pulmonary arterial hypertension (and erectile dysfunction). Contraindicated with nitrates.",
+  },
+
+  // ===== Gastrointestinal (batch 3) =====
+  {
+    slug: "rabeprazole",
+    name: "Rabeprazole",
+    genericName: "rabeprazole",
+    category: "Gastrointestinal",
+    drugClass: "Proton pump inhibitor",
+    target: "H+/K+-ATPase",
+    description:
+      "PPI for GERD and ulcers with rapid onset of acid suppression.",
+  },
+  {
+    slug: "nizatidine",
+    name: "Nizatidine",
+    genericName: "nizatidine",
+    category: "Gastrointestinal",
+    drugClass: "H2 receptor antagonist",
+    target: "Histamine H2 receptor",
+    description:
+      "H2 blocker for dyspepsia and GERD with minimal drug interactions.",
+  },
+  {
+    slug: "calcium-carbonate",
+    name: "Calcium carbonate",
+    genericName: "calcium carbonate",
+    category: "Gastrointestinal",
+    drugClass: "Antacid",
+    target: "Gastric acid (neutralization)",
+    description:
+      "Rapid-acting antacid and calcium supplement; excess can cause milk-alkali syndrome and constipation.",
+  },
+  {
+    slug: "magnesium-hydroxide",
+    name: "Magnesium hydroxide",
+    genericName: "magnesium hydroxide",
+    category: "Gastrointestinal",
+    drugClass: "Antacid / osmotic laxative",
+    target: "Gastric acid / colonic osmosis",
+    description:
+      "Milk of magnesia: neutralizes acid and acts as an osmotic laxative; accumulates in renal failure.",
+  },
+  {
+    slug: "diphenoxylate-atropine",
+    name: "Diphenoxylate–atropine",
+    genericName: "diphenoxylate + atropine",
+    category: "Gastrointestinal",
+    drugClass: "Opioid antidiarrheal",
+    target: "μ-opioid receptor (gut)",
+    description:
+      "Lomotil. Opioid antidiarrheal with subtherapeutic atropine added to deter misuse.",
+  },
+  {
+    slug: "lubiprostone",
+    name: "Lubiprostone",
+    genericName: "lubiprostone",
+    category: "Gastrointestinal",
+    drugClass: "Chloride channel activator",
+    target: "ClC-2 chloride channel",
+    description:
+      "Increases intestinal fluid secretion for chronic idiopathic constipation and IBS-C.",
+  },
+  {
+    slug: "linaclotide",
+    name: "Linaclotide",
+    genericName: "linaclotide",
+    category: "Gastrointestinal",
+    drugClass: "Guanylate cyclase-C agonist",
+    target: "Guanylate cyclase-C",
+    description:
+      "Boosts intestinal secretion and transit for IBS-C and chronic constipation.",
+  },
+  {
+    slug: "prucalopride",
+    name: "Prucalopride",
+    genericName: "prucalopride",
+    category: "Gastrointestinal",
+    drugClass: "5-HT4 agonist (prokinetic)",
+    target: "5-HT4 receptor",
+    description:
+      "Selective prokinetic that accelerates colonic transit in chronic constipation.",
+  },
+  {
+    slug: "domperidone",
+    name: "Domperidone",
+    genericName: "domperidone",
+    category: "Gastrointestinal",
+    drugClass: "Prokinetic / D2 antagonist",
+    target: "D2 receptor (peripheral)",
+    description:
+      "Peripheral dopamine antagonist for gastroparesis and nausea that largely spares the CNS. QT-prolongation caution.",
+  },
+  {
+    slug: "vedolizumab",
+    name: "Vedolizumab",
+    genericName: "vedolizumab",
+    category: "Gastrointestinal",
+    drugClass: "Anti-integrin monoclonal antibody",
+    target: "α4β7 integrin",
+    description:
+      "Gut-selective biologic for ulcerative colitis and Crohn disease with a favorable infection profile.",
+  },
+  {
+    slug: "ustekinumab",
+    name: "Ustekinumab",
+    genericName: "ustekinumab",
+    category: "Gastrointestinal",
+    drugClass: "Anti-IL-12/23 monoclonal antibody",
+    target: "IL-12 / IL-23 p40 subunit",
+    description:
+      "Biologic for Crohn disease, ulcerative colitis, and psoriasis.",
+  },
+  {
+    slug: "pancrelipase",
+    name: "Pancrelipase",
+    genericName: "pancrelipase",
+    category: "Gastrointestinal",
+    drugClass: "Pancreatic enzyme replacement",
+    target: "Dietary fat/protein/starch",
+    description:
+      "Lipase/protease/amylase replacement for pancreatic insufficiency in cystic fibrosis and chronic pancreatitis.",
+  },
+  {
+    slug: "senna",
+    name: "Senna",
+    genericName: "sennosides",
+    category: "Gastrointestinal",
+    drugClass: "Stimulant laxative",
+    target: "Colonic myenteric plexus",
+    description:
+      "Anthraquinone stimulant laxative for constipation, including opioid-induced constipation.",
+  },
+  {
+    slug: "methylnaltrexone",
+    name: "Methylnaltrexone",
+    genericName: "methylnaltrexone",
+    category: "Gastrointestinal",
+    drugClass: "Peripheral opioid antagonist",
+    target: "μ-opioid receptor (gut)",
+    description:
+      "Blocks gut opioid receptors to relieve opioid-induced constipation without reversing analgesia.",
+  },
+
+  // ===== Endocrine (batch 3) =====
+  {
+    slug: "insulin-aspart",
+    name: "Insulin aspart",
+    genericName: "insulin aspart",
+    category: "Endocrine",
+    drugClass: "Rapid-acting insulin",
+    target: "Insulin receptor",
+    description:
+      "Rapid-acting mealtime insulin analog for prandial coverage and insulin pumps.",
+  },
+  {
+    slug: "insulin-degludec",
+    name: "Insulin degludec",
+    genericName: "insulin degludec",
+    category: "Endocrine",
+    drugClass: "Ultra-long-acting insulin",
+    target: "Insulin receptor",
+    description:
+      "Basal insulin with a flat profile lasting over 42 hours, allowing flexible dosing times.",
+  },
+  {
+    slug: "nph-insulin",
+    name: "NPH insulin",
+    genericName: "insulin isophane (NPH)",
+    category: "Endocrine",
+    drugClass: "Intermediate-acting insulin",
+    target: "Insulin receptor",
+    description:
+      "Cloudy intermediate-acting basal insulin with a pronounced peak requiring careful timing.",
+  },
+  {
+    slug: "repaglinide",
+    name: "Repaglinide",
+    genericName: "repaglinide",
+    category: "Endocrine",
+    drugClass: "Meglitinide",
+    target: "Pancreatic β-cell K-ATP channel",
+    description:
+      "Short-acting mealtime insulin secretagogue useful in irregular eating patterns and mild renal disease.",
+  },
+  {
+    slug: "dulaglutide",
+    name: "Dulaglutide",
+    genericName: "dulaglutide",
+    category: "Endocrine",
+    drugClass: "GLP-1 receptor agonist",
+    target: "GLP-1 receptor",
+    description:
+      "Weekly injectable incretin for type 2 diabetes with cardiovascular benefit.",
+  },
+  {
+    slug: "exenatide",
+    name: "Exenatide",
+    genericName: "exenatide",
+    category: "Endocrine",
+    drugClass: "GLP-1 receptor agonist",
+    target: "GLP-1 receptor",
+    description:
+      "Incretin mimetic derived from Gila monster venom for type 2 diabetes; avoid in severe renal impairment.",
+  },
+  {
+    slug: "liraglutide",
+    name: "Liraglutide",
+    genericName: "liraglutide",
+    category: "Endocrine",
+    drugClass: "GLP-1 receptor agonist",
+    target: "GLP-1 receptor",
+    description:
+      "Daily GLP-1 agonist for type 2 diabetes and obesity, with cardiovascular risk reduction.",
+  },
+  {
+    slug: "dapagliflozin",
+    name: "Dapagliflozin",
+    genericName: "dapagliflozin",
+    category: "Endocrine",
+    drugClass: "SGLT2 inhibitor",
+    target: "Renal SGLT2 cotransporter",
+    description:
+      "Promotes glucosuria with proven benefit in heart failure and chronic kidney disease, even without diabetes.",
+  },
+  {
+    slug: "linagliptin",
+    name: "Linagliptin",
+    genericName: "linagliptin",
+    category: "Endocrine",
+    drugClass: "DPP-4 inhibitor",
+    target: "Dipeptidyl peptidase-4",
+    description:
+      "DPP-4 inhibitor uniquely cleared by the gut, requiring no renal dose adjustment.",
+  },
+  {
+    slug: "pramlintide",
+    name: "Pramlintide",
+    genericName: "pramlintide",
+    category: "Endocrine",
+    drugClass: "Amylin analog",
+    target: "Amylin receptor",
+    description:
+      "Mealtime injectable that slows gastric emptying and curbs glucagon, used alongside insulin.",
+  },
+  {
+    slug: "methylprednisolone",
+    name: "Methylprednisolone",
+    genericName: "methylprednisolone",
+    category: "Endocrine",
+    drugClass: "Glucocorticoid",
+    target: "Glucocorticoid receptor",
+    description:
+      "Intermediate-acting steroid for flares of autoimmune and inflammatory disease; IV pulses for severe relapses.",
+  },
+  {
+    slug: "triamcinolone",
+    name: "Triamcinolone",
+    genericName: "triamcinolone",
+    category: "Endocrine",
+    drugClass: "Glucocorticoid",
+    target: "Glucocorticoid receptor",
+    description:
+      "Versatile steroid used intra-articularly, topically, and intranasally for localized inflammation.",
+  },
+  {
+    slug: "estradiol",
+    name: "Estradiol",
+    genericName: "estradiol",
+    category: "Endocrine",
+    drugClass: "Estrogen",
+    target: "Estrogen receptor",
+    description:
+      "Estrogen replacement for menopausal symptoms and hypogonadism; raises thromboembolic risk.",
+  },
+  {
+    slug: "medroxyprogesterone",
+    name: "Medroxyprogesterone",
+    genericName: "medroxyprogesterone acetate",
+    category: "Endocrine",
+    drugClass: "Progestin",
+    target: "Progesterone receptor",
+    description:
+      "Progestin for contraception (depot injection), abnormal uterine bleeding, and endometrial protection.",
+  },
+  {
+    slug: "testosterone",
+    name: "Testosterone",
+    genericName: "testosterone",
+    category: "Endocrine",
+    drugClass: "Androgen",
+    target: "Androgen receptor",
+    description:
+      "Replacement therapy for male hypogonadism. Suppresses spermatogenesis and raises hematocrit.",
+  },
+  {
+    slug: "raloxifene",
+    name: "Raloxifene",
+    genericName: "raloxifene",
+    category: "Endocrine",
+    drugClass: "Selective estrogen receptor modulator",
+    target: "Estrogen receptor",
+    description:
+      "SERM that builds bone and lowers breast-cancer risk while sparing the endometrium; raises clot risk.",
+  },
+  {
+    slug: "cinacalcet",
+    name: "Cinacalcet",
+    genericName: "cinacalcet",
+    category: "Endocrine",
+    drugClass: "Calcimimetic",
+    target: "Parathyroid calcium-sensing receptor",
+    description:
+      "Lowers PTH in secondary hyperparathyroidism of dialysis and in parathyroid carcinoma.",
+  },
+  {
+    slug: "zoledronic-acid",
+    name: "Zoledronic acid",
+    genericName: "zoledronic acid",
+    category: "Endocrine",
+    drugClass: "Bisphosphonate",
+    target: "Osteoclast farnesyl pyrophosphate synthase",
+    description:
+      "Potent IV bisphosphonate dosed yearly for osteoporosis and for hypercalcemia of malignancy and bone metastases.",
+  },
+  {
+    slug: "calcitriol",
+    name: "Calcitriol",
+    genericName: "calcitriol",
+    category: "Endocrine",
+    drugClass: "Active vitamin D",
+    target: "Vitamin D receptor",
+    description:
+      "Active 1,25-dihydroxy vitamin D for renal osteodystrophy and hypoparathyroidism.",
+  },
 ];
