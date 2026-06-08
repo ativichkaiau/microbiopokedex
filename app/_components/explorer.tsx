@@ -6,6 +6,11 @@ import {
   type GenericRecord,
   type SectionKey,
 } from "@/lib/sections";
+import FacetSelect from "./facet-select";
+
+// Facets with more distinct values than this render as a compact dropdown
+// instead of a chip wall.
+const CHIP_LIMIT = 16;
 
 function buildHref(
   listPath: string,
@@ -253,43 +258,102 @@ export default function Explorer({
           ) : null}
         </div>
 
-        <div className="glass-inset space-y-7 rounded-2xl p-5 sm:p-6">
-          {facets.groups.map((group) => (
-            <div key={group.param}>
-              <h3 className="text-tech mb-3 text-[10px] text-muted">
-                {group.label}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {group.counts.map(({ value, count }) => {
-                  const isActive = active[group.param] === value;
-                  const href = buildHref(section.listPath, active, {
-                    [group.param]: isActive ? undefined : value,
-                  });
-                  return (
-                    <Link
-                      key={value}
-                      href={href}
-                      aria-pressed={isActive}
-                      className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
-                        isActive
-                          ? "border-accent bg-accent text-accent-ink shadow-[0_4px_16px_-4px_var(--accent)]"
-                          : "border-glass-border bg-glass text-foreground hover:border-accent/60"
-                      }`}
-                    >
-                      {value}
-                      <span
-                        className={`ml-1.5 font-mono text-[11px] ${
-                          isActive ? "opacity-70" : "text-muted"
+        <div className="glass-inset space-y-1.5 rounded-2xl p-3 sm:p-4">
+          {facets.groups.map((group, idx) => {
+            const activeValue = active[group.param];
+
+            // High-cardinality facets → compact dropdown.
+            if (group.counts.length > CHIP_LIMIT) {
+              const allHref = buildHref(section.listPath, active, {
+                [group.param]: undefined,
+              });
+              const options = group.counts.map(({ value, count }) => ({
+                value,
+                count,
+                href: buildHref(section.listPath, active, {
+                  [group.param]: value,
+                }),
+              }));
+              const activeHref = activeValue
+                ? buildHref(section.listPath, active, {
+                    [group.param]: activeValue,
+                  })
+                : allHref;
+              return (
+                <FacetSelect
+                  key={group.param}
+                  label={group.label}
+                  options={options}
+                  allHref={allHref}
+                  activeHref={activeHref}
+                  total={group.counts.length}
+                />
+              );
+            }
+
+            // Keep the primary organizer open; collapse the rest unless one
+            // holds an active filter (so deep-linked queries stay visible).
+            const open = idx === 0 || Boolean(activeValue);
+            return (
+              <details
+                key={group.param}
+                open={open}
+                className="group rounded-xl px-3 py-2 transition-colors open:bg-glass/50"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+                  <span className="flex items-center gap-2">
+                    <span className="text-tech text-[10px] text-muted">
+                      {group.label}
+                    </span>
+                    {activeValue ? (
+                      <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-medium text-accent-ink">
+                        {activeValue}
+                      </span>
+                    ) : (
+                      <span className="text-tech text-[10px] text-muted/50">
+                        {group.counts.length}
+                      </span>
+                    )}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="text-xs text-muted transition-transform group-open:rotate-180"
+                  >
+                    ▾
+                  </span>
+                </summary>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {group.counts.map(({ value, count }) => {
+                    const isActive = active[group.param] === value;
+                    const href = buildHref(section.listPath, active, {
+                      [group.param]: isActive ? undefined : value,
+                    });
+                    return (
+                      <Link
+                        key={value}
+                        href={href}
+                        aria-pressed={isActive}
+                        className={`rounded-full border px-3 py-1 text-[13px] font-medium transition-colors ${
+                          isActive
+                            ? "border-accent bg-accent text-accent-ink shadow-[0_4px_16px_-4px_var(--accent)]"
+                            : "border-glass-border bg-glass text-foreground hover:border-accent/60"
                         }`}
                       >
-                        {count}
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                        {value}
+                        <span
+                          className={`ml-1.5 font-mono text-[10px] ${
+                            isActive ? "opacity-70" : "text-muted"
+                          }`}
+                        >
+                          {count}
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </details>
+            );
+          })}
         </div>
 
         {hasFilters && (
