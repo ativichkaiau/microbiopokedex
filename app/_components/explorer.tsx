@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { FacetGroup } from "@/lib/db";
 import {
-  SECTION_ORDER,
   SECTIONS,
   type GenericRecord,
   type SectionKey,
 } from "@/lib/sections";
 import FacetSelect from "./facet-select";
+import SectionNav from "./section-nav";
 import { TIER_META, type Tier } from "@/lib/tiers";
 
 // Facets with more distinct values than this render as a compact dropdown
@@ -217,29 +217,7 @@ export default function Explorer({
       </section>
 
       {/* ----- Section tabs (full width) ----- */}
-      <nav className="mt-12 flex justify-center">
-        <div className="glass-soft flex items-center gap-0.5 rounded-full p-1">
-          {SECTION_ORDER.map((key) => {
-            const s = SECTIONS[key];
-            const isActive = key === sectionKey;
-            return (
-              <Link
-                key={key}
-                href={s.listPath}
-                aria-current={isActive ? "page" : undefined}
-                className={`flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-                  isActive
-                    ? "bg-foreground text-surface"
-                    : "text-muted hover:text-foreground"
-                }`}
-              >
-                <span aria-hidden>{s.emoji}</span>
-                {s.navLabel}
-              </Link>
-            );
-          })}
-        </div>
-      </nav>
+      <SectionNav active={sectionKey} />
 
       {/* ----- Filter panel ----- */}
       <section
