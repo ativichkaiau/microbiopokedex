@@ -564,4 +564,580 @@ export const CASES: Case[] = [
     explanation:
       "Atropine — antimuscarinic antidote for organophosphate (cholinergic) poisoning; pair with pralidoxime.",
   },
+
+  // ---------------- Bacteria (set 2) ----------------
+  {
+    id: "b-scarlet",
+    section: "bacteria",
+    prompt:
+      "A 6-year-old with a sore throat develops a sandpaper-like rash, circumoral pallor, and a 'strawberry' tongue. ASO titer is rising.",
+    answer: "streptococcus-pyogenes",
+    distractors: [
+      "staphylococcus-aureus",
+      "corynebacterium-diphtheriae",
+      "streptococcus-agalactiae",
+    ],
+    explanation:
+      "Streptococcus pyogenes (Group A strep) — erythrogenic toxin causes scarlet fever; risk of rheumatic fever and PSGN.",
+  },
+  {
+    id: "b-pneumococcus",
+    section: "bacteria",
+    prompt:
+      "An older adult with abrupt fever, a single shaking rigor, and rust-colored sputum has lobar consolidation. Gram stain shows lancet-shaped gram-positive diplococci.",
+    answer: "streptococcus-pneumoniae",
+    distractors: [
+      "klebsiella-pneumoniae",
+      "haemophilus-influenzae",
+      "mycoplasma-pneumoniae",
+    ],
+    explanation:
+      "Streptococcus pneumoniae — the most common cause of typical community-acquired (lobar) pneumonia; rusty sputum, lancet diplococci.",
+  },
+  {
+    id: "b-ecoli-uti",
+    section: "bacteria",
+    prompt:
+      "A sexually active young woman has dysuria, frequency, and suprapubic pain. Urine culture grows a lactose-fermenting gram-negative rod that is indole positive.",
+    answer: "escherichia-coli",
+    distractors: [
+      "staphylococcus-saprophyticus",
+      "proteus-mirabilis",
+      "klebsiella-pneumoniae",
+    ],
+    explanation:
+      "Escherichia coli — the leading cause of uncomplicated cystitis; lactose-positive, indole-positive enteric rod.",
+  },
+  {
+    id: "b-botulism",
+    section: "bacteria",
+    prompt:
+      "A 4-month-old fed honey becomes constipated, floppy, and feeds poorly, with descending flaccid paralysis and ptosis.",
+    answer: "clostridium-botulinum",
+    distractors: [
+      "clostridium-tetani",
+      "clostridium-perfringens",
+      "listeria-monocytogenes",
+    ],
+    explanation:
+      "Clostridium botulinum — spores in honey produce toxin that blocks ACh release, causing infant botulism (descending paralysis).",
+  },
+  {
+    id: "b-tetanus",
+    section: "bacteria",
+    prompt:
+      "An unvaccinated farmer steps on a rusty nail and days later develops lockjaw, a fixed grimace (risus sardonicus), and painful muscle spasms.",
+    answer: "clostridium-tetani",
+    distractors: [
+      "clostridium-botulinum",
+      "clostridium-perfringens",
+      "bacillus-anthracis",
+    ],
+    explanation:
+      "Clostridium tetani — tetanospasmin blocks inhibitory neurotransmitters, causing spastic (rigid) paralysis.",
+  },
+  {
+    id: "b-gonococcus",
+    section: "bacteria",
+    prompt:
+      "A sexually active young adult has migratory polyarthralgia, tenosynovitis, and scattered pustular skin lesions. Synovial fluid shows gram-negative diplococci within neutrophils.",
+    answer: "neisseria-gonorrhoeae",
+    distractors: [
+      "neisseria-meningitidis",
+      "staphylococcus-aureus",
+      "treponema-pallidum",
+    ],
+    explanation:
+      "Neisseria gonorrhoeae — disseminated gonococcal infection: arthritis-dermatitis syndrome with intracellular gram-negative diplococci.",
+  },
+  {
+    id: "b-epiglottitis",
+    section: "bacteria",
+    prompt:
+      "An unvaccinated toddler is drooling, leaning forward in a tripod position with stridor and high fever. Lateral neck film shows a 'thumbprint' sign.",
+    answer: "haemophilus-influenzae",
+    distractors: [
+      "streptococcus-pyogenes",
+      "corynebacterium-diphtheriae",
+      "bordetella-pertussis",
+    ],
+    explanation:
+      "Haemophilus influenzae type b — classic cause of epiglottitis (thumbprint sign) before conjugate vaccination.",
+  },
+  {
+    id: "b-typhoid",
+    section: "bacteria",
+    prompt:
+      "A traveler returning from South Asia has a week of stepwise rising fever, abdominal pain, rose-colored spots on the trunk, and relative bradycardia.",
+    answer: "salmonella-enterica",
+    distractors: [
+      "shigella-dysenteriae",
+      "brucella-melitensis",
+      "rickettsia-prowazekii",
+    ],
+    explanation:
+      "Salmonella enterica serovar Typhi — enteric (typhoid) fever with rose spots and pulse-temperature dissociation.",
+  },
+  {
+    id: "b-rmsf",
+    section: "bacteria",
+    prompt:
+      "A child from North Carolina has high fever and headache, then a maculopapular rash that begins on the wrists and ankles and spreads to the palms, soles, and trunk after a tick bite.",
+    answer: "rickettsia-rickettsii",
+    distractors: [
+      "rickettsia-prowazekii",
+      "borrelia-burgdorferi",
+      "ehrlichia-chaffeensis",
+    ],
+    explanation:
+      "Rickettsia rickettsii — Rocky Mountain spotted fever; rash starts peripherally (wrists/ankles) and moves centrally.",
+  },
+  {
+    id: "b-legionella",
+    section: "bacteria",
+    prompt:
+      "An older smoker develops severe pneumonia with high fever, confusion, diarrhea, and hyponatremia after staying at a hotel with a contaminated cooling system. Sputum Gram stain shows neutrophils but no organisms.",
+    answer: "legionella-pneumophila",
+    distractors: [
+      "streptococcus-pneumoniae",
+      "mycoplasma-pneumoniae",
+      "coxiella-burnetii",
+    ],
+    explanation:
+      "Legionella pneumophila — atypical pneumonia with hyponatremia and diarrhea; poorly Gram-staining, needs silver stain/charcoal yeast agar.",
+  },
+  {
+    id: "b-leprosy",
+    section: "bacteria",
+    prompt:
+      "An immigrant has several hypopigmented, anesthetic skin patches and thickened peripheral nerves. The acid-fast organism cannot be grown in culture.",
+    answer: "mycobacterium-leprae",
+    distractors: [
+      "mycobacterium-tuberculosis",
+      "mycobacterium-avium",
+      "mycobacterium-marinum",
+    ],
+    explanation:
+      "Mycobacterium leprae — Hansen's disease; loss of sensation in skin lesions; uncultivable in vitro.",
+  },
+
+  // ---------------- Viruses (set 2) ----------------
+  {
+    id: "v-influenza",
+    section: "viruses",
+    prompt:
+      "During a winter outbreak, an adult has abrupt high fever, severe myalgias, headache, and dry cough. A neuraminidase inhibitor started within 48 hours shortens the illness.",
+    answer: "influenza-a-virus",
+    distractors: [
+      "respiratory-syncytial-virus",
+      "parainfluenza-virus",
+      "rhinovirus",
+    ],
+    explanation:
+      "Influenza A — abrupt systemic flu; segmented genome undergoes drift/shift; treat early with oseltamivir.",
+  },
+  {
+    id: "v-rotavirus",
+    section: "viruses",
+    prompt:
+      "An unvaccinated infant in daycare has several days of vomiting and profuse watery, non-bloody diarrhea during the winter.",
+    answer: "rotavirus",
+    distractors: ["norovirus", "adenovirus", "astrovirus"],
+    explanation:
+      "Rotavirus — the leading cause of severe dehydrating gastroenteritis in young children (segmented dsRNA).",
+  },
+  {
+    id: "v-norovirus",
+    section: "viruses",
+    prompt:
+      "Dozens of passengers on a cruise ship develop explosive vomiting and watery diarrhea within a day of each other; it spreads rapidly with a very low infectious dose.",
+    answer: "norovirus",
+    distractors: ["rotavirus", "sapovirus", "hepatitis-a-virus"],
+    explanation:
+      "Norovirus — the dominant cause of epidemic non-bacterial gastroenteritis (cruise ships, institutions).",
+  },
+  {
+    id: "v-hsv-encephalitis",
+    section: "viruses",
+    prompt:
+      "An adult has fever, confusion, and seizures. MRI shows temporal-lobe edema and CSF has red blood cells (hemorrhagic).",
+    answer: "herpes-simplex-virus-1",
+    distractors: [
+      "cytomegalovirus",
+      "varicella-zoster-virus",
+      "rabies-virus",
+    ],
+    explanation:
+      "HSV-1 — the most common cause of sporadic fatal encephalitis, with hemorrhagic temporal-lobe involvement; treat with acyclovir.",
+  },
+  {
+    id: "v-hbv",
+    section: "viruses",
+    prompt:
+      "A healthcare worker has a needlestick and months later develops jaundice and elevated transaminases. Serology shows HBsAg and IgM anti-HBc; she is at long-term risk of hepatocellular carcinoma.",
+    answer: "hepatitis-b-virus",
+    distractors: [
+      "hepatitis-a-virus",
+      "hepatitis-c-virus",
+      "cytomegalovirus",
+    ],
+    explanation:
+      "Hepatitis B virus — bloodborne DNA virus; HBsAg positivity, chronic carriage, and HCC risk.",
+  },
+  {
+    id: "v-dengue",
+    section: "viruses",
+    prompt:
+      "A traveler from Southeast Asia has high fever, severe retro-orbital pain, intense myalgia ('breakbone'), and a rash, with thrombocytopenia. A second infection risks hemorrhagic shock.",
+    answer: "dengue-virus",
+    distractors: [
+      "zika-virus",
+      "yellow-fever-virus",
+      "chikungunya-virus",
+    ],
+    explanation:
+      "Dengue virus — breakbone fever; secondary infection with a different serotype can cause dengue hemorrhagic fever via antibody-dependent enhancement.",
+  },
+  {
+    id: "v-mumps",
+    section: "viruses",
+    prompt:
+      "An unvaccinated teenager develops bilateral painful parotid swelling, followed by testicular pain and swelling.",
+    answer: "mumps-virus",
+    distractors: [
+      "epstein-barr-virus",
+      "cytomegalovirus",
+      "parainfluenza-virus",
+    ],
+    explanation:
+      "Mumps virus — parotitis with orchitis, aseptic meningitis, and pancreatitis; MMR-preventable.",
+  },
+  {
+    id: "v-hpv",
+    section: "viruses",
+    prompt:
+      "A woman has an abnormal Pap smear; cytology shows koilocytes. The high-risk subtypes (16/18) integrate viral E6/E7 oncoproteins and drive cervical cancer.",
+    answer: "human-papillomavirus",
+    distractors: [
+      "herpes-simplex-virus-2",
+      "cytomegalovirus",
+      "epstein-barr-virus",
+    ],
+    explanation:
+      "Human papillomavirus — koilocytes; high-risk types cause cervical and oropharyngeal cancer; vaccine-preventable.",
+  },
+
+  // ---------------- Fungi (set 2) ----------------
+  {
+    id: "f-candida-vag",
+    section: "fungi",
+    prompt:
+      "A woman with poorly controlled diabetes has vulvar itching and a thick, white, 'cottage cheese' vaginal discharge. KOH prep shows budding yeast with pseudohyphae.",
+    answer: "candida-albicans",
+    distractors: [
+      "malassezia-furfur",
+      "cryptococcus-neoformans",
+      "aspergillus-fumigatus",
+    ],
+    explanation:
+      "Candida albicans — vulvovaginal candidiasis; germ-tube-positive yeast forming pseudohyphae.",
+  },
+  {
+    id: "f-blasto",
+    section: "fungi",
+    prompt:
+      "A man from Wisconsin who works outdoors has pneumonia plus well-demarcated warty (verrucous) skin lesions. Biopsy shows broad-based budding yeast.",
+    answer: "blastomyces-dermatitidis",
+    distractors: [
+      "histoplasma-capsulatum",
+      "coccidioides-immitis",
+      "paracoccidioides-brasiliensis",
+    ],
+    explanation:
+      "Blastomyces dermatitidis — broad-based budding yeast; pulmonary plus skin/bone disease in the Great Lakes/Mississippi regions.",
+  },
+  {
+    id: "f-versicolor",
+    section: "fungi",
+    prompt:
+      "A young adult has hypo- and hyperpigmented scaly macules on the trunk that are more obvious after sun exposure. KOH shows yeast and short hyphae ('spaghetti and meatballs').",
+    answer: "malassezia-furfur",
+    distractors: [
+      "trichophyton-rubrum",
+      "candida-albicans",
+      "sporothrix-schenckii",
+    ],
+    explanation:
+      "Malassezia furfur — tinea (pityriasis) versicolor; lipophilic yeast with the classic spaghetti-and-meatballs appearance.",
+  },
+  {
+    id: "f-tinea-pedis",
+    section: "fungi",
+    prompt:
+      "A runner has itchy, scaly, macerated skin between the toes and thickened, discolored toenails. KOH of a scraping shows septate, branching hyphae.",
+    answer: "trichophyton-rubrum",
+    distractors: [
+      "microsporum-canis",
+      "epidermophyton-floccosum",
+      "malassezia-furfur",
+    ],
+    explanation:
+      "Trichophyton rubrum — the most common dermatophyte; athlete's foot and onychomycosis. Treat onychomycosis with oral terbinafine.",
+  },
+  {
+    id: "f-cauris",
+    section: "fungi",
+    prompt:
+      "An ICU has an outbreak of bloodstream infections from a yeast that persists on skin and surfaces, is frequently misidentified, and is resistant to fluconazole and often amphotericin.",
+    answer: "candida-auris",
+    distractors: [
+      "candida-albicans",
+      "candida-glabrata",
+      "cryptococcus-neoformans",
+    ],
+    explanation:
+      "Candida auris — emerging multidrug-resistant nosocomial yeast; echinocandins are first-line.",
+  },
+
+  // ---------------- Parasites (set 2) ----------------
+  {
+    id: "p-toxo",
+    section: "parasites",
+    prompt:
+      "A patient with AIDS and a CD4 count of 50 has headache and focal weakness. MRI shows multiple ring-enhancing lesions in the basal ganglia.",
+    answer: "toxoplasma-gondii",
+    distractors: [
+      "taenia-solium",
+      "trypanosoma-cruzi",
+      "entamoeba-histolytica",
+    ],
+    explanation:
+      "Toxoplasma gondii — reactivation toxoplasmosis causes multiple ring-enhancing brain lesions in AIDS; treat with pyrimethamine-sulfadiazine.",
+  },
+  {
+    id: "p-schisto-mansoni",
+    section: "parasites",
+    prompt:
+      "A traveler who swam in an African lake develops hepatosplenomegaly and signs of portal hypertension. Stool shows eggs with a prominent lateral spine.",
+    answer: "schistosoma-mansoni",
+    distractors: [
+      "schistosoma-haematobium",
+      "clonorchis-sinensis",
+      "fasciola-hepatica",
+    ],
+    explanation:
+      "Schistosoma mansoni — mesenteric veins; lateral-spine eggs; hepatic granulomas and portal hypertension. Treat with praziquantel.",
+  },
+  {
+    id: "p-schisto-haem",
+    section: "parasites",
+    prompt:
+      "An Egyptian man has painless terminal hematuria. Cystoscopy shows bladder wall changes; eggs have a terminal spine, and he is at increased risk of squamous-cell bladder cancer.",
+    answer: "schistosoma-haematobium",
+    distractors: [
+      "schistosoma-mansoni",
+      "schistosoma-japonicum",
+      "wuchereria-bancrofti",
+    ],
+    explanation:
+      "Schistosoma haematobium — bladder venous plexus; terminal-spine eggs, hematuria, and squamous-cell bladder carcinoma risk.",
+  },
+  {
+    id: "p-ascaris",
+    section: "parasites",
+    prompt:
+      "A child in a low-resource area has abdominal discomfort and passes a large round worm in the stool; earlier he had a transient cough with eosinophilia (pulmonary phase).",
+    answer: "ascaris-lumbricoides",
+    distractors: [
+      "necator-americanus",
+      "enterobius-vermicularis",
+      "trichuris-trichiura",
+    ],
+    explanation:
+      "Ascaris lumbricoides — the largest intestinal roundworm; egg ingestion, larval lung migration (Löffler syndrome), can cause obstruction.",
+  },
+  {
+    id: "p-onchocerca",
+    section: "parasites",
+    prompt:
+      "A man in West Africa near fast-flowing rivers has intensely itchy skin, subcutaneous nodules, and progressive vision loss. He was bitten by blackflies.",
+    answer: "onchocerca-volvulus",
+    distractors: ["loa-loa", "wuchereria-bancrofti", "brugia-malayi"],
+    explanation:
+      "Onchocerca volvulus — blackfly-borne filaria causing river blindness; treat with ivermectin.",
+  },
+  {
+    id: "p-filariasis",
+    section: "parasites",
+    prompt:
+      "A man in the tropics develops massive lymphedema of the legs and scrotum (elephantiasis). Nocturnal blood smear shows sheathed microfilariae.",
+    answer: "wuchereria-bancrofti",
+    distractors: ["onchocerca-volvulus", "brugia-malayi", "loa-loa"],
+    explanation:
+      "Wuchereria bancrofti — mosquito-borne lymphatic filariasis causing elephantiasis; nocturnal microfilaremia.",
+  },
+  {
+    id: "p-babesia",
+    section: "parasites",
+    prompt:
+      "An asplenic patient from New England has fever, fatigue, and hemolytic anemia after a summer tick bite. Blood smear shows intraerythrocytic rings and a tetrad 'Maltese cross'.",
+    answer: "babesia-microti",
+    distractors: [
+      "plasmodium-falciparum",
+      "plasmodium-vivax",
+      "trypanosoma-cruzi",
+    ],
+    explanation:
+      "Babesia microti — Ixodes-borne; Maltese-cross tetrads and hemolysis, severe in asplenia.",
+  },
+  {
+    id: "p-leishmania",
+    section: "parasites",
+    prompt:
+      "A patient from the Indian subcontinent has months of fever, massive splenomegaly, weight loss, and pancytopenia. Marrow shows amastigotes within macrophages.",
+    answer: "leishmania-donovani",
+    distractors: [
+      "trypanosoma-cruzi",
+      "plasmodium-falciparum",
+      "schistosoma-mansoni",
+    ],
+    explanation:
+      "Leishmania donovani — visceral leishmaniasis (kala-azar); sandfly-borne amastigotes in macrophages with hepatosplenomegaly.",
+  },
+  {
+    id: "p-scabies",
+    section: "parasites",
+    prompt:
+      "A nursing-home resident and several staff have intensely itchy papules, worse at night, with thin serpiginous burrows in the finger web spaces and wrists.",
+    answer: "sarcoptes-scabiei",
+    distractors: [
+      "pediculus-humanus-capitis",
+      "demodex-folliculorum",
+      "cimex-lectularius",
+    ],
+    explanation:
+      "Sarcoptes scabiei — burrowing mite causing scabies; treat with permethrin (ivermectin for crusted/outbreak).",
+  },
+
+  // ---------------- Pharmacology (set 2) ----------------
+  {
+    id: "d-isoniazid",
+    section: "pharmacology",
+    prompt:
+      "A patient with latent tuberculosis is started on monotherapy and co-prescribed pyridoxine (vitamin B6) to prevent peripheral neuropathy. Which drug?",
+    answer: "isoniazid",
+    distractors: ["rifampin", "ethambutol", "pyrazinamide"],
+    explanation:
+      "Isoniazid — latent TB monotherapy; depletes B6 (neuropathy) and can cause hepatotoxicity.",
+  },
+  {
+    id: "d-amphotericin",
+    section: "pharmacology",
+    prompt:
+      "A patient with severe cryptococcal meningitis is given an IV antifungal that binds ergosterol; infusion causes fever and rigors ('shake and bake'), and it is nephrotoxic with hypokalemia/hypomagnesemia.",
+    answer: "amphotericin-b",
+    distractors: ["fluconazole", "caspofungin", "terbinafine"],
+    explanation:
+      "Amphotericin B — polyene that forms membrane pores; infusion reactions and nephrotoxicity ('amphoterrible').",
+  },
+  {
+    id: "d-acyclovir",
+    section: "pharmacology",
+    prompt:
+      "A guanosine analog that must be monophosphorylated by viral thymidine kinase before it chain-terminates HSV/VZV DNA polymerase is started for herpes encephalitis. Which drug?",
+    answer: "acyclovir",
+    distractors: ["ganciclovir", "foscarnet", "ribavirin"],
+    explanation:
+      "Acyclovir — activated by HSV/VZV thymidine kinase; resistance arises from TK mutations (then use foscarnet).",
+  },
+  {
+    id: "d-warfarin",
+    section: "pharmacology",
+    prompt:
+      "A patient with a mechanical heart valve takes an oral anticoagulant requiring regular INR monitoring; it inhibits vitamin-K-dependent clotting factor synthesis and has many food/drug interactions.",
+    answer: "warfarin",
+    distractors: ["heparin", "apixaban", "aspirin"],
+    explanation:
+      "Warfarin — vitamin K epoxide reductase inhibitor; INR-monitored, reversed with vitamin K/PCC.",
+  },
+  {
+    id: "d-furosemide",
+    section: "pharmacology",
+    prompt:
+      "A patient in acute pulmonary edema is given an IV diuretic that blocks the Na-K-2Cl transporter in the thick ascending limb; watch for hypokalemia and ototoxicity.",
+    answer: "furosemide",
+    distractors: ["hydrochlorothiazide", "spironolactone", "mannitol"],
+    explanation:
+      "Furosemide — loop diuretic; rapid diuresis for volume overload, with hypokalemia and ototoxicity.",
+  },
+  {
+    id: "d-digoxin",
+    section: "pharmacology",
+    prompt:
+      "An elderly patient with heart failure and atrial fibrillation develops nausea, confusion, and yellow-green visual halos. The drug inhibits the Na/K-ATPase and has a narrow therapeutic window.",
+    answer: "digoxin",
+    distractors: ["amiodarone", "metoprolol", "diltiazem"],
+    explanation:
+      "Digoxin — cardiac glycoside; toxicity causes GI upset, visual halos, and arrhythmias, worsened by hypokalemia.",
+  },
+  {
+    id: "d-lithium",
+    section: "pharmacology",
+    prompt:
+      "A patient on long-term bipolar therapy develops a fine tremor, polyuria (nephrogenic DI), and hypothyroidism. The drug has a narrow therapeutic index and reduces suicide risk.",
+    answer: "lithium",
+    distractors: ["valproate", "lamotrigine", "haloperidol"],
+    explanation:
+      "Lithium — mood stabilizer; monitor levels, thyroid, and renal function (nephrogenic DI).",
+  },
+  {
+    id: "d-levodopa",
+    section: "pharmacology",
+    prompt:
+      "A patient with Parkinson disease improves on a dopamine precursor combined with a peripheral DOPA-decarboxylase inhibitor that reduces peripheral side effects.",
+    answer: "levodopa-carbidopa",
+    distractors: ["haloperidol", "donepezil", "gabapentin"],
+    explanation:
+      "Levodopa-carbidopa — replenishes CNS dopamine; carbidopa blocks peripheral conversion (less nausea/hypotension).",
+  },
+  {
+    id: "d-albuterol",
+    section: "pharmacology",
+    prompt:
+      "A patient in an acute asthma attack gets an inhaled short-acting bronchodilator that relaxes airway smooth muscle; side effects include tremor and tachycardia.",
+    answer: "albuterol",
+    distractors: ["ipratropium", "fluticasone", "montelukast"],
+    explanation:
+      "Albuterol — short-acting β2 agonist (SABA) for acute bronchospasm.",
+  },
+  {
+    id: "d-metformin",
+    section: "pharmacology",
+    prompt:
+      "A newly diagnosed type 2 diabetic is started on a first-line oral agent that lowers hepatic glucose output without causing hypoglycemia or weight gain; it is held before contrast due to lactic-acidosis risk.",
+    answer: "metformin",
+    distractors: ["glipizide", "insulin-glargine", "empagliflozin"],
+    explanation:
+      "Metformin — biguanide; first-line for T2DM, weight-neutral, no hypoglycemia, rare lactic acidosis.",
+  },
+  {
+    id: "d-naloxone",
+    section: "pharmacology",
+    prompt:
+      "A person found unresponsive with pinpoint pupils and a respiratory rate of 6 is given an antagonist that rapidly reverses the toxidrome.",
+    answer: "naloxone",
+    distractors: ["atropine", "acetylcysteine", "morphine"],
+    explanation:
+      "Naloxone — competitive μ-opioid antagonist that reverses opioid overdose.",
+  },
+  {
+    id: "d-ceftriaxone",
+    section: "pharmacology",
+    prompt:
+      "A third-generation cephalosporin is chosen empirically for adult bacterial meningitis and is also first-line (with azithromycin) for gonorrhea.",
+    answer: "ceftriaxone",
+    distractors: ["vancomycin", "penicillin-g", "azithromycin"],
+    explanation:
+      "Ceftriaxone — CNS-penetrant third-generation cephalosporin; meningitis, gonorrhea, pyelonephritis.",
+  },
 ];
