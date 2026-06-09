@@ -1140,4 +1140,760 @@ export const CASES: Case[] = [
     explanation:
       "Ceftriaxone — CNS-penetrant third-generation cephalosporin; meningitis, gonorrhea, pyelonephritis.",
   },
+
+  // ---------------- Bacteria (set 3) ----------------
+  {
+    id: "b-anthrax",
+    section: "bacteria",
+    prompt:
+      "A wool-mill worker develops a painless skin papule that becomes a vesicle and then a black eschar surrounded by marked non-pitting edema. Biopsy shows large boxcar-shaped gram-positive rods in chains.",
+    answer: "bacillus-anthracis",
+    distractors: [
+      "pasteurella-multocida",
+      "francisella-tularensis",
+      "staphylococcus-aureus",
+    ],
+    explanation:
+      "Bacillus anthracis — cutaneous anthrax: painless black eschar with surrounding edema; spore-forming boxcar rods.",
+  },
+  {
+    id: "b-bcereus",
+    section: "bacteria",
+    prompt:
+      "Several diners vomit 1–5 hours after eating reheated fried rice from a buffet; the illness is brief and self-limited.",
+    answer: "bacillus-cereus",
+    distractors: [
+      "staphylococcus-aureus",
+      "clostridium-perfringens",
+      "salmonella-enterica",
+    ],
+    explanation:
+      "Bacillus cereus — heat-stable emetic toxin from reheated rice causes rapid-onset vomiting.",
+  },
+  {
+    id: "b-campylobacter",
+    section: "bacteria",
+    prompt:
+      "A young adult has bloody diarrhea and cramps after eating undercooked chicken; weeks later he develops ascending symmetric weakness. Stool culture grows comma/S-shaped microaerophilic gram-negative rods.",
+    answer: "campylobacter-jejuni",
+    distractors: [
+      "shigella-dysenteriae",
+      "salmonella-enterica",
+      "escherichia-coli",
+    ],
+    explanation:
+      "Campylobacter jejuni — the most common bacterial gastroenteritis and a leading trigger of Guillain-Barré syndrome.",
+  },
+  {
+    id: "b-diphtheria",
+    section: "bacteria",
+    prompt:
+      "An unvaccinated traveler returns with sore throat, a thick gray pseudomembrane over the tonsils that bleeds when scraped, cervical 'bull neck', and new heart block.",
+    answer: "corynebacterium-diphtheriae",
+    distractors: [
+      "streptococcus-pyogenes",
+      "arcanobacterium-haemolyticum",
+      "haemophilus-influenzae",
+    ],
+    explanation:
+      "Corynebacterium diphtheriae — diphtheria toxin causes a pseudomembranous pharyngitis with myocarditis.",
+  },
+  {
+    id: "b-mycoplasma",
+    section: "bacteria",
+    prompt:
+      "A college student has 2 weeks of low-grade fever, headache, and a dry hacking cough. Chest X-ray looks far worse than the exam, and cold agglutinins are positive.",
+    answer: "mycoplasma-pneumoniae",
+    distractors: [
+      "streptococcus-pneumoniae",
+      "legionella-pneumophila",
+      "coxiella-burnetii",
+    ],
+    explanation:
+      "Mycoplasma pneumoniae — 'walking' atypical pneumonia in young adults; no cell wall (beta-lactam resistant), cold agglutinins.",
+  },
+  {
+    id: "b-shigella",
+    section: "bacteria",
+    prompt:
+      "A daycare toddler has fever, crampy abdominal pain, and scant bloody, mucoid stools with painful straining; a very low inoculum was enough to cause disease.",
+    answer: "shigella-dysenteriae",
+    distractors: [
+      "salmonella-enterica",
+      "campylobacter-jejuni",
+      "vibrio-cholerae",
+    ],
+    explanation:
+      "Shigella — very low infectious dose; Shiga toxin causes invasive bacillary dysentery with tenesmus.",
+  },
+  {
+    id: "b-gbs-neonate",
+    section: "bacteria",
+    prompt:
+      "A 3-day-old becomes lethargic with fever and poor feeding and is found to have sepsis and meningitis. The mother had a positive vaginal-rectal screen at 36 weeks.",
+    answer: "streptococcus-agalactiae",
+    distractors: [
+      "escherichia-coli",
+      "listeria-monocytogenes",
+      "streptococcus-pneumoniae",
+    ],
+    explanation:
+      "Streptococcus agalactiae (Group B strep) — leading cause of early-onset neonatal sepsis and meningitis.",
+  },
+  {
+    id: "b-actino",
+    section: "bacteria",
+    prompt:
+      "Weeks after a dental extraction, a man develops a slowly enlarging, indurated jaw mass with draining sinus tracts that exude yellow 'sulfur granules'. Anaerobic culture grows branching gram-positive filaments.",
+    answer: "actinomyces-israelii",
+    distractors: [
+      "nocardia-asteroides",
+      "mycobacterium-tuberculosis",
+      "streptococcus-pyogenes",
+    ],
+    explanation:
+      "Actinomyces israelii — anaerobic branching rod causing cervicofacial abscesses with sulfur granules after oral trauma.",
+  },
+  {
+    id: "b-nocardia",
+    section: "bacteria",
+    prompt:
+      "An immunosuppressed transplant patient develops a cavitary pneumonia and brain abscess. The aerobic organism is a weakly acid-fast, branching gram-positive filament.",
+    answer: "nocardia-asteroides",
+    distractors: [
+      "actinomyces-israelii",
+      "mycobacterium-tuberculosis",
+      "rhodococcus-equi",
+    ],
+    explanation:
+      "Nocardia — aerobic, partially acid-fast branching rod; pulmonary and CNS disease in the immunocompromised; treat with TMP-SMX.",
+  },
+  {
+    id: "b-catscratch",
+    section: "bacteria",
+    prompt:
+      "A child develops a tender, swollen lymph node in the axilla two weeks after being scratched by a new kitten, with a small papule at the scratch site.",
+    answer: "bartonella-henselae",
+    distractors: [
+      "francisella-tularensis",
+      "pasteurella-multocida",
+      "yersinia-pestis",
+    ],
+    explanation:
+      "Bartonella henselae — cat-scratch disease with regional lymphadenopathy; bacillary angiomatosis in AIDS.",
+  },
+  {
+    id: "b-plague",
+    section: "bacteria",
+    prompt:
+      "A camper in the southwestern US develops sudden high fever and an exquisitely tender, swollen inguinal lymph node (bubo) after flea bites; he becomes septic. Smear shows bipolar 'safety-pin' staining.",
+    answer: "yersinia-pestis",
+    distractors: [
+      "francisella-tularensis",
+      "bartonella-henselae",
+      "bacillus-anthracis",
+    ],
+    explanation:
+      "Yersinia pestis — flea-borne bubonic plague; safety-pin bipolar staining.",
+  },
+  {
+    id: "b-brucella",
+    section: "bacteria",
+    prompt:
+      "A goat farmer who consumes unpasteurized cheese has weeks of relapsing ('undulant') fevers, drenching sweats, arthralgias, and hepatosplenomegaly.",
+    answer: "brucella-melitensis",
+    distractors: [
+      "coxiella-burnetii",
+      "francisella-tularensis",
+      "salmonella-enterica",
+    ],
+    explanation:
+      "Brucella melitensis — undulant fever (brucellosis) from livestock and unpasteurized dairy.",
+  },
+  {
+    id: "b-leptospirosis",
+    section: "bacteria",
+    prompt:
+      "A triathlete who swam in a freshwater lake develops high fever, severe myalgias, conjunctival suffusion, and then jaundice with acute kidney injury (Weil disease).",
+    answer: "leptospira-interrogans",
+    distractors: [
+      "borrelia-burgdorferi",
+      "rickettsia-rickettsii",
+      "brucella-melitensis",
+    ],
+    explanation:
+      "Leptospira interrogans — water exposure; conjunctival suffusion and Weil's disease (hepatorenal failure).",
+  },
+  {
+    id: "b-vibrio-vuln",
+    section: "bacteria",
+    prompt:
+      "A man with cirrhosis develops rapidly progressive sepsis with hemorrhagic bullae on the legs hours after eating raw oysters.",
+    answer: "vibrio-vulnificus",
+    distractors: [
+      "vibrio-parahaemolyticus",
+      "vibrio-cholerae",
+      "aeromonas-hydrophila",
+    ],
+    explanation:
+      "Vibrio vulnificus — fulminant sepsis and hemorrhagic bullae after raw shellfish or seawater exposure, especially in liver disease.",
+  },
+
+  // ---------------- Viruses (set 3) ----------------
+  {
+    id: "v-hiv-acute",
+    section: "viruses",
+    prompt:
+      "Three weeks after a high-risk exposure, a patient has fever, sore throat, lymphadenopathy, and a rash (a mononucleosis-like illness). A heterophile test is negative; viral RNA is very high.",
+    answer: "hiv-1",
+    distractors: [
+      "epstein-barr-virus",
+      "cytomegalovirus",
+      "hepatitis-b-virus",
+    ],
+    explanation:
+      "HIV-1 — acute retroviral syndrome; heterophile-negative mononucleosis with high viral load before seroconversion.",
+  },
+  {
+    id: "v-hfmd",
+    section: "viruses",
+    prompt:
+      "A toddler in summer has fever, painful oral ulcers, and vesicles on the palms and soles.",
+    answer: "coxsackievirus-a",
+    distractors: [
+      "herpes-simplex-virus-1",
+      "varicella-zoster-virus",
+      "measles-virus",
+    ],
+    explanation:
+      "Coxsackievirus A — hand-foot-and-mouth disease and herpangina.",
+  },
+  {
+    id: "v-coxsackieb",
+    section: "viruses",
+    prompt:
+      "A young adult has sudden pleuritic chest pain that worsens with breathing (devil's grip); another patient in the same outbreak develops myocarditis.",
+    answer: "coxsackievirus-b",
+    distractors: [
+      "coxsackievirus-a",
+      "echovirus",
+      "influenza-a-virus",
+    ],
+    explanation:
+      "Coxsackievirus B — pleurodynia (Bornholm disease) and a leading cause of viral myocarditis/pericarditis.",
+  },
+  {
+    id: "v-croup",
+    section: "viruses",
+    prompt:
+      "A toddler develops a barking 'seal-like' cough and inspiratory stridor; a neck X-ray shows subglottic narrowing (steeple sign).",
+    answer: "parainfluenza-virus",
+    distractors: [
+      "respiratory-syncytial-virus",
+      "influenza-a-virus",
+      "measles-virus",
+    ],
+    explanation:
+      "Parainfluenza virus — the leading cause of croup (laryngotracheobronchitis).",
+  },
+  {
+    id: "v-rubella",
+    section: "viruses",
+    prompt:
+      "An unvaccinated pregnant woman has a mild rash that starts on the face and spreads down, with tender posterior auricular and suboccipital lymph nodes. Her fetus is at risk for cataracts, deafness, and PDA.",
+    answer: "rubella-virus",
+    distractors: [
+      "measles-virus",
+      "parvovirus-b19",
+      "cytomegalovirus",
+    ],
+    explanation:
+      "Rubella — congenital rubella syndrome (cataracts, deafness, cardiac defects); postauricular lymphadenopathy.",
+  },
+  {
+    id: "v-polio",
+    section: "viruses",
+    prompt:
+      "In a region with low vaccine coverage, a child develops fever and then asymmetric flaccid paralysis with preserved sensation; the virus is spread fecal-orally and destroys anterior horn cells.",
+    answer: "poliovirus",
+    distractors: [
+      "west-nile-virus",
+      "coxsackievirus-a",
+      "rabies-virus",
+    ],
+    explanation:
+      "Poliovirus — anterior horn motor neuron destruction causing asymmetric flaccid paralysis.",
+  },
+  {
+    id: "v-wnv",
+    section: "viruses",
+    prompt:
+      "In late summer, an elderly man develops meningoencephalitis with acute flaccid paralysis; local dead crows were reported, and the virus is mosquito-borne.",
+    answer: "west-nile-virus",
+    distractors: [
+      "japanese-encephalitis-virus",
+      "eastern-equine-encephalitis-virus",
+      "saint-louis-encephalitis-virus",
+    ],
+    explanation:
+      "West Nile virus — bird-maintained flavivirus causing neuroinvasive disease and flaccid paralysis in older adults.",
+  },
+  {
+    id: "v-yellowfever",
+    section: "viruses",
+    prompt:
+      "A traveler from the Amazon develops high fever, jaundice, and hematemesis ('black vomit'). Liver biopsy shows Councilman bodies.",
+    answer: "yellow-fever-virus",
+    distractors: ["dengue-virus", "hepatitis-a-virus", "ebola-virus"],
+    explanation:
+      "Yellow fever virus — mosquito-borne hemorrhagic fever with jaundice and hepatic Councilman bodies; live vaccine prevents it.",
+  },
+  {
+    id: "v-hav",
+    section: "viruses",
+    prompt:
+      "Several patrons of a restaurant develop acute jaundice, nausea, and dark urine weeks after eating contaminated shellfish. The illness resolves fully with no chronic carrier state.",
+    answer: "hepatitis-a-virus",
+    distractors: [
+      "hepatitis-b-virus",
+      "hepatitis-c-virus",
+      "norovirus",
+    ],
+    explanation:
+      "Hepatitis A — fecal-oral acute self-limited hepatitis; no chronic infection; vaccine-preventable.",
+  },
+  {
+    id: "v-hcv",
+    section: "viruses",
+    prompt:
+      "A former injection-drug user is found on screening to have a chronic, mostly asymptomatic hepatitis that often progresses to cirrhosis; it is now curable with direct-acting antivirals.",
+    answer: "hepatitis-c-virus",
+    distractors: [
+      "hepatitis-b-virus",
+      "hepatitis-a-virus",
+      "cytomegalovirus",
+    ],
+    explanation:
+      "Hepatitis C — bloodborne RNA virus, high chronicity and cirrhosis/HCC risk; cured by DAAs.",
+  },
+  {
+    id: "v-pml",
+    section: "viruses",
+    prompt:
+      "A patient with AIDS (or on natalizumab) develops progressive focal neurologic deficits over weeks; MRI shows non-enhancing white-matter demyelination without mass effect.",
+    answer: "jc-polyomavirus",
+    distractors: [
+      "cytomegalovirus",
+      "herpes-simplex-virus-1",
+      "bk-polyomavirus",
+    ],
+    explanation:
+      "JC polyomavirus — progressive multifocal leukoencephalopathy (PML) from oligodendrocyte infection in severe immunosuppression.",
+  },
+  {
+    id: "v-monkeypox",
+    section: "viruses",
+    prompt:
+      "After close contact at a gathering, a patient develops fever, lymphadenopathy, and a deep-seated, firm, umbilicated vesiculopustular rash that appears in the same stage.",
+    answer: "monkeypox-virus",
+    distractors: [
+      "varicella-zoster-virus",
+      "molluscum-contagiosum-virus",
+      "herpes-simplex-virus-1",
+    ],
+    explanation:
+      "Monkeypox (mpox) — orthopoxvirus with deep, well-circumscribed lesions and prominent lymphadenopathy.",
+  },
+
+  // ---------------- Fungi (set 3) ----------------
+  {
+    id: "f-paracocci",
+    section: "fungi",
+    prompt:
+      "A middle-aged Brazilian farmer has chronic cough plus ulcerating oral and nasal mucosal lesions. Biopsy shows yeast with multiple buds in a 'captain's wheel' arrangement.",
+    answer: "paracoccidioides-brasiliensis",
+    distractors: [
+      "blastomyces-dermatitidis",
+      "histoplasma-capsulatum",
+      "coccidioides-immitis",
+    ],
+    explanation:
+      "Paracoccidioides brasiliensis — 'captain's wheel' multiple-budding yeast; mucocutaneous and pulmonary disease in Latin America.",
+  },
+  {
+    id: "f-talaro",
+    section: "fungi",
+    prompt:
+      "A patient with advanced HIV in Southeast Asia has fever, anemia, and umbilicated (molluscum-like) skin papules. The dimorphic fungus divides by fission in tissue.",
+    answer: "talaromyces-marneffei",
+    distractors: [
+      "histoplasma-capsulatum",
+      "cryptococcus-neoformans",
+      "candida-albicans",
+    ],
+    explanation:
+      "Talaromyces (Penicillium) marneffei — disseminated infection with molluscum-like papules in HIV in SE Asia; fission yeast.",
+  },
+  {
+    id: "f-cgattii",
+    section: "fungi",
+    prompt:
+      "An immunocompetent person in the Pacific Northwest develops a slowly enlarging brain and lung mass. The encapsulated yeast is associated with eucalyptus trees.",
+    answer: "cryptococcus-gattii",
+    distractors: [
+      "cryptococcus-neoformans",
+      "coccidioides-immitis",
+      "aspergillus-fumigatus",
+    ],
+    explanation:
+      "Cryptococcus gattii — unlike C. neoformans, causes mass-like disease in immunocompetent hosts.",
+  },
+  {
+    id: "f-tinea-capitis",
+    section: "fungi",
+    prompt:
+      "A child has a scaly, patchy area of scalp hair loss after playing with a new kitten. The lesion fluoresces green under a Wood's lamp.",
+    answer: "microsporum-canis",
+    distractors: [
+      "trichophyton-rubrum",
+      "malassezia-furfur",
+      "epidermophyton-floccosum",
+    ],
+    explanation:
+      "Microsporum canis — zoophilic dermatophyte causing tinea capitis that fluoresces under Wood's lamp.",
+  },
+  {
+    id: "f-chromo",
+    section: "fungi",
+    prompt:
+      "A barefoot farmer develops chronic, slowly spreading verrucous (cauliflower-like) nodules on the lower leg. Biopsy shows brown 'copper-penny' sclerotic bodies.",
+    answer: "fonsecaea-pedrosoi",
+    distractors: [
+      "madurella-mycetomatis",
+      "sporothrix-schenckii",
+      "blastomyces-dermatitidis",
+    ],
+    explanation:
+      "Fonsecaea pedrosoi — chromoblastomycosis; dematiaceous mold with sclerotic (Medlar) bodies.",
+  },
+  {
+    id: "f-mycetoma",
+    section: "fungi",
+    prompt:
+      "A man in rural Sudan has a chronically swollen, deformed foot with multiple sinus tracts discharging black grains.",
+    answer: "madurella-mycetomatis",
+    distractors: [
+      "fonsecaea-pedrosoi",
+      "sporothrix-schenckii",
+      "scedosporium-apiospermum",
+    ],
+    explanation:
+      "Madurella mycetomatis — leading agent of eumycetoma (Madura foot) with black grains.",
+  },
+  {
+    id: "f-fusarium",
+    section: "fungi",
+    prompt:
+      "A contact-lens wearer who reused solution develops severe fungal keratitis; in a separate neutropenic patient the same mold causes disseminated infection with skin lesions and positive blood cultures.",
+    answer: "fusarium-solani",
+    distractors: [
+      "aspergillus-fumigatus",
+      "candida-albicans",
+      "scedosporium-apiospermum",
+    ],
+    explanation:
+      "Fusarium solani — keratitis in contact-lens wearers and angioinvasive disease (often fungemic) in neutropenia.",
+  },
+
+  // ---------------- Parasites (set 3) ----------------
+  {
+    id: "p-trichomonas",
+    section: "parasites",
+    prompt:
+      "A woman has a frothy, malodorous yellow-green vaginal discharge and vulvar itching; the cervix has punctate hemorrhages ('strawberry cervix'). Wet mount shows motile pear-shaped flagellates.",
+    answer: "trichomonas-vaginalis",
+    distractors: [
+      "giardia-lamblia",
+      "entamoeba-histolytica",
+      "leishmania-donovani",
+    ],
+    explanation:
+      "Trichomonas vaginalis — motile flagellate; frothy discharge and strawberry cervix; treat patient and partner with metronidazole.",
+  },
+  {
+    id: "p-sleeping",
+    section: "parasites",
+    prompt:
+      "A traveler in East Africa develops fever, posterior cervical lymphadenopathy (Winterbottom sign), and progressive daytime somnolence after a painful fly bite.",
+    answer: "trypanosoma-brucei",
+    distractors: [
+      "trypanosoma-cruzi",
+      "leishmania-donovani",
+      "plasmodium-falciparum",
+    ],
+    explanation:
+      "Trypanosoma brucei — tsetse-borne African sleeping sickness with Winterbottom sign and CNS somnolence.",
+  },
+  {
+    id: "p-crypto",
+    section: "parasites",
+    prompt:
+      "A patient with AIDS (CD4 30) has weeks of profuse, non-bloody watery diarrhea after swimming in a public pool. Stool acid-fast stain shows small round oocysts.",
+    answer: "cryptosporidium-parvum",
+    distractors: [
+      "giardia-lamblia",
+      "entamoeba-histolytica",
+      "cyclospora-cayetanensis",
+    ],
+    explanation:
+      "Cryptosporidium — chlorine-resistant acid-fast oocysts; severe chronic diarrhea in AIDS; treat with nitazoxanide.",
+  },
+  {
+    id: "p-hookworm",
+    section: "parasites",
+    prompt:
+      "A barefoot child in the rural tropics has an itchy rash on the feet, then develops fatigue and microcytic (iron-deficiency) anemia. Stool shows oval thin-shelled eggs.",
+    answer: "necator-americanus",
+    distractors: [
+      "ascaris-lumbricoides",
+      "strongyloides-stercoralis",
+      "trichuris-trichiura",
+    ],
+    explanation:
+      "Necator americanus (hookworm) — skin penetration, gut attachment, and chronic blood loss causing iron-deficiency anemia.",
+  },
+  {
+    id: "p-hydatid",
+    section: "parasites",
+    prompt:
+      "A sheep farmer has a large, smooth liver cyst with internal 'daughter cysts' and eggshell calcification on imaging. The surgeon takes care not to spill the contents (anaphylaxis risk).",
+    answer: "echinococcus-granulosus",
+    distractors: [
+      "entamoeba-histolytica",
+      "taenia-solium",
+      "fasciola-hepatica",
+    ],
+    explanation:
+      "Echinococcus granulosus — hydatid liver cysts with daughter cysts; rupture risks anaphylaxis; inject scolicidal agent / albendazole.",
+  },
+  {
+    id: "p-clonorchis",
+    section: "parasites",
+    prompt:
+      "An older man from East Asia who eats raw freshwater fish has right-upper-quadrant pain, intermittent jaundice, and recurrent cholangitis; he is at risk of cholangiocarcinoma.",
+    answer: "clonorchis-sinensis",
+    distractors: [
+      "fasciola-hepatica",
+      "opisthorchis-viverrini",
+      "paragonimus-westermani",
+    ],
+    explanation:
+      "Clonorchis sinensis — Chinese liver fluke from raw fish; biliary obstruction and cholangiocarcinoma.",
+  },
+  {
+    id: "p-fishtapeworm",
+    section: "parasites",
+    prompt:
+      "A patient who frequently eats homemade sushi develops a megaloblastic anemia; labs confirm B12 deficiency, and stool contains operculated tapeworm eggs.",
+    answer: "diphyllobothrium-latum",
+    distractors: [
+      "taenia-solium",
+      "taenia-saginata",
+      "hymenolepis-nana",
+    ],
+    explanation:
+      "Diphyllobothrium latum — fish tapeworm that competes for vitamin B12, causing megaloblastic anemia.",
+  },
+  {
+    id: "p-loa",
+    section: "parasites",
+    prompt:
+      "A traveler from Central Africa reports transient migratory swellings on the limbs and the unsettling sensation (and sight) of a worm crawling across the white of the eye.",
+    answer: "loa-loa",
+    distractors: [
+      "onchocerca-volvulus",
+      "wuchereria-bancrofti",
+      "brugia-malayi",
+    ],
+    explanation:
+      "Loa loa — deer-fly-borne 'eye worm' with Calabar swellings and conjunctival migration.",
+  },
+  {
+    id: "p-acanthamoeba",
+    section: "parasites",
+    prompt:
+      "A contact-lens wearer who rinses lenses in tap water develops a severe, painful keratitis with a ring-shaped corneal infiltrate that responds poorly to antibacterials.",
+    answer: "acanthamoeba-castellanii",
+    distractors: [
+      "naegleria-fowleri",
+      "balamuthia-mandrillaris",
+      "toxoplasma-gondii",
+    ],
+    explanation:
+      "Acanthamoeba — free-living amoeba causing contact-lens keratitis (and granulomatous encephalitis in the immunocompromised).",
+  },
+  {
+    id: "p-vivax",
+    section: "parasites",
+    prompt:
+      "A traveler returning from India has tertian (every-48-hour) fever spikes; months after treatment of the acute attack, the malaria relapses. Smear shows enlarged red cells with Schüffner dots.",
+    answer: "plasmodium-vivax",
+    distractors: [
+      "plasmodium-falciparum",
+      "babesia-microti",
+      "leishmania-donovani",
+    ],
+    explanation:
+      "Plasmodium vivax — dormant hepatic hypnozoites cause relapse; add primaquine for radical cure (check G6PD).",
+  },
+  {
+    id: "p-headlice",
+    section: "parasites",
+    prompt:
+      "A schoolchild has scalp itching; exam reveals tiny eggs (nits) firmly cemented to hair shafts near the scalp, and several classmates are affected.",
+    answer: "pediculus-humanus-capitis",
+    distractors: [
+      "sarcoptes-scabiei",
+      "demodex-folliculorum",
+      "phthirus-pubis",
+    ],
+    explanation:
+      "Pediculus humanus capitis — head lice; nits cemented to hair, treated with permethrin.",
+  },
+  {
+    id: "p-whipworm",
+    section: "parasites",
+    prompt:
+      "A child in the tropics has chronic mucoid, sometimes bloody diarrhea and rectal prolapse. Stool shows barrel-shaped eggs with bipolar plugs.",
+    answer: "trichuris-trichiura",
+    distractors: [
+      "ascaris-lumbricoides",
+      "necator-americanus",
+      "enterobius-vermicularis",
+    ],
+    explanation:
+      "Trichuris trichiura (whipworm) — heavy infection causes chronic diarrhea and rectal prolapse in children.",
+  },
+
+  // ---------------- Pharmacology (set 3) ----------------
+  {
+    id: "d-gentamicin",
+    section: "pharmacology",
+    prompt:
+      "An aminoglycoside is added for synergy against a serious gram-negative infection. Trough levels are monitored because of dose-related nephrotoxicity and ototoxicity.",
+    answer: "gentamicin",
+    distractors: ["vancomycin", "ciprofloxacin", "ceftriaxone"],
+    explanation:
+      "Gentamicin — 30S aminoglycoside; nephrotoxic and ototoxic, used for gram-negative synergy.",
+  },
+  {
+    id: "d-cipro",
+    section: "pharmacology",
+    prompt:
+      "A drug for complicated UTI carries warnings about tendon rupture and QT prolongation and is avoided in pregnancy and young children due to cartilage effects.",
+    answer: "ciprofloxacin",
+    distractors: ["azithromycin", "doxycycline", "nitrofurantoin"],
+    explanation:
+      "Ciprofloxacin — fluoroquinolone (DNA gyrase inhibitor); tendinopathy, QT, and cartilage cautions.",
+  },
+  {
+    id: "d-doxy",
+    section: "pharmacology",
+    prompt:
+      "A tetracycline is chosen for a tick-borne rickettsial illness. The patient is warned about photosensitivity, and it is avoided in young children and pregnancy because it stains developing teeth.",
+    answer: "doxycycline",
+    distractors: ["azithromycin", "ciprofloxacin", "clindamycin"],
+    explanation:
+      "Doxycycline — 30S inhibitor; first-line for Rickettsia, atypicals, and Lyme; photosensitivity and tooth discoloration.",
+  },
+  {
+    id: "d-clinda",
+    section: "pharmacology",
+    prompt:
+      "A lincosamide is used for an anaerobic above-the-diaphragm infection and to suppress toxin production in necrotizing strep infection; it carries the highest risk of C. difficile colitis.",
+    answer: "clindamycin",
+    distractors: ["metronidazole", "vancomycin", "azithromycin"],
+    explanation:
+      "Clindamycin — 50S inhibitor; anaerobic and toxin-suppressing, classic C. difficile trigger.",
+  },
+  {
+    id: "d-vincristine",
+    section: "pharmacology",
+    prompt:
+      "A chemotherapy agent that blocks microtubule polymerization is dose-limited by peripheral neuropathy and constipation; it is fatal if given intrathecally.",
+    answer: "vincristine",
+    distractors: ["doxorubicin", "paclitaxel", "cisplatin"],
+    explanation:
+      "Vincristine — vinca alkaloid; dose-limiting neurotoxicity (never give intrathecally).",
+  },
+  {
+    id: "d-doxorubicin",
+    section: "pharmacology",
+    prompt:
+      "An anthracycline used in many regimens turns the urine red and causes a dose-dependent dilated cardiomyopathy; dexrazoxane can be cardioprotective.",
+    answer: "doxorubicin",
+    distractors: ["cyclophosphamide", "bleomycin", "vincristine"],
+    explanation:
+      "Doxorubicin — topoisomerase II/intercalator; cumulative cardiotoxicity and red urine.",
+  },
+  {
+    id: "d-cisplatin",
+    section: "pharmacology",
+    prompt:
+      "A platinum chemotherapy for a testicular tumor is given with aggressive hydration because of its nephrotoxicity; it is also markedly ototoxic and emetogenic.",
+    answer: "cisplatin",
+    distractors: ["doxorubicin", "methotrexate", "vincristine"],
+    explanation:
+      "Cisplatin — DNA cross-linker; nephrotoxic, ototoxic, and highly emetogenic.",
+  },
+  {
+    id: "d-mtx",
+    section: "pharmacology",
+    prompt:
+      "An antifolate used in leukemia and (at low dose) rheumatoid arthritis is 'rescued' with leucovorin to limit mucositis and myelosuppression.",
+    answer: "methotrexate",
+    distractors: ["fluorouracil", "cytarabine", "cyclophosphamide"],
+    explanation:
+      "Methotrexate — dihydrofolate reductase inhibitor; leucovorin rescue spares normal cells.",
+  },
+  {
+    id: "d-cyclophosphamide",
+    section: "pharmacology",
+    prompt:
+      "An alkylating agent causes hemorrhagic cystitis from its toxic metabolite acrolein; mesna and hydration are given to prevent it.",
+    answer: "cyclophosphamide",
+    distractors: ["bleomycin", "cisplatin", "vincristine"],
+    explanation:
+      "Cyclophosphamide — acrolein causes hemorrhagic cystitis, prevented with mesna.",
+  },
+  {
+    id: "d-propranolol",
+    section: "pharmacology",
+    prompt:
+      "A nonselective beta blocker is used for performance anxiety and essential tremor, and acutely in thyroid storm; it is avoided in asthma.",
+    answer: "propranolol",
+    distractors: ["metoprolol", "clonidine", "prazosin"],
+    explanation:
+      "Propranolol — nonselective beta blocker; performance anxiety, tremor, thyroid storm; bronchospasm risk in asthma.",
+  },
+  {
+    id: "d-spironolactone",
+    section: "pharmacology",
+    prompt:
+      "A potassium-sparing diuretic improves survival in heart failure and treats ascites and resistant hypertension; it can cause hyperkalemia and gynecomastia.",
+    answer: "spironolactone",
+    distractors: ["furosemide", "hydrochlorothiazide", "amiloride"],
+    explanation:
+      "Spironolactone — aldosterone antagonist; hyperkalemia and antiandrogen effects (gynecomastia).",
+  },
+  {
+    id: "d-phenytoin",
+    section: "pharmacology",
+    prompt:
+      "A sodium-channel-blocking antiepileptic shows zero-order kinetics at therapeutic doses and causes gingival hyperplasia, hirsutism, and (rarely) Stevens-Johnson syndrome.",
+    answer: "phenytoin",
+    distractors: ["valproate", "carbamazepine", "levetiracetam"],
+    explanation:
+      "Phenytoin — gingival hyperplasia and zero-order kinetics; many CYP interactions.",
+  },
 ];
