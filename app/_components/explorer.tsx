@@ -26,57 +26,6 @@ function buildHref(
   return qs ? `${listPath}?${qs}` : listPath;
 }
 
-const MONTHS = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
-];
-const DAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-function todayLabel(): string {
-  const d = new Date();
-  return `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`;
-}
-
-const BULLETS = ["Plated", "Stained", "Catalogued", "Linkable"];
-
-const SINGULAR: Record<SectionKey, string> = {
-  bacteria: "bacterium",
-  viruses: "virus",
-  fungi: "fungus",
-  parasites: "parasite",
-  pharmacology: "drug",
-};
-
-function Stat({
-  label,
-  value,
-  valueClass,
-}: {
-  label: string;
-  value: string;
-  valueClass?: string;
-}) {
-  return (
-    <div className="glass-soft rounded-2xl p-4">
-      <p className="text-tech text-[10px] text-muted">{label}</p>
-      <p
-        className={`mt-2 text-lg font-bold ${valueClass ?? "text-foreground"}`}
-      >
-        {value}
-      </p>
-    </div>
-  );
-}
-
 export default function Explorer({
   sectionKey,
   active,
@@ -90,96 +39,33 @@ export default function Explorer({
 }) {
   const section = SECTIONS[sectionKey];
   const hasFilters = Object.values(active).some(Boolean);
+  const activeFilters = Object.entries(active).filter(([, value]) =>
+    Boolean(value),
+  );
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-6 pb-20 pt-12">
-      <section className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
-        {/* ----- Hero ----- */}
-        <div className="lg:col-span-7">
-          <span className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground">
-            <span aria-hidden>{section.emoji}</span> Specimen Bench ·{" "}
-            {section.navLabel}
-          </span>
-
-          <p className="mt-6 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-            Microbe Pokédex
-          </p>
-
-          <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
-            Every {SINGULAR[sectionKey]} on the wards, with its own{" "}
-            <span className="bg-gradient-to-r from-accent to-blue bg-clip-text text-transparent">
-              Pokédex card
+    <main className="mx-auto w-full max-w-6xl px-5 pb-20 pt-8 sm:px-6 sm:pt-10">
+      <section className="glass rounded-[2rem] p-5 sm:p-7">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-glass-border bg-glass px-3 py-1 text-sm font-semibold text-foreground">
+              <span aria-hidden>{section.emoji}</span>
+              {section.navLabel}
             </span>
-            .
-          </h1>
-
-          <p className="mt-5 max-w-xl text-sm leading-6 text-muted sm:text-base">
-            A clinical-microbiology field guide of medically notable{" "}
-            {section.navLabel.toLowerCase()}, sorted by{" "}
-            {section.eyebrow.toLowerCase()}. Pull a chip, narrow the lineup,
-            open the entry.
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center gap-3">
-            <Link
-              href="#filter"
-              className="text-tech inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-[11px] text-surface shadow-card transition-opacity hover:opacity-90"
-            >
-              Crack the Bench
-            </Link>
-            <Link
-              href="#grid"
-              className="text-tech glass-soft inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] text-foreground transition-colors hover:border-accent/50"
-            >
-              Flip Cards <span aria-hidden>↗</span>
-            </Link>
-          </div>
-
-          <ul className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-tech text-[10px] text-muted">
-            {BULLETS.map((b) => (
-              <li key={b} className="flex items-center gap-2">
-                <span className="text-accent">•</span> {b}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* ----- Info card (Operator Dashboard) ----- */}
-        <aside className="glass rounded-3xl p-6 lg:col-span-5">
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-tech text-[10px] text-muted">
-                Plate Telemetry
-              </p>
-              <h2 className="mt-1 text-lg font-bold text-foreground">
-                Bench Console
-              </h2>
-            </div>
-            <span className="text-tech rounded-full bg-blue-soft px-2.5 py-1 text-[10px] text-blue">
-              Day_Shift
-            </span>
-          </div>
-
-          <div className="glass-inset mt-5 rounded-2xl p-5">
-            <div className="flex items-start justify-between gap-2">
-              <div className="flex items-center gap-2">
-                <span aria-hidden>🧫</span>
-                <span className="font-bold text-foreground">
-                  Active Plate
-                </span>
-              </div>
-              <span className="text-tech text-[10px] text-muted">
-                {todayLabel()}
-              </span>
-            </div>
-            <p className="mt-2 text-sm italic text-muted">
-              Filtering by {section.facets.length} traits · Plate live.
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+              {section.navLabel} Pokédex
+            </h1>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-muted sm:text-base">
+              {facets.total} medically relevant {section.navLabel.toLowerCase()}{" "}
+              organized by {section.eyebrow.toLowerCase()}.
             </p>
+          </div>
 
+          <div className="w-full lg:max-w-sm">
             <form
               method="get"
               action={section.listPath}
-              className="mt-4 flex items-center gap-2 rounded-xl border border-glass-border bg-white/55 px-3 py-2 transition-colors focus-within:border-accent dark:bg-white/5"
+              className="flex items-center gap-2 rounded-2xl border border-glass-border bg-white/55 px-4 py-3 transition-colors focus-within:border-accent dark:bg-white/5"
             >
               {section.facets.map((f) =>
                 active[f.param] ? (
@@ -195,25 +81,30 @@ export default function Explorer({
                 type="search"
                 name="q"
                 defaultValue={active.q ?? ""}
-                placeholder="Streak a name…"
+                placeholder={`Search ${section.navLabel.toLowerCase()}…`}
                 className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted"
               />
               <button
                 type="submit"
-                aria-label="Search"
-                className="leading-none text-accent text-xl font-light transition-transform hover:scale-110"
+                className="rounded-full bg-foreground px-4 py-1.5 text-sm font-semibold text-surface transition-opacity hover:opacity-90"
               >
-                +
+                Search
               </button>
             </form>
           </div>
+        </div>
 
-          <div className="mt-4 grid grid-cols-3 gap-3">
-            <Stat label="Specimens" value={String(facets.total)} />
-            <Stat label="Traits" value={String(section.facets.length)} />
-            <Stat label="Bench" value="• Open" valueClass="text-accent" />
-          </div>
-        </aside>
+        <div className="mt-6 flex flex-wrap gap-2 border-t border-glass-border pt-4 text-tech text-[10px] text-muted">
+          <span className="rounded-full bg-glass px-3 py-1">
+            {items.length} showing
+          </span>
+          <span className="rounded-full bg-glass px-3 py-1">
+            {section.facets.length} trait sets
+          </span>
+          <span className="rounded-full bg-glass px-3 py-1">
+            {activeFilters.length} active filters
+          </span>
+        </div>
       </section>
 
       {/* ----- Section tabs (full width) ----- */}
@@ -222,22 +113,25 @@ export default function Explorer({
       {/* ----- Filter panel ----- */}
       <section
         id="filter"
-        className="glass mt-8 scroll-mt-24 rounded-3xl p-6 sm:p-8"
+        className="glass-soft mt-6 scroll-mt-24 rounded-3xl p-4 sm:p-5"
       >
-        <div className="mb-6 flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-blue shadow-[0_0_12px_2px_var(--blue)]" />
-          <h2 className="text-lg font-bold text-foreground">Bench Filters</h2>
-          <span className="text-tech rounded-full bg-blue-soft px-2.5 py-1 text-[10px] text-blue">
-            Live Bench
-          </span>
-          {active.q ? (
-            <span className="text-tech ml-auto text-[10px] text-muted">
-              q = &ldquo;{active.q}&rdquo;
+        <details open={hasFilters} className="group">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-1 [&::-webkit-details-marker]:hidden">
+            <span className="flex items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_1px_var(--accent)]" />
+              <span className="font-bold text-foreground">Filters</span>
+              {hasFilters ? (
+                <span className="rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-accent-ink">
+                  {activeFilters.length}
+                </span>
+              ) : null}
             </span>
-          ) : null}
-        </div>
+            <span className="text-sm text-muted transition-transform group-open:rotate-180">
+              ▾
+            </span>
+          </summary>
 
-        <div className="glass-inset space-y-1.5 rounded-2xl p-3 sm:p-4">
+        <div className="mt-4 space-y-1.5 rounded-2xl border border-glass-border bg-glass/50 p-3 sm:p-4">
           {facets.groups.map((group, idx) => {
             const activeValue = active[group.param];
 
@@ -336,25 +230,42 @@ export default function Explorer({
         </div>
 
         {hasFilters && (
-          <div className="mt-5 flex justify-end">
+          <div className="mt-4 flex justify-end">
             <Link
               href={section.listPath}
-              className="glass-soft rounded-xl px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
+              className="rounded-xl border border-glass-border bg-glass px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
             >
-              Wash the plate
+              Clear filters
             </Link>
           </div>
         )}
+        </details>
       </section>
 
       {/* ----- Result grid ----- */}
-      <div id="grid" className="mt-10 scroll-mt-24">
+      <div id="grid" className="mt-8 scroll-mt-24">
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-tech text-[10px] text-muted">Results</p>
+            <h2 className="text-xl font-bold text-foreground">
+              {items.length} {section.navLabel.toLowerCase()}
+            </h2>
+          </div>
+          {hasFilters ? (
+            <Link
+              href={section.listPath}
+              className="text-sm font-medium text-accent hover:underline"
+            >
+              Reset
+            </Link>
+          ) : null}
+        </div>
         {items.length === 0 ? (
           <p className="text-tech py-20 text-center text-xs text-muted">
             No {section.navLabel.toLowerCase()} grew on this plate.
           </p>
         ) : (
-          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => {
               const badge = section.primaryBadge(item);
               const tier = String(item.tier) as Tier;
@@ -363,9 +274,9 @@ export default function Explorer({
                 <li key={item.slug}>
                   <Link
                     href={`${section.detailPath}/${item.slug}`}
-                    className="glass-soft hover:shadow-card group flex h-full flex-col rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
+                    className="glass-soft group flex h-full flex-col rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40"
                   >
-                    <div className="mb-3 flex items-start justify-between gap-2">
+                    <div className="mb-3 flex items-start justify-between gap-3">
                       <div className="flex items-start gap-2.5">
                         <span aria-hidden className="text-xl leading-none">
                           {section.entryEmoji(item)}
@@ -399,7 +310,7 @@ export default function Explorer({
                       >
                         {badge.label}
                       </span>
-                      {section.tags(item).map((tag) => (
+                      {section.tags(item).slice(0, 2).map((tag) => (
                         <span
                           key={tag}
                           className="text-tech rounded-full border border-glass-border px-2.5 py-0.5 text-[10px] text-muted"

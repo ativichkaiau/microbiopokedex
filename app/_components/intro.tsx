@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Phase = "visible" | "closing" | "done";
 
@@ -8,48 +8,28 @@ const STEPS = [
   {
     number: "01",
     label: "CULTURE",
-    title: "Plate the library",
-    description:
-      "Wake the organism banks: bacteria, viruses, and fungi are staged like colonies on a diagnostic bench.",
-    tag: "CULTURE READY",
   },
   {
     number: "02",
     label: "STAIN",
-    title: "Read the traits",
-    description:
-      "Screen Gram pattern, morphology, genome, envelope, and fungal form without losing the specimen context.",
-    tag: "TRAITS TAGGED",
   },
   {
     number: "03",
     label: "IDENTIFY",
-    title: "Open the entry",
-    description:
-      "Resolve the isolate into a Pokédex card with its taxonomy, phenotype, and clinical fingerprint.",
-    tag: "SPECIMEN LOCKED",
   },
 ] as const;
 
 export default function Intro() {
   const [phase, setPhase] = useState<Phase>("visible");
-  const [step, setStep] = useState(0);
-  const current = STEPS[step];
-  const isLast = step === STEPS.length - 1;
-
-  const statusText = useMemo(
-    () => `${current.number} — ${current.label}`,
-    [current.label, current.number],
-  );
 
   function close() {
     setPhase((p) => (p === "visible" ? "closing" : p));
   }
 
-  function next() {
-    if (isLast) close();
-    else setStep((s) => Math.min(s + 1, STEPS.length - 1));
-  }
+  useEffect(() => {
+    const t = window.setTimeout(close, 3800);
+    return () => window.clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     if (phase !== "closing") return;
@@ -59,16 +39,23 @@ export default function Intro() {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") close();
-      if (event.key === "ArrowRight" || event.key === "Enter") next();
-      if (event.key === "ArrowLeft") {
-        setStep((s) => Math.max(s - 1, 0));
-      }
+      if (event.key === "Escape" || event.key === "Enter") close();
     };
 
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   });
+
+  useEffect(() => {
+    const onNativeClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest("[data-intro-close='true']")) close();
+    };
+
+    document.addEventListener("click", onNativeClick, true);
+    return () => document.removeEventListener("click", onNativeClick, true);
+  }, []);
 
   if (phase === "done") return null;
 
@@ -76,7 +63,7 @@ export default function Intro() {
     <div
       role="dialog"
       aria-label="Welcome to VESTRIPPN3.0 Microbe Pokédex"
-      className={`fixed inset-0 z-[70] overflow-hidden bg-[#07080d] text-white transition-opacity duration-500 ${
+      className={`intro-shell fixed inset-0 z-[70] overflow-hidden bg-[#07080d] text-white transition-opacity duration-500 ${
         phase === "closing" ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
     >
@@ -85,7 +72,9 @@ export default function Intro() {
 
       <button
         type="button"
+        data-intro-close="true"
         onClick={close}
+        onPointerDown={close}
         className="text-tech absolute right-5 top-5 z-20 rounded-full border border-white/12 bg-white/[0.035] px-5 py-2.5 text-[11px] font-black text-white/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition hover:border-[#f2c566]/45 hover:text-[#f2c566] sm:right-8 sm:top-8"
       >
         Skip Intro
@@ -181,9 +170,9 @@ export default function Intro() {
                 <text x="86" y="260" className="intro-svg-label">
                   FUNGI
                 </text>
-                <rect x="346" y="246" width="158" height="30" rx="15" className="intro-chip" />
+                <rect x="318" y="246" width="214" height="30" rx="15" className="intro-chip" />
                 <text x="425" y="266" textAnchor="middle" className="intro-chip-text">
-                  {current.tag}
+                  ORGANISM BANKS ONLINE
                 </text>
               </svg>
             </div>
@@ -191,52 +180,40 @@ export default function Intro() {
 
           <div className="mt-6">
             <p className="text-tech flex items-center gap-4 text-[11px] font-black text-[#c5a86a]">
-              <span>{statusText}</span>
+              <span>BENCH READY</span>
               <span className="h-px w-10 bg-[#c5a86a]/55" />
             </p>
             <h2 className="mt-2 text-2xl font-black tracking-tight text-[#f4f7f2] sm:text-[1.7rem]">
-              {current.title}
+              Microbe banks loaded
             </h2>
             <p className="mt-2 max-w-2xl text-sm font-semibold leading-6 text-[#aeb7b4] sm:text-base">
-              {current.description}
+              Bacteria, viruses, fungi, parasites, and pharmacology cards are
+              staged for quick lookup without the visual noise.
             </p>
           </div>
 
           <div className="mt-6 border-t border-white/10 pt-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex gap-3" aria-label="Intro progress">
-                {STEPS.map((s, index) => (
-                  <button
+              <div className="flex flex-wrap gap-2" aria-label="Intro status">
+                {STEPS.map((s) => (
+                  <span
                     key={s.number}
-                    type="button"
-                    aria-label={`Go to intro step ${index + 1}`}
-                    onClick={() => setStep(index)}
-                    className={`h-2.5 rounded-full transition-all ${
-                      index === step
-                        ? "w-14 bg-[#f2c566] shadow-[0_0_20px_rgba(242,197,102,0.55)]"
-                        : index < step
-                          ? "w-9 bg-[#b99956]"
-                          : "w-9 bg-[#2c353d]"
-                    }`}
-                  />
+                    className="text-tech rounded-full bg-white/[0.045] px-3 py-1 text-[10px] font-black text-white/65"
+                  >
+                    {s.number} {s.label}
+                  </span>
                 ))}
               </div>
 
               <div className="flex justify-end gap-3">
                 <button
                   type="button"
-                  onClick={() => setStep((s) => Math.max(s - 1, 0))}
-                  disabled={step === 0}
-                  className="rounded-full border border-white/12 bg-white/[0.025] px-6 py-3 text-sm font-black text-white/70 transition hover:border-white/24 hover:text-white disabled:opacity-35"
-                >
-                  Back
-                </button>
-                <button
-                  type="button"
-                  onClick={next}
+                  data-intro-close="true"
+                  onClick={close}
+                  onPointerDown={close}
                   className="rounded-full border border-[#ffd77a]/55 bg-[#f2c566] px-7 py-3 text-sm font-black text-[#16110a] shadow-[0_0_26px_rgba(242,197,102,0.28)] transition hover:bg-[#ffd47d]"
                 >
-                  {isLast ? "Begin" : "Next"}
+                  Begin
                 </button>
               </div>
             </div>

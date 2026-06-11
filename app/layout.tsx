@@ -51,7 +51,7 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center gap-4">
               <span className="hidden text-sm text-muted sm:inline">
-                Gram &amp; Morphology Grid
+                Microbiology Pokédex
               </span>
               <span
                 aria-hidden

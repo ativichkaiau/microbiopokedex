@@ -8,15 +8,15 @@ export default function SectionNav({
   active: SectionKey | "cases";
 }) {
   const tabClass = (isActive: boolean) =>
-    `flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+    `flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
       isActive
         ? "bg-foreground text-surface"
         : "text-muted hover:text-foreground"
     }`;
 
   return (
-    <nav className="mt-12 flex justify-center">
-      <div className="glass-soft flex max-w-full flex-wrap items-center justify-center gap-0.5 rounded-full p-1">
+    <nav className="mt-6 flex justify-center">
+      <div className="glass-soft flex max-w-full flex-wrap items-center justify-center gap-1 rounded-full p-1">
         {SECTION_ORDER.map((key) => {
           const s = SECTIONS[key];
           const isActive = key === active;

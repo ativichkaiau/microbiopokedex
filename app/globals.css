@@ -253,6 +253,10 @@ body {
   animation: intro-card-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.intro-shell {
+  animation: intro-shell-exit 0.52s ease 4.05s forwards;
+}
+
 .intro-svg-label,
 .intro-chip-text {
   fill: #879496;
@@ -353,6 +357,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes intro-shell-exit {
+  to {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 
