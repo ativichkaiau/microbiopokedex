@@ -254,7 +254,7 @@ body {
 }
 
 .intro-shell {
-  animation: intro-shell-exit 0.52s ease 4.05s forwards;
+  animation: intro-shell-exit 0.52s ease 7.45s forwards;
 }
 
 .intro-svg-label,
@@ -323,6 +323,25 @@ body {
   stroke-dashoffset: 260;
   filter: drop-shadow(0 0 12px rgba(215, 132, 255, 0.28));
   animation: hyphae-grow 3s ease-in-out infinite;
+}
+
+.intro-drugs rect,
+.intro-drugs circle {
+  fill: rgba(242, 197, 102, 0.18);
+  stroke: rgba(242, 197, 102, 0.9);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 12px rgba(242, 197, 102, 0.24));
+}
+
+.intro-drugs path {
+  fill: none;
+  stroke: rgba(242, 197, 102, 0.72);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: drug-trace 3.2s ease-in-out infinite;
 }
 
 .intro-scan-line {
@@ -399,6 +418,22 @@ body {
   100% {
     stroke-dashoffset: -120;
     opacity: 0.52;
+  }
+}
+
+@keyframes drug-trace {
+  0% {
+    stroke-dashoffset: 150;
+    opacity: 0.4;
+  }
+  50%,
+  78% {
+    stroke-dashoffset: 0;
+    opacity: 0.95;
+  }
+  100% {
+    stroke-dashoffset: -90;
+    opacity: 0.5;
   }
 }
 

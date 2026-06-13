@@ -40,16 +40,16 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <Atmosphere />
         <header className="sticky top-0 z-20 border-b border-glass-border bg-glass backdrop-blur-xl">
-          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3.5">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-3.5">
             <Link href="/" className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground text-lg font-black text-surface">
                 V
               </span>
-              <span className="text-xl font-extrabold tracking-tight text-foreground">
+              <span className="text-lg font-extrabold tracking-tight text-foreground sm:text-xl">
                 VESTRIPPN<span className="text-blue">3.0</span>
               </span>
             </Link>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4 sm:justify-end">
               <span className="hidden text-sm text-muted sm:inline">
                 Microbiology Pokédex
               </span>
