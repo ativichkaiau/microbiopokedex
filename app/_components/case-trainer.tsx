@@ -15,6 +15,7 @@ export type CaseView = {
   prompt: string;
   explanation: string;
   sectionLabel: string;
+  sectionEmoji: string;
   options: CaseOption[];
 };
 
@@ -70,7 +71,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
       ? Math.round((score.correct / score.answered) * 100)
       : 0;
     return (
-      <section className="glass shadow-card mt-8 rounded-2xl p-8 text-center sm:p-12">
+      <section className="glass shadow-card mt-8 rounded-3xl p-8 text-center sm:p-12">
         <p className="text-tech text-[11px] text-accent">{"// Deck complete"}</p>
         <p className="mt-4 text-5xl font-extrabold tracking-tight text-foreground">
           {score.correct}
@@ -81,14 +82,14 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
           <button
             type="button"
             onClick={() => restart(true)}
-            className="rounded-lg bg-accent px-6 py-2.5 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-strong"
+            className="rounded-xl bg-accent px-6 py-2.5 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-strong"
           >
             Shuffle &amp; restart
           </button>
           <button
             type="button"
             onClick={() => restart(false)}
-            className="glass-soft rounded-lg px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
+            className="glass-soft rounded-xl px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
           >
             Replay in order
           </button>
@@ -98,7 +99,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
   }
 
   return (
-    <section className="glass shadow-card mt-8 rounded-2xl p-6 sm:p-8">
+    <section className="glass shadow-card mt-8 rounded-3xl p-6 sm:p-8">
       {/* header: progress + score + shuffle */}
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <span className="text-tech text-[10px] text-muted">
@@ -113,7 +114,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
           <button
             type="button"
             onClick={() => restart(true)}
-            className="glass-soft text-tech rounded-lg px-3 py-1 text-[10px] text-foreground transition-colors hover:border-accent/50"
+            className="glass-soft text-tech rounded-full px-3 py-1 text-[10px] text-foreground transition-colors hover:border-accent/50"
           >
             Shuffle
           </button>
@@ -121,7 +122,8 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
       </div>
 
       {/* section chip */}
-      <span className="glass-soft inline-flex items-center rounded-lg px-3 py-1 text-[11px] font-semibold text-foreground">
+      <span className="glass-soft inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-semibold text-foreground">
+        <span aria-hidden>{current.sectionEmoji}</span>
         {current.sectionLabel}
       </span>
 
@@ -138,7 +140,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {current.options.map((opt) => {
           let cls =
-            "border-border bg-surface text-foreground hover:border-accent/60";
+            "border-glass-border bg-glass text-foreground hover:border-accent/60";
           if (revealed) {
             if (opt.correct)
               cls =
@@ -146,7 +148,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
             else if (opt.slug === picked)
               cls =
                 "border-rose-500/50 bg-rose-500/15 text-rose-700 dark:text-rose-300";
-            else cls = "border-border bg-surface text-muted opacity-60";
+            else cls = "border-glass-border bg-glass text-muted opacity-60";
           }
           return (
             <button
@@ -154,7 +156,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
               type="button"
               disabled={revealed}
               onClick={() => pick(opt.slug, opt.correct)}
-              className={`flex items-center justify-between gap-2 rounded-lg border px-4 py-3 text-left text-sm font-medium transition-colors ${cls} ${
+              className={`flex items-center justify-between gap-2 rounded-xl border px-4 py-3 text-left text-sm font-medium transition-colors ${cls} ${
                 revealed ? "cursor-default" : "cursor-pointer"
               }`}
             >
@@ -170,7 +172,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
 
       {/* reveal */}
       {revealed ? (
-        <div className="glass-inset mt-5 rounded-xl p-5">
+        <div className="glass-inset mt-5 rounded-2xl p-5">
           <p className="text-base leading-7 text-foreground">
             {current.explanation}
           </p>
@@ -191,7 +193,7 @@ export default function CaseTrainer({ cases }: { cases: CaseView[] }) {
             <button
               type="button"
               onClick={next}
-              className="rounded-lg bg-accent px-6 py-2.5 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-strong"
+              className="rounded-xl bg-accent px-6 py-2.5 text-sm font-bold text-accent-ink transition-colors hover:bg-accent-strong"
             >
               {pos + 1 >= order.length ? "Finish" : "Next case"}
             </button>

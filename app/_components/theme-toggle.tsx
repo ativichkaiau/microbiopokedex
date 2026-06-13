@@ -3,10 +3,10 @@
 import { useSyncExternalStore } from "react";
 
 type Mode = "day" | "auto" | "night";
-const MODES: { id: Mode; label: string }[] = [
-  { id: "day", label: "Day" },
-  { id: "auto", label: "Auto" },
-  { id: "night", label: "Night" },
+const MODES: { id: Mode; label: string; icon: string }[] = [
+  { id: "day", label: "Day", icon: "☀️" },
+  { id: "auto", label: "Auto", icon: "🌗" },
+  { id: "night", label: "Night", icon: "🌙" },
 ];
 
 function resolve(mode: Mode): "day" | "night" {
@@ -43,7 +43,7 @@ export default function ThemeToggle() {
     <div
       role="radiogroup"
       aria-label="Theme"
-      className="flex items-center gap-0.5 rounded-xl border border-border bg-surface p-1"
+      className="glass-soft flex items-center gap-0.5 rounded-full p-1"
     >
       {MODES.map((m) => {
         const active = mode === m.id;
@@ -54,12 +54,15 @@ export default function ThemeToggle() {
             role="radio"
             aria-checked={active}
             onClick={() => pick(m.id)}
-            className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
               active
                 ? "bg-foreground text-surface"
                 : "text-muted hover:text-foreground"
             }`}
           >
+            <span aria-hidden className="text-[0.95em] leading-none">
+              {m.icon}
+            </span>
             {m.label}
           </button>
         );

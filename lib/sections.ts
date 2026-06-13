@@ -38,6 +38,8 @@ export type SectionDef = {
   key: SectionKey;
   table: string;
   navLabel: string;
+  /** Emoji that represents the whole section (nav, hero badge). */
+  emoji: string;
   listPath: string;
   detailPath: string;
   eyebrow: string;
@@ -48,13 +50,20 @@ export type SectionDef = {
   rows: Record<string, string>[];
   primaryBadge: (r: GenericRecord) => { label: string; className: string };
   tags: (r: GenericRecord) => string[];
+  /** Emoji for an individual entry, derived from its defining facet. */
+  entryEmoji: (r: GenericRecord) => string;
 };
+
+function pick(map: Record<string, string>, key: string, fallback: string) {
+  return map[key] ?? fallback;
+}
 
 const SECTION_LIST: SectionDef[] = [
   {
     key: "bacteria",
     table: "bacteria",
     navLabel: "Bacteria",
+    emoji: "🦠",
     listPath: "/",
     detailPath: "/bacteria",
     eyebrow: "Gram & Morphology",
@@ -90,11 +99,26 @@ const SECTION_LIST: SectionDef[] = [
       className: gramStainClasses(String(r.gram_stain)),
     }),
     tags: (r) => [String(r.shape), String(r.arrangement)],
+    entryEmoji: (r) =>
+      pick(
+        {
+          coccus: "🟣",
+          bacillus: "🥖",
+          coccobacillus: "🫘",
+          vibrio: "🦐",
+          spirillum: "🌀",
+          spirochete: "🌀",
+          pleomorphic: "✨",
+        },
+        String(r.shape),
+        "🦠",
+      ),
   },
   {
     key: "viruses",
     table: "viruses",
     navLabel: "Viruses",
+    emoji: "🧬",
     listPath: "/viruses",
     detailPath: "/viruses",
     eyebrow: "Genome & Envelope",
@@ -130,11 +154,13 @@ const SECTION_LIST: SectionDef[] = [
       className: virusGenomeClasses(String(r.genome)),
     }),
     tags: (r) => [String(r.envelope), String(r.family)],
+    entryEmoji: (r) => (String(r.genome) === "DNA" ? "🧬" : "🧪"),
   },
   {
     key: "fungi",
     table: "fungi",
     navLabel: "Fungi",
+    emoji: "🍄",
     listPath: "/fungi",
     detailPath: "/fungi",
     eyebrow: "Morphology & Group",
@@ -167,11 +193,18 @@ const SECTION_LIST: SectionDef[] = [
       className: fungiMorphologyClasses(String(r.morphology)),
     }),
     tags: (r) => [String(r.grp)],
+    entryEmoji: (r) =>
+      pick(
+        { yeast: "🫧", mold: "🟢", dimorphic: "🔄" },
+        String(r.morphology),
+        "🍄",
+      ),
   },
   {
     key: "parasites",
     table: "parasites",
     navLabel: "Parasites",
+    emoji: "🪱",
     listPath: "/parasites",
     detailPath: "/parasites",
     eyebrow: "Group & Transmission",
@@ -207,11 +240,18 @@ const SECTION_LIST: SectionDef[] = [
       className: parasiteGroupClasses(String(r.grp)),
     }),
     tags: (r) => [String(r.form), String(r.transmission)],
+    entryEmoji: (r) =>
+      pick(
+        { Protozoa: "🦠", Helminth: "🪱", Ectoparasite: "🕷️" },
+        String(r.grp),
+        "🪱",
+      ),
   },
   {
     key: "pharmacology",
     table: "drugs",
     navLabel: "Pharmacology",
+    emoji: "💊",
     listPath: "/pharmacology",
     detailPath: "/pharmacology",
     eyebrow: "Class & Target",
@@ -247,6 +287,25 @@ const SECTION_LIST: SectionDef[] = [
       className: drugCategoryClasses(String(r.category)),
     }),
     tags: (r) => [String(r.drug_class), String(r.target)],
+    entryEmoji: (r) =>
+      pick(
+        {
+          Antibacterial: "💊",
+          Antiviral: "🧪",
+          Antifungal: "🍄",
+          Antiparasitic: "🪱",
+          Autonomic: "⚡",
+          Cardiovascular: "❤️",
+          Diuretic: "💧",
+          Antineoplastic: "🎗️",
+          CNS: "🧠",
+          Respiratory: "🫁",
+          Gastrointestinal: "🍽️",
+          Endocrine: "⚖️",
+        },
+        String(r.category),
+        "💊",
+      ),
   },
 ];
 

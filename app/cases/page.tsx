@@ -27,6 +27,7 @@ function buildView(c: (typeof CASES)[number]): CaseView {
     prompt: c.prompt,
     explanation: c.explanation,
     sectionLabel: section.navLabel,
+    sectionEmoji: section.emoji,
     options,
   };
 }
@@ -37,11 +38,15 @@ export default function CasesPage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pb-20 pt-12">
       <section className="flex flex-col items-center text-center">
-        <span className="glass-soft inline-flex items-center rounded-lg px-4 py-1.5 text-sm font-semibold text-foreground">
-          Case Bench
+        <span className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground">
+          <span aria-hidden>🩺</span> Case Bench
         </span>
         <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl">
-          Read the chart, name the microbe.
+          Read the chart, name the{" "}
+          <span className="bg-gradient-to-r from-accent to-blue bg-clip-text text-transparent">
+            bug
+          </span>
+          .
         </h1>
         <p className="mt-5 max-w-xl text-sm leading-6 text-muted sm:text-base">
           {CASES.length} clinical vignettes across bacteria, viruses, fungi,

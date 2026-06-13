@@ -29,7 +29,7 @@ export async function microbeMetadata(
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="glass-soft rounded-xl p-5">
+    <div className="glass-soft rounded-2xl p-5">
       <dt className="text-tech text-[10px] text-muted">{label}</dt>
       <dd className="mt-2 text-lg font-bold text-foreground">{value}</dd>
     </div>
@@ -78,7 +78,7 @@ function PharmaCard({
   tone: "accent" | "warn";
 }) {
   return (
-    <div className="glass-soft rounded-xl p-5">
+    <div className="glass-soft rounded-2xl p-5">
       <h3 className="text-tech text-[10px] text-muted">{label}</h3>
       {!items || items.length === 0 ? (
         <p className="mt-3 text-sm italic text-muted">
@@ -101,7 +101,7 @@ function MicrobeCoverage({ drugSlug }: { drugSlug: string }) {
   // entirely rather than showing an empty panel.
   if (matches.length === 0) return null;
   return (
-    <div className="glass-soft mt-6 rounded-xl p-6">
+    <div className="glass-soft mt-6 rounded-2xl p-6">
       <h3 className="text-tech text-[10px] text-muted">Microbes covered</h3>
       {
         <div className="mt-4 space-y-5">
@@ -122,7 +122,7 @@ function MicrobeCoverage({ drugSlug }: { drugSlug: string }) {
                       <Link
                         key={m.slug}
                         href={`${sec.detailPath}/${m.slug}`}
-                        className="rounded-lg border border-border bg-surface px-3 py-1 text-sm text-foreground transition-colors hover:border-accent/60"
+                        className="rounded-full border border-glass-border bg-glass px-3 py-1 text-sm text-foreground transition-colors hover:border-accent/60"
                       >
                         {label}
                       </Link>
@@ -161,19 +161,20 @@ export default async function MicrobeDetail({
     <main className="mx-auto w-full max-w-3xl px-6 pb-20 pt-12">
       <Link
         href={section.listPath}
-        className="glass-soft inline-flex items-center gap-2 rounded-lg px-4 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/60"
+        className="glass-soft inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/60"
       >
         ← Back to {section.navLabel.toLowerCase()}
       </Link>
 
-      <section className="glass mt-7 rounded-2xl p-7 sm:p-9">
+      <section className="glass mt-7 rounded-3xl p-7 sm:p-9">
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-tech text-[11px]">
               <span className="text-muted">{section.navLabel} {"//"}</span>{" "}
               <span className="text-accent">Decoded</span>
             </p>
-            <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="mt-3 flex items-center gap-3 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+              <span aria-hidden>{section.entryEmoji(item)}</span>
               {item.name}
             </h1>
             <p className="mt-2 font-mono text-base italic text-muted">
@@ -190,6 +191,7 @@ export default async function MicrobeDetail({
             <span
               className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1 text-sm font-semibold ${tierMeta.className}`}
             >
+              <span aria-hidden>{tierMeta.emoji}</span>
               {tier}
             </span>
           ) : null}
@@ -212,7 +214,7 @@ export default async function MicrobeDetail({
             ))}
         </dl>
 
-        <div className="glass-inset mt-8 rounded-xl p-6">
+        <div className="glass-inset mt-8 rounded-2xl p-6">
           <h2 className="text-tech mb-3 text-[10px] text-muted">
             Pokédex entry
           </h2>

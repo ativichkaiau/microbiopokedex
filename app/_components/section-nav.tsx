@@ -8,7 +8,7 @@ export default function SectionNav({
   active: SectionKey | "cases";
 }) {
   const tabClass = (isActive: boolean) =>
-    `flex items-center rounded-lg px-3.5 py-1.5 text-sm font-medium transition-colors ${
+    `flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
       isActive
         ? "bg-foreground text-surface"
         : "text-muted hover:text-foreground"
@@ -16,7 +16,7 @@ export default function SectionNav({
 
   return (
     <nav className="mt-6 flex justify-center">
-      <div className="flex max-w-full flex-wrap items-center justify-center gap-1 rounded-xl border border-border bg-surface p-1">
+      <div className="glass-soft flex max-w-full flex-wrap items-center justify-center gap-1 rounded-full p-1">
         {SECTION_ORDER.map((key) => {
           const s = SECTIONS[key];
           const isActive = key === active;
@@ -27,6 +27,7 @@ export default function SectionNav({
               aria-current={isActive ? "page" : undefined}
               className={tabClass(isActive)}
             >
+              <span aria-hidden>{s.emoji}</span>
               {s.navLabel}
             </Link>
           );
@@ -36,6 +37,7 @@ export default function SectionNav({
           aria-current={active === "cases" ? "page" : undefined}
           className={tabClass(active === "cases")}
         >
+          <span aria-hidden>🩺</span>
           Cases
         </Link>
       </div>

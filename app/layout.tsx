@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import ThemeToggle from "./_components/theme-toggle";
+import Atmosphere from "./_components/atmosphere";
+import Intro from "./_components/intro";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VESTRIPPN3.0 // Microbe Pokédex",
+  title: "VESTRIPPN3.0 // Screening Matrix",
   description:
-    "A microbiology pokédex of medically notable bacteria, viruses, fungi, parasites, and pharmacology.",
+    "A screening matrix of medically notable bacteria, categorized by Gram stain and morphology.",
 };
 
 const NO_FLASH = `(function(){try{var m=localStorage.getItem('theme-mode');if(m!=='day'&&m!=='night'&&m!=='auto')m='auto';var h=new Date().getHours();var t=(m==='night'||(m==='auto'&&(h>=18||h<6)))?'night':'day';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='day';}})();`;
@@ -36,17 +38,18 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
-        <header className="sticky top-0 z-20 border-b border-border bg-surface/90 backdrop-blur-md">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-3.5">
+        <Atmosphere />
+        <header className="sticky top-0 z-20 border-b border-glass-border bg-glass backdrop-blur-xl">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3.5">
             <Link href="/" className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground text-lg font-black text-surface">
                 V
               </span>
-              <span className="text-lg font-extrabold tracking-tight text-foreground sm:text-xl">
+              <span className="text-xl font-extrabold tracking-tight text-foreground">
                 VESTRIPPN<span className="text-blue">3.0</span>
               </span>
             </Link>
-            <div className="flex items-center justify-center gap-4 sm:justify-end">
+            <div className="flex items-center gap-4">
               <span className="hidden text-sm text-muted sm:inline">
                 Microbiology Pokédex
               </span>
@@ -59,6 +62,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <Intro />
       </body>
     </html>
   );
