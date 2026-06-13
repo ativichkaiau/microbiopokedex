@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VESTRIPPN3.0 // Screening Matrix",
+  title: "VESTRIPPN3.0 // Microbe Pokédex",
   description:
-    "A screening matrix of medically notable bacteria, categorized by Gram stain and morphology.",
+    "A microbiology pokédex of medically notable bacteria, viruses, fungi, parasites, and pharmacology.",
 };
 
 const NO_FLASH = `(function(){try{var m=localStorage.getItem('theme-mode');if(m!=='day'&&m!=='night'&&m!=='auto')m='auto';var h=new Date().getHours();var t=(m==='night'||(m==='auto'&&(h>=18||h<6)))?'night':'day';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='day';}})();`;

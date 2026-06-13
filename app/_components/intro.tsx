@@ -4,21 +4,6 @@ import { useEffect, useState } from "react";
 
 type Phase = "visible" | "closing" | "done";
 
-const STEPS = [
-  {
-    number: "01",
-    label: "CULTURE",
-  },
-  {
-    number: "02",
-    label: "STAIN",
-  },
-  {
-    number: "03",
-    label: "IDENTIFY",
-  },
-] as const;
-
 export default function Intro() {
   const [phase, setPhase] = useState<Phase>("visible");
 
@@ -170,53 +155,30 @@ export default function Intro() {
                 <text x="86" y="260" className="intro-svg-label">
                   FUNGI
                 </text>
-                <rect x="318" y="246" width="214" height="30" rx="15" className="intro-chip" />
-                <text x="425" y="266" textAnchor="middle" className="intro-chip-text">
-                  ORGANISM BANKS ONLINE
-                </text>
               </svg>
             </div>
           </div>
 
           <div className="mt-6">
-            <p className="text-tech flex items-center gap-4 text-[11px] font-black text-[#c5a86a]">
-              <span>BENCH READY</span>
-              <span className="h-px w-10 bg-[#c5a86a]/55" />
-            </p>
             <h2 className="mt-2 text-2xl font-black tracking-tight text-[#f4f7f2] sm:text-[1.7rem]">
-              Microbe banks loaded
+              Microbe library loaded
             </h2>
             <p className="mt-2 max-w-2xl text-sm font-semibold leading-6 text-[#aeb7b4] sm:text-base">
               Bacteria, viruses, fungi, parasites, and pharmacology cards are
-              staged for quick lookup without the visual noise.
+              ready for quick lookup.
             </p>
           </div>
 
-          <div className="mt-6 border-t border-white/10 pt-5">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex flex-wrap gap-2" aria-label="Intro status">
-                {STEPS.map((s) => (
-                  <span
-                    key={s.number}
-                    className="text-tech rounded-full bg-white/[0.045] px-3 py-1 text-[10px] font-black text-white/65"
-                  >
-                    {s.number} {s.label}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex justify-end gap-3">
-                <button
-                  type="button"
-                  data-intro-close="true"
-                  onClick={close}
-                  onPointerDown={close}
-                  className="rounded-full border border-[#ffd77a]/55 bg-[#f2c566] px-7 py-3 text-sm font-black text-[#16110a] shadow-[0_0_26px_rgba(242,197,102,0.28)] transition hover:bg-[#ffd47d]"
-                >
-                  Begin
-                </button>
-              </div>
-            </div>
+          <div className="mt-6 flex justify-end border-t border-white/10 pt-5">
+            <button
+              type="button"
+              data-intro-close="true"
+              onClick={close}
+              onPointerDown={close}
+              className="rounded-full border border-[#ffd77a]/55 bg-[#f2c566] px-7 py-3 text-sm font-black text-[#16110a] shadow-[0_0_26px_rgba(242,197,102,0.28)] transition hover:bg-[#ffd47d]"
+            >
+              Begin
+            </button>
           </div>
         </div>
       </section>
