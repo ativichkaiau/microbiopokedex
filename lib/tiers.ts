@@ -13,28 +13,24 @@ export type Tier = (typeof TIERS_ORDER)[number];
 
 export const TIER_META: Record<
   Tier,
-  { emoji: string; short: string; className: string }
+  { short: string; className: string }
 > = {
   "High yield": {
-    emoji: "🔥",
     short: "High",
     className:
       "border-rose-500/40 bg-rose-500/15 text-rose-700 dark:border-rose-400/40 dark:bg-rose-400/15 dark:text-rose-300",
   },
   "Medium yield": {
-    emoji: "⭐",
     short: "Med",
     className:
       "border-amber-500/40 bg-amber-500/15 text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/15 dark:text-amber-300",
   },
   "Good to know": {
-    emoji: "📘",
     short: "Good",
     className:
       "border-glass-border bg-glass text-muted",
   },
   Demigod: {
-    emoji: "👑",
     short: "Demigod",
     className:
       "border-fuchsia-500/40 bg-fuchsia-500/15 text-fuchsia-700 dark:border-fuchsia-400/40 dark:bg-fuchsia-400/15 dark:text-fuchsia-300",
