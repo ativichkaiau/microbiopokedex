@@ -53,8 +53,10 @@ export default function ThemeToggle() {
             type="button"
             role="radio"
             aria-checked={active}
+            aria-label={m.label}
+            title={m.label}
             onClick={() => pick(m.id)}
-            className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium transition-colors sm:px-3 ${
               active
                 ? "bg-foreground text-surface"
                 : "text-muted hover:text-foreground"
@@ -63,7 +65,7 @@ export default function ThemeToggle() {
             <span aria-hidden className="text-[0.95em] leading-none">
               {m.icon}
             </span>
-            {m.label}
+            <span className="hidden sm:inline">{m.label}</span>
           </button>
         );
       })}
