@@ -6,6 +6,7 @@ import {
   type SectionKey,
 } from "@/lib/sections";
 import FacetSelect from "./facet-select";
+import SearchForm from "./search-form";
 import SectionNav from "./section-nav";
 import { TIER_META, type Tier } from "@/lib/tiers";
 
@@ -62,35 +63,17 @@ export default function Explorer({
           </div>
 
           <div className="w-full lg:max-w-sm">
-            <form
-              method="get"
-              action={section.listPath}
-              className="flex items-center gap-2 rounded-2xl border border-glass-border bg-white/55 px-4 py-3 transition-colors focus-within:border-accent dark:bg-white/5"
-            >
-              {section.facets.map((f) =>
-                active[f.param] ? (
-                  <input
-                    key={f.param}
-                    type="hidden"
-                    name={f.param}
-                    value={active[f.param]}
-                  />
-                ) : null,
-              )}
-              <input
-                type="search"
-                name="q"
-                defaultValue={active.q ?? ""}
-                placeholder={`Search ${section.navLabel.toLowerCase()}…`}
-                className="flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-foreground px-4 py-1.5 text-sm font-semibold text-surface transition-opacity hover:opacity-90"
-              >
-                Search
-              </button>
-            </form>
+            <SearchForm
+              listPath={section.listPath}
+              hidden={section.facets
+                .filter((f) => active[f.param])
+                .map((f) => ({
+                  name: f.param,
+                  value: active[f.param] as string,
+                }))}
+              placeholder={`Search ${section.navLabel.toLowerCase()}…`}
+              query={active.q ?? ""}
+            />
           </div>
         </div>
 
