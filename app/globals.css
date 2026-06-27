@@ -32,7 +32,7 @@
   --blob-1: #2fc3ab;
   --blob-2: #5f80ff;
   --blob-3: #b673f5;
-  --blob-opacity: 0.6;
+  --blob-opacity: 0.32;
 }
 
 [data-theme="night"] {
@@ -61,7 +61,7 @@
   --blob-1: #1fb89c;
   --blob-2: #4368e6;
   --blob-3: #8a4fe0;
-  --blob-opacity: 0.66;
+  --blob-opacity: 0.38;
 }
 
 @theme inline {
@@ -106,7 +106,7 @@ body {
 .blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(64px) saturate(150%);
+  filter: blur(80px) saturate(140%);
   opacity: var(--blob-opacity);
   will-change: transform;
 }
