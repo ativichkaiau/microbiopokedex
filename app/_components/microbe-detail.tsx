@@ -227,18 +227,37 @@ export default async function MicrobeDetail({
       {sectionKey === "pharmacology" ? (
         <MicrobeCoverage drugSlug={slug} />
       ) : (
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <PharmaCard
-            label="Resistance Against"
-            items={pharma?.resistance}
-            tone="warn"
-          />
-          <PharmaCard
-            label="Drug Effective"
-            items={pharma?.effective}
-            tone="accent"
-          />
-        </div>
+        <>
+          {pharma?.strengths && pharma.strengths.length > 0 ? (
+            <div className="glass-soft mt-6 rounded-2xl p-5">
+              <h3 className="text-tech text-[10px] text-muted">
+                Strengths &amp; Virulence
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {pharma.strengths.map((s) => (
+                  <span
+                    key={s}
+                    className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-300"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <PharmaCard
+              label="Resistance Against"
+              items={pharma?.resistance}
+              tone="warn"
+            />
+            <PharmaCard
+              label="Drug Effective"
+              items={pharma?.effective}
+              tone="accent"
+            />
+          </div>
+        </>
       )}
     </main>
   );

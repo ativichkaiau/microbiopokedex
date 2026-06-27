@@ -1,7 +1,7 @@
 // Microbe → drug map. Keyed by section + organism slug. The drug strings are
 // drug slugs from drug-data.ts (so they cross-link to /pharmacology/[slug]).
-// Organisms not listed here render "Not characterized in this pokédex" on the
-// detail page — the goal is honest coverage, not fake values for every entry.
+// `strengths` are free-text virulence factors / defenses shown on the detail
+// page. Organisms not listed render "Not characterized in this pokédex".
 
 import type { SectionKey } from "./sections";
 
@@ -10,6 +10,8 @@ export type MicrobePharmacology = {
   slug: string;
   resistance: string[];
   effective: string[];
+  /** Virulence factors / defenses that make the organism formidable. */
+  strengths?: string[];
 };
 
 export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
@@ -17,7 +19,7 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
   {
     section: "bacteria",
     slug: "staphylococcus-aureus",
-    resistance: ["penicillin-g"],
+    resistance: ["penicillin-g", "ampicillin", "amoxicillin"],
     effective: [
       "nafcillin",
       "dicloxacillin",
@@ -34,6 +36,14 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "mupirocin",
       "ceftaroline",
     ],
+    strengths: [
+      "Protein A (binds antibody Fc)",
+      "Coagulase",
+      "Penicillinase",
+      "Biofilm formation",
+      "TSST-1 / enterotoxin superantigens",
+      "Hemolysins & leukocidins",
+    ],
   },
   {
     section: "bacteria",
@@ -45,6 +55,11 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "tedizolid",
       "dalbavancin",
       "daptomycin",
+    ],
+    strengths: [
+      "Biofilm (slime) on catheters & prostheses",
+      "Adheres to plastic/polymers",
+      "Skin commensal reservoir",
     ],
   },
   {
@@ -60,6 +75,12 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "cefazolin",
       "clindamycin",
     ],
+    strengths: [
+      "M protein (antiphagocytic)",
+      "Hyaluronic acid capsule",
+      "Streptolysins O & S",
+      "Pyrogenic exotoxin (superantigen)",
+    ],
   },
   {
     section: "bacteria",
@@ -74,65 +95,103 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "moxifloxacin",
       "vancomycin",
     ],
+    strengths: [
+      "Polysaccharide capsule (antiphagocytic)",
+      "IgA protease",
+      "Pneumolysin",
+    ],
   },
   {
     section: "bacteria",
     slug: "streptococcus-agalactiae",
     resistance: [],
     effective: ["penicillin-g", "penicillin-v", "ampicillin", "cefazolin"],
+    strengths: ["Polysaccharide capsule", "Beta-hemolysin/cytolysin"],
   },
   {
     section: "bacteria",
     slug: "enterococcus-faecalis",
-    resistance: ["cefazolin", "ceftriaxone"],
+    resistance: ["cefazolin", "ceftriaxone", "aztreonam", "tmp-smx"],
     effective: ["ampicillin", "vancomycin", "linezolid"],
+    strengths: [
+      "Bile & 6.5% NaCl tolerant",
+      "Biofilm on heart valves",
+      "Intrinsic cephalosporin resistance",
+    ],
   },
   {
     section: "bacteria",
     slug: "enterococcus-faecium",
-    resistance: ["ampicillin", "vancomycin"],
+    resistance: ["ampicillin", "vancomycin", "penicillin-g"],
     effective: ["linezolid", "tedizolid", "daptomycin"],
+    strengths: [
+      "VanA glycopeptide resistance (VRE)",
+      "Ampicillin resistance",
+      "Hospital persistence",
+    ],
   },
   {
     section: "bacteria",
     slug: "clostridioides-difficile",
     resistance: ["ceftriaxone", "clindamycin"],
     effective: ["fidaxomicin", "vancomycin", "metronidazole"],
+    strengths: [
+      "Alcohol-resistant spores",
+      "Toxin A (enterotoxin)",
+      "Toxin B (cytotoxin)",
+    ],
   },
   {
     section: "bacteria",
     slug: "clostridium-tetani",
     resistance: [],
     effective: ["metronidazole", "penicillin-g"],
+    strengths: ["Terminal spores", "Tetanospasmin (blocks GABA/glycine)"],
   },
   {
     section: "bacteria",
     slug: "clostridium-perfringens",
     resistance: [],
     effective: ["penicillin-g", "clindamycin"],
+    strengths: [
+      "Alpha toxin (lecithinase)",
+      "Gas production in tissue",
+      "Spores",
+    ],
   },
   {
     section: "bacteria",
     slug: "bacillus-anthracis",
     resistance: [],
     effective: ["ciprofloxacin", "doxycycline", "penicillin-g"],
+    strengths: [
+      "Poly-D-glutamate capsule",
+      "Edema & lethal toxins",
+      "Durable spores",
+    ],
   },
   {
     section: "bacteria",
     slug: "listeria-monocytogenes",
-    resistance: ["ceftriaxone", "cefepime"],
+    resistance: ["ceftriaxone", "cefepime", "ceftazidime"],
     effective: ["ampicillin", "tmp-smx", "gentamicin"],
+    strengths: [
+      "Actin-based intracellular motility",
+      "Listeriolysin O (escapes phagosome)",
+      "Grows at 4°C",
+    ],
   },
   {
     section: "bacteria",
     slug: "corynebacterium-diphtheriae",
     resistance: [],
     effective: ["penicillin-g", "azithromycin", "erythromycin"],
+    strengths: ["Diphtheria toxin (ADP-ribosylates EF-2)", "Pseudomembrane"],
   },
   {
     section: "bacteria",
     slug: "mycobacterium-tuberculosis",
-    resistance: ["penicillin-g", "ceftriaxone"],
+    resistance: ["penicillin-g", "ceftriaxone", "tmp-smx"],
     effective: [
       "isoniazid",
       "rifampin",
@@ -144,17 +203,28 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "bedaquiline",
       "linezolid",
     ],
+    strengths: [
+      "Mycolic-acid (acid-fast) wall",
+      "Cord factor",
+      "Inhibits phagolysosome fusion",
+      "Intracellular survival & latency",
+    ],
   },
   {
     section: "bacteria",
     slug: "mycobacterium-leprae",
     resistance: [],
     effective: ["rifampin", "dapsone", "clofazimine"],
+    strengths: [
+      "Grows in cool tissues (skin/nerves)",
+      "Intracellular in macrophages & Schwann cells",
+      "Uncultivable in vitro",
+    ],
   },
   {
     section: "bacteria",
     slug: "escherichia-coli",
-    resistance: ["ampicillin"],
+    resistance: ["ampicillin", "penicillin-g"],
     effective: [
       "ceftriaxone",
       "ceftazidime-avibactam",
@@ -168,18 +238,36 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "nitrofurantoin",
       "fosfomycin",
     ],
+    strengths: [
+      "Endotoxin (lipid A)",
+      "Adhesive fimbriae (P / type 1 pili)",
+      "K1 capsule (neonatal meningitis)",
+      "ESBL in resistant strains",
+    ],
   },
   {
     section: "bacteria",
     slug: "salmonella-enterica",
     resistance: [],
     effective: ["ceftriaxone", "ciprofloxacin", "azithromycin", "chloramphenicol"],
+    strengths: [
+      "Vi capsule (Typhi)",
+      "Acid-tolerance response",
+      "Intracellular in macrophages",
+      "Type III secretion",
+    ],
   },
   {
     section: "bacteria",
     slug: "shigella-dysenteriae",
-    resistance: ["ampicillin"],
+    resistance: ["ampicillin", "tmp-smx"],
     effective: ["ciprofloxacin", "azithromycin", "ceftriaxone"],
+    strengths: [
+      "Shiga toxin",
+      "Cell-to-cell spread (actin)",
+      "Very low infectious dose",
+      "Acid resistance",
+    ],
   },
   {
     section: "bacteria",
@@ -195,11 +283,16 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "aztreonam",
       "tigecycline",
     ],
+    strengths: [
+      "Thick polysaccharide capsule",
+      "ESBL & carbapenemase (KPC)",
+      "Hypervirulent mucoid strains",
+    ],
   },
   {
     section: "bacteria",
     slug: "pseudomonas-aeruginosa",
-    resistance: ["ampicillin", "ceftriaxone", "ertapenem"],
+    resistance: ["ampicillin", "ceftriaxone", "ertapenem", "tmp-smx"],
     effective: [
       "piperacillin-tazobactam",
       "ceftazidime",
@@ -214,11 +307,17 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "amikacin",
       "colistin",
     ],
+    strengths: [
+      "Exotoxin A (inhibits EF-2)",
+      "Pyocyanin (reactive oxygen)",
+      "Alginate biofilm",
+      "Efflux pumps & porin loss",
+    ],
   },
   {
     section: "bacteria",
     slug: "acinetobacter-baumannii",
-    resistance: ["ampicillin", "ceftriaxone"],
+    resistance: ["ampicillin", "ceftriaxone", "ertapenem"],
     effective: [
       "meropenem",
       "imipenem-cilastatin",
@@ -227,17 +326,32 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "amikacin",
       "colistin",
     ],
+    strengths: [
+      "Survives desiccation on surfaces",
+      "OXA carbapenemases",
+      "Biofilm; pan-drug resistance",
+    ],
   },
   {
     section: "bacteria",
     slug: "stenotrophomonas-maltophilia",
-    resistance: ["meropenem", "piperacillin-tazobactam"],
+    resistance: [
+      "meropenem",
+      "imipenem-cilastatin",
+      "piperacillin-tazobactam",
+      "ceftazidime",
+    ],
     effective: ["tmp-smx", "levofloxacin", "moxifloxacin", "minocycline"],
+    strengths: [
+      "Intrinsic carbapenem resistance",
+      "L1 metallo-β-lactamase",
+      "Biofilm on devices",
+    ],
   },
   {
     section: "bacteria",
     slug: "haemophilus-influenzae",
-    resistance: [],
+    resistance: ["ampicillin"],
     effective: [
       "ceftriaxone",
       "amoxicillin-clavulanate",
@@ -245,71 +359,129 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "azithromycin",
       "moxifloxacin",
     ],
+    strengths: [
+      "PRP capsule (type b)",
+      "IgA protease",
+      "β-lactamase (many strains)",
+    ],
   },
   {
     section: "bacteria",
     slug: "neisseria-gonorrhoeae",
-    resistance: ["penicillin-g", "ciprofloxacin", "tmp-smx"],
+    resistance: ["penicillin-g", "ciprofloxacin", "tmp-smx", "tetracycline"],
     effective: ["ceftriaxone", "azithromycin"],
+    strengths: [
+      "Pilus antigenic & phase variation",
+      "IgA protease",
+      "No protective immunity",
+      "Survives within neutrophils",
+    ],
   },
   {
     section: "bacteria",
     slug: "neisseria-meningitidis",
     resistance: [],
     effective: ["ceftriaxone", "penicillin-g", "rifampin", "ciprofloxacin"],
+    strengths: [
+      "Polysaccharide capsule",
+      "Endotoxin (LOS) blebs",
+      "IgA protease",
+    ],
   },
   {
     section: "bacteria",
     slug: "helicobacter-pylori",
     resistance: [],
     effective: ["amoxicillin", "clarithromycin", "metronidazole", "tetracycline"],
+    strengths: [
+      "Urease (neutralizes acid)",
+      "Flagellar motility in mucus",
+      "CagA / VacA cytotoxins",
+    ],
   },
   {
     section: "bacteria",
     slug: "campylobacter-jejuni",
     resistance: [],
     effective: ["azithromycin", "erythromycin", "ciprofloxacin"],
+    strengths: [
+      "Darting flagellar motility",
+      "LOS mimics gangliosides (triggers GBS)",
+      "Microaerophilic",
+    ],
   },
   {
     section: "bacteria",
     slug: "vibrio-cholerae",
     resistance: [],
     effective: ["doxycycline", "azithromycin", "ciprofloxacin"],
+    strengths: [
+      "Cholera toxin (↑ cAMP)",
+      "Toxin-coregulated pili",
+      "Single polar flagellum",
+    ],
   },
   {
     section: "bacteria",
     slug: "treponema-pallidum",
     resistance: [],
     effective: ["penicillin-g", "doxycycline", "ceftriaxone"],
+    strengths: [
+      "Antigenically inert outer membrane",
+      "Endoflagellar motility",
+      "Crosses the placenta",
+    ],
   },
   {
     section: "bacteria",
     slug: "borrelia-burgdorferi",
     resistance: [],
     effective: ["doxycycline", "ceftriaxone", "amoxicillin"],
+    strengths: [
+      "VlsE antigenic variation",
+      "Tissue dissemination",
+      "Immune evasion",
+    ],
   },
   {
     section: "bacteria",
     slug: "leptospira-interrogans",
     resistance: [],
     effective: ["doxycycline", "penicillin-g", "ceftriaxone"],
+    strengths: ["Corkscrew motility", "Penetrates intact skin/mucosa"],
   },
   {
     section: "bacteria",
     slug: "legionella-pneumophila",
     resistance: ["penicillin-g", "ampicillin"],
     effective: ["azithromycin", "erythromycin", "levofloxacin", "moxifloxacin"],
+    strengths: [
+      "Replicates inside macrophages",
+      "Inhibits phagolysosome fusion",
+      "Biofilm in water systems",
+    ],
   },
   {
     section: "bacteria",
     slug: "chlamydia-trachomatis",
-    resistance: ["penicillin-g", "ceftriaxone"],
+    resistance: ["penicillin-g", "ampicillin", "ceftriaxone"],
     effective: ["azithromycin", "doxycycline", "erythromycin"],
+    strengths: [
+      "Obligate intracellular",
+      "Inhibits phagolysosome fusion",
+      "No classic peptidoglycan",
+    ],
   },
   {
     section: "bacteria",
     slug: "mycoplasma-pneumoniae",
-    resistance: ["penicillin-g", "ampicillin", "ceftriaxone"],
+    resistance: [
+      "penicillin-g",
+      "ampicillin",
+      "ceftriaxone",
+      "cefazolin",
+      "vancomycin",
+    ],
     effective: [
       "azithromycin",
       "erythromycin",
@@ -317,17 +489,27 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "levofloxacin",
       "moxifloxacin",
     ],
+    strengths: [
+      "No cell wall (β-lactam resistant)",
+      "P1 adhesin",
+      "Cold-agglutinin induction",
+    ],
   },
   {
     section: "bacteria",
     slug: "bordetella-pertussis",
     resistance: [],
     effective: ["azithromycin", "clarithromycin", "erythromycin"],
+    strengths: [
+      "Pertussis toxin",
+      "Tracheal cytotoxin",
+      "Filamentous hemagglutinin adhesin",
+    ],
   },
   {
     section: "bacteria",
     slug: "bacteroides-fragilis",
-    resistance: ["penicillin-g", "cefazolin"],
+    resistance: ["penicillin-g", "cefazolin", "aztreonam", "gentamicin"],
     effective: [
       "metronidazole",
       "piperacillin-tazobactam",
@@ -337,29 +519,41 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "cefoxitin",
       "clindamycin",
     ],
+    strengths: [
+      "Polysaccharide capsule (abscess)",
+      "β-lactamase",
+      "Obligate anaerobe",
+    ],
   },
   {
     section: "bacteria",
     slug: "rickettsia-rickettsii",
     resistance: ["penicillin-g"],
     effective: ["doxycycline", "chloramphenicol"],
+    strengths: [
+      "Obligate intracellular",
+      "Actin-based motility",
+      "Endothelial tropism (vasculitis)",
+    ],
   },
   {
     section: "bacteria",
     slug: "anaplasma-phagocytophilum",
     resistance: [],
     effective: ["doxycycline"],
+    strengths: ["Intracellular in neutrophils (morulae)", "Inhibits apoptosis"],
   },
   {
     section: "bacteria",
     slug: "ehrlichia-chaffeensis",
     resistance: [],
     effective: ["doxycycline"],
+    strengths: ["Intracellular in monocytes (morulae)"],
   },
   {
     section: "bacteria",
     slug: "burkholderia-pseudomallei",
-    resistance: ["penicillin-g", "ampicillin"],
+    resistance: ["penicillin-g", "ampicillin", "gentamicin", "colistin"],
     effective: [
       "ceftazidime",
       "meropenem",
@@ -367,24 +561,40 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "tmp-smx",
       "amoxicillin-clavulanate",
     ],
+    strengths: [
+      "Facultative intracellular",
+      "Latency & relapse",
+      "Intrinsic aminoglycoside/colistin resistance",
+    ],
   },
   {
     section: "bacteria",
     slug: "nocardia-asteroides",
     resistance: [],
     effective: ["tmp-smx", "linezolid", "meropenem", "imipenem-cilastatin", "minocycline", "amikacin"],
+    strengths: [
+      "Catalase & superoxide dismutase",
+      "Partially acid-fast",
+      "Intracellular survival",
+    ],
   },
   {
     section: "bacteria",
     slug: "actinomyces-israelii",
     resistance: [],
     effective: ["penicillin-g", "amoxicillin", "doxycycline", "clindamycin"],
+    strengths: [
+      "Sulfur-granule colonies",
+      "Forms draining sinus tracts",
+      "Anaerobic biofilm",
+    ],
   },
   {
     section: "bacteria",
     slug: "borrelia-recurrentis",
     resistance: [],
     effective: ["doxycycline", "erythromycin", "penicillin-g"],
+    strengths: ["Antigenic variation (relapsing fever)", "Louse-borne"],
   },
 
   // ---------- Viruses ----------
@@ -393,48 +603,84 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
     slug: "herpes-simplex-virus-1",
     resistance: [],
     effective: ["acyclovir", "valacyclovir", "famciclovir", "foscarnet"],
+    strengths: [
+      "Latency in sensory ganglia",
+      "Reactivation under stress",
+      "Evades MHC-I (ICP47)",
+    ],
   },
   {
     section: "viruses",
     slug: "herpes-simplex-virus-2",
     resistance: [],
     effective: ["acyclovir", "valacyclovir", "famciclovir", "foscarnet"],
+    strengths: [
+      "Latency in sacral ganglia",
+      "Asymptomatic shedding",
+      "Evades MHC-I",
+    ],
   },
   {
     section: "viruses",
     slug: "varicella-zoster-virus",
     resistance: [],
     effective: ["acyclovir", "valacyclovir", "famciclovir", "foscarnet"],
+    strengths: [
+      "Latency in dorsal root ganglia",
+      "Airborne, highly contagious",
+      "Reactivation as zoster",
+    ],
   },
   {
     section: "viruses",
     slug: "cytomegalovirus",
     resistance: [],
     effective: ["ganciclovir", "letermovir", "foscarnet", "cidofovir"],
+    strengths: [
+      "Latency in myeloid cells",
+      "Downregulates MHC-I",
+      "Congenital transmission",
+    ],
   },
   {
     section: "viruses",
     slug: "epstein-barr-virus",
     resistance: [],
     effective: [],
+    strengths: [
+      "Lifelong latency in B cells",
+      "Immortalizes B cells (LMP1)",
+      "Oncogenic (Burkitt, nasopharyngeal CA)",
+    ],
   },
   {
     section: "viruses",
     slug: "influenza-a-virus",
     resistance: [],
     effective: ["oseltamivir", "baloxavir", "zanamivir", "peramivir"],
+    strengths: [
+      "Antigenic drift & shift",
+      "Segment reassortment",
+      "Pandemic potential",
+    ],
   },
   {
     section: "viruses",
     slug: "influenza-b-virus",
     resistance: [],
     effective: ["oseltamivir", "baloxavir", "zanamivir", "peramivir"],
+    strengths: ["Antigenic drift", "Human-restricted reservoir"],
   },
   {
     section: "viruses",
     slug: "sars-cov-2",
     resistance: [],
     effective: ["nirmatrelvir-ritonavir", "remdesivir", "molnupiravir"],
+    strengths: [
+      "Spike–ACE2 entry",
+      "Rapid variant evolution",
+      "Immune-escape mutations",
+    ],
   },
   {
     section: "viruses",
@@ -452,12 +698,23 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "nevirapine",
       "darunavir",
     ],
+    strengths: [
+      "Integrates as latent provirus",
+      "Error-prone reverse transcriptase (escape)",
+      "Depletes CD4 T cells",
+      "gp120 antigenic variation",
+    ],
   },
   {
     section: "viruses",
     slug: "hepatitis-b-virus",
     resistance: [],
     effective: ["tenofovir", "entecavir", "lamivudine"],
+    strengths: [
+      "Chronic carriage",
+      "Oncogenic (HCC)",
+      "Stable cccDNA reservoir",
+    ],
   },
   {
     section: "viruses",
@@ -469,48 +726,82 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "glecaprevir-pibrentasvir",
       "ribavirin",
     ],
+    strengths: [
+      "No proofreading (quasispecies escape)",
+      "High chronicity",
+      "Cirrhosis / HCC risk",
+    ],
   },
   {
     section: "viruses",
     slug: "ebola-virus",
     resistance: [],
     effective: ["remdesivir", "ribavirin"],
+    strengths: [
+      "Suppresses interferon (VP35/VP24)",
+      "Endothelial damage / hemorrhage",
+      "Transmissible via body fluids",
+    ],
   },
   {
     section: "viruses",
     slug: "monkeypox-virus",
     resistance: [],
     effective: ["tecovirimat", "cidofovir"],
+    strengths: [
+      "Cytokine-decoy immune evasion",
+      "Environmentally stable",
+      "Cytoplasmic replication",
+    ],
   },
   {
     section: "viruses",
     slug: "variola-virus",
     resistance: [],
     effective: ["tecovirimat", "cidofovir"],
+    strengths: [
+      "Immune-evasion proteins",
+      "Aerosol transmission",
+      "Environmentally stable",
+    ],
   },
   {
     section: "viruses",
     slug: "adenovirus",
     resistance: [],
     effective: ["cidofovir"],
+    strengths: [
+      "Non-enveloped (hardy/disinfectant-resistant)",
+      "Broad tropism (eye, gut, lung)",
+    ],
   },
   {
     section: "viruses",
     slug: "respiratory-syncytial-virus",
     resistance: [],
     effective: ["ribavirin"],
+    strengths: [
+      "Syncytium formation",
+      "Reinfection throughout life",
+      "Bronchiolar tropism",
+    ],
   },
   {
     section: "viruses",
     slug: "lassa-virus",
     resistance: [],
     effective: ["ribavirin"],
+    strengths: ["Suppresses innate immunity", "Persistent rodent reservoir"],
   },
   {
     section: "viruses",
     slug: "bk-polyomavirus",
     resistance: [],
     effective: ["cidofovir"],
+    strengths: [
+      "Latency in uroepithelium",
+      "Reactivates in immunosuppression",
+    ],
   },
 
   // ---------- Fungi ----------
@@ -527,6 +818,11 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "nystatin",
       "ibrexafungerp",
     ],
+    strengths: [
+      "Yeast–hyphal dimorphism",
+      "Biofilm on devices",
+      "Adhesins for tissue invasion",
+    ],
   },
   {
     section: "fungi",
@@ -537,6 +833,10 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "micafungin",
       "anidulafungin",
       "amphotericin-b",
+    ],
+    strengths: [
+      "Rapid azole resistance (efflux pumps)",
+      "Hardy haploid yeast",
     ],
   },
   {
@@ -550,18 +850,30 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "voriconazole",
       "amphotericin-b",
     ],
+    strengths: ["Intrinsic fluconazole resistance"],
   },
   {
     section: "fungi",
     slug: "candida-auris",
     resistance: ["fluconazole", "amphotericin-b"],
     effective: ["caspofungin", "micafungin", "anidulafungin", "ibrexafungerp"],
+    strengths: [
+      "Multidrug resistance",
+      "Skin & surface colonization",
+      "Outbreak persistence",
+    ],
   },
   {
     section: "fungi",
     slug: "cryptococcus-neoformans",
     resistance: ["caspofungin"],
     effective: ["amphotericin-b", "flucytosine", "fluconazole"],
+    strengths: [
+      "Polysaccharide capsule (antiphagocytic)",
+      "Melanin (laccase)",
+      "Urease",
+      "Grows at 37°C",
+    ],
   },
   {
     section: "fungi",
@@ -573,60 +885,98 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "posaconazole",
       "amphotericin-b",
     ],
+    strengths: [
+      "Angioinvasive hyphae",
+      "Small airborne conidia",
+      "Gliotoxin immunosuppression",
+      "Thermotolerant",
+    ],
   },
   {
     section: "fungi",
     slug: "rhizopus-arrhizus",
     resistance: ["fluconazole", "voriconazole", "caspofungin"],
     effective: ["amphotericin-b", "posaconazole", "isavuconazole"],
+    strengths: [
+      "Angioinvasive (vascular thrombosis)",
+      "Thrives in acidic, iron-rich blood (DKA)",
+      "Rapid growth",
+    ],
   },
   {
     section: "fungi",
     slug: "histoplasma-capsulatum",
     resistance: [],
     effective: ["itraconazole", "amphotericin-b"],
+    strengths: [
+      "Intracellular in macrophages",
+      "Thermal dimorphism",
+      "Inhibits phagolysosome",
+    ],
   },
   {
     section: "fungi",
     slug: "blastomyces-dermatitidis",
     resistance: [],
     effective: ["itraconazole", "amphotericin-b"],
+    strengths: [
+      "BAD1 adhesin",
+      "Thermal dimorphism",
+      "Broad-based budding",
+    ],
   },
   {
     section: "fungi",
     slug: "coccidioides-immitis",
     resistance: [],
     effective: ["fluconazole", "itraconazole", "amphotericin-b"],
+    strengths: [
+      "Spherule/endospore tissue cycle",
+      "Highly infectious arthroconidia",
+    ],
   },
   {
     section: "fungi",
     slug: "sporothrix-schenckii",
     resistance: [],
     effective: ["itraconazole", "amphotericin-b"],
+    strengths: [
+      "Thermal dimorphism",
+      "Traumatic implantation (thorns)",
+      "Lymphocutaneous spread",
+    ],
   },
   {
     section: "fungi",
     slug: "pneumocystis-jirovecii",
-    resistance: ["caspofungin", "fluconazole"],
+    resistance: ["caspofungin", "fluconazole", "amphotericin-b"],
     effective: ["tmp-smx", "pentamidine", "atovaquone", "dapsone"],
+    strengths: [
+      "Lacks ergosterol (azole/ampho resistant)",
+      "Adheres to alveolar epithelium",
+      "Cyst & trophic forms",
+    ],
   },
   {
     section: "fungi",
     slug: "trichophyton-rubrum",
     resistance: [],
     effective: ["terbinafine", "itraconazole", "ciclopirox"],
+    strengths: ["Keratinase (digests keratin)", "Chronic & relapsing"],
   },
   {
     section: "fungi",
     slug: "microsporum-canis",
     resistance: [],
     effective: ["griseofulvin", "terbinafine"],
+    strengths: ["Keratinase", "Zoophilic spread (cats/dogs)"],
   },
   {
     section: "fungi",
     slug: "malassezia-furfur",
     resistance: [],
     effective: ["ketoconazole", "ciclopirox"],
+    strengths: ["Lipid-dependent growth", "Skin commensal overgrowth"],
   },
 
   // ---------- Parasites ----------
@@ -640,6 +990,11 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "quinine",
       "mefloquine",
     ],
+    strengths: [
+      "PfEMP1 antigenic variation",
+      "Cytoadherence & sequestration",
+      "Infects red cells of all ages (high parasitemia)",
+    ],
   },
   {
     section: "parasites",
@@ -651,66 +1006,100 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "primaquine",
       "tafenoquine",
     ],
+    strengths: ["Dormant hepatic hypnozoites (relapse)", "Duffy-antigen entry"],
   },
   {
     section: "parasites",
     slug: "plasmodium-ovale",
     resistance: [],
     effective: ["chloroquine", "primaquine", "tafenoquine"],
+    strengths: ["Dormant hypnozoites (relapse)"],
   },
   {
     section: "parasites",
     slug: "plasmodium-malariae",
     resistance: [],
     effective: ["chloroquine", "hydroxychloroquine"],
+    strengths: ["Decades-long low-grade parasitemia"],
   },
   {
     section: "parasites",
     slug: "toxoplasma-gondii",
     resistance: [],
     effective: ["pyrimethamine-sulfadiazine", "spiramycin", "atovaquone"],
+    strengths: [
+      "Intracellular (any nucleated cell)",
+      "Latent tissue cysts",
+      "Crosses the placenta",
+    ],
   },
   {
     section: "parasites",
     slug: "cryptosporidium-parvum",
     resistance: [],
     effective: ["nitazoxanide"],
+    strengths: [
+      "Chlorine-resistant oocysts",
+      "Autoinfection",
+      "Low infectious dose",
+    ],
   },
   {
     section: "parasites",
     slug: "babesia-microti",
     resistance: [],
     effective: ["atovaquone", "azithromycin", "quinine"],
+    strengths: ["Intraerythrocytic replication", "Severe in asplenia"],
   },
   {
     section: "parasites",
     slug: "giardia-lamblia",
     resistance: [],
     effective: ["metronidazole", "tinidazole", "nitazoxanide"],
+    strengths: [
+      "Chlorine-resistant cysts",
+      "Ventral attachment disc",
+      "Surface-antigen variation",
+    ],
   },
   {
     section: "parasites",
     slug: "trichomonas-vaginalis",
     resistance: [],
     effective: ["metronidazole", "tinidazole"],
+    strengths: ["Flagellar motility", "Adheres to urogenital epithelium"],
   },
   {
     section: "parasites",
     slug: "entamoeba-histolytica",
     resistance: [],
     effective: ["metronidazole", "tinidazole", "paromomycin"],
+    strengths: [
+      "Contact-dependent cytolysis",
+      "Hardy cysts",
+      "Lectin-mediated adherence",
+    ],
   },
   {
     section: "parasites",
     slug: "trypanosoma-cruzi",
     resistance: [],
     effective: ["benznidazole", "nifurtimox"],
+    strengths: [
+      "Intracellular amastigotes",
+      "Lifelong persistence",
+      "Immune-mediated tissue damage",
+    ],
   },
   {
     section: "parasites",
     slug: "trypanosoma-brucei",
     resistance: [],
     effective: ["pentamidine", "nifurtimox", "eflornithine"],
+    strengths: [
+      "VSG antigenic variation (evades antibody)",
+      "Crosses the blood-brain barrier",
+    ],
   },
   {
     section: "parasites",
@@ -722,108 +1111,162 @@ export const MICROBE_PHARMACOLOGY: MicrobePharmacology[] = [
       "paromomycin",
       "sodium-stibogluconate",
     ],
+    strengths: [
+      "Survives inside macrophages",
+      "Inhibits phagolysosome killing",
+      "Sandfly reservoir",
+    ],
   },
   {
     section: "parasites",
     slug: "naegleria-fowleri",
     resistance: [],
     effective: ["miltefosine", "amphotericin-b"],
+    strengths: ["Ascends the cribriform plate", "Rapid tissue destruction"],
   },
   {
     section: "parasites",
     slug: "ascaris-lumbricoides",
     resistance: [],
     effective: ["albendazole", "mebendazole", "ivermectin", "pyrantel-pamoate"],
+    strengths: [
+      "Durable eggs in soil",
+      "Larval lung migration",
+      "Massive worm burden / obstruction",
+    ],
   },
   {
     section: "parasites",
     slug: "enterobius-vermicularis",
     resistance: [],
     effective: ["mebendazole", "albendazole", "pyrantel-pamoate"],
+    strengths: ["Nocturnal perianal egg-laying", "Autoinfection"],
   },
   {
     section: "parasites",
     slug: "strongyloides-stercoralis",
     resistance: [],
     effective: ["ivermectin", "albendazole"],
+    strengths: [
+      "Autoinfection → hyperinfection",
+      "Free-living & parasitic cycles",
+    ],
   },
   {
     section: "parasites",
     slug: "trichinella-spiralis",
     resistance: [],
     effective: ["albendazole", "mebendazole"],
+    strengths: ["Encysts in striated muscle", "Nurse-cell formation"],
   },
   {
     section: "parasites",
     slug: "necator-americanus",
     resistance: [],
     effective: ["albendazole", "mebendazole", "pyrantel-pamoate"],
+    strengths: [
+      "Skin-penetrating larvae",
+      "Cutting plates; chronic blood loss",
+    ],
   },
   {
     section: "parasites",
     slug: "wuchereria-bancrofti",
     resistance: [],
     effective: ["ivermectin", "albendazole", "diethylcarbamazine"],
+    strengths: [
+      "Lymphatic obstruction",
+      "Wolbachia endosymbiont",
+      "Nocturnal microfilaremia",
+    ],
   },
   {
     section: "parasites",
     slug: "brugia-malayi",
     resistance: [],
     effective: ["diethylcarbamazine", "albendazole", "ivermectin"],
+    strengths: ["Lymphatic obstruction", "Wolbachia endosymbiont"],
   },
   {
     section: "parasites",
     slug: "onchocerca-volvulus",
     resistance: [],
     effective: ["ivermectin"],
+    strengths: ["Wolbachia endosymbiont", "Microfilarial eye invasion"],
   },
   {
     section: "parasites",
     slug: "schistosoma-mansoni",
     resistance: [],
     effective: ["praziquantel"],
+    strengths: [
+      "Coats itself in host antigens",
+      "Long-lived in mesenteric veins",
+      "Egg-induced granulomas",
+    ],
   },
   {
     section: "parasites",
     slug: "schistosoma-haematobium",
     resistance: [],
     effective: ["praziquantel"],
+    strengths: [
+      "Host-antigen masking",
+      "Bladder egg deposition (cancer risk)",
+    ],
   },
   {
     section: "parasites",
     slug: "fasciola-hepatica",
     resistance: [],
     effective: ["triclabendazole"],
+    strengths: ["Migrates through liver parenchyma", "Long-lived bile-duct fluke"],
   },
   {
     section: "parasites",
     slug: "paragonimus-westermani",
     resistance: [],
     effective: ["praziquantel", "triclabendazole"],
+    strengths: ["Encysts in lung", "Tissue migration"],
   },
   {
     section: "parasites",
     slug: "taenia-solium",
     resistance: [],
     effective: ["praziquantel", "albendazole"],
+    strengths: [
+      "Cysticerci (including CNS)",
+      "Scolex with hooks",
+      "Egg autoinfection",
+    ],
   },
   {
     section: "parasites",
     slug: "echinococcus-granulosus",
     resistance: [],
     effective: ["albendazole"],
+    strengths: [
+      "Expanding hydatid cyst",
+      "Daughter cysts",
+      "Anaphylaxis on rupture",
+    ],
   },
   {
     section: "parasites",
     slug: "sarcoptes-scabiei",
     resistance: [],
     effective: ["permethrin", "ivermectin"],
+    strengths: [
+      "Burrows in stratum corneum",
+      "Crusted scabies (huge burden) in immunocompromised",
+    ],
   },
   {
     section: "parasites",
     slug: "pediculus-humanus-capitis",
     resistance: [],
     effective: ["permethrin", "ivermectin", "malathion"],
+    strengths: ["Cements nits to hair shafts", "Direct-contact spread"],
   },
 ];
 
