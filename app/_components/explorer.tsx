@@ -5,14 +5,14 @@ import {
   type GenericRecord,
   type SectionKey,
 } from "@/lib/sections";
-import FacetSelect from "./facet-select";
+import FacetFilter from "./facet-filter";
 import SearchForm from "./search-form";
 import SectionNav from "./section-nav";
 import { TIER_META, type Tier } from "@/lib/tiers";
 
-// Facets with more distinct values than this render as a compact dropdown
-// instead of a chip wall.
-const CHIP_LIMIT = 16;
+// Facets with more distinct values than this get an inline text filter and a
+// collapsed "+N more" expander so the chip row stays scannable.
+const SEARCHABLE_LIMIT = 12;
 
 function buildHref(
   listPath: string,
@@ -43,6 +43,23 @@ export default function Explorer({
   const activeFilters = Object.entries(active).filter(([, value]) =>
     Boolean(value),
   );
+
+  // Removable pills for the "Active" bar — each links to the same view with
+  // that one filter dropped, so the current path is always visible and undoable.
+  const activeFacetPills = facets.groups
+    .filter((g) => active[g.param])
+    .map((g) => ({
+      param: g.param,
+      label: g.label,
+      value: active[g.param] as string,
+      removeHref: buildHref(section.listPath, active, { [g.param]: undefined }),
+    }));
+  const searchPill = active.q
+    ? {
+        value: active.q,
+        removeHref: buildHref(section.listPath, active, { q: undefined }),
+      }
+    : null;
 
   return (
     <main className="mx-auto w-full max-w-6xl px-5 pb-20 pt-8 sm:px-6 sm:pt-10">
@@ -98,130 +115,86 @@ export default function Explorer({
         id="filter"
         className="glass-soft mt-6 scroll-mt-24 rounded-3xl p-4 sm:p-5"
       >
-        <details open={hasFilters} className="group">
+        {/* Active filters — always visible, each pill removes itself. */}
+        {searchPill || activeFacetPills.length > 0 ? (
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <span className="text-tech text-[10px] text-muted">Active</span>
+            {searchPill ? (
+              <Link
+                href={searchPill.removeHref}
+                aria-label={`Clear search ${searchPill.value}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[13px] font-medium text-accent-strong transition-colors hover:border-accent"
+              >
+                <span className="text-muted">Search:</span>
+                {searchPill.value}
+                <span aria-hidden className="text-[11px] opacity-70">
+                  ✕
+                </span>
+              </Link>
+            ) : null}
+            {activeFacetPills.map((p) => (
+              <Link
+                key={p.param}
+                href={p.removeHref}
+                aria-label={`Remove ${p.label} filter: ${p.value}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[13px] font-medium text-accent-strong transition-colors hover:border-accent"
+              >
+                {p.value}
+                <span aria-hidden className="text-[11px] opacity-70">
+                  ✕
+                </span>
+              </Link>
+            ))}
+            <Link
+              href={section.listPath}
+              className="rounded-full border border-glass-border bg-glass px-3 py-1 text-[13px] font-medium text-muted transition-colors hover:border-accent/50 hover:text-foreground"
+            >
+              Clear all
+            </Link>
+          </div>
+        ) : null}
+
+        <details open className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-1 [&::-webkit-details-marker]:hidden">
             <span className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_1px_var(--accent)]" />
               <span className="font-bold text-foreground">Filters</span>
-              {hasFilters ? (
-                <span className="rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-accent-ink">
-                  {activeFilters.length}
-                </span>
-              ) : null}
+              <span className="text-tech text-[10px] text-muted/70">
+                {section.facets.length} trait sets
+              </span>
             </span>
             <span className="text-sm text-muted transition-transform group-open:rotate-180">
               ▾
             </span>
           </summary>
 
-        <div className="mt-4 space-y-1.5 rounded-2xl border border-glass-border bg-glass/50 p-3 sm:p-4">
-          {facets.groups.map((group, idx) => {
-            const activeValue = active[group.param];
-
-            // High-cardinality facets → compact dropdown.
-            if (group.counts.length > CHIP_LIMIT) {
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {facets.groups.map((group) => {
               const allHref = buildHref(section.listPath, active, {
                 [group.param]: undefined,
               });
-              const options = group.counts.map(({ value, count }) => ({
-                value,
-                count,
-                href: buildHref(section.listPath, active, {
-                  [group.param]: value,
-                }),
-              }));
-              const activeHref = activeValue
-                ? buildHref(section.listPath, active, {
-                    [group.param]: activeValue,
-                  })
-                : allHref;
+              const chips = group.counts.map(({ value, count }) => {
+                const isActive = active[group.param] === value;
+                return {
+                  value,
+                  count,
+                  active: isActive,
+                  href: buildHref(section.listPath, active, {
+                    [group.param]: isActive ? undefined : value,
+                  }),
+                };
+              });
               return (
-                <FacetSelect
+                <FacetFilter
                   key={group.param}
                   label={group.label}
-                  options={options}
+                  chips={chips}
                   allHref={allHref}
-                  activeHref={activeHref}
-                  total={group.counts.length}
+                  searchable={group.counts.length > SEARCHABLE_LIMIT}
                 />
               );
-            }
-
-            // Keep the primary organizer open; collapse the rest unless one
-            // holds an active filter (so deep-linked queries stay visible).
-            const open = idx === 0 || Boolean(activeValue);
-            return (
-              <details
-                key={group.param}
-                open={open}
-                className="group rounded-xl px-3 py-2 transition-colors open:bg-glass/50"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center gap-2">
-                    <span className="text-tech text-[10px] text-muted">
-                      {group.label}
-                    </span>
-                    {activeValue ? (
-                      <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-medium text-accent-ink">
-                        {activeValue}
-                      </span>
-                    ) : (
-                      <span className="text-tech text-[10px] text-muted/50">
-                        {group.counts.length}
-                      </span>
-                    )}
-                  </span>
-                  <span
-                    aria-hidden
-                    className="text-xs text-muted transition-transform group-open:rotate-180"
-                  >
-                    ▾
-                  </span>
-                </summary>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {group.counts.map(({ value, count }) => {
-                    const isActive = active[group.param] === value;
-                    const href = buildHref(section.listPath, active, {
-                      [group.param]: isActive ? undefined : value,
-                    });
-                    return (
-                      <Link
-                        key={value}
-                        href={href}
-                        aria-pressed={isActive}
-                        className={`rounded-full border px-3 py-1 text-[13px] font-medium transition-colors ${
-                          isActive
-                            ? "border-accent bg-accent text-accent-ink shadow-[0_4px_16px_-4px_var(--accent)]"
-                            : "border-glass-border bg-glass text-foreground hover:border-accent/60"
-                        }`}
-                      >
-                        {value}
-                        <span
-                          className={`ml-1.5 font-mono text-[10px] ${
-                            isActive ? "opacity-70" : "text-muted"
-                          }`}
-                        >
-                          {count}
-                        </span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </details>
-            );
-          })}
-        </div>
-
-        {hasFilters && (
-          <div className="mt-4 flex justify-end">
-            <Link
-              href={section.listPath}
-              className="rounded-xl border border-glass-border bg-glass px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent/50"
-            >
-              Clear filters
-            </Link>
+            })}
           </div>
-        )}
         </details>
       </section>
 
