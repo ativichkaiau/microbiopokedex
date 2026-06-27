@@ -43,7 +43,7 @@ export default function ThemeToggle() {
     <div
       role="radiogroup"
       aria-label="Theme"
-      className="clay-tabs flex items-center gap-1.5 p-1.5"
+      className="clay-tabs clay-theme-tabs flex items-center"
     >
       {MODES.map((m) => {
         const active = mode === m.id;
@@ -58,12 +58,11 @@ export default function ThemeToggle() {
             onClick={() => pick(m.id)}
             data-active={active}
             data-tone={m.id}
-            className="clay-tab flex min-w-10 items-center justify-center gap-1.5 px-2.5 py-1.5 text-sm font-semibold sm:px-3"
+            className="clay-tab clay-theme-tab flex items-center justify-center text-sm"
           >
             <span aria-hidden className="clay-tab-icon text-[0.95em] leading-none">
               {m.icon}
             </span>
-            <span className="hidden sm:inline">{m.label}</span>
           </button>
         );
       })}
