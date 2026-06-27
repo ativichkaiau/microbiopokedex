@@ -42,7 +42,7 @@ export default function FacetFilter({
   const hiddenCount = matched.length - visible.length;
 
   return (
-    <div className="rounded-2xl border border-glass-border bg-glass/40 p-3.5">
+    <div className="glass-inset rounded-2xl p-3.5">
       <div className="mb-2.5 flex items-center justify-between gap-2">
         <span className="text-tech text-[10px] text-muted">{label}</span>
         {searchable ? (

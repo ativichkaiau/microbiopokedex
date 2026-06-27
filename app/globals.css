@@ -182,26 +182,50 @@ body {
   }
 }
 
-/* ---- Glassmorphism utilities ---- */
+/* ---- Card surfaces (claymorphic) ----
+   Names kept for the many call sites; these now render inflated clay panels
+   to match the tabs/chips/header rather than frosted glass. */
 .glass {
-  background-color: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-  backdrop-filter: blur(18px) saturate(160%);
-  box-shadow: var(--shadow-card), inset 0 1px 0 0 var(--glass-hi);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--clay-raised) 90%, white 6%),
+    var(--clay-surface)
+  );
+  border: 1px solid var(--clay-border);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow:
+    16px 16px 34px var(--clay-shadow),
+    -11px -11px 28px var(--clay-highlight),
+    inset 0 1px 1px var(--clay-highlight);
 }
 
+/* Opaque clay (no backdrop blur — this class is used by 200+ result cards,
+   where a per-card filter is needless GPU cost). */
 .glass-soft {
-  background-color: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-  backdrop-filter: blur(14px) saturate(150%);
-  box-shadow: var(--shadow-soft), inset 0 1px 0 0 var(--glass-hi);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--clay-raised) 96%, white 8%),
+    color-mix(in srgb, var(--clay-surface) 94%, white 6%)
+  );
+  border: 1px solid color-mix(in srgb, var(--clay-border) 88%, transparent);
+  box-shadow:
+    8px 8px 20px var(--clay-shadow),
+    -6px -6px 16px var(--clay-highlight),
+    inset 0 1px 1px var(--clay-highlight);
 }
 
+/* Recessed clay well — for nested sub-boxes inside a raised panel. */
 .glass-inset {
-  background-color: var(--glass-inset);
-  border: 1px solid var(--glass-border);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--clay-pressed) 82%, transparent),
+    color-mix(in srgb, var(--clay-surface) 90%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, var(--clay-border) 55%, transparent);
+  box-shadow:
+    inset 5px 5px 12px var(--clay-shadow),
+    inset -4px -4px 10px var(--clay-highlight);
 }
 
 /* Monospace, uppercase, wide-tracked technical label (the // sublabels). */
