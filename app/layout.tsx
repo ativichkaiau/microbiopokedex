@@ -39,24 +39,27 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <script dangerouslySetInnerHTML={{ __html: NO_FLASH }} />
         <Atmosphere />
-        <header className="sticky top-0 z-20 border-b border-glass-border bg-glass backdrop-blur-xl">
-          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-2.5 sm:gap-4 sm:px-6 sm:py-3.5">
-            <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-foreground text-base font-black text-surface sm:h-10 sm:w-10 sm:text-lg">
+        <header className="clay-header sticky top-0 z-20">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-2.5 sm:gap-4 sm:px-6 sm:py-3">
+            <Link href="/" className="group flex items-center gap-2.5 sm:gap-3">
+              <span className="clay-logo flex h-9 w-9 items-center justify-center rounded-2xl text-base font-black sm:h-10 sm:w-10 sm:text-lg">
                 V
               </span>
               <span className="text-base font-extrabold tracking-tight text-foreground sm:text-xl">
                 VESTRIPPN<span className="text-blue">3.0</span>
               </span>
             </Link>
-            <div className="flex items-center gap-3 sm:gap-4">
-              <span className="hidden text-sm text-muted md:inline">
+            <div className="flex items-center gap-2.5 sm:gap-3.5">
+              <span className="hidden text-sm text-muted lg:inline">
                 Microbiology Pokédex
               </span>
               <span
                 aria-hidden
-                className="hidden h-5 w-px bg-border md:inline-block"
+                className="hidden h-5 w-px bg-border lg:inline-block"
               />
+              <span className="text-tech hidden text-[9px] text-muted/80 sm:inline">
+                Mode
+              </span>
               <ThemeToggle />
             </div>
           </div>

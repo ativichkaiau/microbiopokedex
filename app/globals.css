@@ -379,6 +379,51 @@ body {
   --clay-accent: #9a74dc;
 }
 
+/* ---- Claymorphic header + logo ---- */
+.clay-header {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--clay-raised) 74%, transparent),
+    color-mix(in srgb, var(--clay-surface) 55%, transparent)
+  );
+  border-bottom: 1px solid var(--clay-border);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+  box-shadow:
+    0 10px 26px -16px var(--clay-shadow-deep),
+    inset 0 1px 1px var(--clay-highlight);
+}
+
+/* Inflated accent-tinted clay tile — the logo mark. */
+.clay-logo {
+  --clay-accent: var(--accent);
+  color: #fff;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--clay-accent) 68%, white 32%),
+    color-mix(in srgb, var(--clay-accent) 96%, black 4%)
+  );
+  border: 1px solid color-mix(in srgb, var(--clay-accent) 45%, var(--clay-border));
+  box-shadow:
+    5px 5px 12px var(--clay-shadow),
+    -4px -4px 10px var(--clay-highlight),
+    inset 0 2px 2px color-mix(in srgb, white 52%, transparent),
+    inset 0 -3px 5px color-mix(in srgb, var(--clay-accent) 55%, black 28%);
+  text-shadow: 0 1px 1px color-mix(in srgb, var(--clay-accent) 65%, black 35%);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.clay-logo:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    7px 7px 16px var(--clay-shadow),
+    -5px -5px 12px var(--clay-highlight),
+    inset 0 2px 2px color-mix(in srgb, white 55%, transparent),
+    inset 0 -3px 5px color-mix(in srgb, var(--clay-accent) 55%, black 28%);
+}
+
 /* ---- Intro splash animations ---- */
 @keyframes intro-scan {
   0% {
@@ -622,7 +667,8 @@ body {
   }
   .clay-tab,
   .clay-chip,
-  .clay-tab-icon {
+  .clay-tab-icon,
+  .clay-logo {
     transition: none !important;
   }
   body,
