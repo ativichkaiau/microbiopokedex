@@ -39,33 +39,27 @@ export default function ThemeToggle() {
     window.dispatchEvent(new StorageEvent("storage", { key: "theme-mode" }));
   }
 
+  const index = Math.max(
+    0,
+    MODES.findIndex((m) => m.id === mode),
+  );
+  const current = MODES[index];
+  const next = MODES[(index + 1) % MODES.length];
+
+  // One clay button that cycles day → auto → night and shows the current mode.
   return (
-    <div
-      role="radiogroup"
-      aria-label="Theme"
-      className="clay-tabs clay-theme-tabs flex items-center"
+    <button
+      type="button"
+      onClick={() => pick(next.id)}
+      data-tone={current.id}
+      aria-label={`Theme: ${current.label}. Switch to ${next.label}.`}
+      title={`Theme: ${current.label} — switch to ${next.label}`}
+      className="clay-tab flex items-center gap-2 px-3.5 text-sm font-semibold text-foreground"
     >
-      {MODES.map((m) => {
-        const active = mode === m.id;
-        return (
-          <button
-            key={m.id}
-            type="button"
-            role="radio"
-            aria-checked={active}
-            aria-label={m.label}
-            title={m.label}
-            onClick={() => pick(m.id)}
-            data-active={active}
-            data-tone={m.id}
-            className="clay-tab clay-theme-tab flex items-center justify-center text-sm"
-          >
-            <span aria-hidden className="clay-tab-icon text-[0.95em] leading-none">
-              {m.icon}
-            </span>
-          </button>
-        );
-      })}
-    </div>
+      <span aria-hidden className="clay-tab-icon text-[1.05em] leading-none">
+        {current.icon}
+      </span>
+      <span className="min-w-[2.6rem] text-left">{current.label}</span>
+    </button>
   );
 }
