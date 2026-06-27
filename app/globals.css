@@ -27,6 +27,15 @@
   --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04),
     0 24px 50px -18px rgba(16, 24, 40, 0.22);
 
+  /* Clay controls */
+  --clay-surface: rgba(238, 241, 249, 0.82);
+  --clay-raised: rgba(255, 255, 255, 0.84);
+  --clay-pressed: rgba(222, 226, 238, 0.86);
+  --clay-border: rgba(255, 255, 255, 0.88);
+  --clay-highlight: rgba(255, 255, 255, 0.92);
+  --clay-shadow: rgba(49, 56, 82, 0.18);
+  --clay-shadow-deep: rgba(49, 56, 82, 0.26);
+
   /* Atmosphere */
   --page-gradient: linear-gradient(160deg, #fafaff 0%, #f1f1fb 60%, #e8eafc 100%);
   --blob-1: #2fc3ab;
@@ -56,6 +65,14 @@
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4),
     0 28px 56px -20px rgba(0, 0, 0, 0.7);
+
+  --clay-surface: rgba(29, 32, 43, 0.86);
+  --clay-raised: rgba(39, 42, 56, 0.9);
+  --clay-pressed: rgba(16, 18, 26, 0.9);
+  --clay-border: rgba(255, 255, 255, 0.08);
+  --clay-highlight: rgba(255, 255, 255, 0.055);
+  --clay-shadow: rgba(0, 0, 0, 0.42);
+  --clay-shadow-deep: rgba(0, 0, 0, 0.66);
 
   --page-gradient: linear-gradient(160deg, #08090d 0%, #0b0c12 55%, #0d0e18 100%);
   --blob-1: #1fb89c;
@@ -200,6 +217,153 @@ body {
 
 .shadow-card {
   box-shadow: var(--shadow-card);
+}
+
+/* ---- Claymorphic segmented controls ---- */
+.clay-tabs {
+  --clay-accent: var(--accent);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--clay-raised) 86%, transparent),
+      var(--clay-surface)
+    );
+  border: 1px solid var(--clay-border);
+  border-radius: 1.4rem;
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  backdrop-filter: blur(18px) saturate(145%);
+  box-shadow:
+    10px 10px 24px var(--clay-shadow),
+    -7px -7px 20px var(--clay-highlight),
+    inset 0 1px 1px var(--clay-highlight);
+}
+
+.clay-tab,
+.clay-chip {
+  --clay-accent: var(--accent);
+  position: relative;
+  isolation: isolate;
+  color: var(--muted);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--clay-raised) 92%, white 8%),
+      color-mix(in srgb, var(--clay-raised) 82%, var(--clay-surface) 18%)
+    );
+  border: 1px solid color-mix(in srgb, var(--clay-border) 80%, transparent);
+  box-shadow:
+    5px 5px 11px var(--clay-shadow),
+    -4px -4px 10px var(--clay-highlight),
+    inset 0 1px 1px var(--clay-highlight);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.clay-tab {
+  min-height: 2.65rem;
+  border-radius: 1rem;
+}
+
+.clay-chip {
+  min-height: 2rem;
+  border-radius: 0.85rem;
+}
+
+.clay-tab:hover:not([data-active="true"]),
+.clay-chip:hover:not([data-active="true"]) {
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--clay-accent) 35%, var(--clay-border));
+  box-shadow:
+    7px 7px 15px var(--clay-shadow),
+    -5px -5px 12px var(--clay-highlight),
+    inset 0 1px 1px var(--clay-highlight);
+  transform: translateY(-1px);
+}
+
+.clay-tab[data-active="true"],
+.clay-chip[data-active="true"] {
+  color: var(--foreground);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--clay-accent) 22%, var(--clay-pressed)),
+      color-mix(in srgb, var(--clay-accent) 10%, var(--clay-surface))
+    );
+  border-color: color-mix(in srgb, var(--clay-accent) 58%, var(--clay-border));
+  box-shadow:
+    inset 4px 4px 10px var(--clay-shadow-deep),
+    inset -3px -3px 8px var(--clay-highlight),
+    0 0 0 1px color-mix(in srgb, var(--clay-accent) 22%, transparent);
+  transform: translateY(1px);
+}
+
+.clay-tab:active,
+.clay-chip:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow:
+    inset 4px 4px 9px var(--clay-shadow-deep),
+    inset -3px -3px 7px var(--clay-highlight);
+}
+
+.clay-tab:focus-visible,
+.clay-chip:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--clay-accent) 52%, transparent);
+  outline-offset: 3px;
+}
+
+.clay-tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: saturate(0.86);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.clay-tab[data-active="true"] .clay-tab-icon {
+  filter: saturate(1.12);
+  transform: scale(1.08);
+}
+
+.clay-tab[data-tone="bacteria"] {
+  --clay-accent: #39b99a;
+}
+
+.clay-tab[data-tone="viruses"] {
+  --clay-accent: #6587f4;
+}
+
+.clay-tab[data-tone="fungi"] {
+  --clay-accent: #dc745f;
+}
+
+.clay-tab[data-tone="parasites"] {
+  --clay-accent: #bf70d8;
+}
+
+.clay-tab[data-tone="pharmacology"] {
+  --clay-accent: #e3ae48;
+}
+
+.clay-tab[data-tone="cases"] {
+  --clay-accent: #5aa9b3;
+}
+
+.clay-tab[data-tone="day"] {
+  --clay-accent: #e9b84d;
+}
+
+.clay-tab[data-tone="auto"] {
+  --clay-accent: #7892e8;
+}
+
+.clay-tab[data-tone="night"] {
+  --clay-accent: #9a74dc;
 }
 
 /* ---- Intro splash animations ---- */
@@ -442,6 +606,11 @@ body {
   .animate-float-in,
   [class*="animate-"] {
     animation: none !important;
+  }
+  .clay-tab,
+  .clay-chip,
+  .clay-tab-icon {
+    transition: none !important;
   }
   body,
   body::before {

@@ -10,12 +10,8 @@ export type FacetChip = {
   active: boolean;
 };
 
-const chipClass = (active: boolean) =>
-  `inline-flex items-center rounded-full border px-3 py-1 text-[13px] font-medium transition-colors ${
-    active
-      ? "border-accent bg-accent text-accent-ink shadow-[0_4px_16px_-4px_var(--accent)]"
-      : "border-glass-border bg-glass text-foreground hover:border-accent/60"
-  }`;
+const chipClass =
+  "clay-chip inline-flex items-center justify-center px-3 py-1 text-[13px] font-semibold";
 
 // One facet rendered as a flat, always-visible row of toggle chips. Long facets
 // (drug class, virus family, …) get an inline text filter plus a show-more
@@ -69,7 +65,8 @@ export default function FacetFilter({
         <Link
           href={allHref}
           aria-pressed={!anyActive}
-          className={chipClass(!anyActive)}
+          data-active={!anyActive}
+          className={chipClass}
         >
           All
         </Link>
@@ -78,7 +75,8 @@ export default function FacetFilter({
             key={c.value}
             href={c.href}
             aria-pressed={c.active}
-            className={chipClass(c.active)}
+            data-active={c.active}
+            className={chipClass}
           >
             {c.value}
             <span
@@ -94,7 +92,7 @@ export default function FacetFilter({
           <button
             type="button"
             onClick={() => setExpanded(true)}
-            className="rounded-full border border-dashed border-glass-border px-3 py-1 text-[13px] font-medium text-muted transition-colors hover:border-accent/60 hover:text-foreground"
+            className="clay-chip border-dashed px-3 py-1 text-[13px] font-semibold"
           >
             +{hiddenCount} more
           </button>
